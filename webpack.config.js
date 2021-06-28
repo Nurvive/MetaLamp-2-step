@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PATHS = {
     src: path.join(__dirname, './src'),
     dist: path.join(__dirname, './dist'),
@@ -12,10 +12,10 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.p
 
 module.exports = {
     entry: './src/js/main.js',
-    mode: "production",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "./[name].bundle.js"
+        filename: "./[name].bundle.js",
+        assetModuleFilename: 'assets/images/[name].[hash].[ext]'
     },
     module: {
         rules: [
@@ -44,15 +44,31 @@ module.exports = {
             }, {
                 test: /\.js$/,
                 include: path.resolve(__dirname, "src/js"),
-
-            }, {
+            },
+            {
                 test: /\.pug$/,
-
-                use: ['raw-loader', 'pug-plain-loader']
-
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: {
+                            minimize:false
+                        }
+                    },
+                    {
+                        loader: "pug-html-loader",
+                        options: {
+                            pretty:true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     },
+
     plugins: [
         new MiniCssExtractPlugin({
             filename: './[name].css'
@@ -60,6 +76,7 @@ module.exports = {
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}\\${page}`,
             filename: `${PATHS.dist}/${page.replace(/\.pug/, '.html')}`
-        }))
+        })),
+        new CleanWebpackPlugin(),
     ],
 }
