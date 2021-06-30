@@ -1,0 +1,35 @@
+header.header
+    .container.header__container
+        .header__logo
+            a.header__logo-link
+                img(src="../assets/img/logo.png")
+        div.header__menu-wrapper
+            nav.header__nav
+                ul.header__menu
+                    li.header__menu-item
+                        a О нас
+                    li.header__menu-item
+                        ul.header__menu-dropdown Услуги
+                            li.header__dropdown-item
+                                a Покупка
+                            li.header__dropdown-item
+                                a Покупка
+                            li.header__dropdown-item
+                                a Покупка
+                    li.header__menu-item
+                        a Вакансии
+                    li.header__menu-item
+                        a Новости
+                    li.header__menu-item
+                        ul.header__menu-dropdown Соглашение
+                            li.header__dropdown-item
+                                a О Воде
+            .header__buttons
+                - let isAuthorised = true
+                    if isAuthorised
+                        include header-kit/cabinet-button
+                    else
+                        include header-kit/log-in-buttons
+
+
+

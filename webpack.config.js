@@ -3,6 +3,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack')
 const PATHS = {
     src: path.join(__dirname, './src'),
     dist: path.join(__dirname, './dist'),
@@ -12,10 +13,13 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.p
 
 module.exports = {
     entry: './src/js/main.js',
+    mode: 'development',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "./[name].bundle.js",
-        assetModuleFilename: 'assets/images/[name].[hash].[ext]'
+    },
+    devServer: {
+        contentBase: './dist',
     },
     module: {
         rules: [
@@ -33,6 +37,11 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             sourceMap: true
+                        }
+                    },{
+                        loader: 'resolve-url-loader',
+                        options: {
+                            sourceMap:true
                         }
                     },
                     {
@@ -64,7 +73,16 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator: {
+                    filename:'assets/images/[name].[hash].[ext]'
+                }
+            },{
+                test: /\.(woff|ttf|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name][ext]'
+                }
             }
         ]
     },
@@ -78,5 +96,9 @@ module.exports = {
             filename: `${PATHS.dist}/${page.replace(/\.pug/, '.html')}`
         })),
         new CleanWebpackPlugin(),
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery'
+        // }),
     ],
 }

@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+body{
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+.wrapper{
+  max-width: 1460px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.container{
+  max-width: 1190px;
+  margin: 0 auto;
+}
