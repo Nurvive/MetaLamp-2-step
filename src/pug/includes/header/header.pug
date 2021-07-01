@@ -25,11 +25,10 @@ header.header
                             li.header__dropdown-item
                                 a О Воде
             .header__buttons
-                - let isAuthorised = true
-                    if isAuthorised
-                        include header-kit/cabinet-button
+                    include header-kit/header-mixins
+                    if isAuthorized
+                        +log-in-buttons
                     else
-                        include header-kit/log-in-buttons
-
+                        +cabinet-button
 
 

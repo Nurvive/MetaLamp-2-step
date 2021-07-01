@@ -3,5 +3,8 @@ block title
     title Toxin
 
     .wrapper
-        //include includes/header/header
+        - var isAuthorized = true
+        include includes/header/header
+        - isAuthorized = false
+        include includes/header/header
         include includes/footer/footer
