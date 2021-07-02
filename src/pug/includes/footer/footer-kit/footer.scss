@@ -17,13 +17,13 @@
 .footer__description-text{
   margin-top: 11px;
   line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  color: $dark75;
 }
 
 .footer__column-list{
   max-width: rem(150);
   text-transform: uppercase;
-  color: #1F2041;
+  color: $dark100;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -34,7 +34,7 @@
   line-height: 17px;
   font-style: normal;
   font-weight: normal;
-  color: rgba(31, 32, 65, 0.5);
+  color: $dark50;
   text-transform: none;
   margin-top: 22px;
   display: block;
@@ -84,7 +84,7 @@
   display: flex;
   justify-content: space-between;
   &-copyright{
-    color: rgba(31, 32, 65, 0.75);
+    color: $dark75;
     line-height: 17px;
   }
 }

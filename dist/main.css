@@ -371,7 +371,7 @@ template {
 }
 .header__menu-item:first-child {
   font-weight: bold;
-  color: #1F2041;
+  color: #1f2041;
 }
 .header__menu-item > .header__menu-dropdown {
   margin-right: 2.75rem;
@@ -524,7 +524,7 @@ template {
 .footer__column-list, .footer__subscribe {
   max-width: 9.375rem;
   text-transform: uppercase;
-  color: #1F2041;
+  color: #1f2041;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -650,4 +650,97 @@ body {
 
 .logo {
   display: block;
+}
+
+.colors-type__container {
+  padding: 145px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column__colors-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.column__colors-list-item:nth-child(1) > .column__item-color {
+  background-color: #1f2041;
+}
+.column__colors-list-item:nth-child(2) > .column__item-color {
+  background-color: rgba(31, 32, 65, 0.75);
+}
+.column__colors-list-item:nth-child(3) > .column__item-color {
+  background-color: rgba(31, 32, 65, 0.5);
+}
+.column__colors-list-item:nth-child(4) > .column__item-color {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+.column__colors-list-item:nth-child(5) > .column__item-color {
+  background-color: rgba(31, 32, 65, 0.05);
+}
+.column__colors-list-item:nth-child(6) > .column__item-color {
+  background-color: #BC9CFF;
+}
+.column__colors-list-item:nth-child(7) > .column__item-color {
+  background-color: #6FCF97;
+}
+
+.column__item-color {
+  height: 70px;
+  width: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+
+.column__info-title, .column__info-text {
+  font-size: 19px;
+  font-weight: bold;
+  color: #1f2041;
+  line-height: 28px;
+}
+
+.column__info-text {
+  font-weight: 400;
+}
+
+.column__type-list-item {
+  display: flex;
+}
+.column__type-list-item:first-child > * {
+  font-size: 24px;
+  line-height: 29px;
+}
+.column__type-list-item:nth-child(2) > * {
+  font-size: 19px;
+  line-height: 23px;
+}
+.column__type-list-item:nth-child(3) > * {
+  font-size: 12px;
+  line-height: 15px;
+}
+.column__type-list-item:nth-child(4) > * {
+  font-size: 14px;
+  line-height: 24px;
+}
+.column__type-list-item:nth-child(1) > .column__item-text {
+  font-weight: bold;
+}
+.column__type-list-item:nth-child(2) > .column__item-text {
+  font-weight: bold;
+}
+.column__type-list-item:nth-child(3) > .column__item-text {
+  font-weight: bold;
+}
+
+.column__item-tag {
+  color: rgba(31, 32, 65, 0.25);
+  margin-right: 30px;
+  text-align: right;
+  width: 30px;
+  height: 30px;
+}
+
+.column__item-text {
+  max-width: 370px;
+  margin-bottom: 50px;
 }

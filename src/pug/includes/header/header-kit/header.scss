@@ -16,12 +16,12 @@
 
 .header__menu-item {
   line-height: 17px;
-  color: rgba(31, 32, 65, 0.5);
+  color: $dark50;
   position: relative;
 
   &:first-child {
     font-weight: bold;
-    color:#1F2041;
+    color:$dark100;
   }
 
   & > .header__menu-dropdown {
@@ -150,7 +150,7 @@
 
 .cabinet{
   line-height: 17px;
-  color: rgba(31, 32, 65, 0.5);
+  color: $dark50;
   padding:6px 0 6px 20px;
   display: block;
   border-left: 1px solid rgba(31, 32, 65, 0.1);

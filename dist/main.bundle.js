@@ -16,18 +16,18 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/html-loader/dist/runtime/getUrl.js */ \"./node_modules/html-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/img/logo.png */ \"./src/assets/img/logo.png\"), __webpack_require__.b);\n// Module\nvar ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);\nvar code = \"<!DOCTYPE html>\\n<html lang=\\\"ru\\\">\\n  <head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1, maximum-scale=1\\\">\\n    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\n    <meta name=\\\"description\\\" content=\\\"Index page\\\">\\n    <meta name=\\\"keywords\\\" content=\\\"index, page\\\">\\n    <meta name=\\\"author\\\" content=\\\"\\\">\\n    <link href=\\\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\">\\n    <title>Toxin</title>\\n    <div class=\\\"wrapper\\\">\\n      <header class=\\\"header\\\">\\n        <div class=\\\"container header__container\\\">\\n          <div class=\\\"header__logo\\\"><a class=\\\"header__logo-link\\\"><img src=\\\"\" + ___HTML_LOADER_REPLACEMENT_0___ + \"\\\"></a></div>\\n          <div class=\\\"header__menu-wrapper\\\">\\n            <nav class=\\\"header__nav\\\">\\n              <ul class=\\\"header__menu\\\">\\n                <li class=\\\"header__menu-item\\\"><a>О нас</a></li>\\n                <li class=\\\"header__menu-item\\\">\\n                  <ul class=\\\"header__menu-dropdown\\\">Услуги\\n                    <li class=\\\"header__dropdown-item\\\"><a>Покупка</a></li>\\n                    <li class=\\\"header__dropdown-item\\\"><a>Покупка</a></li>\\n                    <li class=\\\"header__dropdown-item\\\"><a>Покупка</a></li>\\n                  </ul>\\n                </li>\\n                <li class=\\\"header__menu-item\\\"><a>Вакансии</a></li>\\n                <li class=\\\"header__menu-item\\\"><a>Новости</a></li>\\n                <li class=\\\"header__menu-item\\\">\\n                  <ul class=\\\"header__menu-dropdown\\\">Соглашение\\n                    <li class=\\\"header__dropdown-item\\\"><a>О Воде</a></li>\\n                  </ul>\\n                </li>\\n              </ul>\\n            </nav>\\n            <div class=\\\"header__buttons\\\"><a class=\\\"log-in-button header__button\\\"><span class=\\\"log-in-button__text\\\">Войти</span></a><a class=\\\"sign-up-button header__button\\\"><span class=\\\"sign-up-button__text\\\">Зарегистрироваться</span></a>\\n            </div>\\n          </div>\\n        </div>\\n      </header>\\n      <header class=\\\"header\\\">\\n        <div class=\\\"container header__container\\\">\\n          <div class=\\\"header__logo\\\"><a class=\\\"header__logo-link\\\"><img src=\\\"\" + ___HTML_LOADER_REPLACEMENT_0___ + \"\\\"></a></div>\\n          <div class=\\\"header__menu-wrapper\\\">\\n            <nav class=\\\"header__nav\\\">\\n              <ul class=\\\"header__menu\\\">\\n                <li class=\\\"header__menu-item\\\"><a>О нас</a></li>\\n                <li class=\\\"header__menu-item\\\">\\n                  <ul class=\\\"header__menu-dropdown\\\">Услуги\\n                    <li class=\\\"header__dropdown-item\\\"><a>Покупка</a></li>\\n                    <li class=\\\"header__dropdown-item\\\"><a>Покупка</a></li>\\n                    <li class=\\\"header__dropdown-item\\\"><a>Покупка</a></li>\\n                  </ul>\\n                </li>\\n                <li class=\\\"header__menu-item\\\"><a>Вакансии</a></li>\\n                <li class=\\\"header__menu-item\\\"><a>Новости</a></li>\\n                <li class=\\\"header__menu-item\\\">\\n                  <ul class=\\\"header__menu-dropdown\\\">Соглашение\\n                    <li class=\\\"header__dropdown-item\\\"><a>О Воде</a></li>\\n                  </ul>\\n                </li>\\n              </ul>\\n            </nav>\\n            <div class=\\\"header__buttons\\\"><a class=\\\"cabinet\\\">Юлий Цезарь</a>\\n            </div>\\n          </div>\\n        </div>\\n      </header>\\n      <footer class=\\\"footer\\\">\\n        <div class=\\\"container footer__container\\\">\\n          <div class=\\\"footer__top\\\">\\n            <div class=\\\"footer__top-description\\\"><a class=\\\"logo\\\"><img src=\\\"\" + ___HTML_LOADER_REPLACEMENT_0___ + \"\\\"></a>\\n              <p class=\\\"footer__description-text\\\">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>\\n            </div>\\n                        <ul class=\\\"footer__column-list\\\">Навигация\\n                          <li><a class=\\\"footer__column-item\\\">О нас</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Новости</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Служба поддержки</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Услуги</a></li>\\n                        </ul>\\n                        <ul class=\\\"footer__column-list\\\">О нас\\n                          <li><a class=\\\"footer__column-item\\\">О сервисе</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Наша команда</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Вакансии</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Инвесторы</a></li>\\n                        </ul>\\n                        <ul class=\\\"footer__column-list\\\">Служба поддержки\\n                          <li><a class=\\\"footer__column-item\\\">Соглашения</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Сообщества</a></li>\\n                          <li><a class=\\\"footer__column-item\\\">Связь с нами</a></li>\\n                        </ul>\\n            <div class=\\\"footer__subscribe\\\">\\n              <p class=\\\"footer__subscribe-title\\\">Подписка</p>\\n              <p class=\\\"footer__subscribe-text\\\">Получайте специальные предложения и новости сервиса</p>\\n              <form action=\\\"#\\\">\\n                <div class=\\\"input-wrapper\\\"></div>\\n                <input class=\\\"footer__subscribe-field\\\" placeholder=\\\"Email\\\" type=\\\"text\\\">\\n              </form>\\n            </div>\\n          </div>\\n          <div class=\\\"footer-line\\\"></div>\\n          <div class=\\\"footer__down\\\">\\n            <p class=\\\"footer__down-copyright\\\">Copyright © 2018 Toxin отель. Все права защищены.</p>\\n            <div class=\\\"social-media\\\"><a class=\\\"social-media__link twitter\\\"><i class=\\\"fab fa-twitter\\\"></i></a><a class=\\\"social-media__link facebook\\\"><i class=\\\"fab fa-facebook-square\\\"></i></a><a class=\\\"social-media__link instagram\\\"><i class=\\\"fab fa-instagram\\\"></i></a></div>\\n          </div>\\n        </div>\\n      </footer>\\n    </div>\\n  </head>\\n</html>\\n<body></body>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack:///./src/pug/index.pug?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<!DOCTYPE html>\\n<html lang=\\\"ru\\\">\\n  <head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\">\\n    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\n    <meta name=\\\"description\\\" content=\\\"Index page\\\">\\n    <meta name=\\\"author\\\" content=\\\"\\\">\\n    <link href=\\\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\\\" rel=\\\"stylesheet\\\" type=\\\"text/css\\\">\\n    <title>Toxin</title>\\n    <div class=\\\"wrapper\\\">\\n      <!-- - var isAuthorized = true-->\\n      <!-- include includes/header/header-->\\n      <!-- - isAuthorized = false-->\\n      <!-- include includes/header/header-->\\n      <!-- include includes/footer/footer-->\\n      <div class=\\\"container colors-type__container\\\">\\n        <div class=\\\"column\\\">\\n          <ul class=\\\"column__list\\\">\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Dark Shade 100%</div>\\n                            <div class=\\\"column__info-text\\\">#1F2041</div>\\n                          </div>\\n                        </li>\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Dark Shade 75%</div>\\n                            <div class=\\\"column__info-text\\\">#1F2041</div>\\n                          </div>\\n                        </li>\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Dark Shade 50%</div>\\n                            <div class=\\\"column__info-text\\\">#1F2041</div>\\n                          </div>\\n                        </li>\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Dark Shade 25%</div>\\n                            <div class=\\\"column__info-text\\\">#1F2041</div>\\n                          </div>\\n                        </li>\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Dark Shade 5%</div>\\n                            <div class=\\\"column__info-text\\\">#1F2041</div>\\n                          </div>\\n                        </li>\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Purple</div>\\n                            <div class=\\\"column__info-text\\\">#BC9CFF</div>\\n                          </div>\\n                        </li>\\n                        <li class=\\\"column__colors-list-item\\\">\\n                          <div class=\\\"column__item-color\\\"></div>\\n                          <div class=\\\"column__item-info\\\">\\n                            <div class=\\\"column__info-title\\\">Green</div>\\n                            <div class=\\\"column__info-text\\\">#6FCF97</div>\\n                          </div>\\n                        </li>\\n          </ul>\\n        </div>\\n        <div class=\\\"column\\\">\\n          <ul class=\\\"column__list\\\">\\n                        <li class=\\\"column__type-list-item\\\">\\n                          <p class=\\\"column__item-tag\\\">H1</p>\\n                          <p class=\\\"column__item-text\\\">This one is the sub-section or widget title</p>\\n                        </li>\\n                        <li class=\\\"column__type-list-item\\\">\\n                          <p class=\\\"column__item-tag\\\">H2</p>\\n                          <p class=\\\"column__item-text\\\">Next one is the item title inside widgets</p>\\n                        </li>\\n                        <li class=\\\"column__type-list-item\\\">\\n                          <p class=\\\"column__item-tag\\\">H3</p>\\n                          <p class=\\\"column__item-text\\\">This is a label or CTA text</p>\\n                        </li>\\n                        <li class=\\\"column__type-list-item\\\">\\n                          <p class=\\\"column__item-tag\\\">Body</p>\\n                          <p class=\\\"column__item-text\\\">This is the body text which is used for most of the design, like paragraphs, lists, etc.</p>\\n                        </li>\\n          </ul>\\n        </div>\\n      </div>\\n    </div>\\n  </head>\\n  <body></body>\\n</html>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack:///./src/pug/index.pug?");
 
 /***/ }),
 
-/***/ "./node_modules/html-loader/dist/runtime/getUrl.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/html-loader/dist/runtime/getUrl.js ***!
-  \*********************************************************/
-/***/ ((module) => {
+/***/ "./src/pug/pages/colors-type/colors-type.pug":
+/*!***************************************************!*\
+  !*** ./src/pug/pages/colors-type/colors-type.pug ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = String(url.__esModule ? url.default : url);\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  }\n\n  if (options.maybeNeedQuotes && /[\\t\\n\\f\\r \"'=<>`]/.test(url)) {\n    return \"\\\"\".concat(url, \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///./node_modules/html-loader/dist/runtime/getUrl.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"\\n<div class=\\\"container colors-type__container\\\">\\n  <div class=\\\"column\\\">\\n    <ul class=\\\"column__list\\\">\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Dark Shade 100%</div>\\n                <div class=\\\"column__info-text\\\">#1F2041</div>\\n              </div>\\n            </li>\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Dark Shade 75%</div>\\n                <div class=\\\"column__info-text\\\">#1F2041</div>\\n              </div>\\n            </li>\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Dark Shade 50%</div>\\n                <div class=\\\"column__info-text\\\">#1F2041</div>\\n              </div>\\n            </li>\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Dark Shade 25%</div>\\n                <div class=\\\"column__info-text\\\">#1F2041</div>\\n              </div>\\n            </li>\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Dark Shade 5%</div>\\n                <div class=\\\"column__info-text\\\">#1F2041</div>\\n              </div>\\n            </li>\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Purple</div>\\n                <div class=\\\"column__info-text\\\">#BC9CFF</div>\\n              </div>\\n            </li>\\n            <li class=\\\"column__colors-list-item\\\">\\n              <div class=\\\"column__item-color\\\"></div>\\n              <div class=\\\"column__item-info\\\">\\n                <div class=\\\"column__info-title\\\">Green</div>\\n                <div class=\\\"column__info-text\\\">#6FCF97</div>\\n              </div>\\n            </li>\\n    </ul>\\n  </div>\\n  <div class=\\\"column\\\">\\n    <ul class=\\\"column__list\\\">\\n            <li class=\\\"column__type-list-item\\\">\\n              <p class=\\\"column__item-tag\\\">H1</p>\\n              <p class=\\\"column__item-text\\\">This one is the sub-section or widget title</p>\\n            </li>\\n            <li class=\\\"column__type-list-item\\\">\\n              <p class=\\\"column__item-tag\\\">H2</p>\\n              <p class=\\\"column__item-text\\\">Next one is the item title inside widgets</p>\\n            </li>\\n            <li class=\\\"column__type-list-item\\\">\\n              <p class=\\\"column__item-tag\\\">H3</p>\\n              <p class=\\\"column__item-text\\\">This is a label or CTA text</p>\\n            </li>\\n            <li class=\\\"column__type-list-item\\\">\\n              <p class=\\\"column__item-tag\\\">Body</p>\\n              <p class=\\\"column__item-text\\\">This is the body text which is used for most of the design, like paragraphs, lists, etc.</p>\\n            </li>\\n    </ul>\\n  </div>\\n</div>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack:///./src/pug/pages/colors-type/colors-type.pug?");
 
 /***/ }),
 
@@ -106,17 +106,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(style, options, obj) {\n  
 
 /***/ }),
 
-/***/ "./src/assets/img/logo.png":
-/*!*********************************!*\
-  !*** ./src/assets/img/logo.png ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"assets/images/logo.c7bbe4d50961d353cabd..png\";\n\n//# sourceURL=webpack:///./src/assets/img/logo.png?");
-
-/***/ }),
-
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -124,7 +113,7 @@ eval("module.exports = __webpack_require__.p + \"assets/images/logo.c7bbe4d50961
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _pug_index_pug__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pug/index.pug */ \"./src/pug/index.pug\");\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/index.scss */ \"./src/scss/index.scss\");\n/* harmony import */ var _pug_includes_header_header_kit_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pug/includes/header/header-kit/header */ \"./src/pug/includes/header/header-kit/header.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _pug_index_pug__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pug/index.pug */ \"./src/pug/index.pug\");\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/index.scss */ \"./src/scss/index.scss\");\n/* harmony import */ var _pug_includes_header_header_kit_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pug/includes/header/header-kit/header */ \"./src/pug/includes/header/header-kit/header.js\");\n/* harmony import */ var _pug_pages_colors_type_colors_type_pug__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pug/pages/colors-type/colors-type.pug */ \"./src/pug/pages/colors-type/colors-type.pug\");\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -165,9 +154,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -193,18 +179,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -219,52 +193,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/
