@@ -1,0 +1,11 @@
+@import "../../../../scss/common/colors";
+.form-elements__container{
+  padding: 140px 15px 132px 15px;
+}
+label{
+  color: $dark100;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}

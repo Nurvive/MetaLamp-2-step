@@ -1,0 +1,104 @@
+@import "../../../../scss/common/colors";
+.dropdown{
+  max-width: 320px;
+  position: relative;
+  &__input-wrapper{
+    &_active .dropdown__open-button{
+      transform: rotate(180deg);
+    }
+  }
+  &__open-button{
+    content:url("../../../../assets/img/arrow-down.svg");
+    position: absolute;
+    top:34px;
+    right: 16px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  & &__input{
+    display: block;
+    border: 1px solid $dark50;
+    cursor: pointer;
+    line-height: 18px;
+    color: $dark75;
+    &_active{
+      border-radius:4px 4px 0 0;
+    }
+  }
+  &__list{
+    position: absolute;
+    width: 100%;
+    border: 1px solid $dark50;
+    border-top: none;
+    box-shadow: 0 10px 20px $dark5;
+    border-radius: 0 0 5px 5px;
+    padding: 13px 7px 13px 15px;
+    transition: opacity .3s;
+    opacity: 0;
+    &_active{
+      opacity: 1;
+    }
+  }
+  &__item{
+    color: $dark100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    &-container{
+      display: flex;
+      align-items: center;
+    }
+    &-minus{
+      border: 1px solid $dark50;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      cursor: pointer;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 2px;
+        background-color: $dark50;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+    &-count{
+      margin: 0 9px;
+      width: 10px;
+      text-align: center;
+    }
+    &-plus{
+      @extend .dropdown__item-minus;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 8px;
+        background-color: $dark50;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    }
+  }
+  &__item-interactive{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__interactive-word{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple;
+    cursor: pointer;
+  }
+}

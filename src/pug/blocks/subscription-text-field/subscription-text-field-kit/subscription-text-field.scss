@@ -1,0 +1,12 @@
+.text-field-wrapper{
+  position: relative;
+  &::after{
+    position: absolute;
+    display: block;
+    content:url("../../../../assets/img/arrow_forward.png");
+    z-index: 2;
+    right: 10px;
+    top:13px;
+    cursor: pointer;
+  }
+}

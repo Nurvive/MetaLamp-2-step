@@ -25,7 +25,7 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, "src/scss"),
+                // include: path.resolve(__dirname, "src/scss"),
                 use: ['style-loader',
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -98,7 +98,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         // new webpack.ProvidePlugin({
         //     $: 'jquery',
-        //     jQuery: 'jquery'
+        //     jQuery: 'jquery',
         // }),
     ],
 }
