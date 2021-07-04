@@ -4,14 +4,16 @@
   position: relative;
   &__input-wrapper{
     &_active .dropdown__open-button{
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(50%);
     }
   }
   &__open-button{
     content:url("../../../../assets/img/arrow-down.svg");
     position: absolute;
-    top:34px;
+    top:50%;
+    transform: translateY(-50%);
     right: 16px;
+    border: none;
     cursor: pointer;
     transition: .3s;
   }
@@ -35,7 +37,10 @@
     padding: 13px 7px 13px 15px;
     transition: opacity .3s;
     opacity: 0;
+    background-color: #fff;
+    display: none;
     &_active{
+      display: block;
       opacity: 1;
     }
   }

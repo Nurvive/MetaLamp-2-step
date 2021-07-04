@@ -22,43 +22,46 @@
         <label>text field
                   <input class="text-field" placeholder="Email" type="text" id="focus-field">
         </label>
-        <div class="dropdown">
-          <div class="dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-            <label>dropdown
+        <label for="dropdown">dropdown
+          <div class="dropdown" id="dropdown">
+            <div class="dropdown__input-wrapper"><span class="dropdown__open-button"></span>
                             <input class="text-field dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly">
-            </label>
+            </div>
+            <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                              <p>взрослые</p>
+                              <div class="dropdown__item-container">
+                                <div class="dropdown__item-minus"></div>
+                                <div class="dropdown__item-count">0</div>
+                                <div class="dropdown__item-plus"></div>
+                              </div>
+                            </li>
+                            <li class="dropdown__item">
+                              <p>дети</p>
+                              <div class="dropdown__item-container">
+                                <div class="dropdown__item-minus"></div>
+                                <div class="dropdown__item-count">0</div>
+                                <div class="dropdown__item-plus"></div>
+                              </div>
+                            </li>
+                            <li class="dropdown__item">
+                              <p>младенцы</p>
+                              <div class="dropdown__item-container">
+                                <div class="dropdown__item-minus"></div>
+                                <div class="dropdown__item-count">0</div>
+                                <div class="dropdown__item-plus"></div>
+                              </div>
+                            </li>
+              <li class="dropdown__item-interactive">
+                <p class="dropdown__interactive-word" id="clear">очистить</p>
+                <p class="dropdown__interactive-word" id="confirm">применить</p>
+              </li>
+            </ul>
           </div>
-          <ul class="dropdown__list">
-                        <li class="dropdown__item">
-                          <p>взрослые</p>
-                          <div class="dropdown__item-container">
-                            <div class="dropdown__item-minus"></div>
-                            <div class="dropdown__item-count">0</div>
-                            <div class="dropdown__item-plus"></div>
-                          </div>
-                        </li>
-                        <li class="dropdown__item">
-                          <p>дети</p>
-                          <div class="dropdown__item-container">
-                            <div class="dropdown__item-minus"></div>
-                            <div class="dropdown__item-count">0</div>
-                            <div class="dropdown__item-plus"></div>
-                          </div>
-                        </li>
-                        <li class="dropdown__item">
-                          <p>младенцы</p>
-                          <div class="dropdown__item-container">
-                            <div class="dropdown__item-minus"></div>
-                            <div class="dropdown__item-count">0</div>
-                            <div class="dropdown__item-plus"></div>
-                          </div>
-                        </li>
-            <li class="dropdown__item-interactive">
-              <p class="dropdown__interactive-word" id="clear">очистить</p>
-              <p class="dropdown__interactive-word" id="confirm">применить</p>
-            </li>
-          </ul>
-        </div>
+        </label>
+        <label>masked text field
+                    <input class="text-field masked-text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="masked-text-field">
+        </label>
       </div>
     </div>
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>

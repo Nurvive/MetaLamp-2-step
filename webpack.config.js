@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpack = require('webpack')
 const PATHS = {
     src: path.join(__dirname, './src'),
@@ -38,10 +38,10 @@ module.exports = {
                         options: {
                             sourceMap: true
                         }
-                    },{
+                    }, {
                         loader: 'resolve-url-loader',
                         options: {
-                            sourceMap:true
+                            sourceMap: true
                         }
                     },
                     {
@@ -60,13 +60,13 @@ module.exports = {
                     {
                         loader: "html-loader",
                         options: {
-                            minimize:false
+                            minimize: false
                         }
                     },
                     {
                         loader: "pug-html-loader",
                         options: {
-                            pretty:true
+                            pretty: true
                         }
                     }
                 ]
@@ -75,9 +75,9 @@ module.exports = {
                 test: /\.(png|jpe?g|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename:'assets/images/[name].[hash].[ext]'
+                    filename: 'assets/images/[name].[hash].[ext]'
                 }
-            },{
+            }, {
                 test: /\.(woff|ttf|svg)$/i,
                 type: 'asset/resource',
                 generator: {

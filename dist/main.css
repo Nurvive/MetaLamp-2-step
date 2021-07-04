@@ -400,13 +400,15 @@ body {
   position: relative;
 }
 .dropdown__input-wrapper_active .dropdown__open-button {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(50%);
 }
 .dropdown__open-button {
   content: url(assets/fonts/arrow-down.svg);
   position: absolute;
-  top: 34px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 16px;
+  border: none;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -430,8 +432,11 @@ body {
   padding: 13px 7px 13px 15px;
   transition: opacity 0.3s;
   opacity: 0;
+  background-color: #fff;
+  display: none;
 }
 .dropdown__list_active {
+  display: block;
   opacity: 1;
 }
 .dropdown__item {
@@ -724,6 +729,7 @@ body {
 .cabinet:hover {
   text-decoration: underline;
 }
+
 .text-field-wrapper {
   position: relative;
 }

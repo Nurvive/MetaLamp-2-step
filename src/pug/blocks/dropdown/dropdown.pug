@@ -1,9 +1,8 @@
-div.dropdown
+div.dropdown(id='dropdown')
     .dropdown__input-wrapper
         span.dropdown__open-button
-        label dropdown
-            include ../text-field/text-field
-            +text-field(readonly='readonly' placeholder='Сколько гостей' class='dropdown__input')
+        include ../text-field/text-field
+        +text-field(readonly='readonly' placeholder='Сколько гостей' class='dropdown__input')
     ul.dropdown__list
         -var obj = ["взрослые",'дети',"младенцы"]
         include dropdown-kit/dropdown-mixins
