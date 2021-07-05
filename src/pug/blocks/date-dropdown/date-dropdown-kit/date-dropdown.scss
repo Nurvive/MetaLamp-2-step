@@ -1,0 +1,24 @@
+.date-dropdown {
+  max-width: 150px;
+  position: relative;
+  cursor: pointer;
+  & .date-dropdown-input {
+    cursor: pointer;
+    background-color: transparent;
+  }
+  &_active .date-dropdown__open-button{
+    transform: rotate(180deg) translateY(50%);
+  }
+}
+.date-dropdown__open-button{
+  content:url("../../../../assets/img/arrow-down.svg");
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 16px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  z-index: -1;
+}
+

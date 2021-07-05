@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@babel/preset-env": "^7.14.7",
+    "air-datepicker": "^2.2.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
     "html-loader": "^2.1.2",

@@ -50,7 +50,23 @@ module.exports = {
                             sourceMap: true
                         }
                     },]
-            }, {
+            },{
+                test: /\.css$/,
+                // include: path.resolve(__dirname, "src/scss"),
+                use: ['style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            esModule: false,
+                        },
+                    },
+                    {
+                        loader: 'css-loader',
+                    }, {
+                        loader: 'resolve-url-loader',
+                    }]
+            },
+            {
                 test: /\.js$/,
                 include: path.resolve(__dirname, "src/js"),
             },
@@ -96,9 +112,11 @@ module.exports = {
             filename: `${PATHS.dist}/${page.replace(/\.pug/, '.html')}`
         })),
         new CleanWebpackPlugin(),
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery',
-        // }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            "global.window.jQuery": "jquery"
+        }),
     ],
 }
