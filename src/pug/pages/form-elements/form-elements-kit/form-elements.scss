@@ -1,11 +1,22 @@
 @import "../../../../scss/common/colors";
-.form-elements__container{
-  padding: 140px 15px 132px 15px;
+.form-elements{
+  &__container{
+    padding: 140px 15px 132px 15px;
+    display: flex;
+  }
+  &__label{
+    color: $dark100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 40px;
+  }
+  &__inner{
+    max-width: 320px;
+    width: 100%;
+  }
 }
-label{
-  color: $dark100;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}
+
+

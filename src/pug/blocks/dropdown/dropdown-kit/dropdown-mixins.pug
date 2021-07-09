@@ -1,6 +1,6 @@
 mixin dropdown-item(obj)
     each val in obj
-        li.dropdown__item
+        li.dropdown__item&attributes(attributes)
             p=val
             .dropdown__item-container
                 div.dropdown__item-minus

@@ -1,0 +1,8 @@
+mixin split-dropdown-item(obj)
+    each val in obj
+        li.split-dropdown__item
+            p=val
+            .split-dropdown__item-container
+                div.split-dropdown__item-minus
+                div.split-dropdown__item-count 0
+                div.split-dropdown__item-plus

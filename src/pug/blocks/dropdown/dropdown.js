@@ -1,6 +1,5 @@
 import './dropdown.pug'
 import './dropdown-kit/dropdown.scss'
-import $ from "jquery";
 
 $().ready(function () {
     let gCount = 0;
@@ -26,7 +25,7 @@ $().ready(function () {
     });
     $('.dropdown__input, .dropdown__open-button').on('click', function (e) {
         e.preventDefault();
-        $(this).toggleClass('dropdown__input_active')
+        $('.dropdown__input').toggleClass('dropdown__input_active')
         $('.dropdown__list').toggleClass('dropdown__list_active')
         $('.dropdown__input-wrapper').toggleClass('dropdown__input-wrapper_active')
         e.stopPropagation()

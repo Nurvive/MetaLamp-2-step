@@ -93,7 +93,14 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[name].[hash].[ext]'
                 }
-            }, {
+            },{
+                test: /\.ico$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[name][ext]'
+                }
+            },
+            {
                 test: /\.(woff|ttf|svg)$/i,
                 type: 'asset/resource',
                 generator: {
