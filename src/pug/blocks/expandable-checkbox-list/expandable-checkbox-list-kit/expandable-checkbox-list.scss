@@ -23,11 +23,7 @@
   &__list {
     opacity: 1;
     transition:  0.5s;
-    //transform: translateY(-100%);
     position: absolute;
-    //&_active{
-    //  opacity: 1;
-    //}
     & li {
       transition: all 0.4s ease-out;
       opacity: 0;

@@ -1,0 +1,6 @@
+mixin check_button(obj)
+    each val in obj
+        li.checkbox-buttons__item
+            label
+                input(type='checkbox' class='checkbox-buttons__check')
+                p.checkbox-buttons__item-text= val

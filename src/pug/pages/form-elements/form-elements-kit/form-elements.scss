@@ -3,6 +3,7 @@
   &__container{
     padding: 140px 15px 132px 15px;
     display: flex;
+    justify-content: space-between;
   }
   &__label{
     color: $dark100;
