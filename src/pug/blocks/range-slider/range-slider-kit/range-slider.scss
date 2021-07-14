@@ -1,0 +1,28 @@
+@import "../../../../scss/common/colors";
+.range-slider {
+  max-width: 270px;
+  position: relative;
+  & .irs--round .irs-handle {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #FFFFFF;
+    top: 30px;
+    box-sizing: content-box;
+  }
+  & .irs--round .irs-bar{
+    height: 6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+  & .irs--round .irs-line{
+    background-color: transparent;
+    border: 1px solid $dark25;
+    height: 6px;
+  }
+  &__count{
+    position: absolute;
+    right: 0;
+    color: $dark50;
+    font-weight: normal;
+  }
+}
