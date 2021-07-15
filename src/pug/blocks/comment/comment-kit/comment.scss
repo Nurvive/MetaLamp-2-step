@@ -1,0 +1,46 @@
+@import "../../../../scss/common/colors";
+
+.comment {
+  max-width: 711px;
+  &__info {
+    display: flex;
+    margin-bottom: 10px;
+    &-img {
+      width: 48px;
+      height: 48px;
+      border: 2px solid #FFFFFF;
+      filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+      border-radius: 32px;
+      background-image: url("../../../../assets/img/man.png");
+      background-position: center 25%;
+      margin-right: 10px;
+    }
+
+    &-inner {
+
+    }
+
+    &-author {
+      color: $dark75;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+
+    &-time {
+      @extend .comment__info-author;
+      font-weight: normal;
+
+    }
+  }
+
+  &__content {
+    display: flex;
+    &-text {
+
+      @extend .comment__info-author;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+  }
+}
