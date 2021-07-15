@@ -1,0 +1,7 @@
+mixin rich_check_button(obj)
+    each description, text in obj
+        li.rich-checkbox-buttons__item
+            label
+                input(type='checkbox' class='rich-checkbox-buttons__check')
+                p.rich-checkbox-buttons__item-text= text
+            p.rich-checkbox-buttons__description= description
