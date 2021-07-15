@@ -1,9 +1,9 @@
-.rate-button#rate-button не готово
-    // -var n = 0;
-    // while n < 5
-    //     label(class="rate-button__star far fa-star")
-    //         input(type="radio")
-    //
-    //     -n++;
+.rate-button#rate-button
+    .rate-button__inner
+         -var n = 5;
+         while n > 0
+            input(id = 'rate-button__item' + n class='rate-button__item' value=n type="radio" name='rating')
+            label(class="rate-button__star" for='rate-button__item' + n)
+            -n--;
 
 
