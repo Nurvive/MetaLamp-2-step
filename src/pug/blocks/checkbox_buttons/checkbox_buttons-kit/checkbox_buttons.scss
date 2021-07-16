@@ -45,7 +45,7 @@
     opacity: 0;
     &:checked + .checkbox-buttons__item-text:after{
       border: 1px solid $purple;
-      background-image: url("../../../../assets/img/check.svg");
+      background-image: url("../../../../assets/images/check.png");
       background-repeat: no-repeat;
       background-position: center;
     }

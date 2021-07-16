@@ -17,19 +17,19 @@
     left: 0;
     visibility: hidden;
     &:checked, &:checked ~ .rate-button__star:before{
-      content: url("../../../../assets/img/star.svg");
+      content: url("../../../../assets/images/star.png");
     }
   }
   &__star{
     height: 100%;
     cursor: pointer;
     &::before{
-      content: url("../../../../assets/img/star_border.svg");
+      content: url("../../../../assets/images/star_border.png");
       display: block;
       transition: .3s;
     }
     &:hover:before, &:hover ~ &:before{
-        content: url("../../../../assets/img/star.svg");
+        content: url("../../../../assets/images/star.png");
     }
   }
 }

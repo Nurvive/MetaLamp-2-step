@@ -1,0 +1,25 @@
+@import "../../../../scss/common/colors";
+
+.pros {
+
+  width: 280px;
+
+  &__container {
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+
+  &__title {
+    color: $dark75;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__text {
+    @extend .pros__title;
+    font-weight: normal;
+  }
+
+
+}

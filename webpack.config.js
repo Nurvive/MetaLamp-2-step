@@ -50,7 +50,7 @@ module.exports = {
                             sourceMap: true
                         }
                     },]
-            },{
+            }, {
                 test: /\.css$/,
                 // include: path.resolve(__dirname, "src/scss"),
                 use: ['style-loader',
@@ -93,7 +93,7 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[name].[hash].[ext]'
                 }
-            },{
+            }, {
                 test: /\.ico$/i,
                 type: 'asset/resource',
                 generator: {

@@ -25,7 +25,7 @@
             include ../../blocks/radio-buttons/radio-buttons
         label(class='form-elements__label' for='toggle') toggle
             include ../../blocks/toggle/toggle
-        label(class='form-elements__label' for='like-button') like button
+        label(class='form-elements__label') like button
             div
                 include ../../blocks/like-button/like-button
         label(class='form-elements__label' for='rate-button') rate button
@@ -36,4 +36,32 @@
     .form-elements__inner
         label(class='form-elements__label' for='range-slider') range slider
             include ../../blocks/range-slider/range-slider
+        label(class='form-elements__label') buttons
+            include ../../blocks/buttons/default-button
+            include ../../blocks/buttons/text-button
+            include ../../blocks/buttons/long-button
+            include ../../blocks/buttons/transparent-button
+            div
+                +default-button
+            div
+                +transparent-button
+            div
+                +text-button
+            div
+                +long-button
+include ../../blocks/pros/pros
+-
+    var obj = [
+        {
+            img: '../../../assets/images/insert_emoticon.png',
+            title: 'Комфорт',
+            text: 'Шумопоглощающие стены',
+        },
+        {
+            images:'../../../assets/images/location_city.png',
+            title:'Удобство',
+            text:'Окно в каждой из спален'
+        }
+            ]
++pros-item(obj)
 include ../../blocks/comment/comment
