@@ -2,7 +2,7 @@ mixin pros-item(obj)
     .pros
         each val in obj
             .pros__container
-                img()
+                img(src = val.img)
                 .pros__inner
                     p.pros__title=val.title
                     p.pros__text=val.text

@@ -1,67 +1,75 @@
-.container.form-elements__container
-    include ../../blocks/text-field/text-field
-    .form-elements__inner
-        label(class='form-elements__label') Text field
-            +text-field
-        label(class='form-elements__label' for='dropdown') dropdown
-            include ../../blocks/dropdown/dropdown
-        label(class='form-elements__label') masked text field
-            include ../../blocks/masked-text-field/masked-text-field
-        label(class='form-elements__label' for='date-dropdown') date Dropdown
-            include ../../blocks/date-dropdown/date-dropdown
-        label(class='form-elements__label' for='filter-date-dropdown') filter date dropdown
-            include ../../blocks/filter-date-dropdown/filter-date-dropdown
-        label(class='form-elements__label') subscription text field
-            include ../../blocks/subscription-text-field/subscription-text-field
-            +subscription-text-field
-        label( class='form-elements__label' for='split-dropdown') split dropdown
-            include ../../blocks/split-dropdown/split-dropdown
-        label(class='form-elements__label' for='expandable-checkbox') expandable checkbox list
-            include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
-    .form-elements__inner
-        label(class='form-elements__label' for='checkbox_buttons') Checkbox Buttons
-            include ../../blocks/checkbox_buttons/checkbox_buttons
-        label(class='form-elements__label' for='radio-buttons') radio buttons
-            include ../../blocks/radio-buttons/radio-buttons
-        label(class='form-elements__label' for='toggle') toggle
-            include ../../blocks/toggle/toggle
-        label(class='form-elements__label') like button
-            div
-                include ../../blocks/like-button/like-button
-        label(class='form-elements__label' for='rate-button') rate button
-            div
-                include ../../blocks/rate-button/rate-button
-        label(class='form-elements__label' for='rich-checkbox-buttons') rich Checkbox Buttons
-            include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
-    .form-elements__inner
-        label(class='form-elements__label' for='range-slider') range slider
-            include ../../blocks/range-slider/range-slider
-        label(class='form-elements__label') buttons
-            include ../../blocks/buttons/default-button
-            include ../../blocks/buttons/text-button
-            include ../../blocks/buttons/long-button
-            include ../../blocks/buttons/transparent-button
-            div
-                +default-button
-            div
-                +transparent-button
-            div
-                +text-button
-            div
-                +long-button
-include ../../blocks/pros/pros
--
-    var obj = [
-        {
-            img: '../../../assets/images/insert_emoticon.png',
-            title: 'Комфорт',
-            text: 'Шумопоглощающие стены',
-        },
-        {
-            images:'../../../assets/images/location_city.png',
-            title:'Удобство',
-            text:'Окно в каждой из спален'
-        }
+extends ../../templates/template
+block title
+    title Toxin
+
+block content
+    .wrapper
+        .container.form-elements__container
+            include ../../blocks/text-field/text-field
+            .form-elements__inner
+                label(class='form-elements__label') Text field
+                    +text-field
+                label(class='form-elements__label' for='dropdown') dropdown
+                    include ../../blocks/dropdown/dropdown
+                label(class='form-elements__label') masked text field
+                    include ../../blocks/masked-text-field/masked-text-field
+                label(class='form-elements__label' for='date-dropdown') date Dropdown
+                    include ../../blocks/date-dropdown/date-dropdown
+                label(class='form-elements__label' for='filter-date-dropdown') filter date dropdown
+                    include ../../blocks/filter-date-dropdown/filter-date-dropdown
+                label(class='form-elements__label') subscription text field
+                    include ../../blocks/subscription-text-field/subscription-text-field
+                    +subscription-text-field
+                label( class='form-elements__label' for='split-dropdown') split dropdown
+                    include ../../blocks/split-dropdown/split-dropdown
+                label(class='form-elements__label' for='expandable-checkbox') expandable checkbox list
+                    include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+            .form-elements__inner
+                label(class='form-elements__label' for='checkbox_buttons') Checkbox Buttons
+                    include ../../blocks/checkbox_buttons/checkbox_buttons
+                label(class='form-elements__label' for='radio-buttons') radio buttons
+                    include ../../blocks/radio-buttons/radio-buttons
+                label(class='form-elements__label' for='toggle') toggle
+                    include ../../blocks/toggle/toggle
+                label(class='form-elements__label') like button
+                    div
+                        include ../../blocks/like-button/like-button
+                label(class='form-elements__label' for='rate-button') rate button
+                    div
+                        include ../../blocks/rate-button/rate-button
+                label(class='form-elements__label' for='rich-checkbox-buttons') rich Checkbox Buttons
+                    include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
+            .form-elements__inner
+                label(class='form-elements__label' for='range-slider') range slider
+                    include ../../blocks/range-slider/range-slider
+                label(class='form-elements__label') buttons
+                    include ../../blocks/buttons/default-button
+                    include ../../blocks/buttons/text-button
+                    include ../../blocks/buttons/long-button
+                    include ../../blocks/buttons/transparent-button
+                    div
+                        +default-button
+                    div
+                        +transparent-button
+                    div
+                        +text-button
+                    div
+                        +long-button
+                label(class='form-elements__label') pagination
+                    include ../../blocks/pagination/pagination
+        include ../../blocks/pros/pros
+        -
+            var obj = [
+                {
+                    img: '../../../assets/images/insert_emoticon.png',
+                    title: 'Комфорт',
+                    text: 'Шумопоглощающие стены',
+                },
+                {
+                    img: '../../../assets/images/location_city.png',
+                    title: 'Удобство',
+                    text: 'Окно в каждой из спален'
+                }
             ]
-+pros-item(obj)
-include ../../blocks/comment/comment
+        +pros-item(obj)
+        include ../../blocks/comment/comment

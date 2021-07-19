@@ -4,13 +4,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpack = require('webpack')
-const PATHS = {
-    src: path.join(__dirname, './src'),
-    dist: path.join(__dirname, './dist'),
-}
-const PAGES_DIR = `${PATHS.src}/pug/`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
-
+// const PATHS = {
+//     src: path.join(__dirname, './src'),
+//     dist: path.join(__dirname, './dist'),
+// }
+// const PAGES_DIR = `${PATHS.src}/pug/pages`
+// const DIRS = fs.readdirSync(PAGES_DIR)
+// let PAGES = DIRS.map(function (DIR) {
+//     return DIR + '/' + fs.readdirSync(path.join(PATHS.src + '/pug/pages', DIR)).filter(fileName => fileName.endsWith('.pug'))
+// })
+// PAGES = PAGES.map((item) => item.toString())
+const PAGES = fs.readdirSync(path.join(__dirname, "./src/pug/pages"));
 module.exports = {
     entry: './src/js/main.js',
     mode: 'development',
@@ -91,7 +95,7 @@ module.exports = {
                 test: /\.(png|jpe?g|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/images/[name].[hash].[ext]'
+                    filename: 'assets/images/[name].[hash][ext]'
                 }
             }, {
                 test: /\.ico$/i,
@@ -114,10 +118,17 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: './[name].css'
         }),
-        ...PAGES.map(page => new HtmlWebpackPlugin({
-            template: `${PAGES_DIR}/${page}`,
-            filename: `${PATHS.dist}/${page.replace(/\.pug/, '.html')}`
-        })),
+        // ...PAGES.map(page => new HtmlWebpackPlugin({
+        //     template: `${PAGES_DIR}/${page}`,
+        //     filename: `${PATHS.dist}/${page.replace(/\.pug/, '.html')}`
+        // })),
+        ...PAGES.map(
+            (page) =>
+                new HtmlWebpackPlugin({
+                    filename: `${page}.html`,
+                    template: `./src/pug/pages/${page}/${page}.pug`,
+                })
+        ),
         new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             $: "jquery",
