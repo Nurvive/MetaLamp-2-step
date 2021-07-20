@@ -58,19 +58,26 @@ block content
                 label(class='form-elements__label') pagination
                     include ../../blocks/pagination/pagination
                 label(class='form-elements__label') bullet list
-        include ../../blocks/pros/pros
-        -
-            var obj = [
-                {
-                    img: '../../../assets/images/insert_emoticon.png',
-                    title: 'Комфорт',
-                    text: 'Шумопоглощающие стены',
-                },
-                {
-                    img: '../../../assets/images/location_city.png',
-                    title: 'Удобство',
-                    text: 'Окно в каждой из спален'
-                }
-            ]
-        +pros-item(obj)
-        include ../../blocks/comment/comment
+                    include ../../blocks/bullet-list/bullet-list
+                    -
+                        var arr = ['Нельзя с питомцами',
+                            'Без вечеринок и мероприятий',
+                            'Время прибытия — после 13:00, а выезд до 12:00']
+                    +bullet-list(arr)
+        div.low-container
+            include ../../blocks/pros/pros
+            -
+                var obj = [
+                    {
+                        img: '../../../assets/images/insert_emoticon.png',
+                        title: 'Комфорт',
+                        text: 'Шумопоглощающие стены',
+                    },
+                    {
+                        img: '../../../assets/images/location_city.png',
+                        title: 'Удобство',
+                        text: 'Окно в каждой из спален'
+                    }
+                ]
+            +pros-item(obj)
+            include ../../blocks/comment/comment
