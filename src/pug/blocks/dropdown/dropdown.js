@@ -1,4 +1,4 @@
-import './dropdown.pug'
+
 import './dropdown-kit/dropdown.scss'
 
 $().ready(function () {

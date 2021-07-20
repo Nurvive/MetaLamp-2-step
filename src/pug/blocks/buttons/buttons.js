@@ -1,5 +1,2 @@
-import './default-button.pug'
-import './long-button.pug'
-import './text-button.pug'
-import './transparent-button.pug'
+
 import './buttons-kit/buttons.scss'

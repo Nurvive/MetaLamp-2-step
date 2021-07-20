@@ -1,4 +1,4 @@
-import './filter-date-dropdown.pug'
+
 import './filter-date-dropdown-kit/filter-date-dropdown.scss'
 import 'air-datepicker/dist/css/datepicker.min.css';
 import 'air-datepicker'

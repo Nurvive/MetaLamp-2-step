@@ -1,4 +1,4 @@
-import './expandable-checkbox-list.pug'
+
 import './expandable-checkbox-list-kit/expandable-checkbox-list.scss'
 function ReverseObject(Obj) {
     let NewObj = [];

@@ -1,6 +1,6 @@
-import './range-slider.pug'
+
 import './range-slider-kit/range-slider.scss'
-// import 'jquery'
+
 import 'ion-rangeslider'
 import 'ion-rangeslider/css/ion.rangeSlider.min.css'
 $(".range-slider__slider").ionRangeSlider({

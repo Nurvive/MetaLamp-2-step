@@ -1,4 +1,4 @@
-import './split-dropdown.pug'
+
 import './split-dropdown-kit/split-dropdown.scss'
 
 $().ready(function () {

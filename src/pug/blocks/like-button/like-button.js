@@ -1,4 +1,4 @@
-import './like-button.pug'
+
 import './like-button-kit/like-button.scss'
 
 $().ready(()=>{
