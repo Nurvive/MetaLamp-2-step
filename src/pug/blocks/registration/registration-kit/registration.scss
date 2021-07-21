@@ -1,0 +1,29 @@
+@import "../../../../scss/common/colors";
+.registration{
+  width: 380px;
+  &__layout{
+    margin-bottom: 20px;
+    &-text{
+      color:$dark100;
+      font-weight: bold;
+      line-height: 29px;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      &_big{
+        font-size: 24px;
+        text-transform: initial;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__input{
+    margin-bottom: 10px;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
