@@ -1,12 +1,13 @@
-div.dropdown(id='dropdown')
-    .dropdown__input-wrapper
-        span.dropdown__open-button
-        include ../text-field/text-field
-        +text-field(readonly='readonly' placeholder='Сколько гостей' class='dropdown__input')
-    ul.dropdown__list
-        -var obj = ["взрослые",'дети',"младенцы"]
-        include dropdown-kit/dropdown-mixins
-        +dropdown-item(obj)
-        li.dropdown__item-interactive
-            p.dropdown__interactive-word#clear очистить
-            p.dropdown__interactive-word#confirm применить
+mixin dropdown(id)
+    div.dropdown(id=id)
+        .dropdown__input-wrapper
+            span.dropdown__open-button
+            include ../text-field/text-field
+            +text-field(readonly='readonly' placeholder='Сколько гостей' class='dropdown__input')
+        ul.dropdown__list
+            -var obj = ["взрослые",'дети',"младенцы"]
+            include dropdown-kit/dropdown-mixins
+            +dropdown-item(obj)
+            li.dropdown__item-interactive
+                p.dropdown__interactive-word#clear очистить
+                p.dropdown__interactive-word#confirm применить

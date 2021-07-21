@@ -1,0 +1,35 @@
+@import "../../../../scss/common/colors";
+
+.find-room{
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  width: 380px;
+  height: 374px;
+  padding: 40px 30px 30px;
+  &__title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $dark100;
+  }
+  &__dates{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  &__layout{
+    &-text{
+      color:$dark100;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 5px;
+    }
+  }
+  &__long-button-wrapper{
+    margin-top: 30px;
+  }
+}

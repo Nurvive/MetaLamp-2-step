@@ -1,0 +1,17 @@
+.find-room
+    p.find-room__title Найдём номера под ваши пожелания
+    .find-room__dates
+        include ../date-dropdown/date-dropdown
+        div.find-room__layout
+            p.find-room__layout-text прибытие
+            +date-dropdown('find-room__date-dropdown_start', 'find-room__date-dropdown')(id = 'find-room__date-dropdown1')
+        div.find-room__layout
+            p.find-room__layout-text выезд
+            +date-dropdown('find-room__date-dropdown_end', 'find-room__date-dropdown')(id = 'find-room__date-dropdown2')
+    div.find-room__layout
+        p.find-room__layout-text гости
+        include ../dropdown/dropdown
+        +dropdown('find-room__dropdown')
+    include ../buttons/long-button
+    .find-room__long-button-wrapper
+        +long-button('подобрать номер')

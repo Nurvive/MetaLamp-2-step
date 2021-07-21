@@ -1,4 +1,5 @@
-mixin long-button
+mixin long-button(text)
+    -var newText = text || 'lorem'
     .long-button
-        .long-button__text перейти к оплате
+        .long-button__text=newText
         .long-button__arrow
