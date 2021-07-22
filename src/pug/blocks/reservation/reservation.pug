@@ -13,9 +13,11 @@
             }
         ]
     .reservation__info
-        p.reservation__info-number № 888
+        p.reservation__info-number 888
             span.reservation__info-type люкс
-        p.reservation__info-cost 9 990₽ в сутки
+        p.reservation__info-cost
+            strong 9 990₽
+            span в сутки
     .reservation__dates
         include ../double-date-dropdown/double-date-dropdown
         +double-date-dropdown(obj)
@@ -23,3 +25,11 @@
         p.reservation__layout-text гости
         include ../dropdown/dropdown
         +dropdown('reservation__dropdown', 'default')
+    .reservation__services
+        -var obj = {'9 990₽ х 4 суток':'39 960₽', 'Сбор за услуги: скидка 2 179₽':'0₽','Сбор за дополнительные услуги':'300₽'}
+        include ./reservation-kit/reservation-mixin
+        +services(obj)
+    .reservation__total
+        p.reservation__total-text Итого
+        .reservation__total-border
+        p.reservation__total-price 38 081₽

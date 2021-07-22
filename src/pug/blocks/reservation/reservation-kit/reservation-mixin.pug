@@ -1,0 +1,6 @@
+mixin services(obj)
+    ul.reservation__list
+        each price,text in obj
+            li.reservation__item
+                p.reservation__service=text
+                p.reservation__price=price

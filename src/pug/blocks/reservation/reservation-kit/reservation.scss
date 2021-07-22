@@ -1,4 +1,99 @@
-.reservation{
-  width:380px;
+@import "../../../../scss/common/colors";
+
+.reservation {
+  width: 380px;
+
+  &__info {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    &-number {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: $dark100;
+      position: relative;
+      margin-left: 22px;
+      &::before{
+        position: absolute;
+        left: -22px;
+        bottom: 3px;
+        content: '№';
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &-type {
+      color: $purple;
+      text-transform: uppercase;
+      line-height: 15px;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+    &-cost{
+      color: $dark50;
+      & strong{
+        font-size: 14px;
+      }
+      & span{
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__dates{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__layout-text{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $dark100;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__services{
+    margin: 20px 0 30px;
+
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__service{
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark75;
+  }
+  &__price{
+    @extend .reservation__service;
+  }
+  &__total{
+    display: flex;
+    &-text{
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+      color:$dark100
+    }
+    &-border{
+      flex-grow: 1;
+      border-bottom: 1px dotted $dark25;
+      height: 18px;
+    }
+    &-price{
+      @extend .reservation__total-text;
+    }
+
+  }
 
 }
