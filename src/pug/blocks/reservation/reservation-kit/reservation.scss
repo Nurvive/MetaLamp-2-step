@@ -58,7 +58,6 @@
   }
   &__services{
     margin: 20px 0 30px;
-
   }
   &__list{
     display: flex;
@@ -73,9 +72,14 @@
     font-size: 14px;
     line-height: 24px;
     color: $dark75;
+    max-width: 214px;
+    margin-right: auto;
   }
   &__price{
     @extend .reservation__service;
+    width: 77px;
+    text-align: right;
+    margin-right: initial;
   }
   &__total{
     display: flex;
@@ -95,5 +99,32 @@
     }
 
   }
+  &__button{
+    margin-top: 20px;
+  }
+  &__info-label{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../../../assets/images/info.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
 
+    &-text{
+      z-index: -1;
+      position: absolute;
+      display: block;
+      opacity: 0;
+      transition: opacity .2s;
+      background: #c7c7cf;
+      bottom: 30px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    &:hover &-text{
+      opacity: 1;
+      z-index: 1;
+    }
+  }
 }

@@ -26,10 +26,34 @@
         include ../dropdown/dropdown
         +dropdown('reservation__dropdown', 'default')
     .reservation__services
-        -var obj = {'9 990₽ х 4 суток':'39 960₽', 'Сбор за услуги: скидка 2 179₽':'0₽','Сбор за дополнительные услуги':'300₽'}
+        -
+            var obj = [
+                {
+                    text: '9 990₽ х 4 суток',
+                    info:false,
+                    price: '39 960₽'
+                },
+
+                {
+                    text: 'Сбор за услуги: скидка 2 179₽',
+                    info: true,
+                    infoText:'Скидка за красивые глаза',
+                    price: '0₽'
+                },
+                {
+                    text: 'Сбор за дополнительные услуги',
+                    info: true,
+                    infoText: 'Сбор за красивые глаза',
+                    price: '300₽'
+                }
+            ]
+
         include ./reservation-kit/reservation-mixin
         +services(obj)
     .reservation__total
         p.reservation__total-text Итого
         .reservation__total-border
         p.reservation__total-price 38 081₽
+    .reservation__button
+        include ../buttons/long-button
+        +long-button('забронировать')
