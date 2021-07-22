@@ -1,9 +1,0 @@
-div.split-dropdown(id='split-dropdown')
-    .split-dropdown__input-wrapper
-        span.split-dropdown__open-button
-        include ../text-field/text-field
-        +text-field(readonly='readonly' placeholder='Сколько комнат' class='split-dropdown__input')
-    ul.split-dropdown__list
-        -var obj = ["спальни",'кровати',"ванные комнаты"]
-        include split-dropdown-kit/split-dropdown-mixin
-        +split-dropdown-item(obj)

@@ -11,7 +11,7 @@ block content
                     +text-field
                 label(class='form-elements__label' for='dropdown') dropdown
                     include ../../blocks/dropdown/dropdown
-                    +dropdown('dropdown')
+                    +dropdown('dropdown', 'default')
                 label(class='form-elements__label') masked text field
                     include ../../blocks/masked-text-field/masked-text-field
                 label(class='form-elements__label' for='date-dropdown') date Dropdown
@@ -23,7 +23,8 @@ block content
                     include ../../blocks/subscription-text-field/subscription-text-field
                     +subscription-text-field
                 label( class='form-elements__label' for='split-dropdown') split dropdown
-                    include ../../blocks/split-dropdown/split-dropdown
+                    include ../../blocks/dropdown/dropdown
+                    +dropdown('split-dropdown', 'rooms')
                 label(class='form-elements__label' for='expandable-checkbox') expandable checkbox list
                     include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
             .form-elements__inner

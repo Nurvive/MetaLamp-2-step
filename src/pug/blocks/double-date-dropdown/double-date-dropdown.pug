@@ -1,0 +1,8 @@
+mixin double-date-dropdown(obj)
+    -var n = 1;
+    include ../date-dropdown/date-dropdown
+    each val in obj
+        div.find-room__layout
+            p.find-room__layout-text=val.text
+            +date-dropdown(val.idUnique,val.class)(id = val.id + n)
+        -n++

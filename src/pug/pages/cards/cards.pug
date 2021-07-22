@@ -4,6 +4,10 @@ block title
 
 block content
     .wrapper
-        .container
-            include ../../blocks/find-room/find-room
-            include ../../blocks/registration/registration
+        .container.cards__container
+            div.cards__item
+                include ../../blocks/find-room/find-room
+            div.cards__item
+                include ../../blocks/registration/registration
+            div.cards__item
+                include ../../blocks/reservation/reservation

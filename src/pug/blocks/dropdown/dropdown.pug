@@ -1,13 +1,26 @@
-mixin dropdown(id)
-    div.dropdown(id=id)
+mixin dropdown(id, type)
+    -
+        var placeholder = ''
+        var hasButtons = false
+        var className = ' dropdown-' + type
+    if type === 'default'
+        -
+            var hasButtons = true
+            placeholder = 'Сколько гостей'
+            var obj = ["взрослые", 'дети', "младенцы"]
+    else if type = 'rooms'
+        -
+            var obj = ["спальни", 'кровати', "ванные комнаты"]
+            placeholder = 'Сколько комнат'
+    div.dropdown(id=id class=className)
         .dropdown__input-wrapper
             span.dropdown__open-button
             include ../text-field/text-field
-            +text-field(readonly='readonly' placeholder='Сколько гостей' class='dropdown__input')
+            +text-field(readonly='readonly' placeholder=placeholder class='dropdown__input')
         ul.dropdown__list
-            -var obj = ["взрослые",'дети',"младенцы"]
             include dropdown-kit/dropdown-mixins
             +dropdown-item(obj)
-            li.dropdown__item-interactive
-                p.dropdown__interactive-word#clear очистить
-                p.dropdown__interactive-word#confirm применить
+            if hasButtons
+                li.dropdown__item-interactive
+                    p.dropdown__interactive-word.clear очистить
+                    p.dropdown__interactive-word.confirm применить
