@@ -16,3 +16,25 @@ block content
             div.cards__item
                 include ../../blocks/calendar/calendar
                 +calendar
+            div.cards__item
+                include ../../blocks/room-card/room-card
+                -
+                    var obj = {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145
+                    }
+                +room-card(obj)
+                -
+                    var obj = {
+                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                                number: '56',
+                                type: '',
+                                cost: '990₽',
+                                rating: 2,
+                                reviews: 14
+                            }
+                +room-card(obj)

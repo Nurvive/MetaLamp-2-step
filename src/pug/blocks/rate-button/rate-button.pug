@@ -1,9 +1,13 @@
-.rate-button#rate-button
-    .rate-button__inner
-         -var n = 5;
-         while n > 0
-            input(id = 'rate-button__item' + n class='rate-button__item' value=n type="radio" name='rating')
-            label(class="rate-button__star" for='rate-button__item' + n)
-            -n--;
+mixin rate-button(count)
+    .rate-button
+        .rate-button__inner
+            -var n = 5;
+            while n > 0
+                if n === count
+                    input(checked id = 'rate-button__item' + n class='rate-button__item' value=n type="radio" name='rating')
+                else
+                    input(id = 'rate-button__item' + n class='rate-button__item' value=n type="radio" name='rating')
+                label(class="rate-button__star" for='rate-button__item' + n)
+                -n--;
 
 

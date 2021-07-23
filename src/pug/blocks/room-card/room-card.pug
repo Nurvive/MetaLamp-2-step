@@ -1,0 +1,21 @@
+mixin room-card(options)
+    .room-card
+        .room-card__top
+            each src in options.images
+                img(class='room-card__top-img' src=src)
+        .room-card__content
+            ul.room-card__list
+                li.room-card__item
+                    .room-card__number
+                        strong=options.number
+                        if options.type
+                            span.room-card__type=options.type
+                    .room-card__price
+                        strong=options.cost
+                        span  в сутки
+                li.room-card__item
+                    include ../rate-button/rate-button
+                    +rate-button(options.rating)
+                    .room-card__reviews
+                        strong.room-card__reviews-text=options.reviews
+                        span  отзывов
