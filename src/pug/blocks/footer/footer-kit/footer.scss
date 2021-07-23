@@ -2,74 +2,71 @@
 @import "../../../../scss/common/functions";
 .footer{
   padding-top: rem(104);
+  background-color: #FFFFFF;
+  position: relative;
   &__container{
     padding: 0 15px;
   }
-}
-
-.footer__top{
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: rem(100);
-  &-description{
-    max-width: rem(260);
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: rem(100);
+    &-description{
+      max-width: rem(260);
+    }
   }
-}
-
-.footer__description-text{
-  margin-top: 11px;
-  line-height: 24px;
-  color: $dark75;
-}
-
-.footer__column-list{
-  max-width: rem(150);
-  text-transform: uppercase;
-  color: $dark100;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.footer__column-item{
-  font-size: 14px;
-  line-height: 17px;
-  font-style: normal;
-  font-weight: normal;
-  color: $dark50;
-  text-transform: none;
-  margin-top: 22px;
-  display: block;
-}
-
-.footer__subscribe{
-  @extend .footer__column-list;
-  max-width: rem(260);
-  &-text{
-    @extend .footer__column-item;
-    line-height: 23px;
-  }
-
-}
-
-
-.footer-line{
-  position: absolute;
-  width: 4000px;
-  height: 1px;
-  right: 0;
-  border-top: 1px solid rgba(31, 32, 65, 0.1);
-}
-.footer__down{
-  position: relative;
-  padding: 26px 0;
-  display: flex;
-  justify-content: space-between;
-  &-copyright{
+  &__description-text{
+    margin-top: 11px;
+    line-height: 24px;
     color: $dark75;
+  }
+  &__column-list{
+    max-width: rem(150);
+    text-transform: uppercase;
+    color: $dark100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &__column-item{
+    font-size: 14px;
     line-height: 17px;
+    font-style: normal;
+    font-weight: normal;
+    color: $dark50;
+    text-transform: none;
+    margin-top: 22px;
+    display: block;
+  }
+  &__subscribe{
+    @extend .footer__column-list;
+    max-width: rem(260);
+    &-text{
+      @extend .footer__column-item;
+      line-height: 23px;
+    }
+
+  }
+  &-line{
+    //width: 4000px;
+    width: 1440px;
+    position: absolute;
+    height: 1px;
+    bottom: 70px;
+    border-top: 1px solid rgba(31, 32, 65, 0.1);
+  }
+  &__down{
+    position: relative;
+    padding: 26px 0;
+    display: flex;
+    justify-content: space-between;
+    &-copyright{
+      color: $dark75;
+      line-height: 17px;
+    }
   }
 }
+
 
 .social-media{
   display: flex;
