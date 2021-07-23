@@ -1,10 +1,15 @@
 @import "../../../../scss/common/colors";
 
 .default-button{
-  display: inline-block;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-  padding: 14px 19px;
+  height: 44px;
+  max-width: 99px;
+  width: 100%;
   cursor: pointer;
   transition: .2s;
   &__text{
@@ -59,8 +64,10 @@
     width: 15px;
     height: 2px;
     background-color: white;
-    left: 100%;
+    //left: 100%;
     top:-8px;
+    left: 45%;
+
     transform: translateX(-50%);
     &::after{
       content: '';

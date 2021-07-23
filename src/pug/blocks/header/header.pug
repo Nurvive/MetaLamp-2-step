@@ -26,7 +26,8 @@ header.header
                                 a О Воде
             .header__buttons
                     include header-kit/header-mixins
-                    if isAuthorized
+                    - var isAuthorized = isAuthorized || false
+                    if !isAuthorized
                         +log-in-buttons
                     else
                         +cabinet-button

@@ -1,5 +1,7 @@
-mixin long-button(text)
+mixin long-button(text, arrow)
     -var newText = text || 'lorem'
+    -var arrow = arrow || false
     .long-button
         .long-button__text=newText
-        .long-button__arrow
+        if arrow
+            .long-button__arrow
