@@ -1,0 +1,32 @@
+@import "../../../../scss/common/colors";
+
+.login{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 380px;
+  &__title{
+    &-text{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: $dark100;
+    }
+  }
+  &__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__bottom{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text{
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
