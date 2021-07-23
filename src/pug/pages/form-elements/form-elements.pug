@@ -7,45 +7,58 @@ block content
         .container.form-elements__container
             include ../../blocks/text-field/text-field
             .form-elements__inner
-                label(class='form-elements__label') Text field
+                div(class='form-elements__label') Text field
                     +text-field
-                label(class='form-elements__label' for='dropdown') dropdown
+                div(class='form-elements__label') dropdown
                     include ../../blocks/dropdown/dropdown
                     +dropdown('dropdown', 'default')
-                label(class='form-elements__label') masked text field
+                div(class='form-elements__label') masked text field
                     include ../../blocks/masked-text-field/masked-text-field
-                label(class='form-elements__label' for='date-dropdown') date Dropdown
+                div(class='form-elements__label') date Dropdown
                     include ../../blocks/date-dropdown/date-dropdown
-                    +date-dropdown('date-dropdown')
-                label(class='form-elements__label' for='filter-date-dropdown') filter date dropdown
-                    include ../../blocks/filter-date-dropdown/filter-date-dropdown
-                label(class='form-elements__label') subscription text field
+                    -
+                        var options={
+                            id:'date-dropdown',
+                            className:'',
+                            range:''
+                        }
+                    +date-dropdown(options)
+                div(class='form-elements__label') filter date dropdown
+                    -
+                        var options = {
+                            id: 'filter-date-dropdown',
+                            className: 'filter-date-dropdown',
+                            range: 'true'
+                        }
+                    +date-dropdown(options)
+                div(class='form-elements__label') subscription text field
                     include ../../blocks/subscription-text-field/subscription-text-field
                     +subscription-text-field
-                label( class='form-elements__label' for='split-dropdown') split dropdown
+                div( class='form-elements__label') split dropdown
                     include ../../blocks/dropdown/dropdown
                     +dropdown('split-dropdown', 'rooms')
-                label(class='form-elements__label' for='expandable-checkbox') expandable checkbox list
+                div(class='form-elements__label') expandable checkbox list
                     include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
             .form-elements__inner
-                label(class='form-elements__label' for='checkbox_buttons') Checkbox Buttons
+                div(class='form-elements__label') Checkbox Buttons
                     include ../../blocks/checkbox_buttons/checkbox_buttons
-                label(class='form-elements__label' for='radio-buttons') radio buttons
+                div(class='form-elements__label') radio buttons
                     include ../../blocks/radio-buttons/radio-buttons
-                label(class='form-elements__label' for='toggle') toggle
+                div(class='form-elements__label') toggle
                     include ../../blocks/toggle/toggle
-                label(class='form-elements__label') like button
+                div(class='form-elements__label') like button
                     div
                         include ../../blocks/like-button/like-button
-                label(class='form-elements__label' for='rate-button') rate button
+                div(class='form-elements__label') rate button
                     div
                         include ../../blocks/rate-button/rate-button
-                label(class='form-elements__label' for='rich-checkbox-buttons') rich Checkbox Buttons
+                        +rate-button
+                div(class='form-elements__label') rich Checkbox Buttons
                     include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
             .form-elements__inner
-                label(class='form-elements__label' for='range-slider') range slider
+                div(class='form-elements__label') range slider
                     include ../../blocks/range-slider/range-slider
-                label(class='form-elements__label') buttons
+                div(class='form-elements__label') buttons
                     include ../../blocks/buttons/default-button
                     include ../../blocks/buttons/text-button
                     include ../../blocks/buttons/long-button
@@ -58,9 +71,9 @@ block content
                         +text-button
                     div
                         +long-button
-                label(class='form-elements__label') pagination
+                div(class='form-elements__label') pagination
                     include ../../blocks/pagination/pagination
-                label(class='form-elements__label') bullet list
+                div(class='form-elements__label') bullet list
                     include ../../blocks/bullet-list/bullet-list
                     -
                         var arr = ['Нельзя с питомцами',

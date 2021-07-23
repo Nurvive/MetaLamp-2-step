@@ -4,10 +4,10 @@ import 'air-datepicker'
 $().ready(function () {
     $('.date-dropdown-input').datepicker({
         onShow: function (inst, animationCompleted) {
-            $('#date-dropdown').addClass('date-dropdown_active')
+            $(this).addClass('date-dropdown_active')
         },
         onHide: function (inst, animationCompleted) {
-            $('#date-dropdown').removeClass('date-dropdown_active')
+            $(this).removeClass('date-dropdown_active')
         },
     })
 })
