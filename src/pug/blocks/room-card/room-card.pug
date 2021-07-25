@@ -15,7 +15,7 @@ mixin room-card(options)
                         span  в сутки
                 li.room-card__item
                     include ../rate-button/rate-button
-                    +rate-button(options.rating)
+                    +rate-button(options.rating, options.uniqueID)
                     .room-card__reviews
                         strong.room-card__reviews-text=options.reviews
                         span  отзывов
