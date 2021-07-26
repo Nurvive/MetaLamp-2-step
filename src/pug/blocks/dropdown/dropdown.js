@@ -56,9 +56,13 @@ class Dropdown {
     decrease() {
         let index = event.target.dataset.index;
         let counter = this.counters[index];
+        let node = this.minus[index]
         if (counter.innerHTML > 0) {
             counter.innerHTML--
             this.gCount--
+        }
+        if(Number(counter.innerHTML) === 0){
+            node.classList.add('dropdown__item-minus_inactive')
         }
         this.countingGuests()
     }
@@ -66,6 +70,8 @@ class Dropdown {
     increase() {
         let index = event.target.dataset.index;
         let counter = this.counters[index];
+        let minus = this.minus[index]
+        minus.classList.remove('dropdown__item-minus_inactive')
         counter.innerHTML++
         this.gCount++
         this.countingGuests()

@@ -73,6 +73,9 @@
         left:50%;
         transform: translate(-50%,-50%);
       }
+      &_inactive{
+        opacity: 0.5;
+      }
     }
     &-count{
       margin: 0 9px;
