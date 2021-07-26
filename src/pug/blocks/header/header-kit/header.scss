@@ -11,6 +11,8 @@
   &__menu-wrapper{
     display: flex;
     align-items: center;
+    z-index: 2;
+
   }
   &__menu {
     display: flex;
@@ -20,11 +22,14 @@
       color: $dark50;
       position: relative;
 
-      &:first-child {
-        font-weight: bold;
-        color:$dark100;
-      }
-
+      //&:first-child {
+      //  font-weight: bold;
+      //  color:$dark100;
+      //}
+      //&:hover > a, &:hover > ul {
+      //  font-weight: bold;
+      //  color: $dark100;
+      //}
       & > .header__menu-dropdown {
         margin-right: rem(44);
       }
@@ -59,7 +64,9 @@
     border-radius: 8px;
     left: 0;
     border: 1px solid black;
+    font-weight: initial;
     padding: 4px;
+    background-color: #FFFFFF;
     & a{
       margin: 0;
     }
