@@ -26,11 +26,14 @@ class Dropdown {
     constructor(component) {
         this.component = component;
         this.gCount = 0;
+        this.inputWrapper = this.component.querySelector('.dropdown__input-wrapper')
+        this.list = this.component.querySelector('.dropdown__list')
         this.input = this.component.querySelector(".dropdown__input");
         this.plus = this.component.querySelectorAll(".dropdown__item-plus");
         this.minus = this.component.querySelectorAll(".dropdown__item-minus");
         this.counters = this.component.querySelectorAll(".dropdown__item-count");
         this.clears = this.component.querySelectorAll('.clear')
+        this.confirms = this.component.querySelectorAll('.confirm')
         this.attachEventHandlers();
 
     }
@@ -44,6 +47,9 @@ class Dropdown {
         })
         this.clears.forEach((node) => {
             node.addEventListener('click', () => this.clear())
+        })
+        this.confirms.forEach((node) => {
+            node.addEventListener('click', () => this.confirm())
         })
     }
 
@@ -79,6 +85,11 @@ class Dropdown {
         this.counters.forEach((node) => {
             node.innerHTML = 0
         })
+    }
+    confirm(){
+        this.input.classList.remove('dropdown__input_active')
+        this.list.classList.remove('dropdown__list_active')
+        this.inputWrapper.classList.remove('dropdown__input-wrapper_active')
     }
 }
 

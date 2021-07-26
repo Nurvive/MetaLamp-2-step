@@ -1,0 +1,11 @@
+extends ../../templates/template
+block title
+    title landing
+
+block content
+    .wrapper.landing
+        include ../../blocks/header/header
+        .landing__main
+            include ../../blocks/find-room/find-room
+            span.landing__main-text Лучшие номера для вашей работы, отдыха и просто вдохновения
+        include ../../blocks/footer/footer

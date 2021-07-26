@@ -1,0 +1,22 @@
+@import "../../../../scss/common/colors";
+
+.landing{
+  &__main{
+    height: 830px;
+    background-image: url("../../../../assets/images/landing-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px 0 0 140px;
+    position: relative;
+    &-text{
+      position: absolute;
+      font-size: 14px;
+      line-height: 24px;
+      color:$dark75;
+      right: 134px;
+      bottom: 18px;
+      max-width: 300px;
+      text-align: right;
+    }
+  }
+}
