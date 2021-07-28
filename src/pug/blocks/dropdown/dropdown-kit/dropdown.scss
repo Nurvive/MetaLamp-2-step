@@ -34,7 +34,7 @@
     border-top: none;
     box-shadow: 0 10px 20px $dark5;
     border-radius: 0 0 5px 5px;
-    padding: 13px 7px 13px 15px;
+    padding: 5px 7px 13px 15px;
     background-color: #fff;
     display: none;
     z-index: 4;
@@ -48,7 +48,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 7px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +99,7 @@
   &__item-interactive{
     display: flex;
     justify-content: space-between;
+    margin-top: 21px;
   }
   &__interactive-word{
     font-weight: bold;

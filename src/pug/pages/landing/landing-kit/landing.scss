@@ -4,7 +4,7 @@
   &__main{
     height: 830px;
     background-image: url("../../../../assets/images/landing-background.png");
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     padding: 70px 0 0 140px;
     position: relative;
@@ -14,7 +14,7 @@
       line-height: 24px;
       color:$dark75;
       right: 134px;
-      bottom: 18px;
+      bottom: 20px;
       max-width: 300px;
       text-align: right;
     }

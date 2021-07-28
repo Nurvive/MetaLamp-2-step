@@ -4,6 +4,9 @@
   padding-top: rem(104);
   background-color: #FFFFFF;
   position: relative;
+  &__logo{
+    margin-top: -3px;
+  }
   &__container{
     padding: 0 15px;
   }
@@ -16,7 +19,7 @@
     }
   }
   &__description-text{
-    margin-top: 11px;
+    margin-top: 14px;
     line-height: 24px;
     color: $dark75;
   }
@@ -44,6 +47,7 @@
     &-text{
       @extend .footer__column-item;
       line-height: 23px;
+      margin-bottom: 21px;
     }
 
   }
@@ -65,22 +69,23 @@
       line-height: 17px;
     }
   }
-}
-
-
-.social-media{
-  display: flex;
-  &__link{
-    display: block;
-    margin-left: 20px;
-    line-height: 23px;
-    font-size: 24px;
-    background: linear-gradient(180deg,#BC9CFF, #8BA4F9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: -8px;
+  &__social-media{
+    display: flex;
+    &-link{
+      display: block;
+      margin-left: 23px;
+      line-height: 23px;
+      font-size: 24px;
+      background: linear-gradient(180deg,#BC9CFF, #8BA4F9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: -6px;
+    }
   }
 }
+
+
+
 
 
 

@@ -14,7 +14,7 @@
   &__dates{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 21px 0;
   }
   &__layout{
 
@@ -33,4 +33,10 @@
   & &__date-text-field{
     max-width: 150px;
   }
+}
+.text-buttons{
+  display: flex;
+  justify-content: space-between;
+  font-family: Montserrat, sans-serif;
+  margin-top: 16px;
 }
