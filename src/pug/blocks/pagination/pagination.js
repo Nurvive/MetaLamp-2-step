@@ -17,7 +17,13 @@ $().ready(() => {
             autoHideNext: true,
             autoHidePrevious: true,
             prevText: `<div class='pagination__arrow-prev'></div>`,
-            nextText: `<div class='pagination__arrow-next'></div>`
+            nextText: `<div class='pagination__arrow-next'></div>`,
+            callback:function(data, pagination) {
+                $('.pagination__info1').text(data[0]);
+                $('.pagination__info2').text(data[data.length - 1]);
+                $('.pagination__info3').text(pagination.totalNumber);
+
+            }
         })
     }
 })
