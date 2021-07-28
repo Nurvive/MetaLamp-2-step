@@ -17,6 +17,7 @@
     margin: 20px 0;
   }
   &__layout{
+
     &-text{
       color:$dark100;
       text-transform: uppercase;
@@ -28,5 +29,8 @@
   }
   &__long-button-wrapper{
     margin-top: 30px;
+  }
+  & &__date-text-field{
+    max-width: 150px;
   }
 }

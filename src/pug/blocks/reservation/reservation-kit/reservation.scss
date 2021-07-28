@@ -127,4 +127,7 @@
       z-index: 1;
     }
   }
+  & &__date-text-field{
+    max-width: 150px;
+  }
 }

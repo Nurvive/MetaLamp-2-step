@@ -5,20 +5,11 @@ $().ready(function () {
         $end = $('#reservation__date-dropdown_end');
 
     $start.datepicker({
-        onSelect: function (fd, date) {
-            $end.data('datepicker')
-                .update('minDate', date);
-
-            $end.focus();
-        }
-    })
-    $end.datepicker({
-        onSelect: function (fd, date) {
-            $start.data('datepicker')
-                .update('maxDate', date)
+        onSelect: function (fd, d, picker) {
+            $start.val(fd.split("-")[0]);
+            $end.val(fd.split("-")[1]);
         }
     })
 })
-
 
 

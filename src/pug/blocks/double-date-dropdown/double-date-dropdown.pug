@@ -1,9 +1,11 @@
 mixin double-date-dropdown(obj)
     -var n = 1;
     include ../date-dropdown/date-dropdown
-    each val in obj
-        div.find-room__layout
-            p.find-room__layout-text=val.text
-            -var options = {id:val.idUnique, className:val.class}
-            +date-dropdown(options)(id = val.id + n)
-        -n++
+    include ../text-field/text-field
+    div.find-room__layout
+        p.find-room__layout-text=obj[0].text
+        -var options = {id: obj[0].idUnique, className: obj[0].class, range:'true', type:'double'}
+        +date-dropdown(options)
+    div.find-room__layout
+        p.find-room__layout-text=obj[1].text
+        +text-field(id = obj[1].idUnique, class=obj[1].class, placeholder='ДД.ММ.ГГГГ', readonly)

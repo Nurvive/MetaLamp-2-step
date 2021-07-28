@@ -1,3 +1,5 @@
+@import "../../../../scss/common/colors";
+
 .date-dropdown {
   width: 150px;
   position: relative;
@@ -19,9 +21,14 @@
   border: none;
   cursor: pointer;
   transition: .3s;
-  z-index: -1;
 }
 .filter-date-dropdown{
   width: 266px;
 }
-
+.datepicker--pointer{
+  display: none;
+}
+.toggle-datepicker{
+  width: 320px;
+  padding: 20px;
+}
