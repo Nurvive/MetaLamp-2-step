@@ -14,9 +14,9 @@ $(".range-slider__slider").ionRangeSlider({
     hide_min_max: true,
     hide_from_to: true,
     onStart: function (data) {
-        $('.range-slider__count').text(this.from + ' - ' +this.to)
+        $('.range-slider__count').text(this.from +'₽'+ ' - ' +this.to+'₽')
     },
     onChange: function (data){
-        $('.range-slider__count').text(data.from + ' - ' +data.to)
+        $('.range-slider__count').text(data.from+'₽' + ' - ' +data.to+'₽')
     }
 });
