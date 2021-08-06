@@ -1,60 +1,76 @@
 @import "../../../../scss/common/colors";
 
-.room-card{
+.room-card {
   max-width: 270px;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
-  &__top{
+
+  &__top {
     height: 152px;
-    &-img{
+
+    &-img {
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
     }
   }
-  &__item{
+
+  &__item {
     display: flex;
     align-items: center;
-    height: 40px;
+    padding: 6px 0;
     justify-content: space-between;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     }
   }
-  &__number{
+
+  &__number {
     font-size: 19px;
     line-height: 23px;
-    color:$dark100;
-    &::before{
+    color: $dark100;
+
+    &::before {
       content: "№";
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
       color: $dark100;
     }
+
+    & strong {
+      font-size: 19px;
+      line-height: 23px;
+    }
   }
-  &__type{
+
+  &__type {
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    color:$purple;
+    color: $purple;
     text-transform: uppercase;
     margin-left: 3px;
   }
-  &__price{
-    font-size: 14px;
-    line-height: 18px;
-    color:$dark50;
-  }
-  &__reviews{
+
+  &__price {
     font-size: 14px;
     line-height: 18px;
     color: $dark50;
   }
-  &__content{
-    padding: 20px;
+
+  &__reviews {
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark50;
+  }
+
+  &__content {
+    padding: 18px 20px;
     background: #FFFFFF;
   }
-  &__arrow{
+
+  &__arrow {
     top: 50%;
     color: white;
     border: none;
@@ -67,31 +83,35 @@
     transform: translateY(-50%);
     display: none !important;
     width: 42px;
-    &_next{
-      right:0;
+
+    &_next {
+      right: 0;
       background: linear-gradient(
-                      270deg
-              , rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+                      270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     }
-    &_prev{
+
+    &_prev {
       background: linear-gradient(
-                      90deg
-              , rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+                      90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     }
   }
-  &:hover &__arrow{
+
+  &:hover &__arrow {
     display: block !important;
   }
-  &__dots{
+
+  &__dots {
     display: flex;
     position: absolute;
     right: 15px;
     bottom: 15px;
     gap: 4px;
     z-index: 3;
-    & li{
+
+    & li {
       cursor: pointer;
-      & button{
+
+      & button {
         cursor: pointer;
         font-size: 0;
         line-height: 0;
@@ -102,7 +122,8 @@
         border-radius: 50%;
       }
     }
-    & li.slick-active button{
+
+    & li.slick-active button {
       background: white;
     }
   }

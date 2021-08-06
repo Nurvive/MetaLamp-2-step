@@ -8,7 +8,7 @@ block content
         main.search-room__main
             aside.search-room__aside
                 ul.search-room__list
-                    li.search-room__item
+                    li.search-room__item.search-room__item_small-margin
                         include ../../blocks/date-dropdown/date-dropdown
                         -
                             var options = {
@@ -17,29 +17,31 @@ block content
                                 range: 'true',
                                 type: 'single'
                             }
-                        .search-room__layout даты пребывания в отеле
-                            +date-dropdown(options)
+                        .search-room__layout.search-room__dropdown-layout даты пребывания в отеле
+                        +date-dropdown(options)
                     li.search-room__item
-                        .search-room__layout Гости
-                            include ../../blocks/dropdown/dropdown
-                            +dropdown('search-room__dropdown', 'default')
+                        .search-room__layout.search-room__dropdown-layout Гости
+                        include ../../blocks/dropdown/dropdown
+                        +dropdown('search-room__dropdown', 'default')
                     li.search-room__item
-                        .search-room__layout диапазон цены
-                            include ../../blocks/range-slider/range-slider
+                        .search-room__layout.search-room__slider-layout диапазон цены
+                        include ../../blocks/range-slider/range-slider
+                        span.search-room__item-extra-text Стоимость за сутки пребывания в номере
                     li.search-room__item
                         .search-room__layout правила дома
-                            include ../../blocks/checkbox_buttons/checkbox_buttons
-                    li.search-room__item
+                        include ../../blocks/checkbox_buttons/checkbox_buttons
+                    li.search-room__item.search-room__item_small-margin
                         .search-room__layout доступность
-                            include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
+                        include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
                     li.search-room__item
-                        .search-room__layout удобства номера
+                        .search-room__layout.search-room__dropdown-layout удобства номера
                         +dropdown('search-room__dropdown', 'rooms')
                     li.search-room__item
-                        .search-room__layout дополнительные удобства
+                        .search-room__layout
                             include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+                            +expandable-checkbox('дополнительные удобства')
             .search-room__content
-                h1.search-room__content-title Номера, которые мы для вас подобрали
+                p.search-room__content-title Номера, которые мы для вас подобрали
                 include ../../blocks/room-card/room-card
                 -
                     var obj = {
