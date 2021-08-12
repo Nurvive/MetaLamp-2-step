@@ -1,0 +1,64 @@
+extends ../../templates/template
+block title
+    title room-details
+
+block content
+    .wrapper.room-details
+        include ../../blocks/header/header
+        main.room-details__main
+            .room-details__gallery#room-details__gallery
+                a.room-details__gallery-link(href='../../../assets/images/gallery1.png')
+                    img(src='../../../assets/images/gallery1.png')
+                a.room-details__gallery-link(href='../../../assets/images/gallery2.png')
+                    img(src='../../../assets/images/gallery2.png')
+                a.room-details__gallery-link(href='../../../assets/images/gallery3.png')
+                    img(src='../../../assets/images/gallery3.png')
+            .room-details__inner
+                ul.room-details__list
+                    li.room-details__item
+                        .room-details__info
+                            p.room-details__title Сведения о номере
+                            include ../../blocks/pros/pros
+                            -
+                                var obj = [
+                                    {
+                                        img: '../../../assets/images/insert_emoticon.png',
+                                        title: 'Комфорт',
+                                        text: 'Шумопоглощающие стены',
+                                    },
+                                    {
+                                        img: '../../../assets/images/location_city.png',
+                                        title: 'Удобство',
+                                        text: 'Окно в каждой из спален'
+                                    },
+                                    {
+                                        img: '../../../assets/images/whatshot.png',
+                                        title: 'Уют',
+                                        text: 'Номер оснащён камином'
+                                    }
+                                ]
+                            +pros-item(obj)
+                        .room-details__rating
+                            p.room-details__title Впечатления от номера
+                            div(style="position: relative; height:126px; width: 311px")
+                                <canvas class="room-details__chart" id="room-details__chart" width="311" height="126" aria-label="Room Chart" role="chart"></canvas>
+                    li.room-details__item
+                        .room-details__reviews
+                            p.room-details__title Отзывы посетителей номера
+                            include ../../blocks/comment/comment
+                            +comment
+                            +comment
+                    li.room-details__item
+                        .room-details__rules
+                            p.room-details__title Правила
+                            include ../../blocks/bullet-list/bullet-list
+                            -
+                                var arr = ['Нельзя с питомцами',
+                                    'Без вечеринок и мероприятий',
+                                    'Время прибытия — после 13:00, а выезд до 12:00']
+                            +bullet-list(arr)
+                        .room-details__abort
+                            p.room-details__title Отмена
+                            p.room-details__abort-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                include ../../blocks/reservation/reservation
+        include ../../blocks/footer/footer

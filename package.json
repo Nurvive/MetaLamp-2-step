@@ -3,6 +3,7 @@
     "@babel/preset-env": "^7.14.7",
     "air-datepicker": "^2.2.3",
     "babel-loader": "^8.2.2",
+    "chart.js": "^3.5.0",
     "css-loader": "^5.2.6",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",

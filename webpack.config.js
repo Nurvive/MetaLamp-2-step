@@ -95,7 +95,7 @@ module.exports = {
                 test: /\.(png|jpe?g|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/images/[name].[hash][ext]'
+                    filename: 'assets/images/[name][ext]'
                 }
             }, {
                 test: /\.ico$/i,
