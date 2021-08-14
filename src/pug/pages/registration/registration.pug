@@ -1,0 +1,11 @@
+extends ../../templates/template
+block title
+    title registration
+
+block content
+    .wrapper.registration-page
+        include ../../blocks/header/header
+        main.registration-page__main
+            include ../../blocks/registration/registration
+            +registration(class='registration-page__card')
+        include ../../blocks/footer/footer

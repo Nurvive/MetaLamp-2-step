@@ -1,24 +1,25 @@
-.registration.card
-    include ../text-field/text-field
-    .registration__layout
-        p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
-        +text-field(placeholder='Имя' class='registration__input')
-        +text-field(placeholder='Фамилия' class='registration__input')
-        include ../radio-buttons/radio-buttons
-    .registration__layout
-        p.registration__layout-text дата рождения
-        include ../masked-text-field/masked-text-field
-    .registration__layout
-        p.registration__layout-text данные для входа в сервис
-        +text-field(placeholder='Email' class='registration__input')
-        +text-field(placeholder='Пароль' class='registration__input')
-        include ../toggle/toggle-kit/toggle-mixin
-        -var obj = ['Получать спецпредложения']
-        +toggle-buttons(obj)
-    include ../buttons/long-button
-    +long-button('перейти к оплате', true)
-    .registration__bottom
-        p.registration__bottom-text Уже есть аккаунт на Toxin
-        include ../buttons/transparent-button
-        +transparent-button('Войти')
+mixin registration
+    .registration.card&attributes(attributes)
+        include ../text-field/text-field
+        .registration__layout
+            p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
+            +text-field(placeholder='Имя' class='registration__input')
+            +text-field(placeholder='Фамилия' class='registration__input')
+            include ../radio-buttons/radio-buttons
+        .registration__layout
+            p.registration__layout-text дата рождения
+            include ../masked-text-field/masked-text-field
+        .registration__layout
+            p.registration__layout-text данные для входа в сервис
+            +text-field(placeholder='Email' class='registration__input')
+            +text-field(placeholder='Пароль' class='registration__input')
+            include ../toggle/toggle-kit/toggle-mixin
+            -var obj = ['Получать спецпредложения']
+            +toggle-buttons(obj)
+        include ../buttons/long-button
+        +long-button('Зарегистрироваться', true)
+        .registration__bottom
+            p.registration__bottom-text Уже есть аккаунт на Toxin
+            include ../buttons/transparent-button
+            +transparent-button('Войти')
 

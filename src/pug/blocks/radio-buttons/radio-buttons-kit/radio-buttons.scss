@@ -2,7 +2,7 @@
 
 .radio-buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
   max-width: 220px;
   position: relative;
   left: 22px;
@@ -25,8 +25,8 @@
       content: '';
       position: absolute;
       left: -32px;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: #FFF;
       transition: .2s;
@@ -38,10 +38,10 @@
       position: absolute;
       left: -28px;
       top: 50%;
-      transform: translateY(-55%);
+      transform: translateY(-66%);
       opacity: 0;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       transition: .2s;
       border: 1px solid $dark25;

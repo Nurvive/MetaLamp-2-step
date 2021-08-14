@@ -2,7 +2,6 @@ import './room-details-kit/room-details.scss'
 import {Chart, registerables} from 'chart.js';
 
 Chart.register(...registerables);
-// import Chart from "chart.js/auto"
 
 let ctx = document.getElementById('room-details__chart');
 const data = {
@@ -19,40 +18,41 @@ const data = {
 
     }]
 }
-let chart = new Chart(ctx, {
-    type: 'doughnut',
-    data: data,
-    options: {
-        layout: {
-            padding: {
-            }
-        },
+if (ctx) {
+    let chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: {
+            layout: {
+                padding: {}
+            },
 
-        responsive: false,
-        maintainAspectRatio: false,
-        datasets: {
-            doughnut: {
-                cutout: 53,
-            }
-        },
-        plugins: {
-            legend: {
-                position: "right",
-                reverse: true,
-                display:false,
-                labels: {
-                    usePointStyle: true,
-                    boxWidth: 10,
-                    font: {
-                        family: "Montserrat",
-                        lineHeight: 24
-                    }
+            responsive: false,
+            maintainAspectRatio: false,
+            datasets: {
+                doughnut: {
+                    cutout: 53,
                 }
             },
-        },
-        elements: {
-            point: {}
+            plugins: {
+                legend: {
+                    position: "right",
+                    reverse: true,
+                    display: false,
+                    labels: {
+                        usePointStyle: true,
+                        boxWidth: 10,
+                        font: {
+                            family: "Montserrat",
+                            lineHeight: 24
+                        }
+                    }
+                },
+            },
+            elements: {
+                point: {}
 
+            }
         }
-    }
-})
+    })
+}
