@@ -1,0 +1,11 @@
+extends ../../templates/template
+block title
+    title Sign In
+
+block content
+    .wrapper.signIn
+        include ../../blocks/header/header
+        main.signIn__main
+            include ../../blocks/login/login
+            +login(class='signIn__card')
+        include ../../blocks/footer/footer

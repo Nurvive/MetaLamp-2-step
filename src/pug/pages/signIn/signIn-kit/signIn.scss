@@ -1,0 +1,12 @@
+@import "../../../../scss/common/colors";
+.signIn{
+  &__main{
+    background-image: url("../../../../assets/images/registration.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 163px 0;
+  }
+  &__card{
+    margin: 0 auto;
+  }
+}
