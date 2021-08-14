@@ -40,14 +40,33 @@ block content
                             +pros-item(obj)
                         .room-details__rating
                             p.room-details__title Впечатления от номера
-                            div(style="position: relative; height:126px; width: 311px")
-                                <canvas class="room-details__chart" id="room-details__chart" width="311" height="126" aria-label="Room Chart" role="chart"></canvas>
+                            div.room-details__canvas-wrapper(style="position: relative; height:126px; width: 120px")
+                                span.canvas-count 260
+                                span.canvas-word голосов
+                                div.canvas-legend
+                                    -var colors = ['Великолепно','Хорошо','Удовлетворительно','Разочарован']
+                                    each val, n in colors
+                                        p(class=`canvas-legend__colors color-${n}`)=val
+                                <canvas class="room-details__chart" id="room-details__chart" width="120" height="126" aria-label="Room Chart" role="chart"></canvas>
                     li.room-details__item
                         .room-details__reviews
                             p.room-details__title Отзывы посетителей номера
+                                span 2 отзыва
                             include ../../blocks/comment/comment
-                            +comment
-                            +comment
+                            -
+                                var options={
+                                    name:'Мурад Сарафанов',
+                                    time:'5 дней назад',
+                                    text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                                }
+                            +comment(options)
+                            -
+                                var options = {
+                                    name: 'Патрисия Стёклышкова',
+                                    time: 'Неделю назад',
+                                    text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                                }
+                            +comment(options)
                     li.room-details__item
                         .room-details__rules
                             p.room-details__title Правила

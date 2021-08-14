@@ -1,10 +1,11 @@
-mixin comment
+mixin comment(options)
+    -var options = options || {}
     .comment
         .comment__info
             .comment__info-img
             .comment__info-inner
-                .comment__info-author Мурад Сарафанов
-                .comment__info-time 5 дней назад
+                .comment__info-author=options.name
+                .comment__info-time=options.time
         .comment__content
             include ../like-button/like-button
-            p.comment__content-text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+            p.comment__content-text=options.text

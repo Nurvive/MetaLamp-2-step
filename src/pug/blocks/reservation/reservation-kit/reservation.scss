@@ -7,6 +7,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     &-number {
       font-weight: bold;
       font-size: 24px;
@@ -57,7 +58,7 @@
     margin-bottom: 5px;
   }
   &__services{
-    margin: 20px 0 30px;
+    margin: 20px 0 25px;
   }
   &__list{
     display: flex;
@@ -70,7 +71,7 @@
   }
   &__service{
     font-size: 14px;
-    line-height: 24px;
+    line-height: 23px;
     color: $dark75;
     max-width: 214px;
     margin-right: auto;

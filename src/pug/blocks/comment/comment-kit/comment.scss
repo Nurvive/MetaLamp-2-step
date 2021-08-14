@@ -1,7 +1,7 @@
 @import "../../../../scss/common/colors";
 
 .comment {
-  max-width: 711px;
+  max-width: 710px;
   &__info {
     display: flex;
     margin-bottom: 10px;
@@ -14,10 +14,6 @@
       background-image: url("../../../../assets/images/man.png");
       background-position: center 25%;
       margin-right: 10px;
-    }
-
-    &-inner {
-
     }
 
     &-author {
@@ -40,7 +36,7 @@
 
       @extend .comment__info-author;
       font-weight: normal;
-      margin-left: 10px;
+      margin-left: 15px;
     }
   }
 }

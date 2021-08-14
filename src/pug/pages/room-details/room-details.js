@@ -32,14 +32,14 @@ let chart = new Chart(ctx, {
         maintainAspectRatio: false,
         datasets: {
             doughnut: {
-                cutout: 55,
+                cutout: 53,
             }
         },
         plugins: {
             legend: {
                 position: "right",
-                fullSize: false,
                 reverse: true,
+                display:false,
                 labels: {
                     usePointStyle: true,
                     boxWidth: 10,

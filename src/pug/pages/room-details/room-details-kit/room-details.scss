@@ -16,12 +16,21 @@
     width: 100%;
     justify-content: center;
     gap: 70px;
-    padding: 70px 0;
+    padding-top: 68px;
+    padding-bottom: 60px;
+    & .card{
+      align-self: baseline;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
   &__item {
     display: flex;
     width: 100%;
-
+    column-gap: 81px;
   }
 
   &__title {
@@ -29,13 +38,99 @@
     font-size: 19px;
     line-height: 23px;
     color: $dark100;
+
+  }
+  &__canvas-wrapper{
+    span{
+      position: absolute;
+      color: $purple;
+      font-weight: bold;
+      left: 50%;
+
+      transform: translate(-50%);
+    }
+
+    .canvas-count{
+      font-size: 24px;
+      line-height: 29px;
+      top: 30%;
+    }
+    .canvas-word{
+      font-size: 12px;
+      line-height: 15px;
+      top: 55%;
+      text-transform: uppercase;
+
+    }
+    .canvas-legend{
+      position: absolute;
+      bottom: 2px;
+      left: calc(100% + 45px);
+      &__colors{
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark75;
+        position: relative;
+        &::before{
+          position: absolute;
+          content: ' ';
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          left: -15px;
+          top: 25%
+        }
+      }
+      .color-0{
+       &::before{
+         background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+       }
+      }.color-1{
+       &::before{
+         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+       }
+      }.color-2{
+       &::before{
+         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+       }
+      }.color-3{
+       &::before{
+         background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+       }
+      }
+    }
   }
   &__rating {
     width: 310px;
     height: 170px;
+    @extend .room-details__reviews;
+  }
+  &__reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .room-details__title{
+      position: relative;
+      span{
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+        color:$dark50;
+        line-height: 14px;
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+  }
+  &__rules{
+    max-width: 260px;
+    padding-left: 20px;
+    margin-right: 20px;
+    @extend .room-details__reviews;
   }
   &__abort{
     max-width: 341px;
+    @extend .room-details__reviews;
     &-text{
       font-size: 14px;
       line-height: 24px;
