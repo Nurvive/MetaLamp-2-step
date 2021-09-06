@@ -1,0 +1,11 @@
+@media (max-width: 960px) {
+  .header__nav, .header__buttons{
+    display: none;
+  }
+  .side-menu{
+    opacity: 1;
+  }
+  .header__container{
+    justify-content: center;
+  }
+}

@@ -1,8 +1,10 @@
 .index{
   display: flex;
   align-items: center;
-  justify-content: space-around;
   height: 100%;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
   & > a{
     font-size: 22px;
     text-transform: uppercase;
