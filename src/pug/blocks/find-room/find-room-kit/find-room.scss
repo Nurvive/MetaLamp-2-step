@@ -1,25 +1,28 @@
 @import "../../../../scss/common/colors";
 
-.find-room{
+.find-room {
 
-  width: 380px;
+  max-width: 380px;
   height: 374px;
+  width: 100%;
 
-  &__title{
+  &__title {
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: $dark100;
   }
-  &__dates{
+
+  &__dates {
     display: flex;
     justify-content: space-between;
     margin: 21px 0;
   }
-  &__layout{
 
-    &-text{
-      color:$dark100;
+  &__layout {
+
+    &-text {
+      color: $dark100;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 12px;
@@ -27,14 +30,17 @@
       margin-bottom: 5px;
     }
   }
-  &__long-button-wrapper{
+
+  &__long-button-wrapper {
     margin-top: 30px;
   }
-  & &__date-text-field{
-    max-width: 150px;
+
+  & &__date-text-field {
+    width: 150px;
   }
 }
-.text-buttons{
+
+.text-buttons {
   display: flex;
   justify-content: space-between;
   font-family: Montserrat, sans-serif;

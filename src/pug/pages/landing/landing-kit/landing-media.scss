@@ -1,0 +1,44 @@
+@media (max-width: 960px) {
+  .landing__main {
+    height: 560px;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+
+    &-text {
+      display: none;
+    }
+
+  }
+}
+
+@media (max-width: 390px) {
+  .find-room {
+    &__title {
+      font-size: 21px;
+      text-align: center;
+    }
+
+    &__dates {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  .landing__main {
+    & .find-room {
+      padding: 30px 20px 20px;
+      height: 420px;
+
+      & .find-room__date-text-field {
+        max-width: 313px;
+        width: 100%;
+      }
+    }
+
+    & .date-dropdown {
+      max-width: 313px;
+      width: 100%;
+    }
+  }
+}
