@@ -1,8 +1,8 @@
 @import "../../../../scss/common/colors";
 
 .reservation {
-  width: 380px;
-
+  max-width: 380px;
+  width: 100%;
   &__info {
     margin-bottom: 20px;
     display: flex;
@@ -111,7 +111,7 @@
     background-position: center;
     cursor: pointer;
     position: relative;
-
+    flex-shrink: 0;
     &-text{
       z-index: -1;
       position: absolute;
@@ -132,3 +132,4 @@
     max-width: 150px;
   }
 }
+@import "reservation-media";

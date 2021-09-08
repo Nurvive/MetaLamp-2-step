@@ -12,15 +12,32 @@
     flex: 0 0 326px;
   }
 
-  &__list {
+  &__small-menu {
+
+    & .small-menu__content {
+      display: none;
+      top: 50px;
+      position: absolute;
+      background-color: #FFFFFF;
+      z-index: 5;
+      padding: 10px;
+    }
   }
+
   &__item {
     max-width: 266px;
     margin-bottom: 30px;
-    &_small-margin{
+
+    &_small-margin {
       margin-bottom: 20px;
+
+      .date-dropdown {
+        max-width: 266px;
+        width: 100%;
+      }
     }
-    &-extra-text{
+
+    &-extra-text {
       color: $dark50;
       font-weight: normal;
       font-size: 12px;
@@ -29,7 +46,8 @@
       display: inline-block;
     }
   }
-  &__layout{
+
+  &__layout {
     color: $dark100;
     font-weight: bold;
     font-size: 12px;
@@ -37,12 +55,15 @@
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-  &__dropdown-layout{
+
+  &__dropdown-layout {
     margin-bottom: 5px;
   }
-  &__slider-layout{
+
+  &__slider-layout {
     margin-bottom: -15px;
   }
+
   &__content {
     display: flex;
     flex-wrap: wrap;
@@ -63,4 +84,14 @@
     margin: 22px auto 0 auto;
     text-align: center;
   }
+
+  &__small-menu > &__layout {
+    border: 1px solid $dark50;
+    border-radius: 22px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+  }
 }
+
+@import "search-room-media";

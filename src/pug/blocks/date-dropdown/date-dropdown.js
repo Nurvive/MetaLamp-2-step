@@ -11,5 +11,6 @@ $().ready(function () {
         onHide: function (inst, animationCompleted) {
             $(this).removeClass('date-dropdown_active')
         },
+        position:'bottom center'
     })
 })

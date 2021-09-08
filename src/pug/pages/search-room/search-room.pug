@@ -8,7 +8,7 @@ block content
         main.search-room__main
             aside.search-room__aside
                 ul.search-room__list
-                    li.search-room__item.search-room__item_small-margin
+                    li.search-room__item.search-room__item_small-margin(data-move="no")
                         include ../../blocks/date-dropdown/date-dropdown
                         -
                             var options = {
@@ -19,11 +19,11 @@ block content
                             }
                         .search-room__layout.search-room__dropdown-layout даты пребывания в отеле
                         +date-dropdown(options)
-                    li.search-room__item
+                    li.search-room__item(data-move="no")
                         .search-room__layout.search-room__dropdown-layout Гости
                         include ../../blocks/dropdown/dropdown
                         +dropdown('search-room__dropdown', 'default')
-                    li.search-room__item
+                    li.search-room__item(data-move="no")
                         .search-room__layout.search-room__slider-layout диапазон цены
                         include ../../blocks/range-slider/range-slider
                         span.search-room__item-extra-text Стоимость за сутки пребывания в номере
@@ -40,6 +40,9 @@ block content
                         .search-room__layout
                             include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
                             +expandable-checkbox('дополнительные удобства')
+                    ul.search-room__item.search-room__small-menu.small-menu
+                        p.search-room__layout.small-menu-title(data-attr="small-menu-title") фильтр
+                        .small-menu__content
             .search-room__content
                 p.search-room__content-title Номера, которые мы для вас подобрали
                 include ../../blocks/room-card/room-card

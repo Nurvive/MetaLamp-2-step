@@ -1,8 +1,22 @@
 import './room-details-kit/room-details.scss'
 import {Chart, registerables} from 'chart.js';
+import 'jquery'
+import slick from 'slick-carousel'
+import 'slick-carousel/slick/slick.scss'
+
+$(window).resize(function () {
+    let width = $(this).width()
+    if (width < 900)
+        $('#room-details__gallery').slick({
+            slidesToShow: 1,
+            arrows: false,
+        })
+    else
+        $('#room-details__gallery').slick("unslick")
+})
+
 
 Chart.register(...registerables);
-
 let ctx = document.getElementById('room-details__chart');
 const data = {
     labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],

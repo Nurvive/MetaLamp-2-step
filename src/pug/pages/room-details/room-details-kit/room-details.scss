@@ -1,32 +1,60 @@
 @import "../../../../scss/common/colors";
 
 .room-details {
-  &__gallery-link {
-    &:first-child {
-      float: left;
-    }
+  &__gallery {
+    grid-template-areas:
+        "A A C"
+        "A A B";
+    display: grid;
+      & img {
+        max-width: 100%;
+        width: 100%;
+      }
+      & img:nth-child(1) {
+        grid-area: A;
+      }
 
-    &:not(:first-child) {
-      height: 50%;
-      display: grid;
-    }
+      & img:nth-child(2) {
+        grid-area: B;
+      }
+
+      & img:nth-child(3) {
+        grid-area: C;
+        display: grid;
+        //height: 50%;
+      }
+      //
+      //&:first-child {
+      //  float: left;
+      //}
+
+      & img:not(:first-child) {
+        //height: 50%;
+        display: grid;
+      }
+
   }
-  &__inner{
+
+
+  &__inner {
     display: flex;
     width: 100%;
     justify-content: center;
     gap: 70px;
     padding-top: 68px;
     padding-bottom: 60px;
-    & .card{
+
+    & .card {
       align-self: baseline;
     }
   }
-  &__list{
+
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 35px;
   }
+
   &__item {
     display: flex;
     width: 100%;
@@ -40,8 +68,9 @@
     color: $dark100;
 
   }
-  &__canvas-wrapper{
-    span{
+
+  &__canvas-wrapper {
+    span {
       position: absolute;
       color: $purple;
       font-weight: bold;
@@ -50,28 +79,32 @@
       transform: translate(-50%);
     }
 
-    .canvas-count{
+    .canvas-count {
       font-size: 24px;
       line-height: 29px;
       top: 30%;
     }
-    .canvas-word{
+
+    .canvas-word {
       font-size: 12px;
       line-height: 15px;
       top: 55%;
       text-transform: uppercase;
 
     }
-    .canvas-legend{
+
+    .canvas-legend {
       position: absolute;
       bottom: 2px;
       left: calc(100% + 45px);
-      &__colors{
+
+      &__colors {
         font-size: 14px;
         line-height: 24px;
         color: $dark75;
         position: relative;
-        &::before{
+
+        &::before {
           position: absolute;
           content: ' ';
           width: 10px;
@@ -81,60 +114,75 @@
           top: 25%
         }
       }
-      .color-0{
-       &::before{
-         background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-       }
-      }.color-1{
-       &::before{
-         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-       }
-      }.color-2{
-       &::before{
-         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-       }
-      }.color-3{
-       &::before{
-         background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-       }
+
+      .color-0 {
+        &::before {
+          background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+        }
+      }
+
+      .color-1 {
+        &::before {
+          background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        }
+      }
+
+      .color-2 {
+        &::before {
+          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+      }
+
+      .color-3 {
+        &::before {
+          background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+        }
       }
     }
   }
+
   &__rating {
     width: 310px;
     height: 170px;
     @extend .room-details__reviews;
   }
-  &__reviews{
+
+  &__reviews {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    .room-details__title{
+
+    .room-details__title {
       position: relative;
-      span{
+
+      span {
         position: absolute;
         right: 0;
         bottom: 4px;
-        color:$dark50;
+        color: $dark50;
         line-height: 14px;
         font-weight: normal;
         font-size: 14px;
       }
     }
   }
-  &__rules{
+
+  &__rules {
     max-width: 260px;
     padding-left: 20px;
     margin-right: 20px;
     @extend .room-details__reviews;
   }
-  &__abort{
+
+  &__abort {
     max-width: 341px;
     @extend .room-details__reviews;
-    &-text{
+
+    &-text {
       font-size: 14px;
       line-height: 24px;
       color: $dark75;
     }
   }
 }
+@import "room-details-media";

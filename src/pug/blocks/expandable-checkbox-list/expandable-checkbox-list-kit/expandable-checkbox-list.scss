@@ -28,6 +28,7 @@
     opacity: 1;
     transition:  0.5s;
     position: absolute;
+    height: 0;
     background-color: white;
     & li {
       transition: all 0.4s ease-out;
@@ -36,6 +37,11 @@
     & li.show {
       opacity: 1;
       height: 20px;
+    }
+    &_active{
+      height: initial;
+      padding: 5px;
+
     }
   }
 
