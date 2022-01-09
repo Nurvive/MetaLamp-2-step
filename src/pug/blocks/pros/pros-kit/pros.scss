@@ -1,14 +1,15 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .pros {
   width: 280px;
 
   &__container {
     padding: 20px 0;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    border-bottom: 1px solid rgb(31 32 65 / 10%);
     display: flex;
     align-items: center;
-    &:last-child{
+
+    &:last-child {
       border: none;
       padding-bottom: 0;
     }
@@ -26,9 +27,8 @@
   }
 
   &__text {
-    @extend .pros__title;
+    @extend.pros__title;
+
     font-weight: normal;
   }
-
-
 }
