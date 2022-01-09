@@ -1,33 +1,40 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
 }
-ul{
+
+ul {
   list-style: none;
 }
-a{
+
+a {
   text-decoration: none;
   cursor: pointer;
 }
-body{
+
+body {
   font-family: Montserrat, sans-serif;
   font-size: 14px;
 }
-html,body{
+
+html,
+body {
   height: 100%;
 }
-.wrapper{
+
+.wrapper {
   max-width: 1460px;
   padding: 0 10px;
   margin: 0 auto;
 }
-.container{
+
+.container {
   max-width: 1190px;
   margin: 0 auto;
 }
 
-.logo{
+.logo {
   display: block;
 }

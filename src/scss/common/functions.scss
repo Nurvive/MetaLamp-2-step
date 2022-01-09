@@ -1,4 +1,5 @@
-@use "sass:math";
-@function rem($x){
+@use 'sass:math';
+
+@function rem($x) {
   @return #{math.div($x, 16)}rem;
 }
