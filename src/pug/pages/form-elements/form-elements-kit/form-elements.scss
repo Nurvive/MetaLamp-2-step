@@ -1,11 +1,13 @@
-@import "../../../../scss/common/colors";
-.form-elements{
-  &__container{
-    padding: 140px 15px 132px 15px;
+@import '../../../../scss/common/colors';
+
+.form-elements {
+  &__container {
+    padding: 140px 15px 132px;
     display: flex;
     justify-content: space-between;
   }
-  &__label{
+
+  &__label {
     color: $dark100;
     font-weight: bold;
     font-size: 12px;
@@ -14,13 +16,13 @@
     display: block;
     margin-bottom: 40px;
   }
-  &__inner{
+
+  &__inner {
     max-width: 320px;
     width: 100%;
   }
-
 }
 
-.low-container{
+.low-container {
   display: flex;
 }
