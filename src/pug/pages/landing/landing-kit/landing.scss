@@ -1,18 +1,19 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
-.landing{
-  &__main{
+.landing {
+  &__main {
     height: 830px;
-    background-image: url("../../../../assets/images/landing-background.png");
+    background-image: url('../../../../assets/images/landing-background.png');
     background-position: center bottom;
     background-repeat: no-repeat;
     padding: 70px 0 0 140px;
     position: relative;
-    &-text{
+
+    &-text {
       position: absolute;
       font-size: 14px;
       line-height: 24px;
-      color:$dark75;
+      color: $dark75;
       right: 134px;
       bottom: 20px;
       max-width: 300px;
@@ -20,4 +21,3 @@
     }
   }
 }
-@import "landing-media";

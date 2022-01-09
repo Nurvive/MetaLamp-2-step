@@ -1,1 +1,1 @@
-import './landing-kit/landing.scss'
+import './landing-kit/landing-media.scss';

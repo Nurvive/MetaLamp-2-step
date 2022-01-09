@@ -1,3 +1,5 @@
+@import 'landing';
+
 @media (max-width: 960px) {
   .landing__main {
     height: 560px;
@@ -8,7 +10,6 @@
     &-text {
       display: none;
     }
-
   }
 }
 
@@ -25,6 +26,7 @@
       gap: 10px;
     }
   }
+
   .landing__main {
     & .find-room {
       padding: 30px 20px 20px;
