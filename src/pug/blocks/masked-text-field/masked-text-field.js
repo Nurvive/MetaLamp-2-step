@@ -1,5 +1,3 @@
-import './masked-text-field-kit/masked-text-field.scss';
-
 import IMask from 'imask';
 
 $().ready(function () {
