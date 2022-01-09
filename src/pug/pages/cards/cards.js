@@ -1,1 +1,1 @@
-import './cards-kit/cards.scss'
+import './cards-kit/cards.scss';
