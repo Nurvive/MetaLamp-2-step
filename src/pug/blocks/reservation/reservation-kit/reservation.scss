@@ -1,13 +1,15 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .reservation {
   max-width: 380px;
   width: 100%;
+
   &__info {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
     &-number {
       font-weight: bold;
       font-size: 24px;
@@ -15,7 +17,8 @@
       color: $dark100;
       position: relative;
       margin-left: 22px;
-      &::before{
+
+      &::before {
         position: absolute;
         left: -22px;
         bottom: 3px;
@@ -33,23 +36,27 @@
       font-size: 12px;
       margin-left: 8px;
     }
-    &-cost{
+
+    &-cost {
       color: $dark50;
-      & strong{
+
+      & strong {
         font-size: 14px;
       }
-      & span{
+
+      & span {
         font-size: 12px;
       }
     }
   }
 
-  &__dates{
+  &__dates {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
   }
-  &__layout-text{
+
+  &__layout-text {
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
@@ -57,79 +64,92 @@
     text-transform: uppercase;
     margin-bottom: 5px;
   }
-  &__services{
+
+  &__services {
     margin: 20px 0 25px;
   }
-  &__list{
+
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  &__item{
+
+  &__item {
     display: flex;
     justify-content: space-between;
   }
-  &__service{
+
+  &__service {
     font-size: 14px;
     line-height: 23px;
     color: $dark75;
     max-width: 214px;
     margin-right: auto;
   }
-  &__price{
-    @extend .reservation__service;
+
+  &__price {
+    @extend.reservation__service;
+
     width: 77px;
     text-align: right;
     margin-right: initial;
   }
-  &__total{
+
+  &__total {
     display: flex;
-    &-text{
+
+    &-text {
       font-weight: bold;
       font-size: 19px;
       line-height: 23px;
-      color:$dark100
+      color: $dark100;
     }
-    &-border{
+
+    &-border {
       flex-grow: 1;
       border-bottom: 1px dotted $dark25;
       height: 18px;
     }
-    &-price{
-      @extend .reservation__total-text;
-    }
 
+    &-price {
+      @extend.reservation__total-text;
+    }
   }
-  &__button{
+
+  &__button {
     margin-top: 20px;
   }
-  &__info-label{
+
+  &__info-label {
     width: 20px;
     height: 20px;
-    background-image: url("../../../../assets/images/info.png");
+    background-image: url('../../../../assets/images/info.png');
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
     position: relative;
     flex-shrink: 0;
-    &-text{
+
+    &-text {
       z-index: -1;
       position: absolute;
       display: block;
       opacity: 0;
-      transition: opacity .2s;
+      transition: opacity 0.2s;
       background: #c7c7cf;
       bottom: 30px;
       padding: 5px;
       border-radius: 5px;
     }
-    &:hover &-text{
+
+    &:hover &-text {
       opacity: 1;
       z-index: 1;
     }
   }
-  & &__date-text-field{
+
+  & &__date-text-field {
     max-width: 150px;
   }
 }
-@import "reservation-media";
