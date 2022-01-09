@@ -1,36 +1,33 @@
-@import "../../../../scss/common/colors";
-@import "../../../../scss/common/functions";
-.header{
+@import '../../../../scss/common/colors';
+@import '../../../../scss/common/functions';
+@import 'side-menu';
+
+.header {
   background-color: #fff;
   width: 100%;
-  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
-  &__container{
+  box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
+
+  &__container {
     display: flex;
     justify-content: space-between;
     padding: 12px 16px;
   }
-  &__menu-wrapper{
+
+  &__menu-wrapper {
     display: flex;
     align-items: center;
     z-index: 2;
-
   }
+
   &__menu {
     display: flex;
     align-items: center;
+
     &-item {
       line-height: 17px;
       color: $dark50;
       position: relative;
 
-      //&:first-child {
-      //  font-weight: bold;
-      //  color:$dark100;
-      //}
-      //&:hover > a, &:hover > ul {
-      //  font-weight: bold;
-      //  color: $dark100;
-      //}
       & > .header__menu-dropdown {
         margin-right: rem(44);
       }
@@ -38,74 +35,77 @@
       & a {
         margin-right: rem(20);
       }
-
     }
+
     &-dropdown {
       right: 0;
       position: relative;
       display: block;
       cursor: pointer;
-      &_active::after{
+
+      &_active::after {
         transform: rotate(180deg);
       }
+
       &::after {
-        transition: .3s;
+        transition: 0.3s;
         position: absolute;
-        content: url("../../../../assets/images/arrow-down.png");
+        content: url('../../../../assets/images/arrow-down.png');
         right: -17px;
         top: 0;
       }
-
-
     }
   }
+
   &__dropdown-item {
     display: none;
-    position:absolute;
+    position: absolute;
     border-radius: 8px;
     left: 0;
     border: 1px solid black;
     font-weight: initial;
     padding: 4px;
-    background-color: #FFFFFF;
-    & a{
+    background-color: #fff;
+
+    & a {
       margin: 0;
     }
 
-    @for $i from 1 through 3{
-      &:nth-child(#{$i}){
-        top:$i * 30px;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        top: $i * 30px;
       }
     }
   }
+
   &__buttons {
     display: flex;
     gap: 20px;
   }
-  &__button{
-    &>div{
+
+  &__button {
+    & > div {
       height: 34px;
     }
   }
 }
 
-.log-in-button{
+.log-in-button {
   width: 87px;
 }
 
-.sign-up-button{
+.sign-up-button {
   width: 196px;
 }
 
-.cabinet{
+.cabinet {
   line-height: 17px;
   color: $dark50;
-  padding:6px 0 6px 20px;
+  padding: 6px 0 6px 20px;
   display: block;
-  border-left: 1px solid rgba(31, 32, 65, 0.1);
-  &:hover{
+  border-left: 1px solid rgb(31 32 65 / 10%);
+
+  &:hover {
     text-decoration: underline;
   }
 }
-@import "side-menu";
-@import "header-media";
