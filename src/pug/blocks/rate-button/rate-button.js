@@ -1,2 +1,1 @@
-
-import './rate-button-kit/rate-button.scss'
+import './rate-button-kit/rate-button.scss';
