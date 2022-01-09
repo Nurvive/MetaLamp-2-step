@@ -1,4 +1,4 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .search-room {
   &__main {
@@ -13,12 +13,11 @@
   }
 
   &__small-menu {
-
     & .small-menu__content {
       display: none;
       top: 50px;
       position: absolute;
-      background-color: #FFFFFF;
+      background-color: #fff;
       z-index: 5;
       padding: 10px;
     }
@@ -81,7 +80,7 @@
   }
 
   &__pagination-wrapper {
-    margin: 22px auto 0 auto;
+    margin: 22px auto 0;
     text-align: center;
   }
 
@@ -93,5 +92,3 @@
     padding: 5px;
   }
 }
-
-@import "search-room-media";
