@@ -1,0 +1,29 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "jquery": true
+  },
+  "extends": [
+    "airbnb-base/legacy"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "rules": {
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "indent": [
+      "error",
+      4
+    ],
+    "no-underscore-dangle": [2, { "allow": ["__filename", "__dirname"] }],
+    "func-names": [
+      "error",
+      "never"
+    ]
+  }
+}
