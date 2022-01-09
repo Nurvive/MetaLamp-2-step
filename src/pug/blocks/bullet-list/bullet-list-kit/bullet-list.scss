@@ -1,16 +1,15 @@
 @import '../../../../scss/common/colors';
 
-.bullet-list{
-  &__list{
-  }
-  &__item{
-    color:$dark75;
+.bullet-list {
+  &__item {
+    color: $dark75;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     text-transform: initial;
     position: relative;
     margin-bottom: 10px;
+
     &::before {
       position: absolute;
       content: '';
