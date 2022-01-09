@@ -2,7 +2,7 @@ mixin dropdown(id, type)
     -
         var placeholder = ''
         var hasButtons = false
-        var className = ' dropdown-' + type
+        var className = 'dropdown-' + type
     if type === 'default'
         -
             var hasButtons = true
@@ -12,12 +12,12 @@ mixin dropdown(id, type)
         -
             var obj = ["спальни", 'кровати', "ванные комнаты"]
             placeholder = 'Сколько комнат'
-    div.dropdown(id=id class=className)
-        .dropdown__input-wrapper
+    div.dropdown.js-dropdown(id=id class=className)
+        .dropdown__input-wrapper.js-dropdown__input-wrapper
             span.dropdown__open-button
             include ../text-field/text-field
-            +text-field(readonly='readonly' placeholder=placeholder class='dropdown__input')
-        ul.dropdown__list
+            +text-field(readonly='readonly' placeholder=placeholder class='dropdown__input js-dropdown__input')
+        ul.dropdown__list.js-dropdown__list
             include dropdown-kit/dropdown-mixins
             +dropdown-item(obj)
             if hasButtons

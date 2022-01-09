@@ -2,7 +2,7 @@ import './header-kit/header-media.scss';
 import $ from 'jquery';
 let startingX;
 $().ready(() => {
-    $('.header__menu-dropdown').on('click', function () {
+    $('.js-header__menu-dropdown').on('click', function () {
         if ($(this).hasClass('header__menu-dropdown_active')) {
             $(this).children().css('display', 'none');
             $(this).removeClass('header__menu-dropdown_active');
@@ -11,10 +11,10 @@ $().ready(() => {
             $(this).children().css('display', 'block');
         }
     });
-    $('.side-menu__menu-dropdown').on('click', function () {
-        $(this).children('.side-menu__dropdown-item').toggle(400);
+    $('.js-side-menu__menu-dropdown').on('click', function () {
+        $(this).children('.js-side-menu__dropdown-item').toggle(400);
     });
-    let sideMenu = $('.side-menu');
+    let sideMenu = $('.js-side-menu');
     sideMenu.on('touchstart', function (event) {
         startingX = event.touches[0].clientX;
     });

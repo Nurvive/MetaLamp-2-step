@@ -9,8 +9,8 @@ function ReverseObject(Obj) {
 }
 
 $().ready(() => {
-    $('.expandable-checkbox__open-button').on('click', function () {
-        let list = $('.expandable-checkbox__list');
+    $('.js-expandable-checkbox__open-button').on('click', function () {
+        let list = $('.js-expandable-checkbox__list');
         $(this).toggleClass('expandable-checkbox__open-button_active');
         let items = list.children();
         if (list.hasClass('expandable-checkbox__list_active')) {

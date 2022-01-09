@@ -9,7 +9,7 @@ header.header
                     li.header__menu-item
                         a О нас
                     li.header__menu-item
-                        ul.header__menu-dropdown Услуги
+                        ul.header__menu-dropdown.js-header__menu-dropdown Услуги
                             li.header__dropdown-item
                                 a Покупка
                             li.header__dropdown-item
@@ -21,7 +21,7 @@ header.header
                     li.header__menu-item
                         a Новости
                     li.header__menu-item
-                        ul.header__menu-dropdown Соглашение
+                        ul.header__menu-dropdown.js-header__menu-dropdown Соглашение
                             li.header__dropdown-item
                                 a О Воде
             .header__buttons
@@ -32,27 +32,27 @@ header.header
                 else
                     +cabinet-button
 
-div(class="side-menu" id="side-menu")
+div(class="side-menu js-side-menu" id="side-menu")
     div.side-menu__holder
     nav.side-menu__nav
         ul.side-menu__menu
             li.side-menu__menu-item
                 a О нас
             li.side-menu__menu-item
-                ul.side-menu__menu-dropdown Услуги
-                    li.side-menu__dropdown-item
+                ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Услуги
+                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
                         a Покупка
-                    li.side-menu__dropdown-item
+                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
                         a Покупка
-                    li.side-menu__dropdown-item
+                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
                         a Покупка
             li.side-menu__menu-item
                 a Вакансии
             li.side-menu__menu-item
                 a Новости
             li.side-menu__menu-item
-                ul.side-menu__menu-dropdown Соглашение
-                    li.side-menu__dropdown-item
+                ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Соглашение
+                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
                         a О Воде
     .side-menu__buttons
         include header-kit/header-mixins
