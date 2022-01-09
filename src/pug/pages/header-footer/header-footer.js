@@ -1,1 +1,1 @@
-import './header-footer-kit/header-footer.scss'
+import './header-footer-kit/header-footer.scss';
