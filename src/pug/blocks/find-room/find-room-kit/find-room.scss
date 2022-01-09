@@ -1,7 +1,6 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .find-room {
-
   max-width: 380px;
   height: 374px;
   width: 100%;
@@ -20,7 +19,6 @@
   }
 
   &__layout {
-
     &-text {
       color: $dark100;
       text-transform: uppercase;
