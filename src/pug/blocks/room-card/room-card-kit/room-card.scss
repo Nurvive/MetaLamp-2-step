@@ -1,8 +1,8 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .room-card {
   max-width: 270px;
-  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
   border-radius: 4px;
 
   &__top {
@@ -21,7 +21,7 @@
     justify-content: space-between;
 
     &:not(:last-child) {
-      border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+      border-bottom: 1px solid rgb(31 32 65 / 10%);
     }
   }
 
@@ -31,7 +31,7 @@
     color: $dark100;
 
     &::before {
-      content: "№";
+      content: '№';
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
@@ -67,7 +67,7 @@
 
   &__content {
     padding: 18px 20px;
-    background: #FFFFFF;
+    background: #fff;
   }
 
   &__arrow {
@@ -86,13 +86,23 @@
 
     &_next {
       right: 0;
-      background: linear-gradient(
-                      270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      background:
+        linear-gradient(
+          270deg,
+          rgb(0 0 0 / 50%) 0%,
+          rgb(0 0 0 / 0%) 99.99%,
+          rgb(255 255 255 / 0%) 100%
+        );
     }
 
     &_prev {
-      background: linear-gradient(
-                      90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      background:
+        linear-gradient(
+          90deg,
+          rgb(0 0 0 / 50%) 0%,
+          rgb(0 0 0 / 0%) 99.99%,
+          rgb(255 255 255 / 0%) 100%
+        );
     }
   }
 
@@ -118,7 +128,7 @@
         width: 8px;
         height: 8px;
         background: transparent;
-        border: 1px solid #FFFFFF;
+        border: 1px solid #fff;
         border-radius: 50%;
       }
     }
