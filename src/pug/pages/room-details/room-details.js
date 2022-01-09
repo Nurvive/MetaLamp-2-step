@@ -1,21 +1,31 @@
-import './room-details-kit/room-details.scss'
+import './room-details-kit/room-details-media.scss';
 import {Chart, registerables} from 'chart.js';
-import 'jquery'
-import slick from 'slick-carousel'
-import 'slick-carousel/slick/slick.scss'
+import 'jquery';
+import 'slick-carousel';
+import 'slick-carousel/slick/slick.scss';
 
+const gallery = $('#room-details__gallery');
+const galleryImages = gallery.children();
+let slickExist = null;
 $(window).resize(function () {
-    let width = $(this).width()
-    if (width < 900)
-        $('#room-details__gallery').slick({
+    const width = document.documentElement.clientWidth;
+    if (width > 900 && slickExist) {
+        gallery.slick('unslick');
+        gallery.append(galleryImages);
+    }
+});
+$(document).ready(() => {
+    const width = document.documentElement.clientWidth;
+    gallery.on('init', () => {
+        slickExist = true;
+    });
+    if (width < 900) {
+        gallery.slick({
             slidesToShow: 1,
-            arrows: false,
-        })
-    else
-        $('#room-details__gallery').slick("unslick")
-})
-
-
+            arrows: false
+        });
+    }
+});
 Chart.register(...registerables);
 let ctx = document.getElementById('room-details__chart');
 const data = {
@@ -28,12 +38,13 @@ const data = {
             '#BC9CFF',
             '#6FCF97',
             '#FFE39C'
-        ],
+        ]
 
     }]
-}
+};
 if (ctx) {
-    let chart = new Chart(ctx, {
+    // eslint-disable-next-line no-new
+    new Chart(ctx, {
         type: 'doughnut',
         data: data,
         options: {
@@ -45,28 +56,27 @@ if (ctx) {
             maintainAspectRatio: false,
             datasets: {
                 doughnut: {
-                    cutout: 53,
+                    cutout: 53
                 }
             },
             plugins: {
                 legend: {
-                    position: "right",
+                    position: 'right',
                     reverse: true,
                     display: false,
                     labels: {
                         usePointStyle: true,
                         boxWidth: 10,
                         font: {
-                            family: "Montserrat",
+                            family: 'Montserrat',
                             lineHeight: 24
                         }
                     }
-                },
+                }
             },
             elements: {
                 point: {}
-
             }
         }
-    })
+    });
 }

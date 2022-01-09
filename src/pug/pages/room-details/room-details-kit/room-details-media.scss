@@ -1,23 +1,26 @@
+@import 'room-details';
+
 @media (max-width: 1200px) {
-  .room-details__inner{
+  .room-details__inner {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .room-details__inner .card{
+
+  .room-details__inner .card {
     align-self: unset;
   }
-
 }
 
 @media (max-width: 770px) {
-  .room-details__item{
+  .room-details__item {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
 }
+
 @media (max-width: 420px) {
-  .room-details__reviews .room-details__title span{
+  .room-details__reviews .room-details__title span {
     top: 25px;
     left: 0;
   }
