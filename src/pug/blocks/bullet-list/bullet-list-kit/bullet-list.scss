@@ -1,4 +1,4 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .bullet-list{
   &__list{
@@ -13,7 +13,7 @@
     margin-bottom: 10px;
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       display: inline-block;
       width: 10px;
       height: 10px;
