@@ -1,22 +1,27 @@
-@import "../../../../scss/common/colors";
-.rich-checkbox-buttons{
+@import '../../../../scss/common/colors';
+
+.rich-checkbox-buttons {
   max-width: 266px;
   position: relative;
+
   &__list{
 
   }
-  &__item{
+
+  &__item {
     margin-bottom: 10px;
     margin-left: 20px;
+
     &:first-child {
       margin-top: 18px;
     }
-    & label *{
+
+    & label * {
       cursor: pointer;
     }
   }
 
-  &__item-text{
+  &__item-text {
     margin-left: 10px;
     color: $dark75;
     line-height: 18px;
@@ -25,7 +30,7 @@
     text-transform: initial;
     position: relative;
 
-    &::after{
+    &::after {
       content: '';
       position: absolute;
       top: -2px;
@@ -33,24 +38,27 @@
       width: 20px;
       height: 20px;
       border-radius: 4px;
-      background: #FFF;
-      transition: .2s;
+      background: #fff;
+      transition: 0.2s;
       border: 1px solid $dark25;
     }
   }
-  &__check{
+
+  &__check {
     position: absolute;
     z-index: -1;
     opacity: 0;
-    &:checked + .rich-checkbox-buttons__item-text:after{
+
+    &:checked + .rich-checkbox-buttons__item-text::after {
       border: 1px solid $purple;
-      background-image: url("../../../../assets/images/check.png");
+      background-image: url('../../../../assets/images/check.png');
       background-repeat: no-repeat;
       background-position: center;
     }
   }
-  &__description{
-    color:$dark50;
+
+  &__description {
+    color: $dark50;
     line-height: 14px;
     font-weight: normal;
     text-transform: initial;
