@@ -5,20 +5,20 @@
   display: inline-flex;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   height: 44px;
   max-width: 99px;
   width: 100%;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 
   &__text {
     font-size: 12px;
     line-height: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
   }
 
   &:hover {
@@ -27,13 +27,15 @@
 }
 
 .transparent-button {
-  @extend .default-button;
+  @extend.default-button;
+
   background: white;
-  border: 2px solid #BC9CFF;
+  border: 2px solid #bc9cff;
 
   &__text {
-    @extend .default-button__text;
-    color: #BC9CFF;
+    @extend.default-button__text;
+
+    color: #bc9cff;
   }
 
   &:hover {
@@ -46,8 +48,9 @@
   display: inline-block;
 
   &__text {
-    transition: .2s;
-    @extend .transparent-button__text;
+    transition: 0.2s;
+
+    @extend.transparent-button__text;
   }
 
   &:hover &__text {
@@ -56,14 +59,15 @@
 }
 
 .long-button {
-  @extend .default-button;
+  @extend.default-button;
+
   text-align: center;
   max-width: 320px;
   width: 100%;
   position: relative;
 
   &__text {
-    @extend .default-button__text;
+    @extend.default-button__text;
   }
 
   &__arrow {
@@ -94,7 +98,7 @@
       top: 3px;
       right: -2px;
       background-color: white;
-      transform: rotate(-45deg)
+      transform: rotate(-45deg);
     }
   }
 }
