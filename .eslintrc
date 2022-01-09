@@ -4,6 +4,9 @@
     "es2021": true,
     "jquery": true
   },
+  "plugins": [
+    "pug"
+  ],
   "extends": [
     "airbnb-base/legacy"
   ],
