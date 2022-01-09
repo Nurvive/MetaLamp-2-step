@@ -1,19 +1,25 @@
 @media (max-width: 1060px) {
-  .footer{
+  .footer {
     padding: 120px 0;
   }
-  .footer__column-list, .footer-line, .footer__description-text{
+
+  .footer__column-list,
+  .footer-line,
+  .footer__description-text {
     display: none;
   }
-  .footer__container{
+
+  .footer__container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .footer__top{
+
+  .footer__top {
     padding-bottom: 20px;
   }
-  .footer__down{
+
+  .footer__down {
     flex-direction: column;
     padding: 0;
     gap: 25px;
