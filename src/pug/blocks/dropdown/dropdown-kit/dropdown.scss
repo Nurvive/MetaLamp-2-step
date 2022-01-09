@@ -1,33 +1,39 @@
-@import "../../../../scss/common/colors";
-.dropdown{
+@import '../../../../scss/common/colors';
+
+.dropdown {
   max-width: 320px;
   position: relative;
-  &__input-wrapper{
-    &_active .dropdown__open-button{
+
+  &__input-wrapper {
+    &__open-button {
+      content: url('../../../../assets/images/arrow-down.png');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 16px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    &_active .dropdown__open-button {
       transform: rotate(180deg) translateY(50%);
     }
   }
-  &__open-button{
-    content:url("../../../../assets/images/arrow-down.png");
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    right: 16px;
-    border: none;
-    cursor: pointer;
-    transition: .3s;
-  }
-  & &__input{
+
+  & &__input {
     display: block;
     border: 1px solid $dark50;
     cursor: pointer;
     line-height: 18px;
     color: $dark75;
-    &_active{
-      border-radius:4px 4px 0 0;
+
+    &_active {
+      border-radius: 4px 4px 0 0;
     }
   }
-  &__list{
+
+  &__list {
     position: absolute;
     width: 100%;
     border: 1px solid $dark50;
@@ -38,11 +44,13 @@
     background-color: #fff;
     display: none;
     z-index: 4;
-    &_active{
+
+    &_active {
       display: block;
     }
   }
-  &__item{
+
+  &__item {
     color: $dark100;
     font-weight: bold;
     font-size: 12px;
@@ -52,56 +60,65 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-container{
+
+    &-container {
       display: flex;
       align-items: center;
     }
-    &-minus{
+
+    &-minus {
       border: 1px solid $dark50;
       border-radius: 50%;
       height: 30px;
       width: 30px;
       position: relative;
       cursor: pointer;
-      &::before{
+
+      &::before {
         content: '';
         position: absolute;
         width: 8px;
         height: 2px;
         background-color: $dark50;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
-      &_inactive{
+
+      &_inactive {
         opacity: 0.5;
       }
     }
-    &-count{
+
+    &-count {
       margin: 0 9px;
       width: 10px;
       text-align: center;
     }
-    &-plus{
-      @extend .dropdown__item-minus;
-      &::after{
+
+    &-plus {
+      @extend.dropdown__item-minus;
+
+      &::after {
         content: '';
         position: absolute;
         width: 2px;
         height: 8px;
         background-color: $dark50;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-    }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
-  &__item-interactive{
+
+  &__item-interactive {
     display: flex;
     justify-content: space-between;
     margin-top: 21px;
   }
-  &__interactive-word{
+
+  &__interactive-word {
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
