@@ -2,12 +2,12 @@ const path = require('path');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const PAGES = fs.readdirSync(path.join(__dirname, './src/pug/pages'));
 module.exports = {
     entry: './src/js/main.js',
-    mode: 'production',
+    mode: 'development',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './[name].bundle.js'
