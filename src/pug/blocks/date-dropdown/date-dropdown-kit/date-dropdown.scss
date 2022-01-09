@@ -1,35 +1,41 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
 .date-dropdown {
   width: 150px;
   position: relative;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #fff;
+
   & .date-dropdown-input {
     cursor: pointer;
     background-color: transparent;
   }
-  &_active .date-dropdown__open-button{
+
+  &__open-button {
+    content: url('../../../../assets/images/arrow-down.png');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &_active .date-dropdown__open-button {
     transform: rotate(180deg) translateY(50%);
   }
 }
-.date-dropdown__open-button{
-  content:url("../../../../assets/images/arrow-down.png");
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  right: 16px;
-  border: none;
-  cursor: pointer;
-  transition: .3s;
-}
-.filter-date-dropdown{
+
+.filter-date-dropdown {
   width: 266px;
 }
-.datepicker--pointer{
+
+.datepicker--pointer {
   display: none;
 }
-.toggle-datepicker{
+
+.toggle-datepicker {
   width: 320px;
   padding: 14px 20px 20px;
 }
