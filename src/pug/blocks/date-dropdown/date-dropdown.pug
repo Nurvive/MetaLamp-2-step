@@ -1,11 +1,11 @@
 mixin date-dropdown(options)
     -var options = options || {}
-    .date-dropdown(class=options.className)
+    .date-dropdown.js-date-dropdown(class=options.className)
         span.date-dropdown__open-button
         include ../text-field/text-field
         if options.type === 'single'
-            +text-field(data-date-format="dd M" id=options.id data-range=options.range data-multiple-dates-separator=" - " class='date-dropdown-input' placeholder='ДД.ММ - ДД.ММ' readonly='readonly')
+            +text-field(data-date-format="dd M" id=options.id data-range=options.range data-multiple-dates-separator=" - " class='date-dropdown-input js-date-dropdown-input' placeholder='ДД.ММ - ДД.ММ' readonly='readonly')
         else
-            +text-field(data-date-format="dd.m.yyyy" id=options.id data-range=options.range data-multiple-dates-separator=" - " class='date-dropdown-input' placeholder='ДД.ММ.ГГГГ' readonly='readonly')
+            +text-field(data-date-format="dd.m.yyyy" id=options.id data-range=options.range data-multiple-dates-separator=" - " class='date-dropdown-input js-date-dropdown-input' placeholder='ДД.ММ.ГГГГ' readonly='readonly')
 
 
