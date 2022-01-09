@@ -1,1 +1,1 @@
-import './login-kit/login.scss'
+import './login-kit/login.scss';
