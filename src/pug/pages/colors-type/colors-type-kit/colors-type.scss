@@ -1,4 +1,5 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
+
 .colors-type__container {
   padding: 145px 0;
   display: flex;
@@ -54,10 +55,10 @@
 }
 
 .column__info-text {
-  @extend .column__info-title;
+  @extend.column__info-title;
+
   font-weight: 400;
 }
-
 
 .column__type-list-item {
   display: flex;
@@ -89,9 +90,8 @@
   }
 }
 
-
 .column__item-tag {
-  color: rgba(31, 32, 65, 0.25);
+  color: rgb(31 32 65 / 25%);
   margin-right: 30px;
   text-align: right;
   width: 30px;
@@ -102,4 +102,3 @@
   max-width: 370px;
   margin-bottom: 50px;
 }
-
