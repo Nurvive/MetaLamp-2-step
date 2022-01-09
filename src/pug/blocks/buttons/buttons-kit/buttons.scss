@@ -1,6 +1,6 @@
-@import "../../../../scss/common/colors";
+@import '../../../../scss/common/colors';
 
-.default-button{
+.default-button {
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -12,64 +12,70 @@
   width: 100%;
   cursor: pointer;
   transition: .2s;
-  &__text{
+
+  &__text {
     font-size: 12px;
     line-height: 15px;
     font-weight: bold;
     text-transform: uppercase;
     color: #FFFFFF;
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.5;
   }
 }
-.transparent-button{
+
+.transparent-button {
   @extend .default-button;
   background: white;
   border: 2px solid #BC9CFF;
-  &__text{
+
+  &__text {
     @extend .default-button__text;
     color: #BC9CFF;
   }
-  &:hover{
+
+  &:hover {
     opacity: 0.5;
   }
 }
 
-.text-button{
+.text-button {
   cursor: pointer;
   display: inline-block;
 
-  &__text{
+  &__text {
     transition: .2s;
-
     @extend .transparent-button__text;
   }
-  &:hover &__text{
+
+  &:hover &__text {
     color: $dark50;
   }
 }
 
-.long-button{
+.long-button {
   @extend .default-button;
   text-align: center;
   max-width: 320px;
   width: 100%;
   position: relative;
-  &__text{
+
+  &__text {
     @extend .default-button__text;
   }
-  &__arrow{
+
+  &__arrow {
     position: relative;
     width: 15px;
     height: 2px;
     background-color: white;
-    //left: 100%;
-    top:-8px;
+    top: -8px;
     left: 45%;
-
     transform: translateX(-50%);
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       width: 10px;
@@ -79,7 +85,8 @@
       background-color: white;
       transform: rotate(45deg);
     }
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       width: 10px;
