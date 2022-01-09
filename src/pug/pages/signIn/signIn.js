@@ -1,1 +1,1 @@
-import './signIn-kit/signIn.scss'
+import './signIn-kit/signIn.scss';
