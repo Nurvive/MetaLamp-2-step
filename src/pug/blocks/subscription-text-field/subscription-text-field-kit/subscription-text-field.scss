@@ -1,15 +1,17 @@
-.text-field-wrapper{
+.text-field-wrapper {
   position: relative;
   max-width: 267px;
   height: 44px;
-  & .subscription-input{
+
+  & .subscription-input {
     padding-right: 44px;
   }
 }
-.subscription-text-button{
+
+.subscription-text-button {
   position: absolute;
   z-index: 2;
-  background-image: url("../../../../assets/images/arrow_forward.png");
+  background-image: url('../../../../assets/images/arrow_forward.png');
   background-repeat: no-repeat;
   border: none;
   background-position: center;
@@ -19,5 +21,3 @@
   height: 44px;
   cursor: pointer;
 }
-
-
