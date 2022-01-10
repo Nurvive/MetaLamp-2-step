@@ -2,7 +2,7 @@ import './range-slider-kit/range-slider.scss';
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 
-$('.range-slider__slider').ionRangeSlider({
+$('.js-range-slider__slider').ionRangeSlider({
     skin: 'round',
     min: 0,
     type: 'double',
@@ -13,9 +13,9 @@ $('.range-slider__slider').ionRangeSlider({
     hide_min_max: true,
     hide_from_to: true,
     onStart: function (data) {
-        $('.range-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
+        $('.js-range-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
     },
     onChange: function (data) {
-        $('.range-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
+        $('.js-range-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
     }
 });
