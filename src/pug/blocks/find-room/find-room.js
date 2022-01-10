@@ -3,8 +3,8 @@ import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
 $().ready(function () {
-    let $start = $('#find-room__date-dropdown_start');
-    let $end = $('#find-room__date-dropdown_end');
+    const $start = $('#find-room__date-dropdown_start');
+    const $end = $('#find-room__date-dropdown_end');
 
     $start.datepicker({
         onSelect: function (fd) {
@@ -12,8 +12,8 @@ $().ready(function () {
             $end.val(fd.split('-')[1]);
         }
     }).data('datepicker');
-    let pckr = $('.datepickers-container .datepicker');
-    pckr.append('<div class="text-buttons">'
+    let $picker = $('.datepickers-container .datepicker');
+    $picker.append('<div class="text-buttons">'
         + '<div class="text-button"><div class="text-button__text">Очистить</div></div>'
         + '<div class="text-button"><div class="text-button__text">Применить</div></div>'
         + '</div>');
