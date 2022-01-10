@@ -4,30 +4,30 @@ import 'jquery';
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
 
-const gallery = $('#room-details__gallery');
-const galleryImages = gallery.children();
+const $gallery = $('#room-details__gallery');
+const $galleryImages = $gallery.children();
 let slickExist = null;
 $(window).resize(function () {
     const width = document.documentElement.clientWidth;
     if (width > 900 && slickExist) {
-        gallery.slick('unslick');
-        gallery.append(galleryImages);
+        $gallery.slick('unslick');
+        $gallery.append($galleryImages);
     }
 });
 $(document).ready(() => {
     const width = document.documentElement.clientWidth;
-    gallery.on('init', () => {
+    $gallery.on('init', () => {
         slickExist = true;
     });
     if (width < 900) {
-        gallery.slick({
+        $gallery.slick({
             slidesToShow: 1,
             arrows: false
         });
     }
 });
 Chart.register(...registerables);
-let ctx = document.getElementById('room-details__chart');
+const ctx = document.getElementById('room-details__chart');
 const data = {
     labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
     datasets: [{
