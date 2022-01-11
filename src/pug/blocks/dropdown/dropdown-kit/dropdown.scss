@@ -4,18 +4,18 @@
   max-width: 320px;
   position: relative;
 
-  &__input-wrapper {
-    &__open-button {
-      content: url('../../../../assets/images/arrow-down.png');
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 16px;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+  &__open-button {
+    content: url('../../../../assets/images/arrow-down.png');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
+  &__input-wrapper {
     &_active .dropdown__open-button {
       transform: rotate(180deg) translateY(50%);
     }
