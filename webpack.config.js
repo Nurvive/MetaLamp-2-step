@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const PAGES = fs.readdirSync(path.join(__dirname, './src/pug/pages'));
 module.exports = {
     entry: './src/js/main.js',
-    mode: 'development',
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './[name].bundle.js'
