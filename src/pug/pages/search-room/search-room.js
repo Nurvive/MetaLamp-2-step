@@ -1,5 +1,4 @@
 import './search-room-kit/search-room-media.scss';
-import 'jquery';
 
 $().ready(() => {
     let width = ($(window).width());

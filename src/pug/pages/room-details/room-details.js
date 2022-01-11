@@ -1,6 +1,5 @@
 import './room-details-kit/room-details-media.scss';
 import {Chart, registerables} from 'chart.js';
-import 'jquery';
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
 
