@@ -10,10 +10,9 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "dev": "webpack serve --open",
+    "lint": "eslint ./src/**/*.js"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.7",
