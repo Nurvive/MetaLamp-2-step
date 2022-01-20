@@ -1,1 +1,1 @@
-import './comment-kit/comment.scss';
+import './comment.scss';

@@ -1,7 +1,7 @@
 extends ../../templates/template
 include ../../blocks/buttons/button
 include ../../blocks/checkbox-buttons/checkbox-buttons
-
+include ../../blocks/comment/comment
 block title
     title form-elements
 
@@ -97,11 +97,10 @@ block content
                     }
                 ]
             +pros-item(obj)
-            include ../../blocks/comment/comment
-            -
-                var options = {
-                    name: 'Мурад Сарафанов',
-                    time: '5 дней назад',
-                    text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-                }
-            +comment(options)
+            +comment({
+                name: 'Мурад Сарафанов',
+                time: '5 дней назад',
+                text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                likes: 2,
+                img: '../../../assets/images/man.png'
+            })

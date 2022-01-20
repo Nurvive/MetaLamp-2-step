@@ -1,11 +1,19 @@
+include ../like-button/like-button
+
 mixin comment(options)
-    -var options = options || {}
+    -
+        const likes = options.likes || 0
+        const text = options.text || 'lorem'
+        const time = options.time || 'Сейчас'
+        const name = options.name || 'Имя Фамилия'
+        const img = options.img || '../../../assets/favicon/favicon.ico'
     .comment
         .comment__info
             .comment__info-img
+                img(src=img alt=name)
             .comment__info-inner
-                .comment__info-author=options.name
-                .comment__info-time=options.time
+                .comment__info-author=name
+                .comment__info-time=time
         .comment__content
-            include ../like-button/like-button
-            p.comment__content-text=options.text
+            +like-button(likes)
+            p.comment__content-text=text
