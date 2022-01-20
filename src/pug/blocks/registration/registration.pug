@@ -1,3 +1,4 @@
+include ../buttons/button
 mixin registration
     .registration.card&attributes(attributes)
         include ../text-field/text-field
@@ -16,10 +17,8 @@ mixin registration
             include ../toggle/toggle-kit/toggle-mixin
             -var obj = ['Получать спецпредложения']
             +toggle-buttons(obj)
-        include ../buttons/long-button
-        +long-button('Зарегистрироваться', true)
+        +button({text: 'Зарегистрироваться', size: 'long', arrow: true})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin
-            include ../buttons/transparent-button
-            +transparent-button('Войти')
+            +button({text: 'Войти', size: 'default', type: 'transparent'})
 

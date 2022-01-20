@@ -1,3 +1,4 @@
+include ../buttons/button
 mixin login
     .card.login&attributes(attributes)
         .login__title
@@ -7,10 +8,8 @@ mixin login
             +text-field(placeholder='Email' class='login__input')
             +text-field(placeholder='Пароль' class='login__input')
         .login__button
-            include ../buttons/long-button
-            +long-button('войти', true)
+            +button({text: 'Войти', size: 'long', arrow: true})
         .login__bottom
             p.login__bottom-text Нет аккаунта на Toxin?
-            include ../buttons/transparent-button
-            +transparent-button('Создать')
+            +button({text: 'Создать', size: 'default', type: 'transparent'})
 

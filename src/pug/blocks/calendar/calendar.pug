@@ -1,7 +1,7 @@
+include ../buttons/button
 mixin calendar
     .calendar
         .calendar__inner.js-calendar__inner
         .calendar__buttons
-            include ../buttons/text-button
-            +text-button
-            +text-button
+            +button({text: 'click', type: 'text'})
+            +button({text: 'click', type: 'text'})

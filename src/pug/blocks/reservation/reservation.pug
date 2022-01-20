@@ -1,3 +1,4 @@
+include ../buttons/button
 .card.reservation
     -
         var obj = [
@@ -5,13 +6,13 @@
                 id: 'reservation__date-dropdown',
                 idUnique: 'reservation__date-dropdown_start',
                 text: 'прибытие',
-                class:'reservation__date-dropdown_start'
+                class: 'reservation__date-dropdown_start'
             },
             {
                 id: 'reservation__date-dropdown',
                 idUnique: 'reservation__date-dropdown_end',
                 text: 'выезд',
-                class:'reservation__date-text-field'
+                class: 'reservation__date-text-field'
             }
         ]
     .reservation__info
@@ -32,14 +33,14 @@
             var obj = [
                 {
                     text: '9 990₽ х 4 суток',
-                    info:false,
+                    info: false,
                     price: '39 960₽'
                 },
 
                 {
                     text: 'Сбор за услуги: скидка 2 179₽',
                     info: true,
-                    infoText:'Скидка за красивые глаза',
+                    infoText: 'Скидка за красивые глаза',
                     price: '0₽'
                 },
                 {
@@ -57,5 +58,4 @@
         .reservation__total-border
         p.reservation__total-price 38 081₽
     .reservation__button
-        include ../buttons/long-button
-        +long-button('забронировать', true)
+        +button({text: 'Забронировать', size: 'long', arrow: true})

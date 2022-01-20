@@ -1,10 +1,9 @@
+include ../../buttons/button
 mixin log-in-buttons
-    include ../../buttons/transparent-button
-    include ../../buttons/long-button
     a.log-in-button.header__button
-        +transparent-button('Войти')
+        +button({text: 'Войти', type: 'transparent', size: 'default'})
     a.sign-up-button.header__button
-        +long-button('Зарегистрироваться', false)
+        +button({text: 'Зарегистрироваться', size: 'long'})
 
 mixin cabinet-button
     a.cabinet Юлий Цезарь
