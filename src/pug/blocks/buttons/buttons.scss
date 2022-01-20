@@ -1,6 +1,6 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
-.default-button {
+.button {
   align-items: center;
   display: inline-flex;
   justify-content: center;
@@ -12,62 +12,40 @@
   width: 100%;
   cursor: pointer;
   transition: 0.2s;
-
-  &__text {
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-  }
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
 
   &:hover {
     opacity: 0.5;
   }
-}
 
-.transparent-button {
-  @extend.default-button;
-
-  background: white;
-  border: 2px solid #bc9cff;
-
-  &__text {
-    @extend.default-button__text;
-
+  &__transparent {
+    background: white;
+    border: 2px solid #bc9cff;
     color: #bc9cff;
   }
 
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.text-button {
-  cursor: pointer;
-  display: inline-block;
-
   &__text {
-    transition: 0.2s;
+    cursor: pointer;
+    display: inline-block;
+    color: #bc9cff;
+    background: none;
+    height: initial;
 
-    @extend.transparent-button__text;
+    &:hover {
+      color: $dark100;
+    }
   }
 
-  &:hover &__text {
-    color: $dark50;
-  }
-}
-
-.long-button {
-  @extend.default-button;
-
-  text-align: center;
-  max-width: 320px;
-  width: 100%;
-  position: relative;
-
-  &__text {
-    @extend.default-button__text;
+  &__long {
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    position: relative;
   }
 
   &__arrow {

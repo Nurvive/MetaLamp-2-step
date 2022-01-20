@@ -1,0 +1,19 @@
+mixin button(options)
+    -
+        let size = 'default';
+        let className = 'button';
+        const text = options.text || 'click me';
+        if (options.size) {
+            size = options.size;
+            className += ` button__${size}`;
+        }
+        if (options.type)
+            className += ` button__${options.type}`;
+        // if (options.arrow){
+        //     className += ` button__with-arrow`
+        // }
+    if (options.arrow)
+        button(class=className)= text
+            span.button__arrow
+    else
+        button(class=className)= text

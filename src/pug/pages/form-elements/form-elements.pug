@@ -1,4 +1,5 @@
 extends ../../templates/template
+include ../../blocks/buttons/button
 block title
     title form-elements
 
@@ -17,10 +18,10 @@ block content
                 div(class='form-elements__label') date Dropdown
                     include ../../blocks/date-dropdown/date-dropdown
                     -
-                        var options={
-                            id:'date-dropdown',
-                            className:'',
-                            range:''
+                        var options = {
+                            id: 'date-dropdown',
+                            className: '',
+                            range: ''
                         }
                     +date-dropdown(options)
                 div(class='form-elements__label') filter date dropdown
@@ -29,7 +30,7 @@ block content
                             id: 'filter-date-dropdown',
                             className: 'filter-date-dropdown',
                             range: 'true',
-                            type:'single'
+                            type: 'single'
                         }
                     +date-dropdown(options)
                 div(class='form-elements__label') subscription text field
@@ -61,18 +62,14 @@ block content
                 div(class='form-elements__label') range slider
                     include ../../blocks/range-slider/range-slider
                 div(class='form-elements__label') buttons
-                    include ../../blocks/buttons/default-button
-                    include ../../blocks/buttons/text-button
-                    include ../../blocks/buttons/long-button
-                    include ../../blocks/buttons/transparent-button
                     div
-                        +default-button
+                        +button({text: 'click me', size: 'default'})
                     div
-                        +transparent-button
+                        +button({text: 'click ME', size: 'default', type: 'transparent'})
                     div
-                        +text-button
+                        +button({text: 'clickkk meee', size: 'default', type: 'text'})
                     div
-                        +long-button('lorem', true  )
+                        +button({text: 'long click me', 'size': 'long', arrow: 'true'})
                 div(class='form-elements__label') pagination
                     include ../../blocks/pagination/pagination
                 div(class='form-elements__label') bullet list
@@ -101,8 +98,8 @@ block content
             include ../../blocks/comment/comment
             -
                 var options = {
-                            name: 'Мурад Сарафанов',
-                            time: '5 дней назад',
-                            text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-                        }
+                    name: 'Мурад Сарафанов',
+                    time: '5 дней назад',
+                    text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                }
             +comment(options)
