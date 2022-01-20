@@ -7,3 +7,5 @@ $purple: #bc9cff;
 $green: #6fcf97;
 $header-button-first-color: #bc9cff;
 $header-button-second-color: #8ba4f9;
+$gradient-green: linear-gradient(180deg, $purple 0%, $header-button-second-color 100%);
+$gradient-purple: linear-gradient(180deg, $green 0%, #66d2ea 100%);

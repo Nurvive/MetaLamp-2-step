@@ -1,1 +1,1 @@
-import './text-field-kit/text-field.scss';
+import './text-field.scss';

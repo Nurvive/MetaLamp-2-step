@@ -1,20 +1,19 @@
 include ../buttons/button
+include ../date-dropdown/date-dropdown
 .card.reservation
     -
         var obj = [
-            {
-                id: 'reservation__date-dropdown',
-                idUnique: 'reservation__date-dropdown_start',
-                text: 'прибытие',
-                class: 'reservation__date-dropdown_start'
-            },
-            {
-                id: 'reservation__date-dropdown',
-                idUnique: 'reservation__date-dropdown_end',
-                text: 'выезд',
-                class: 'reservation__date-text-field'
-            }
-        ]
+                    {
+                        title: 'Прибытие',
+                        class: 'js-reservation__date-dropdown_start',
+                        placeholder: 'ДД.ММ.ГГГГ'
+                    },
+                    {
+                        title: 'Выезд',
+                        class: 'js-reservation__date-dropdown_end',
+                        placeholder: 'ДД.ММ.ГГГГ'
+                    }
+                ]
     .reservation__info
         p.reservation__info-number 888
             span.reservation__info-type люкс
@@ -22,8 +21,7 @@ include ../buttons/button
             strong 9 990₽
             span в сутки
     .reservation__dates
-        include ../double-date-dropdown/double-date-dropdown
-        +double-date-dropdown(obj)
+        +date-dropdown(obj)
     .reservation__layout
         p.reservation__layout-text гости
         include ../dropdown/dropdown

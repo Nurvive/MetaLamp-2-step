@@ -1,4 +1,5 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .button {
   align-items: center;
@@ -49,34 +50,9 @@
   }
 
   &__arrow {
-    position: relative;
-    width: 15px;
-    height: 2px;
-    background-color: white;
     top: -8px;
     left: 45%;
+    background-color: white;
     transform: translateX(-50%);
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 2px;
-      top: -3px;
-      right: -2px;
-      background-color: white;
-      transform: rotate(45deg);
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 2px;
-      top: 3px;
-      right: -2px;
-      background-color: white;
-      transform: rotate(-45deg);
-    }
   }
 }

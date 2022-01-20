@@ -1,11 +1,17 @@
-import 'air-datepicker';
-import 'air-datepicker/dist/css/datepicker.min.css';
-import './calendar.scss';
-
-$('.js-calendar__inner').datepicker({
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+// eslint-disable-next-line no-unused-vars
+const picker = new AirDatepicker('.js-calendar__inner', {
     classes: 'calendar-datepicker',
     range: true,
+    buttons: ['clear', 'today'],
+    locale: {
+        today: 'Применить'
+    },
+    prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
+    nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
     navTitles: {
-        days: 'MM yyyy'
-    }
+        days: 'MMMM yyyy'
+    },
+    startDate: new Date()
 });

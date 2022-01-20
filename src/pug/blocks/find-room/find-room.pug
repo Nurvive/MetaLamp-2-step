@@ -1,24 +1,22 @@
+include ../date-dropdown/date-dropdown
 include ../buttons/button
 .card.find-room
     p.find-room__title Найдём номера под ваши пожелания
     .find-room__dates
-        include ../double-date-dropdown/double-date-dropdown
         -
             var obj = [
                 {
-                    id: 'find-room__date-dropdown',
-                    idUnique: 'find-room__date-dropdown_start',
-                    text: 'прибытие',
-                    class: 'find-room__date-dropdown-start'
+                    title: 'Прибытие',
+                    class: 'js-find-room__date-dropdown_start',
+                    placeholder: 'ДД.ММ.ГГГГ'
                 },
                 {
-                    id: 'find-room__date-dropdown',
-                    idUnique: 'find-room__date-dropdown_end',
-                    text: 'выезд',
-                    class: 'find-room__date-text-field'
+                    title: 'Выезд',
+                    class: 'js-find-room__date-dropdown_end',
+                    placeholder: 'ДД.ММ.ГГГГ'
                 }
             ]
-        +double-date-dropdown(obj)
+        +date-dropdown(obj)
     div.find-room__layout
         p.find-room__layout-text гости
         include ../dropdown/dropdown
