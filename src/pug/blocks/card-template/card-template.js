@@ -1,1 +1,1 @@
-import './card-template-kit/card-template.scss';
+import './card-template.scss';
