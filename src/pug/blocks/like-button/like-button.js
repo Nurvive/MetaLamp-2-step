@@ -1,4 +1,4 @@
-import './like-button-kit/like-button.scss';
+import './like-button.scss';
 
 $().ready(()=>{
     $('.js-like-button').on('click', function () {
