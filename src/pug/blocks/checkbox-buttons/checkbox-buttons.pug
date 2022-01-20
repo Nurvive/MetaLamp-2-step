@@ -1,0 +1,8 @@
+mixin checkbox-buttons(items)
+    .checkbox-buttons
+        ul.checkbox-buttons__list
+            each val in items
+                li.checkbox-buttons__item
+                    label
+                        input(type='checkbox' class='checkbox-buttons__check')
+                        p.checkbox-buttons__item-text= val
