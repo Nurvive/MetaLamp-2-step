@@ -1,4 +1,6 @@
 include ../buttons/button
+include ../masked-text-field/masked-text-field
+
 mixin registration
     .registration.card&attributes(attributes)
         include ../text-field/text-field
@@ -9,7 +11,7 @@ mixin registration
             include ../radio-buttons/radio-buttons
         .registration__layout
             p.registration__layout-text дата рождения
-            include ../masked-text-field/masked-text-field
+            +masked-text-field
         .registration__layout
             p.registration__layout-text данные для входа в сервис
             +text-field(placeholder='Email' class='registration__input')

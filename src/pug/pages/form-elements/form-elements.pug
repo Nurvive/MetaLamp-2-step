@@ -7,6 +7,7 @@ include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/like-button/like-button
 include ../../blocks/bullet-list/bullet-list
 include ../../blocks/dropdown/dropdown
+include ../../blocks/masked-text-field/masked-text-field
 
 block title
     title form-elements
@@ -19,10 +20,9 @@ block content
                 div(class='form-elements__label') Text field
                     +text-field
                 div(class='form-elements__label') dropdown
-                    include ../../blocks/dropdown/dropdown
                     +dropdown('dropdown', 'default')
                 div(class='form-elements__label') masked text field
-                    include ../../blocks/masked-text-field/masked-text-field
+                    +masked-text-field
                 div(class='form-elements__label') date Dropdown
                     -
                         var obj = [
