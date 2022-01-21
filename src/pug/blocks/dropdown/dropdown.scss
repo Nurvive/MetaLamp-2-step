@@ -1,18 +1,14 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .dropdown {
   max-width: 320px;
   position: relative;
 
   &__open-button {
-    content: url('../../../assets/images/arrow-down.png');
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-25%);
     right: 16px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
   }
 
   &__input-wrapper {
