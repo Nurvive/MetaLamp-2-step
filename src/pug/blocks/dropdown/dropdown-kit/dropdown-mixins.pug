@@ -1,8 +1,0 @@
-mixin dropdown-item(obj)
-    each val, index in obj
-        li.dropdown__item&attributes(attributes)
-            p.dropdown__item-text(data-index=index)=val
-            .dropdown__item-container
-                div.dropdown__item-minus.dropdown__item-minus_inactive(data-type='minus', data-index=index)
-                div.dropdown__item-count(data-index=index) 0
-                div.dropdown__item-plus(data-type='plus' data-index=index)

@@ -1,3 +1,14 @@
+include ../text-field/text-field
+
+mixin dropdown-item(obj)
+    each val, index in obj
+        li.dropdown__item&attributes(attributes)
+            p.dropdown__item-text(data-index=index)=val
+            .dropdown__item-container
+                div.dropdown__item-minus.dropdown__item-minus_inactive(data-type='minus', data-index=index)
+                div.dropdown__item-count(data-index=index) 0
+                div.dropdown__item-plus(data-type='plus' data-index=index)
+
 mixin dropdown(id, type)
     -
         var placeholder = ''
@@ -15,10 +26,8 @@ mixin dropdown(id, type)
     div.dropdown.js-dropdown(id=id class=className)
         .dropdown__input-wrapper.js-dropdown__input-wrapper
             span.dropdown__open-button
-            include ../text-field/text-field
             +text-field(readonly='readonly' placeholder=placeholder class='dropdown__input js-dropdown__input')
         ul.dropdown__list.js-dropdown__list
-            include dropdown-kit/dropdown-mixins
             +dropdown-item(obj)
             if hasButtons
                 li.dropdown__item-interactive

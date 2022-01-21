@@ -1,11 +1,11 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .dropdown {
   max-width: 320px;
   position: relative;
 
   &__open-button {
-    content: url('../../../../assets/images/arrow-down.png');
+    content: url('../../../assets/images/arrow-down.png');
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

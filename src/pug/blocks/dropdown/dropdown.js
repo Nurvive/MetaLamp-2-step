@@ -1,4 +1,4 @@
-import './dropdown-kit/dropdown.scss';
+import './dropdown.scss';
 import {DropdownRooms} from './dropdown-kit/DropdownRooms';
 import {DropdownDefault} from './dropdown-kit/DropdownDefault';
 
