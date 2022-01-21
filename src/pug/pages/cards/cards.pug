@@ -1,6 +1,7 @@
 extends ../../templates/template
 include ../../blocks/find-room/find-room
 include ../../blocks/calendar/calendar
+include ../../blocks/login/login
 
 block title
     title cards
@@ -28,7 +29,7 @@ block content
             div.cards__item
                 include ../../blocks/reservation/reservation
             div.cards__item
-                include ../../blocks/login/login
+                +login
             div.cards__item
                 +calendar
             div.cards__item

@@ -1,10 +1,11 @@
 include ../buttons/button
+include ../text-field/text-field
+
 mixin login
     .card.login&attributes(attributes)
         .login__title
             p.login__title-text Войти
         .login__inputs
-            include ../text-field/text-field
             +text-field(placeholder='Email' class='login__input')
             +text-field(placeholder='Пароль' class='login__input')
         .login__button

@@ -1,6 +1,6 @@
 @import '../../../../scss/common/colors';
 
-.signIn {
+.sign-in {
   &__main {
     background-image: url('../../../../assets/images/registration.png');
     background-repeat: no-repeat;
@@ -8,7 +8,8 @@
     padding: 163px 0;
   }
 
-  &__card {
+  &__card-wrapper {
     margin: 0 auto;
+    max-width: 380px;
   }
 }
