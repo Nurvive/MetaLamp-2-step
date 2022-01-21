@@ -5,6 +5,6 @@ mixin expandable-checkbox(options)
         const text = options.text || 'text'
     .expandable-checkbox
         span.expandable-checkbox__text=text
-        span.expandable-checkbox__open-button.js-expandable-checkbox__open-button
+        span.expandable-checkbox__open-button.js-expandable-checkbox__open-button.open-button-chevron
         .expandable-checkbox__inner.js-expandable-checkbox__inner
             +checkbox-buttons({jsClass: options.jsClass, items: options.items})

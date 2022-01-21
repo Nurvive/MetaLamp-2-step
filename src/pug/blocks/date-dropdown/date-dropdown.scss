@@ -1,4 +1,5 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .date-dropdown {
   background-color: #fff;
@@ -27,17 +28,13 @@
     }
 
     &-open-button {
-      content: url('../../../assets/images/arrow-down.png');
-      position: absolute;
       top: 50%;
+      transform: translateY(-12.5%);
       right: 16px;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
     }
 
     &_active .date-dropdown__input-open-button {
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(50%);
     }
 
     &_long {
