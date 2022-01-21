@@ -1,8 +1,10 @@
-mixin checkbox-buttons(items)
-    .checkbox-buttons
-        ul.checkbox-buttons__list
-            each val in items
-                li.checkbox-buttons__item
-                    label
-                        input(type='checkbox' class='checkbox-buttons__check')
-                        p.checkbox-buttons__item-text= val
+mixin checkbox-buttons(options)
+    -
+        const items = options.items || []
+        const jsClass = options.jsClass || ''
+    ul.checkbox-buttons(class=jsClass)
+        each val in items
+            li.checkbox-buttons__item
+                label
+                    input(type='checkbox' class='checkbox-buttons__check')
+                    p.checkbox-buttons__item-text= val
