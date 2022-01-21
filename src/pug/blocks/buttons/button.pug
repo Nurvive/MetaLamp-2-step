@@ -9,9 +9,6 @@ mixin button(options)
         }
         if (options.type)
             className += ` button__${options.type}`;
-        // if (options.arrow){
-        //     className += ` button__with-arrow`
-        // }
     if (options.arrow)
         button(class=className)= text
             span.arrow.button__arrow

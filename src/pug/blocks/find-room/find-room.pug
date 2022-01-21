@@ -1,5 +1,6 @@
 include ../date-dropdown/date-dropdown
 include ../buttons/button
+include ../dropdown/dropdown
 
 mixin find-room(obj)
     .card.find-room
@@ -8,7 +9,6 @@ mixin find-room(obj)
             +date-dropdown(obj)
         div.find-room__layout
             p.find-room__layout-text гости
-            include ../dropdown/dropdown
             +dropdown('find-room__dropdown', 'default')
         .find-room__long-button-wrapper
             +button({text: 'Подобрать номер', size: 'long', arrow: true})
