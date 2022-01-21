@@ -1,11 +1,14 @@
 extends ../../templates/template
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+
 block title
     title Sign In
 
 block content
     .wrapper.signIn
-        include ../../blocks/header/header
+        +header(false)
         main.signIn__main
             include ../../blocks/login/login
             +login(class='signIn__card')
-        include ../../blocks/footer/footer
+        +footer

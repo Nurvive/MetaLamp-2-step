@@ -1,13 +1,15 @@
 extends ../../templates/template
 include ../../blocks/comment/comment
 include ../../blocks/bullet-list/bullet-list
+include ../../blocks/footer/footer
+include ../../blocks/header/header
 
 block title
     title room-details
 
 block content
     .wrapper.room-details
-        include ../../blocks/header/header
+        +header(false)
         main.room-details__main
             .room-details__gallery#room-details__gallery
                 img(src='../../../assets/images/gallery1.png')
@@ -78,4 +80,4 @@ block content
                             p.room-details__title Отмена
                             p.room-details__abort-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                 include ../../blocks/reservation/reservation
-        include ../../blocks/footer/footer
+        +footer

@@ -1,11 +1,14 @@
 extends ../../templates/template
 include ../../blocks/find-room/find-room
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+
 block title
     title landing
 
 block content
     .wrapper.landing
-        include ../../blocks/header/header
+        +header(false)
         .landing__main
             -
                 var obj = [
@@ -22,4 +25,4 @@ block content
                 ]
             +find-room(obj)
             span.landing__main-text Лучшие номера для вашей работы, отдыха и просто вдохновения
-        include ../../blocks/footer/footer
+        +footer

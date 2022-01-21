@@ -3,13 +3,15 @@ include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+include ../../blocks/footer/footer
+include ../../blocks/header/header
 
 block title
     title search-room
 
 block content
     .wrapper.search-room
-        include ../../blocks/header/header
+        +header(false)
         main.search-room__main
             aside.search-room__aside
                 ul.search-room__list
@@ -188,5 +190,4 @@ block content
                 include ../../blocks/pagination/pagination
                 .search-room__pagination-wrapper
                     +pagination(class='search-room__pagination')
-
-        include ../../blocks/footer/footer
+        +footer
