@@ -1,3 +1,9 @@
+mixin column(title,text)
+    ul.footer__column-list= title
+        each val in text
+            li
+                a.footer__column-item= val
+
 footer.footer
     .container.footer__container
         .footer__top
@@ -7,7 +13,6 @@ footer.footer
                 p.footer__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             - var text = ["О нас", "Новости", "Служба поддержки", "Услуги"];
             - var title = "Навигация";
-            include footer-kit/footer-mixins
             +column(title, text)
             - var text = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"];
             - var title = "О нас";

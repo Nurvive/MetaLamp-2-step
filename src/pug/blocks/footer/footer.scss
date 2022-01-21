@@ -1,5 +1,24 @@
-@import '../../../../scss/common/colors';
-@import '../../../../scss/common/functions';
+@import '../../../scss/common/colors';
+@import '../../../scss/common/functions';
+%column-item {
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  font-weight: normal;
+  color: $dark50;
+  text-transform: none;
+  margin-top: 22px;
+  display: block;
+}
+
+%column-list {
+  max-width: rem(150);
+  text-transform: uppercase;
+  color: $dark100;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
 
 .footer {
   padding-top: rem(104);
@@ -7,18 +26,32 @@
   position: relative;
   border-top: 1px solid rgb(31 32 65 / 10%);
 
+  @media (max-width: 1060px) {
+    padding: 120px 0;
+  }
+
   &__logo {
     margin-top: -3px;
   }
 
   &__container {
     padding: 0 15px;
+
+    @media (max-width: 1060px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
     padding-bottom: rem(100);
+
+    @media (max-width: 1060px) {
+      padding-bottom: 20px;
+    }
 
     &-description {
       max-width: rem(260);
@@ -29,35 +62,31 @@
     margin-top: 14px;
     line-height: 24px;
     color: $dark75;
+
+    @media (max-width: 1060px) {
+      display: none;
+    }
   }
 
   &__column-list {
-    max-width: rem(150);
-    text-transform: uppercase;
-    color: $dark100;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    @extend %column-list;
+
+    @media (max-width: 1060px) {
+      display: none;
+    }
   }
 
   &__column-item {
-    font-size: 14px;
-    line-height: 17px;
-    font-style: normal;
-    font-weight: normal;
-    color: $dark50;
-    text-transform: none;
-    margin-top: 22px;
-    display: block;
+    @extend %column-item;
   }
 
   &__subscribe {
-    @extend.footer__column-list;
+    @extend %column-list;
 
     max-width: rem(260);
 
     &-text {
-      @extend.footer__column-item;
+      @extend %column-item;
 
       line-height: 23px;
       margin-bottom: 21px;
@@ -70,6 +99,10 @@
     height: 1px;
     bottom: 70px;
     border-top: 1px solid rgb(31 32 65 / 10%);
+
+    @media (max-width: 1060px) {
+      display: none;
+    }
   }
 
   &__down {
@@ -77,6 +110,13 @@
     padding: 26px 0;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1060px) {
+      flex-direction: column;
+      padding: 0;
+      gap: 25px;
+      align-items: center;
+    }
 
     &-copyright {
       color: $dark75;
@@ -94,6 +134,7 @@
       line-height: 23px;
       font-size: 24px;
       background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+      // stylelint-disable-next-line
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;

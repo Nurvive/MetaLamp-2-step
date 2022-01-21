@@ -1,1 +1,1 @@
-import './footer-kit/footer-media.scss';
+import './footer.scss';
