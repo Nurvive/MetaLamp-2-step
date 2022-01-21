@@ -3,7 +3,7 @@ include ../../blocks/buttons/button
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/comment/comment
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
-
+include ../../blocks/date-dropdown/date-dropdown
 block title
     title form-elements
 
@@ -20,23 +20,28 @@ block content
                 div(class='form-elements__label') masked text field
                     include ../../blocks/masked-text-field/masked-text-field
                 div(class='form-elements__label') date Dropdown
-                    include ../../blocks/date-dropdown/date-dropdown
                     -
-                        var options = {
-                            id: 'date-dropdown',
-                            className: '',
-                            range: ''
-                        }
-                    +date-dropdown(options)
+                        var obj = [
+                            {
+                                class: 'js-form-elements__date-dropdown_start',
+                                placeholder: 'ДД.ММ.ГГГГ'
+                            },
+                            {
+                                class: 'js-form-elements__date-dropdown_end',
+                                placeholder: 'ДД.ММ.ГГГГ'
+                            }
+                        ]
+                    +date-dropdown(obj)
                 div(class='form-elements__label') filter date dropdown
                     -
-                        var options = {
-                            id: 'filter-date-dropdown',
-                            className: 'filter-date-dropdown',
-                            range: 'true',
-                            type: 'single'
-                        }
-                    +date-dropdown(options)
+                        var obj = [
+                            {
+                                class: 'js-form-elements__filter-date-dropdown_start',
+                                placeholder: 'ДД.ММ. - ДД.ММ.',
+                                size: 'long'
+                            }
+                        ]
+                    +date-dropdown(obj)
                 div(class='form-elements__label') subscription text field
                     include ../../blocks/subscription-text-field/subscription-text-field
                     +subscription-text-field
