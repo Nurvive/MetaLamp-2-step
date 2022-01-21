@@ -11,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 16px;
+
+    @media (max-width: 960px) {
+      justify-content: center;
+    }
   }
 
   &__menu-wrapper {
@@ -81,6 +85,10 @@
   &__buttons {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
 
   &__button {
@@ -107,5 +115,62 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.side-menu {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: -70%;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  gap: 25px;
+
+  @media (max-width: 960px) {
+    opacity: 1;
+  }
+
+  &__holder {
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    right: -5%;
+    top: 0;
+    background-color: transparent;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    &-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      & .side-menu__dropdown-item {
+        display: none;
+        align-self: center;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 }
