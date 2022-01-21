@@ -1,7 +1,10 @@
-mixin expandable-checkbox(text)
-    .expandable-checkbox=text
+include ../checkbox-buttons/checkbox-buttons
+
+mixin expandable-checkbox(options)
+    -
+        const text = options.text || 'text'
+    .expandable-checkbox
+        span.expandable-checkbox__text=text
         span.expandable-checkbox__open-button.js-expandable-checkbox__open-button
-        .expandable-checkbox__inner
-            include expandable-checkbox-list-kit/expandable-checkbox-list-mixin
-            -var obj = ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь']
-            +checkbox-items(obj)
+        .expandable-checkbox__inner.js-expandable-checkbox__inner
+            +checkbox-buttons({jsClass: options.jsClass, items: options.items})

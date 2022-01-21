@@ -2,6 +2,8 @@ extends ../../templates/template
 include ../../blocks/buttons/button
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/comment/comment
+include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+
 block title
     title form-elements
 
@@ -41,12 +43,15 @@ block content
                 div( class='form-elements__label') split dropdown
                     include ../../blocks/dropdown/dropdown
                     +dropdown('split-dropdown', 'rooms')
-                div(class='form-elements__label') expandable checkbox list
-                    include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
-                    +expandable-checkbox('expandable checkbox list')
+                div(class='form-elements__label')
+                    +expandable-checkbox({
+                        text: 'expandable checkbox list',
+                        items: ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'],
+                        jsClass: 'js-expandable-checkbox__list'
+                    })
             .form-elements__inner
                 div(class='form-elements__label') Checkbox Buttons
-                    +checkbox-buttons(['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])
+                    +checkbox-buttons({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
                 div(class='form-elements__label') radio buttons
                     include ../../blocks/radio-buttons/radio-buttons
                 div(class='form-elements__label') toggle

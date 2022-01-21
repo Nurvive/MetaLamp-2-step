@@ -1,23 +1,38 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
+%open-button-chevron {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background-color: $dark50;
+  transform-origin: bottom;
+  right: 50%;
+  content: '';
+}
 
 .expandable-checkbox {
   position: relative;
   max-width: 266px;
-  font-weight: inherit;
-  font-size: inherit;
-  text-transform: inherit;
-  line-height: inherit;
-  color: inherit;
 
   &__open-button {
-    content: url('../../../../assets/images/arrow-down.png');
     position: absolute;
-    transform: translateY(50%);
-    right: 16px;
-    border: none;
     cursor: pointer;
     transition: 0.3s;
+    right: 0;
     z-index: 1;
+    width: 15px;
+    height: 15px;
+
+    &::after {
+      @extend %open-button-chevron;
+
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      @extend %open-button-chevron;
+
+      transform: rotate(45deg);
+    }
 
     &_active {
       transform: rotate(180deg);
@@ -25,81 +40,12 @@
   }
 
   &__inner {
-    position: relative;
-  }
-
-  &__list {
-    opacity: 1;
-    transition: 0.5s;
     position: absolute;
-    height: 0;
+    z-index: 9999;
     background-color: white;
 
-    & li {
-      transition: all 0.4s ease-out;
-      opacity: 0;
-    }
-
-    & li.show {
-      opacity: 1;
-      height: 20px;
-    }
-
-    &_active {
-      height: initial;
-      padding: 5px;
-    }
-  }
-
-  &__item {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    height: 0;
-
-    &:first-child {
-      margin-top: 18px;
-    }
-
-    & * {
-      cursor: pointer;
-    }
-  }
-
-  &__item-text {
-    margin-left: 10px;
-    color: $dark50;
-    line-height: 18px;
-    font-weight: normal;
-    font-size: 14px;
-    text-transform: initial;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -32px;
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-      background: #fff;
-      transition: 0.2s;
-      border: 1px solid $dark25;
-    }
-  }
-
-  &__check {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-
-    &:checked + .expandable-checkbox__item-text::after {
-      border: 1px solid $purple;
-      background-image: url('../../../../assets/images/check.png');
-      background-repeat: no-repeat;
-      background-position: center;
+    &_hide {
+      display: none;
     }
   }
 }
