@@ -1,63 +1,40 @@
-header.header
-    .container.header__container
-        .header__logo
-            a.header__logo-link
-                img(src="../../../assets/images/logo.png")
-        div.header__menu-wrapper
-            nav.header__nav
-                ul.header__menu
-                    li.header__menu-item
-                        a О нас
-                    li.header__menu-item
-                        ul.header__menu-dropdown.js-header__menu-dropdown Услуги
-                            li.header__dropdown-item
-                                a Покупка
-                            li.header__dropdown-item
-                                a Покупка
-                            li.header__dropdown-item
-                                a Покупка
-                    li.header__menu-item
-                        a Вакансии
-                    li.header__menu-item
-                        a Новости
-                    li.header__menu-item
-                        ul.header__menu-dropdown.js-header__menu-dropdown Соглашение
-                            li.header__dropdown-item
-                                a О Воде
-            .header__buttons
-                include header-kit/header-mixins
-                - var isAuthorized = isAuthorized || false
-                if !isAuthorized
-                    +log-in-buttons
-                else
-                    +cabinet-button
+include ../buttons/button
+include ../side-menu/side-menu
 
-div(class="side-menu js-side-menu" id="side-menu")
-    div.side-menu__holder
-    nav.side-menu__nav
-        ul.side-menu__menu
-            li.side-menu__menu-item
-                a О нас
-            li.side-menu__menu-item
-                ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Услуги
-                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
-                        a Покупка
-                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
-                        a Покупка
-                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
-                        a Покупка
-            li.side-menu__menu-item
-                a Вакансии
-            li.side-menu__menu-item
-                a Новости
-            li.side-menu__menu-item
-                ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Соглашение
-                    li.side-menu__dropdown-item.js-side-menu__dropdown-item
-                        a О Воде
-    .side-menu__buttons
-        include header-kit/header-mixins
-        - var isAuthorized = isAuthorized || false
-        if !isAuthorized
-            +log-in-buttons
-        else
-            +cabinet-button
+mixin header(isAuthorized)
+    header.header
+        .container.header__container
+            .header__logo
+                a.header__logo-link
+                    img(src="../../../assets/images/logo.png")
+            div.header__menu-wrapper
+                nav.header__nav
+                    ul.header__menu
+                        li.header__menu-item
+                            a О нас
+                        li.header__menu-item
+                            ul.header__menu-dropdown.js-header__menu-dropdown Услуги
+                                - const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];
+                                each item in headerDropdownItems1
+                                    li.header__dropdown-item
+                                        a= item
+                        li.header__menu-item
+                            a Вакансии
+                        li.header__menu-item
+                            a Новости
+                        li.header__menu-item
+                            ul.header__menu-dropdown.js-header__menu-dropdown Соглашение
+                                - const headerDropdownItems2 = ['О воде', 'О солях'];
+                                each item in headerDropdownItems2
+                                    li.header__dropdown-item
+                                        a= item
+                .header__buttons
+                    - var isAuthorized = isAuthorized || false
+                    if !isAuthorized
+                        +log-in-buttons
+                    else
+                        +cabinet-button('Юлий Цезарь')
+    +side-menu({
+        jsClass: 'js-side-menu',
+        isAuthorized: isAuthorized
+    })

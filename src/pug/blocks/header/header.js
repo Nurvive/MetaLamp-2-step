@@ -1,4 +1,4 @@
-import './header-kit/header-media.scss';
+import './header.scss';
 let startingX;
 $().ready(() => {
     $('.js-header__menu-dropdown').on('click', function () {

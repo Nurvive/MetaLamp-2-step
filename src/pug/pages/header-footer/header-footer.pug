@@ -1,4 +1,6 @@
 extends ../../templates/template
+include ../../blocks/header/header
+
 block title
     title header&footer
 
@@ -6,7 +8,7 @@ block content
     .wrapper.header-footer
         .header-footer__container
             .header-footer__wrapper
-                include ../../blocks/header/header
+                +header(false)
             //.header-footer__wrapper
             //    - var isAuthorized = true
             //    include ../../blocks/header/header
