@@ -1,4 +1,7 @@
 extends ../../templates/template
+include ../../blocks/find-room/find-room
+include ../../blocks/calendar/calendar
+
 block title
     title cards
 
@@ -6,7 +9,20 @@ block content
     .wrapper
         .container.cards__container
             div.cards__item
-                include ../../blocks/find-room/find-room
+                -
+                    var obj = [
+                        {
+                            title: 'Прибытие',
+                            class: 'js-cards__date-dropdown_start',
+                            placeholder: 'ДД.ММ.ГГГГ'
+                        },
+                        {
+                            title: 'Выезд',
+                            class: 'js-cards__date-dropdown_end',
+                            placeholder: 'ДД.ММ.ГГГГ'
+                        }
+                    ]
+                +find-room(obj)
             div.cards__item
                 include ../../blocks/registration/registration
             div.cards__item
@@ -14,7 +30,6 @@ block content
             div.cards__item
                 include ../../blocks/login/login
             div.cards__item
-                include ../../blocks/calendar/calendar
                 +calendar
             div.cards__item
                 include ../../blocks/room-card/room-card

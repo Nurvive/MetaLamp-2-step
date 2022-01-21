@@ -1,5 +1,5 @@
 import AirDatepicker from 'air-datepicker';
-import './find-room-kit/find-room.scss';
+import './find-room.scss';
 import 'air-datepicker/air-datepicker.css';
 
 const inputStart = document.querySelector('.js-find-room__date-dropdown_start');

@@ -1,4 +1,9 @@
 extends ../../templates/template
+include ../../blocks/date-dropdown/date-dropdown
+include ../../blocks/dropdown/dropdown
+include ../../blocks/checkbox-buttons/checkbox-buttons
+include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+
 block title
     title search-room
 
@@ -9,27 +14,26 @@ block content
             aside.search-room__aside
                 ul.search-room__list
                     li.search-room__item.search-room__item_small-margin(data-move="no")
-                        include ../../blocks/date-dropdown/date-dropdown
                         -
-                            var options = {
-                                id: 'filter-date-dropdown',
-                                className: 'filter-date-dropdown',
-                                range: 'true',
-                                type: 'single'
-                            }
+                            var options = [
+                                {
+                                    class: 'js-search-room__filter-date-dropdown_start',
+                                    placeholder: 'ДД.ММ. - ДД.ММ.',
+                                    size: 'long'
+                                }
+                            ]
                         .search-room__layout.search-room__dropdown-layout даты пребывания в отеле
-                        +date-dropdown(options)
+                            +date-dropdown(options)
                     li.search-room__item(data-move="no")
                         .search-room__layout.search-room__dropdown-layout Гости
-                        include ../../blocks/dropdown/dropdown
-                        +dropdown('search-room__dropdown', 'default')
+                            +dropdown('search-room__dropdown', 'default')
                     li.search-room__item(data-move="no")
                         .search-room__layout.search-room__slider-layout диапазон цены
                         include ../../blocks/range-slider/range-slider
                         span.search-room__item-extra-text Стоимость за сутки пребывания в номере
                     li.search-room__item
                         .search-room__layout правила дома
-                        include ../../blocks/checkbox-buttons/checkbox-buttons
+                            +checkbox-buttons({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
                     li.search-room__item.search-room__item_small-margin
                         .search-room__layout доступность
                         include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
@@ -38,8 +42,11 @@ block content
                         +dropdown('search-room__dropdown', 'rooms')
                     li.search-room__item
                         .search-room__layout
-                            include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
-                            +expandable-checkbox('дополнительные удобства')
+                            +expandable-checkbox({
+                                text: 'Дополнительные удобства',
+                                items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'],
+                                jsClass: 'js-expandable-checkbox__list'
+                            })
                     ul.search-room__item.search-room__small-menu.small-menu
                         p.search-room__layout.small-menu-title(data-attr="small-menu-title") фильтр
                         .small-menu__content

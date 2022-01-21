@@ -4,6 +4,10 @@ include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/comment/comment
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
 include ../../blocks/date-dropdown/date-dropdown
+include ../../blocks/like-button/like-button
+include ../../blocks/bullet-list/bullet-list
+include ../../blocks/dropdown/dropdown
+
 block title
     title form-elements
 
@@ -45,8 +49,7 @@ block content
                 div(class='form-elements__label') subscription text field
                     include ../../blocks/subscription-text-field/subscription-text-field
                     +subscription-text-field
-                div( class='form-elements__label') split dropdown
-                    include ../../blocks/dropdown/dropdown
+                div( class='form-elements__label') dropdown
                     +dropdown('split-dropdown', 'rooms')
                 div(class='form-elements__label')
                     +expandable-checkbox({
@@ -63,7 +66,7 @@ block content
                     include ../../blocks/toggle/toggle
                 div(class='form-elements__label') like button
                     div
-                        include ../../blocks/like-button/like-button
+                        +like-button(2)
                 div(class='form-elements__label') rate button
                     div
                         include ../../blocks/rate-button/rate-button
@@ -85,7 +88,6 @@ block content
                 div(class='form-elements__label') pagination
                     include ../../blocks/pagination/pagination
                 div(class='form-elements__label') bullet list
-                    include ../../blocks/bullet-list/bullet-list
                     -
                         var arr = ['Нельзя с питомцами',
                             'Без вечеринок и мероприятий',

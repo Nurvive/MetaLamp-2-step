@@ -28,13 +28,12 @@
     }
 
     &-open-button {
-      top: 50%;
-      transform: translateY(-12.5%);
+      bottom: 12px;
       right: 16px;
     }
 
     &_active .date-dropdown__input-open-button {
-      transform: rotate(180deg) translateY(50%);
+      transform: rotate(180deg) translateY(40%);
     }
 
     &_long {

@@ -1,5 +1,7 @@
 extends ../../templates/template
 include ../../blocks/comment/comment
+include ../../blocks/bullet-list/bullet-list
+
 block title
     title room-details
 
@@ -22,7 +24,7 @@ block content
                                     {
                                         img: '../../../assets/images/insert-emoticon.png',
                                         title: 'Комфорт',
-                                        text: 'Шумопоглощающие стены',
+                                        text: 'Шумопоглощающие стены'
                                     },
                                     {
                                         img: '../../../assets/images/location-city.png',
@@ -67,7 +69,6 @@ block content
                     li.room-details__item
                         .room-details__rules
                             p.room-details__title Правила
-                            include ../../blocks/bullet-list/bullet-list
                             -
                                 var arr = ['Нельзя с питомцами',
                                     'Без вечеринок и мероприятий',

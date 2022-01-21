@@ -1,4 +1,5 @@
 extends ../../templates/template
+include ../../blocks/find-room/find-room
 block title
     title landing
 
@@ -6,6 +7,19 @@ block content
     .wrapper.landing
         include ../../blocks/header/header
         .landing__main
-            include ../../blocks/find-room/find-room
+            -
+                var obj = [
+                    {
+                        title: 'Прибытие',
+                        class: 'js-landing__date-dropdown_start',
+                        placeholder: 'ДД.ММ.ГГГГ'
+                    },
+                    {
+                        title: 'Выезд',
+                        class: 'js-landing__date-dropdown_end',
+                        placeholder: 'ДД.ММ.ГГГГ'
+                    }
+                ]
+            +find-room(obj)
             span.landing__main-text Лучшие номера для вашей работы, отдыха и просто вдохновения
         include ../../blocks/footer/footer

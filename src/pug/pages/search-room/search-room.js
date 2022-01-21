@@ -1,4 +1,30 @@
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
 import './search-room-kit/search-room-media.scss';
+
+const input = document.querySelector('.js-search-room__filter-date-dropdown_start');
+const picker = new AirDatepicker('.js-search-room__filter-date-dropdown_start', {
+    multipleDates: true,
+    range: true,
+    multipleDatesSeparator: ' - ',
+    onShow: function () {
+        input.parentNode.classList.add('date-dropdown__input_active');
+    },
+    onHide: function () {
+        input.parentNode.classList.remove('date-dropdown__input_active');
+    },
+    dateFormat: 'dd.MMM',
+    buttons: ['clear', 'today'],
+    locale: {
+        today: 'Применить'
+    },
+    prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
+    nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
+    navTitles: {
+        days: 'MMMM yyyy'
+    },
+    startDate: new Date()
+});
 
 $().ready(() => {
     let width = ($(window).width());

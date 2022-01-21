@@ -1,25 +1,14 @@
 include ../date-dropdown/date-dropdown
 include ../buttons/button
-.card.find-room
-    p.find-room__title Найдём номера под ваши пожелания
-    .find-room__dates
-        -
-            var obj = [
-                {
-                    title: 'Прибытие',
-                    class: 'js-find-room__date-dropdown_start',
-                    placeholder: 'ДД.ММ.ГГГГ'
-                },
-                {
-                    title: 'Выезд',
-                    class: 'js-find-room__date-dropdown_end',
-                    placeholder: 'ДД.ММ.ГГГГ'
-                }
-            ]
-        +date-dropdown(obj)
-    div.find-room__layout
-        p.find-room__layout-text гости
-        include ../dropdown/dropdown
-        +dropdown('find-room__dropdown', 'default')
-    .find-room__long-button-wrapper
-        +button({text: 'Подобрать номер', size: 'long', arrow: true})
+
+mixin find-room(obj)
+    .card.find-room
+        p.find-room__title Найдём номера под ваши пожелания
+        .find-room__dates
+            +date-dropdown(obj)
+        div.find-room__layout
+            p.find-room__layout-text гости
+            include ../dropdown/dropdown
+            +dropdown('find-room__dropdown', 'default')
+        .find-room__long-button-wrapper
+            +button({text: 'Подобрать номер', size: 'long', arrow: true})
