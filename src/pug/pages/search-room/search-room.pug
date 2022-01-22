@@ -8,6 +8,7 @@ include ../../blocks/header/header
 include ../../blocks/pagination/pagination
 include ../../blocks/range-slider/range-slider
 include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
+include ../../blocks/room-card/room-card
 
 block title
     title search-room
@@ -64,7 +65,6 @@ block content
                         .small-menu__content
             .search-room__content
                 p.search-room__content-title Номера, которые мы для вас подобрали
-                include ../../blocks/room-card/room-card
                 -
                     var obj = {
                                 images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],

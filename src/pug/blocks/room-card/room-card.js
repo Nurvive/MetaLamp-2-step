@@ -1,4 +1,4 @@
-import './room-card-kit/room-card.scss';
+import './room-card.scss';
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
 

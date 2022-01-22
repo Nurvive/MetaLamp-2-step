@@ -1,22 +1,30 @@
 include ../rate-button/rate-button
 
 mixin room-card(options)
+    -
+        const images = options.images || []
+        const number = options.number || '1337'
+        const type = options.type || ''
+        const cost = options.cost || '666₽'
+        const rating = options.rating || 0
+        const reviews = options.reviews || 0
+        const uniqueID = options.uniqueID || ''
     .room-card
         .room-card__top.js-room-card__top
-            each src in options.images
+            each src in images
                 img(class='room-card__top-img' src=src)
         .room-card__content
             ul.room-card__list
                 li.room-card__item
                     .room-card__number
-                        strong=options.number
-                        if options.type
-                            span.room-card__type=options.type
+                        strong=number
+                        if type
+                            span.room-card__type=type
                     .room-card__price
-                        strong=options.cost
+                        strong=cost
                         span  в сутки
                 li.room-card__item
-                    +rate-button(options.rating, options.uniqueID)
+                    +rate-button(rating, uniqueID)
                     .room-card__reviews
-                        strong.room-card__reviews-text=options.reviews
+                        strong.room-card__reviews-text=reviews
                         span  отзывов

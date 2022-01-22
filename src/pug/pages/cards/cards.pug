@@ -4,6 +4,7 @@ include ../../blocks/calendar/calendar
 include ../../blocks/login/login
 include ../../blocks/registration/registration
 include ../../blocks/reservation/reservation
+include ../../blocks/room-card/room-card
 
 block title
     title cards
@@ -35,7 +36,6 @@ block content
             div.cards__item
                 +calendar
             div.cards__item
-                include ../../blocks/room-card/room-card
                 -
                     var obj = {
                         images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
