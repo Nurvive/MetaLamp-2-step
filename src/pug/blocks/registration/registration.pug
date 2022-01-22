@@ -1,10 +1,11 @@
 include ../buttons/button
 include ../masked-text-field/masked-text-field
 include ../radio-buttons/radio-buttons
+include ../text-field/text-field
+include ../toggle/toggle-kit/toggle-mixin
 
 mixin registration
     .registration.card&attributes(attributes)
-        include ../text-field/text-field
         .registration__layout
             p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
             +text-field(placeholder='Имя' class='registration__input')
@@ -17,7 +18,6 @@ mixin registration
             p.registration__layout-text данные для входа в сервис
             +text-field(placeholder='Email' class='registration__input')
             +text-field(placeholder='Пароль' class='registration__input')
-            include ../toggle/toggle-kit/toggle-mixin
             -var obj = ['Получать спецпредложения']
             +toggle-buttons(obj)
         +button({text: 'Зарегистрироваться', size: 'long', arrow: true})

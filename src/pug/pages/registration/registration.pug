@@ -1,6 +1,7 @@
 extends ../../templates/template
 include ../../blocks/footer/footer
 include ../../blocks/header/header
+include ../../blocks/registration/registration
 
 block title
     title registration
@@ -9,6 +10,6 @@ block content
     .wrapper.registration-page
         +header(false)
         main.registration-page__main
-            include ../../blocks/registration/registration
-            +registration(class='registration-page__card')
+            .registration-page__card-wrapper
+                +registration
         +footer

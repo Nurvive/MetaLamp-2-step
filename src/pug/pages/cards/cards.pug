@@ -2,6 +2,7 @@ extends ../../templates/template
 include ../../blocks/find-room/find-room
 include ../../blocks/calendar/calendar
 include ../../blocks/login/login
+include ../../blocks/registration/registration
 
 block title
     title cards
@@ -25,7 +26,7 @@ block content
                     ]
                 +find-room(obj)
             div.cards__item
-                include ../../blocks/registration/registration
+                +registration
             div.cards__item
                 include ../../blocks/reservation/reservation
             div.cards__item
