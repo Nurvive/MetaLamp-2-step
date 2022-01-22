@@ -1,3 +1,5 @@
+include ../subscription-text-field/subscription-text-field
+
 mixin column(title,text)
     ul.footer__column-list= title
         each val in text
@@ -25,7 +27,6 @@ mixin footer()
                     p.footer__subscribe-title Подписка
                     p.footer__subscribe-text Получайте специальные предложения и новости сервиса
                     form(action='#')
-                        include ../subscription-text-field/subscription-text-field
                         +subscription-text-field
             .footer__down
                 p.footer__down-copyright Copyright © 2018 Toxin отель. Все права защищены.

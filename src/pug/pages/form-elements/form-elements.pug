@@ -14,6 +14,8 @@ include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-slider/range-slider
 include ../../blocks/rate-button/rate-button
 include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
+include ../../blocks/subscription-text-field/subscription-text-field
+include ../../blocks/text-field/text-field
 
 block title
     title form-elements
@@ -21,7 +23,6 @@ block title
 block content
     .wrapper
         .container.form-elements__container
-            include ../../blocks/text-field/text-field
             .form-elements__inner
                 div(class='form-elements__label') Text field
                     +text-field
@@ -53,7 +54,6 @@ block content
                         ]
                     +date-dropdown(obj)
                 div(class='form-elements__label') subscription text field
-                    include ../../blocks/subscription-text-field/subscription-text-field
                     +subscription-text-field
                 div( class='form-elements__label') dropdown
                     +dropdown('split-dropdown', 'rooms')
