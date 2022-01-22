@@ -1,1 +1,1 @@
-import './rich-checkbox-buttons-kit/rich-checkbox-buttons.scss';
+import './rich-checkbox-buttons.scss';

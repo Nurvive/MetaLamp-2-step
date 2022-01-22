@@ -1,12 +1,8 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .rich-checkbox-buttons {
   max-width: 266px;
   position: relative;
-
-  &__list{
-
-  }
 
   &__item {
     margin-bottom: 10px;
@@ -51,7 +47,7 @@
 
     &:checked + .rich-checkbox-buttons__item-text::after {
       border: 1px solid $purple;
-      background-image: url('../../../../assets/images/check.png');
+      background-image: url('../../../assets/images/check.png');
       background-repeat: no-repeat;
       background-position: center;
     }

@@ -7,6 +7,7 @@ include ../../blocks/footer/footer
 include ../../blocks/header/header
 include ../../blocks/pagination/pagination
 include ../../blocks/range-slider/range-slider
+include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
 
 block title
     title search-room
@@ -43,7 +44,11 @@ block content
                             +checkbox-buttons({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
                     li.search-room__item.search-room__item_small-margin
                         .search-room__layout доступность
-                        include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
+                        +rich-checkbox-buttons({
+                            'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
+                            'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
+                        })
+
                     li.search-room__item
                         .search-room__layout.search-room__dropdown-layout удобства номера
                         +dropdown('search-room__dropdown', 'rooms')

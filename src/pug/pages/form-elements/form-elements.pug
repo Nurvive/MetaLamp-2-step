@@ -13,6 +13,7 @@ include ../../blocks/pros/pros
 include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-slider/range-slider
 include ../../blocks/rate-button/rate-button
+include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
 
 block title
     title form-elements
@@ -76,7 +77,10 @@ block content
                     div
                         +rate-button(1, 'form-elements')
                 div(class='form-elements__label') rich Checkbox Buttons
-                    include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
+                    +rich-checkbox-buttons({
+                        'Широкий коридор':'Ширина коридоров в номере не менее 91 см.',
+                        'Помощник для инвалидов':'На 1 этаже вас встретит специалист и проводит до номера.'
+                    })
             .form-elements__inner
                 div(class='form-elements__label') range slider
                     +range-slider({

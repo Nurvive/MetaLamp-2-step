@@ -1,5 +1,14 @@
-include rich-checkbox-buttons-kit/rich-checkbox-buttons-mixin
-.rich-checkbox-buttons
-    ul.rich-checkbox-buttons__list
-        -var obj = {'Широкий коридор':'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов':'На 1 этаже вас встретит специалист  и проводит до номера.'}
-        +rich_check_button(obj)
+mixin rich_check_button(obj)
+    each description, text in obj
+        li.rich-checkbox-buttons__item
+            label
+                input(type='checkbox' class='rich-checkbox-buttons__check')
+                p.rich-checkbox-buttons__item-text= text
+            p.rich-checkbox-buttons__description= description
+
+mixin rich-checkbox-buttons(obj)
+    -
+        var obj = obj || {}
+    .rich-checkbox-buttons
+        ul.rich-checkbox-buttons__list
+            +rich_check_button(obj)
