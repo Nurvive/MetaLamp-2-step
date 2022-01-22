@@ -1,4 +1,11 @@
-include ./radio-buttons-kit/radio-buttons-mixin
-.radio-buttons
-    -var obj = ['Мужчина', "Женщина"]
-    +radio-button(obj)
+mixin radio-button(obj)
+    each val in obj
+        label.radio-buttons__label
+            input(name='radio' class='radio-buttons__button' type='radio')
+            p.radio-buttons__text= val
+
+mixin radio-buttons(obj)
+    -
+        var obj = obj || []
+    .radio-buttons
+        +radio-button(obj)

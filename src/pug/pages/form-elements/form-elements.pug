@@ -10,6 +10,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/masked-text-field/masked-text-field
 include ../../blocks/pagination/pagination
 include ../../blocks/pros/pros
+include ../../blocks/radio-buttons/radio-buttons
 
 block title
     title form-elements
@@ -63,7 +64,7 @@ block content
                 div(class='form-elements__label') Checkbox Buttons
                     +checkbox-buttons({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
                 div(class='form-elements__label') radio buttons
-                    include ../../blocks/radio-buttons/radio-buttons
+                    +radio-buttons(['Мужчина', 'Женщина'])
                 div(class='form-elements__label') toggle
                     include ../../blocks/toggle/toggle
                 div(class='form-elements__label') like button

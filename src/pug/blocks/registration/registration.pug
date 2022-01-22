@@ -1,5 +1,6 @@
 include ../buttons/button
 include ../masked-text-field/masked-text-field
+include ../radio-buttons/radio-buttons
 
 mixin registration
     .registration.card&attributes(attributes)
@@ -8,7 +9,7 @@ mixin registration
             p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
             +text-field(placeholder='Имя' class='registration__input')
             +text-field(placeholder='Фамилия' class='registration__input')
-            include ../radio-buttons/radio-buttons
+            +radio-buttons(['Мужчина', "Женщина"])
         .registration__layout
             p.registration__layout-text дата рождения
             +masked-text-field
