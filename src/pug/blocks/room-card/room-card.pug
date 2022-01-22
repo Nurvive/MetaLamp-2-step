@@ -1,3 +1,5 @@
+include ../rate-button/rate-button
+
 mixin room-card(options)
     .room-card
         .room-card__top.js-room-card__top
@@ -14,7 +16,6 @@ mixin room-card(options)
                         strong=options.cost
                         span  в сутки
                 li.room-card__item
-                    include ../rate-button/rate-button
                     +rate-button(options.rating, options.uniqueID)
                     .room-card__reviews
                         strong.room-card__reviews-text=options.reviews

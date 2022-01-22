@@ -1,4 +1,4 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .rate-button {
   display: inline-block;
@@ -16,14 +16,13 @@
     margin-right: 5px;
 
     &::before {
-      content: url('../../../../assets/images/star-border.png');
+      content: url('../../../assets/images/star-border.png');
       display: block;
-      transition: 0.3s;
     }
 
     &:hover::before,
     &:hover ~ &::before {
-      content: url('../../../../assets/images/star.png');
+      content: url('../../../assets/images/star.png');
     }
   }
 
@@ -38,7 +37,7 @@
 
     &:checked,
     &:checked ~ .rate-button__star::before {
-      content: url('../../../../assets/images/star.png');
+      content: url('../../../assets/images/star.png');
     }
   }
 }

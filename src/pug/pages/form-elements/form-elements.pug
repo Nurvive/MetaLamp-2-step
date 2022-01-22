@@ -12,6 +12,7 @@ include ../../blocks/pagination/pagination
 include ../../blocks/pros/pros
 include ../../blocks/radio-buttons/radio-buttons
 include ../../blocks/range-slider/range-slider
+include ../../blocks/rate-button/rate-button
 
 block title
     title form-elements
@@ -73,8 +74,7 @@ block content
                         +like-button(2)
                 div(class='form-elements__label') rate button
                     div
-                        include ../../blocks/rate-button/rate-button
-                        +rate-button
+                        +rate-button(1, 'form-elements')
                 div(class='form-elements__label') rich Checkbox Buttons
                     include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
             .form-elements__inner
