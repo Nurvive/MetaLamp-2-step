@@ -1,6 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import './reservation-kit/reservation-media.scss';
+import './reservation.scss';
 
 const inputStart = document.querySelector('.js-reservation__date-dropdown_start');
 const inputEnd = document.querySelector('.js-reservation__date-dropdown_end');

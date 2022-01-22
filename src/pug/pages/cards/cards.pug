@@ -3,6 +3,7 @@ include ../../blocks/find-room/find-room
 include ../../blocks/calendar/calendar
 include ../../blocks/login/login
 include ../../blocks/registration/registration
+include ../../blocks/reservation/reservation
 
 block title
     title cards
@@ -28,7 +29,7 @@ block content
             div.cards__item
                 +registration
             div.cards__item
-                include ../../blocks/reservation/reservation
+                +reservation
             div.cards__item
                 +login
             div.cards__item

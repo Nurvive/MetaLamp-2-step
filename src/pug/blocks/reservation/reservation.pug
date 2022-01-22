@@ -1,59 +1,69 @@
 include ../buttons/button
 include ../date-dropdown/date-dropdown
-.card.reservation
-    -
-        var obj = [
-                    {
-                        title: 'Прибытие',
-                        class: 'js-reservation__date-dropdown_start',
-                        placeholder: 'ДД.ММ.ГГГГ'
-                    },
-                    {
-                        title: 'Выезд',
-                        class: 'js-reservation__date-dropdown_end',
-                        placeholder: 'ДД.ММ.ГГГГ'
-                    }
-                ]
-    .reservation__info
-        p.reservation__info-number 888
-            span.reservation__info-type люкс
-        p.reservation__info-cost
-            strong 9 990₽
-            span в сутки
-    .reservation__dates
-        +date-dropdown(obj)
-    .reservation__layout
-        p.reservation__layout-text гости
-        include ../dropdown/dropdown
-        +dropdown('reservation__dropdown', 'default')
-    .reservation__services
+include ../dropdown/dropdown
+
+mixin services(obj)
+    ul.reservation__list
+        each val in obj
+            li.reservation__item
+                p.reservation__service=val.text
+                if val.info
+                    div.reservation__info-label
+                        span.reservation__info-label-text=val.infoText
+                p.reservation__price=val.price
+
+mixin reservation()
+    .card.reservation
         -
             var obj = [
-                {
-                    text: '9 990₽ х 4 суток',
-                    info: false,
-                    price: '39 960₽'
-                },
+                        {
+                            title: 'Прибытие',
+                            class: 'js-reservation__date-dropdown_start',
+                            placeholder: 'ДД.ММ.ГГГГ'
+                        },
+                        {
+                            title: 'Выезд',
+                            class: 'js-reservation__date-dropdown_end',
+                            placeholder: 'ДД.ММ.ГГГГ'
+                        }
+                    ]
+        .reservation__info
+            p.reservation__info-number 888
+                span.reservation__info-type люкс
+            p.reservation__info-cost
+                strong 9 990₽
+                span в сутки
+        .reservation__dates
+            +date-dropdown(obj)
+        .reservation__layout
+            p.reservation__layout-text гости
+            +dropdown('reservation__dropdown', 'default')
+        .reservation__services
+            -
+                var obj = [
+                    {
+                        text: '9 990₽ х 4 суток',
+                        info: false,
+                        price: '39 960₽'
+                    },
 
-                {
-                    text: 'Сбор за услуги: скидка 2 179₽',
-                    info: true,
-                    infoText: 'Скидка за красивые глаза',
-                    price: '0₽'
-                },
-                {
-                    text: 'Сбор за дополнительные услуги',
-                    info: true,
-                    infoText: 'Сбор за красивые глаза',
-                    price: '300₽'
-                }
-            ]
-
-        include ./reservation-kit/reservation-mixin
-        +services(obj)
-    .reservation__total
-        p.reservation__total-text Итого
-        .reservation__total-border
-        p.reservation__total-price 38 081₽
-    .reservation__button
-        +button({text: 'Забронировать', size: 'long', arrow: true})
+                    {
+                        text: 'Сбор за услуги: скидка 2 179₽',
+                        info: true,
+                        infoText: 'Скидка за красивые глаза',
+                        price: '0₽'
+                    },
+                    {
+                        text: 'Сбор за дополнительные услуги',
+                        info: true,
+                        infoText: 'Сбор за красивые глаза',
+                        price: '300₽'
+                    }
+                ]
+            +services(obj)
+        .reservation__total
+            p.reservation__total-text Итого
+            .reservation__total-border
+            p.reservation__total-price 38 081₽
+        .reservation__button
+            +button({text: 'Забронировать', size: 'long', arrow: true})

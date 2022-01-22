@@ -4,6 +4,7 @@ include ../../blocks/bullet-list/bullet-list
 include ../../blocks/footer/footer
 include ../../blocks/header/header
 include ../../blocks/pros/pros
+include ../../blocks/reservation/reservation
 
 block title
     title room-details
@@ -79,5 +80,5 @@ block content
                         .room-details__abort
                             p.room-details__title Отмена
                             p.room-details__abort-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-                include ../../blocks/reservation/reservation
+                +reservation
         +footer

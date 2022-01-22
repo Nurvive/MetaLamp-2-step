@@ -1,4 +1,4 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .reservation {
   max-width: 380px;
@@ -54,6 +54,12 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @media (max-width: 390px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   &__layout-text {
@@ -124,7 +130,7 @@
   &__info-label {
     width: 20px;
     height: 20px;
-    background-image: url('../../../../assets/images/info.png');
+    background-image: url('../../../assets/images/info.png');
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;

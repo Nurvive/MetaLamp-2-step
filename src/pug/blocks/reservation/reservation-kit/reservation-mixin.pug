@@ -1,9 +1,0 @@
-mixin services(obj)
-    ul.reservation__list
-        each val in obj
-            li.reservation__item
-                p.reservation__service=val.text
-                if val.info
-                    div.reservation__info-label
-                        span.reservation__info-label-text=val.infoText
-                p.reservation__price=val.price
