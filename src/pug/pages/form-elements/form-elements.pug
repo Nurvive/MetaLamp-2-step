@@ -25,13 +25,17 @@ block content
     .wrapper
         .container.form-elements__container
             .form-elements__inner
-                div(class='form-elements__label') Text field
+                .form-elements__label
+                    p Text field
                     +text-field
-                div(class='form-elements__label') dropdown
+                .form-elements__label
+                    p dropdown
                     +dropdown('dropdown', 'default')
-                div(class='form-elements__label') masked text field
+                .form-elements__label
+                    p masked text field
                     +masked-text-field
-                div(class='form-elements__label') date Dropdown
+                .dform-elements__label
+                    p date Dropdown
                     -
                         var obj = [
                             {
@@ -44,7 +48,8 @@ block content
                             }
                         ]
                     +date-dropdown(obj)
-                div(class='form-elements__label') filter date dropdown
+                .form-elements__label
+                    p filter date dropdown
                     -
                         var obj = [
                             {
@@ -54,61 +59,73 @@ block content
                             }
                         ]
                     +date-dropdown(obj)
-                div(class='form-elements__label') subscription text field
+                .form-elements__label
+                    p subscription text field
                     +subscription-text-field
-                div( class='form-elements__label') dropdown
+                .form-elements__label
+                    p dropdown
                     +dropdown('split-dropdown', 'rooms')
-                div(class='form-elements__label')
+                .form-elements__label
                     +expandable-checkbox({
                         text: 'expandable checkbox list',
                         items: ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'],
                         jsClass: 'js-expandable-checkbox__list'
                     })
             .form-elements__inner
-                div(class='form-elements__label') Checkbox Buttons
+                .form-elements__label
+                    p Checkbox Buttons
                     +checkbox-buttons({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
-                div(class='form-elements__label') radio buttons
+                .form-elements__label
+                    p radio buttons
                     +radio-buttons(['Мужчина', 'Женщина'])
-                div(class='form-elements__label') toggle
+                .form-elements__label
+                    p toggle
                     +toggle({
                         'checked':'Получать спецпредложения',
                         '':'Получать спецпредложения'
                     })
-                div(class='form-elements__label') like button
+                .form-elements__label
+                    p like button
                     div
                         +like-button(2)
-                div(class='form-elements__label') rate button
+                .form-elements__label
+                    p rate button
                     div
                         +rate-button(1, 'form-elements')
-                div(class='form-elements__label') rich Checkbox Buttons
+                .form-elements__label
+                    p rich Checkbox Buttons
                     +rich-checkbox-buttons({
                         'Широкий коридор':'Ширина коридоров в номере не менее 91 см.',
                         'Помощник для инвалидов':'На 1 этаже вас встретит специалист и проводит до номера.'
                     })
             .form-elements__inner
-                div(class='form-elements__label') range slider
+                .form-elements__label
+                    p range slider
                     +range-slider({
                         jsClassInput: 'js-form-elements-slider__slider',
                         jsClassCounter: 'js-form-elements-slider__count'
                     })
-                div(class='form-elements__label') buttons
-                    div
+                .form-elements__label
+                    p buttons
+                    .form-elements__button-wrapper
                         +button({text: 'click me', size: 'default'})
-                    div
+                    .form-elements__button-wrapper
                         +button({text: 'click ME', size: 'default', type: 'transparent'})
-                    div
+                    .form-elements__button-wrapper
                         +button({text: 'clickkk meee', size: 'default', type: 'text'})
-                    div
+                    .form-elements__button-wrapper
                         +button({text: 'long click me', 'size': 'long', arrow: 'true'})
-                div(class='form-elements__label') pagination
+                .form-elements__label
+                    p pagination
                     +pagination
-                div(class='form-elements__label') bullet list
+                .form-elements__label
+                    p bullet list
                     -
                         var arr = ['Нельзя с питомцами',
                             'Без вечеринок и мероприятий',
                             'Время прибытия — после 13:00, а выезд до 12:00']
                     +bullet-list(arr)
-        div.low-container
+        .low-container.container
             -
                 var obj = [
                     {

@@ -2,7 +2,7 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
-import './form-elements-kit/form-elements.scss';
+import './form-elements.scss';
 import './form-elements.pug';
 
 const inputStart = document.querySelector('.js-form-elements__date-dropdown_start');
