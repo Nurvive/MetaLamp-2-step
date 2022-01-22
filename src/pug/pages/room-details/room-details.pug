@@ -3,6 +3,7 @@ include ../../blocks/comment/comment
 include ../../blocks/bullet-list/bullet-list
 include ../../blocks/footer/footer
 include ../../blocks/header/header
+include ../../blocks/pros/pros
 
 block title
     title room-details
@@ -20,7 +21,6 @@ block content
                     li.room-details__item
                         .room-details__info
                             p.room-details__title Сведения о номере
-                            include ../../blocks/pros/pros
                             -
                                 var obj = [
                                     {
@@ -39,7 +39,7 @@ block content
                                         text: 'Номер оснащён камином'
                                     }
                                 ]
-                            +pros-item(obj)
+                            +pros(obj)
                         .room-details__rating
                             p.room-details__title Впечатления от номера
                             div.room-details__canvas-wrapper(style="position: relative; height:126px; width: 120px")

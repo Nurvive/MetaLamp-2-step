@@ -1,7 +1,15 @@
-@import '../../../../scss/common/colors';
-
+@import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 .pagination {
   height: 50px;
+
+  &__info {
+    line-height: 24px;
+    font-weight: normal;
+    color: $dark75;
+    text-transform: none;
+    font-size: 14px;
+  }
 
   &js {
     &-prev {
@@ -9,6 +17,7 @@
       border-radius: 22px;
       display: block;
       position: relative;
+      cursor: pointer;
     }
 
     &-next {
@@ -49,34 +58,9 @@
 
   &__arrow {
     &-next {
-      position: relative;
-      width: 15px;
-      height: 2px;
       background-color: white;
       left: 50%;
       transform: translateX(-50%);
-
-      &::after {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 2px;
-        top: -3px;
-        right: -2px;
-        background-color: white;
-        transform: rotate(45deg);
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 2px;
-        top: 3px;
-        right: -2px;
-        background-color: white;
-        transform: rotate(-45deg);
-      }
     }
 
     &-prev {

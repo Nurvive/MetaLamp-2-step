@@ -1,4 +1,4 @@
-import './pagination-kit/pagination.scss';
+import './pagination.scss';
 import 'paginationjs';
 
 $().ready(() => {
@@ -15,8 +15,8 @@ $().ready(() => {
             pageRange: 1,
             autoHideNext: true,
             autoHidePrevious: true,
-            prevText: '<div class=\'pagination__arrow-prev\'></div>',
-            nextText: '<div class=\'pagination__arrow-next\'></div>',
+            prevText: '<div class=\'pagination__arrow-prev arrow\'></div>',
+            nextText: '<div class=\'pagination__arrow-next arrow\'></div>',
             callback: function (data, pagination) {
                 $('.js-pagination__info1').text(data[0]);
                 $('.js-pagination__info2').text(data[data.length - 1]);

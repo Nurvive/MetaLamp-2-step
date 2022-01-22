@@ -5,6 +5,7 @@ include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
 include ../../blocks/footer/footer
 include ../../blocks/header/header
+include ../../blocks/pagination/pagination
 
 block title
     title search-room
@@ -187,7 +188,6 @@ block content
                                 uniqueID: 'vbn'
                             }
                 + room-card(obj)
-                include ../../blocks/pagination/pagination
                 .search-room__pagination-wrapper
-                    +pagination(class='search-room__pagination')
+                    +pagination
         +footer

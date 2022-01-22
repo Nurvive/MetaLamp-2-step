@@ -1,1 +1,1 @@
-import './pros-kit/pros.scss';
+import './pros.scss';
