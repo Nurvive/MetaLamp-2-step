@@ -1,1 +1,1 @@
-import './toggle-kit/toggle.scss';
+import './toggle.scss';

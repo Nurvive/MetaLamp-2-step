@@ -1,4 +1,11 @@
-include toggle-kit/toggle-mixin
-.togge
-    -var obj = ['Получать спецпредложения','Получать спецпредложения']
-    +toggle-buttons(obj)
+mixin toggle(obj)
+    -
+        var obj = obj || {}
+    .toggle
+        each val, isChecked in obj
+            label.toggle__label
+                if isChecked
+                    input(checked type='checkbox' class='toggle__button')
+                else
+                    input(type='checkbox' class='toggle__button')
+                p.toggle__text=val

@@ -2,7 +2,7 @@ include ../buttons/button
 include ../masked-text-field/masked-text-field
 include ../radio-buttons/radio-buttons
 include ../text-field/text-field
-include ../toggle/toggle-kit/toggle-mixin
+include ../toggle/toggle
 
 mixin registration
     .registration.card&attributes(attributes)
@@ -18,8 +18,7 @@ mixin registration
             p.registration__layout-text данные для входа в сервис
             +text-field(placeholder='Email' class='registration__input')
             +text-field(placeholder='Пароль' class='registration__input')
-            -var obj = ['Получать спецпредложения']
-            +toggle-buttons(obj)
+            +toggle({'checked':'Получать спецпредложения'})
         +button({text: 'Зарегистрироваться', size: 'long', arrow: true})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin
