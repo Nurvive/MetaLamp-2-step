@@ -6,6 +6,7 @@ include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
 include ../../blocks/footer/footer
 include ../../blocks/header/header
 include ../../blocks/pagination/pagination
+include ../../blocks/range-slider/range-slider
 
 block title
     title search-room
@@ -32,7 +33,10 @@ block content
                             +dropdown('search-room__dropdown', 'default')
                     li.search-room__item(data-move="no")
                         .search-room__layout.search-room__slider-layout диапазон цены
-                        include ../../blocks/range-slider/range-slider
+                        +range-slider({
+                            jsClassInput: 'js-search-room-slider__slider',
+                            jsClassCounter: 'js-search-room-slider__count'
+                        })
                         span.search-room__item-extra-text Стоимость за сутки пребывания в номере
                     li.search-room__item
                         .search-room__layout правила дома

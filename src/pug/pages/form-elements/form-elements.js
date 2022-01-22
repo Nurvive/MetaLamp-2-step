@@ -1,5 +1,7 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
+import 'ion-rangeslider';
+import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './form-elements-kit/form-elements.scss';
 import './form-elements.pug';
 
@@ -34,6 +36,7 @@ const picker1 = new AirDatepicker('.js-form-elements__date-dropdown_start', {
 });
 
 const input2 = document.querySelector('.js-form-elements__filter-date-dropdown_start');
+// eslint-disable-next-line no-unused-vars
 const picker2 = new AirDatepicker('.js-form-elements__filter-date-dropdown_start', {
     multipleDates: true,
     range: true,
@@ -55,4 +58,22 @@ const picker2 = new AirDatepicker('.js-form-elements__filter-date-dropdown_start
         days: 'MMMM yyyy'
     },
     startDate: new Date()
+});
+
+$('.js-form-elements-slider__slider').ionRangeSlider({
+    skin: 'round',
+    min: 0,
+    type: 'double',
+    max: 10000,
+    from: 2000,
+    to: 5000,
+    step: 20,
+    hide_min_max: true,
+    hide_from_to: true,
+    onStart: function (data) {
+        $('.js-form-elements-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
+    },
+    onChange: function (data) {
+        $('.js-form-elements-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
+    }
 });

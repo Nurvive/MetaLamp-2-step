@@ -11,6 +11,7 @@ include ../../blocks/masked-text-field/masked-text-field
 include ../../blocks/pagination/pagination
 include ../../blocks/pros/pros
 include ../../blocks/radio-buttons/radio-buttons
+include ../../blocks/range-slider/range-slider
 
 block title
     title form-elements
@@ -78,7 +79,10 @@ block content
                     include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
             .form-elements__inner
                 div(class='form-elements__label') range slider
-                    include ../../blocks/range-slider/range-slider
+                    +range-slider({
+                        jsClassInput: 'js-form-elements-slider__slider',
+                        jsClassCounter: 'js-form-elements-slider__count'
+                    })
                 div(class='form-elements__label') buttons
                     div
                         +button({text: 'click me', size: 'default'})
