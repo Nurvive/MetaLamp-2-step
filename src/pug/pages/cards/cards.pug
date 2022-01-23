@@ -12,7 +12,7 @@ block title
 block content
     .wrapper
         .container.cards__container
-            div.cards__item
+            .cards__item
                 -
                     var obj = [
                         {
@@ -27,15 +27,12 @@ block content
                         }
                     ]
                 +find-room(obj)
-            div.cards__item
                 +registration
-            div.cards__item
+            .cards__item
                 +reservation
-            div.cards__item
                 +login
-            div.cards__item
+            .cards__item
                 +calendar
-            div.cards__item
                 -
                     var obj = {
                         images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
@@ -44,7 +41,7 @@ block content
                         cost: '9 990₽',
                         rating: 5,
                         reviews: 145,
-                        uniqueID:'qwe'
+                        uniqueID: 'qwe'
                     }
                 +room-card(obj)
                 -

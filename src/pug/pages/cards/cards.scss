@@ -1,0 +1,15 @@
+@import '../../../scss/common/colors';
+
+.cards {
+  &__container {
+    display: flex;
+    gap: 40px;
+    padding: 80px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+  }
+}
