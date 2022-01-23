@@ -1,6 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import './landing-kit/landing-media.scss';
+import './landing.scss';
 
 const inputStart = document.querySelector('.js-landing__date-dropdown_start');
 const inputEnd = document.querySelector('.js-landing__date-dropdown_end');
