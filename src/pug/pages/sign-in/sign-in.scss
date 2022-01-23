@@ -1,11 +1,12 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .sign-in {
   &__main {
-    background-image: url('../../../../assets/images/registration.png');
+    background-image: url('../../../assets/images/registration.png');
     background-repeat: no-repeat;
     background-position: center bottom;
     padding: 163px 0;
+    background-size: cover;
   }
 
   &__card-wrapper {
