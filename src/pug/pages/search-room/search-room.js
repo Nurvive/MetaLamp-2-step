@@ -2,7 +2,7 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
-import './search-room-kit/search-room-media.scss';
+import './search-room.scss';
 
 const input = document.querySelector('.js-search-room__filter-date-dropdown_start');
 // eslint-disable-next-line no-unused-vars
@@ -26,7 +26,7 @@ const picker = new AirDatepicker('.js-search-room__filter-date-dropdown_start', 
     navTitles: {
         days: 'MMMM yyyy'
     },
-    startDate: new Date()
+    startDate: new Date(),
 });
 
 $().ready(() => {

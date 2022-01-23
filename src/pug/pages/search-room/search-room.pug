@@ -25,13 +25,15 @@ block content
                                 {
                                     class: 'js-search-room__filter-date-dropdown_start',
                                     placeholder: 'ДД.ММ. - ДД.ММ.',
-                                    size: 'long'
+                                    size: 'long',
+                                    title: 'даты пребывания в отеле'
                                 }
                             ]
-                        .search-room__layout.search-room__dropdown-layout даты пребывания в отеле
+                        .search-room__layout.search-room__dropdown-layout
                             +date-dropdown(options)
                     li.search-room__item(data-move="no")
-                        .search-room__layout.search-room__dropdown-layout Гости
+                        .search-room__layout.search-room__dropdown-layout
+                            p Гости
                             +dropdown('search-room__dropdown', 'default')
                     li.search-room__item(data-move="no")
                         .search-room__layout.search-room__slider-layout диапазон цены

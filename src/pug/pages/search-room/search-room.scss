@@ -1,18 +1,51 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .search-room {
   &__main {
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 78px;
     justify-content: center;
+    padding: 30px 20px 78px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__aside {
     flex: 0 0 326px;
+
+    @media (max-width: 900px) {
+      flex: unset;
+    }
+  }
+
+  &__list {
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    @media (max-width: 600px) {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
   }
 
   &__small-menu {
+    display: none;
+
+    @media (max-width: 900px) {
+      display: flex;
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+    }
+
     & .small-menu__content {
       display: none;
       top: 50px;
@@ -26,6 +59,16 @@
   &__item {
     max-width: 266px;
     margin-bottom: 30px;
+
+    @media (max-width: 900px) {
+      max-width: 100%;
+      flex-basis: 40%;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      flex-basis: 100%;
+    }
 
     &_small-margin {
       margin-bottom: 20px;
@@ -57,6 +100,10 @@
 
   &__dropdown-layout {
     margin-bottom: 5px;
+
+    & > p {
+      margin-bottom: 5px;
+    }
   }
 
   &__slider-layout {
@@ -70,12 +117,20 @@
     row-gap: 20px;
     max-width: 834px;
 
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+
     &-title {
       width: 100%;
       font-weight: bold;
       font-size: 24px;
       line-height: 29px;
       color: $dark100;
+
+      @media (max-width: 900px) {
+        text-align: center;
+      }
     }
   }
 
