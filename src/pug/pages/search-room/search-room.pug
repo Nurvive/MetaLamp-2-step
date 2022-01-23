@@ -68,137 +68,105 @@ block content
             .search-room__content
                 p.search-room__content-title Номера, которые мы для вас подобрали
                 -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'qwe'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '111',
-                                type: 'люкс',
-                                cost: '9 456₽',
-                                rating: 2,
-                                reviews: 15,
-                                uniqueID: 'qw'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '88',
-                                type: '',
-                                cost: '990₽',
-                                rating: 5,
-                                reviews: 14,
-                                uniqueID: 'wer'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '18',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'ert'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '234',
-                                type: 'люкс',
-                                cost: '9 8990₽',
-                                rating: 5,
-                                reviews: 95,
-                                uniqueID: 'rty'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '668',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'tyu'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: 'люкс',
-                                cost: '9990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'iop'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'asd'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: '',
-                                cost: '9 990₽',
-                                rating: 1,
-                                reviews: 5,
-                                uniqueID: 'sdf'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'zxc'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'xcv'
-                            }
-                + room-card(obj)
-                -
-                    var obj = {
-                                images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                                number: '888',
-                                type: 'люкс',
-                                cost: '9 990₽',
-                                rating: 5,
-                                reviews: 145,
-                                uniqueID: 'vbn'
-                            }
-                + room-card(obj)
+                    const roomsArray = [{
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'qwe'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '111',
+                        type: 'люкс',
+                        cost: '9 456₽',
+                        rating: 2,
+                        reviews: 15,
+                        uniqueID: 'qw'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '111',
+                        type: 'люкс',
+                        cost: '9 456₽',
+                        rating: 2,
+                        reviews: 15,
+                        uniqueID: 'qw'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '88',
+                        type: '',
+                        cost: '990₽',
+                        rating: 5,
+                        reviews: 14,
+                        uniqueID: 'wer'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '18',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'ert'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '234',
+                        type: 'люкс',
+                        cost: '9 8990₽',
+                        rating: 5,
+                        reviews: 95,
+                        uniqueID: 'rty'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '668',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'tyu'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'iop'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'asd'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: '',
+                        cost: '9 990₽',
+                        rating: 1,
+                        reviews: 5,
+                        uniqueID: 'sdf'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'zxc'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'xcv'
+                    }]
+                each obj in roomsArray
+                    +room-card(obj)
                 .search-room__pagination-wrapper
                     +pagination
         +footer
