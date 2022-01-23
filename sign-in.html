@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>registration</title>
+    <title>Sign In</title>
     <meta name="description" content="Index page">
     <meta name="author" content="">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script defer src="main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
-    <div class="wrapper registration-page">
+    <div class="wrapper sign-in">
       <header class="header">
         <div class="container header__container">
           <div class="header__logo">
@@ -72,43 +72,22 @@
             <button class="button button__long">Зарегистрироваться</button></a>
         </div>
       </div>
-      <main class="registration-page__main">
-        <div class="registration-page__card-wrapper">
-          <div class="registration card">
-            <div class="registration__layout">
-              <p class="registration__layout-text registration__layout-text_big">Регистрация аккаунта</p>
-              <input class="text-field registration__input" placeholder="Имя" type="text"/>
-              <input class="text-field registration__input" placeholder="Фамилия" type="text"/>
-              <div class="radio-buttons">
-                <label class="radio-buttons__label">
-                  <input class="radio-buttons__button" name="radio" type="radio"/>
-                  <p class="radio-buttons__text">Мужчина</p>
-                </label>
-                <label class="radio-buttons__label">
-                  <input class="radio-buttons__button" name="radio" type="radio"/>
-                  <p class="radio-buttons__text">Женщина</p>
-                </label>
-              </div>
+      <main class="sign-in__main">
+        <div class="sign-in__card-wrapper">
+          <div class="card login">
+            <div class="login__title">
+              <p class="login__title-text">Войти</p>
             </div>
-            <div class="registration__layout">
-              <p class="registration__layout-text">дата рождения</p>
-              <input class="text-field masked-text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="masked-text-field"/>
+            <div class="login__inputs">
+              <input class="text-field login__input" placeholder="Email" type="text"/>
+              <input class="text-field login__input" placeholder="Пароль" type="text"/>
             </div>
-            <div class="registration__layout">
-              <p class="registration__layout-text">данные для входа в сервис</p>
-              <input class="text-field registration__input" placeholder="Email" type="text"/>
-              <input class="text-field registration__input" placeholder="Пароль" type="text"/>
-              <div class="toggle">
-                <label class="toggle__label">
-                  <input class="toggle__button" checked="checked" type="checkbox"/>
-                  <p class="toggle__text">Получать спецпредложения</p>
-                </label>
-              </div>
+            <div class="login__button">
+              <button class="button button__long">Войти<span class="arrow button__arrow"></span></button>
             </div>
-            <button class="button button__long">Зарегистрироваться<span class="arrow button__arrow"></span></button>
-            <div class="registration__bottom">
-              <p class="registration__bottom-text">Уже есть аккаунт на Toxin</p>
-              <button class="button button__default button__transparent">Войти</button>
+            <div class="login__bottom">
+              <p class="login__bottom-text">Нет аккаунта на Toxin?</p>
+              <button class="button button__default button__transparent">Создать</button>
             </div>
           </div>
         </div>
