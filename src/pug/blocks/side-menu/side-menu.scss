@@ -13,6 +13,16 @@
   padding: 25px;
   gap: 25px;
 
+  &_active {
+    left: 0;
+    transition: all 0.1s;
+  }
+
+  &_hide {
+    left: -70%;
+    transition: all 0.9s;
+  }
+
   @media (max-width: 960px) {
     opacity: 1;
   }

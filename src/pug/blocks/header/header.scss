@@ -16,6 +16,21 @@
     }
   }
 
+  &__logo {
+    position: relative;
+
+    &-burger {
+      position: absolute;
+      left: -50%;
+      font-size: 2rem;
+      color: $purple;
+
+      @media (min-width: 960px) {
+        display: none;
+      }
+    }
+  }
+
   &__menu-wrapper {
     display: flex;
     align-items: center;
