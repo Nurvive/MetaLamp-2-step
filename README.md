@@ -18,7 +18,7 @@ https://nurvive.github.io/MetaLamp-2-step/
 
 ### Зависимости проекта
 
-air-datepicker: "^2.2.3",
+air-datepicker: "^3.1.0",
 
 chart.js: "^3.5.0",
 
