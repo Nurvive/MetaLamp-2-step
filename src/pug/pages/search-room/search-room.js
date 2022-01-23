@@ -26,7 +26,7 @@ const picker = new AirDatepicker('.js-search-room__filter-date-dropdown_start', 
     navTitles: {
         days: 'MMMM yyyy'
     },
-    startDate: new Date(),
+    startDate: new Date()
 });
 
 $().ready(() => {

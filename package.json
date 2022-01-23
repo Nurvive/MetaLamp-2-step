@@ -12,7 +12,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve --open",
-    "lint": "eslint ./src/**/*.js"
+    "lint": "eslint ./src/**/*.js && stylelint ./src/**/*.scss"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.7",

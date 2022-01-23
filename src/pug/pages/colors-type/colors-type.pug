@@ -1,3 +1,16 @@
+mixin list-item-colors(obj)
+    each text,title in obj
+        li.column__colors-list-item
+            .column__item-color
+            .column__item-info
+                .column__info-title= title
+                .column__info-text= text
+
+mixin list-item-type(obj)
+    each text,tag in obj
+        li.column__type-list-item
+            p.column__item-tag=tag
+            p.column__item-text=text
 
 block title
     title colors & type
@@ -5,7 +18,6 @@ block title
         .column
             ul.column__list
                 - var obj = {'Dark Shade 100%':'#1F2041', 'Dark Shade 75%':'#1F2041', 'Dark Shade 50%':'#1F2041', 'Dark Shade 25%':'#1F2041','Dark Shade 5%':'#1F2041', 'Purple':'#BC9CFF', 'Green':'#6FCF97' }
-                include colors-type-kit/colors-types-mixins
                 +list-item-colors(obj)
         .column
             ul.column__list
