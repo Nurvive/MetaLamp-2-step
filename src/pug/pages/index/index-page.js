@@ -1,1 +1,1 @@
-import './index-kit/index-page.scss';
+import './index-page.scss';
