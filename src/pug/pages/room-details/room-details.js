@@ -1,4 +1,4 @@
-import './room-details-kit/room-details-media.scss';
+import './room-details.scss';
 import {Chart, registerables} from 'chart.js';
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';

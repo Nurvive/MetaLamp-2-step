@@ -1,4 +1,4 @@
-@import '../../../../scss/common/colors';
+@import '../../../scss/common/colors';
 
 .room-details {
   &__gallery {
@@ -38,6 +38,11 @@
     padding-top: 68px;
     padding-bottom: 60px;
 
+    @media (max-width: 1200px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
     & .card {
       align-self: baseline;
     }
@@ -53,6 +58,13 @@
     display: flex;
     width: 100%;
     column-gap: 81px;
+
+    @media (max-width: 770px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 0 20px;
+    }
   }
 
   &__title {
@@ -155,6 +167,11 @@
         line-height: 14px;
         font-weight: normal;
         font-size: 14px;
+
+        @media (max-width: 420px) {
+          top: 25px;
+          left: 0;
+        }
       }
     }
   }
