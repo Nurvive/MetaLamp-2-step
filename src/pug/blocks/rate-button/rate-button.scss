@@ -16,13 +16,13 @@
         margin-right: 5px;
 
         &::before {
-            content: url('../../../assets/images/star-border.png');
+            content: url('../../../assets/images/star-border.svg');
             display: block;
         }
 
         &:hover::before,
         &:hover ~ &::before {
-            content: url('../../../assets/images/star.png');
+            content: url('../../../assets/images/star.svg');
         }
     }
 
@@ -37,7 +37,7 @@
 
         &:checked,
         &:checked ~ .rate-button__star::before {
-            content: url('../../../assets/images/star.png');
+            content: url('../../../assets/images/star.svg');
         }
     }
 }
