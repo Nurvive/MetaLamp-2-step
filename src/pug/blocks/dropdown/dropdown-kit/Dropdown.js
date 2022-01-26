@@ -86,6 +86,9 @@ export class Dropdown {
             // eslint-disable-next-line no-param-reassign
             node.innerHTML = 0;
         });
+        this.minus.forEach((node) => {
+            node.classList.add('dropdown__item-minus_inactive');
+        });
     }
 
     confirm() {
