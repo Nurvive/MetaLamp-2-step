@@ -4,10 +4,12 @@ import 'air-datepicker/air-datepicker.css';
 const picker = new AirDatepicker('.js-calendar__inner', {
     classes: 'calendar-datepicker',
     range: true,
-    buttons: ['clear', 'today'],
-    locale: {
-        today: 'Применить'
-    },
+    buttons: ['clear', {
+        content: 'Применить',
+        onClick: (dp) => {
+            dp.hide();
+        }
+    }],
     prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
     nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
     navTitles: {

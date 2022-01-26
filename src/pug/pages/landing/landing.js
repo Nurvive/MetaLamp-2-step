@@ -20,10 +20,12 @@ const picker = new AirDatepicker('.js-landing__date-dropdown_start', {
         inputStart.parentNode.classList.remove('date-dropdown__input_active');
         inputEnd.parentNode.classList.remove('date-dropdown__input_active');
     },
-    buttons: ['clear', 'today'],
-    locale: {
-        today: 'Применить'
-    },
+    buttons: ['clear', {
+        content: 'Применить',
+        onClick: (dp) => {
+            dp.hide();
+        }
+    }],
     prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
     nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
     navTitles: {

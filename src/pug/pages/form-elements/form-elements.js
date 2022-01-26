@@ -7,6 +7,12 @@ import './form-elements.pug';
 
 const inputStart = document.querySelector('.js-form-elements__date-dropdown_start');
 const inputEnd = document.querySelector('.js-form-elements__date-dropdown_end');
+const button = {
+    content: 'Применить',
+    onClick: (dp) => {
+        dp.hide();
+    }
+};
 // eslint-disable-next-line no-unused-vars
 const picker1 = new AirDatepicker('.js-form-elements__date-dropdown_start', {
     multipleDates: true,
@@ -23,10 +29,7 @@ const picker1 = new AirDatepicker('.js-form-elements__date-dropdown_start', {
         inputStart.parentNode.classList.remove('date-dropdown__input_active');
         inputEnd.parentNode.classList.remove('date-dropdown__input_active');
     },
-    buttons: ['clear', 'today'],
-    locale: {
-        today: 'Применить'
-    },
+    buttons: ['clear', button],
     prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
     nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
     navTitles: {
@@ -48,16 +51,15 @@ const picker2 = new AirDatepicker('.js-form-elements__filter-date-dropdown_start
         input2.parentNode.classList.remove('date-dropdown__input_active');
     },
     dateFormat: 'dd.MMM',
-    buttons: ['clear', 'today'],
-    locale: {
-        today: 'Применить'
-    },
+    buttons: ['clear', button],
     prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
     nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
     navTitles: {
         days: 'MMMM yyyy'
     },
-    startDate: new Date()
+    startDate: new Date(),
+    autoClose: true
+
 });
 
 $('.js-form-elements-slider__slider').ionRangeSlider({
