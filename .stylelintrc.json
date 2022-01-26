@@ -1,11 +1,11 @@
 {
-  "plugins": [
-    "stylelint-scss"
-  ],
-  "extends": "stylelint-config-standard-scss",
-  "rules": {
-    "string-quotes": "single",
-    "selector-class-pattern": null,
-    "indentation": 4
-  }
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+        "string-quotes": "single",
+        "selector-class-pattern": null,
+        "indentation": 4
+    }
 }
