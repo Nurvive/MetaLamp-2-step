@@ -2,57 +2,57 @@
 @import '../../../scss/common/templates';
 
 .button {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  flex-direction: column;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 22px;
-  height: 44px;
-  max-width: 99px;
-  width: 100%;
-  cursor: pointer;
-  transition: 0.2s;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-  border: none;
-
-  &:hover {
-    opacity: 0.5;
-  }
-
-  &__transparent {
-    background: white;
-    border: 2px solid #bc9cff;
-    color: #bc9cff;
-  }
-
-  &__text {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 22px;
+    height: 44px;
+    max-width: 99px;
+    width: 100%;
     cursor: pointer;
-    display: inline-block;
-    color: #bc9cff;
-    background: none;
-    height: initial;
+    transition: 0.2s;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
 
     &:hover {
-      color: $dark100;
+        opacity: 0.5;
     }
-  }
 
-  &__long {
-    text-align: center;
-    max-width: 320px;
-    width: 100%;
-    position: relative;
-  }
+    &__transparent {
+        background: white;
+        border: 2px solid #bc9cff;
+        color: #bc9cff;
+    }
 
-  &__arrow {
-    top: -8px;
-    left: 45%;
-    background-color: white;
-    transform: translateX(-50%);
-  }
+    &__text {
+        cursor: pointer;
+        display: inline-block;
+        color: #bc9cff;
+        background: none;
+        height: initial;
+
+        &:hover {
+            color: $dark100;
+        }
+    }
+
+    &__long {
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__arrow {
+        top: -8px;
+        left: 45%;
+        background-color: white;
+        transform: translateX(-50%);
+    }
 }

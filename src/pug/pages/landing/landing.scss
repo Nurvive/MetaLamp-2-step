@@ -1,35 +1,35 @@
 @import '../../../scss/common/colors';
 
 .landing {
-  &__main {
-    height: 830px;
-    background-image: url('../../../assets/images/landing-background.png');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    padding: 70px 0 0 140px;
-    position: relative;
-    background-size: cover;
+    &__main {
+        height: 830px;
+        background-image: url('../../../assets/images/landing-background.png');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        padding: 70px 0 0 140px;
+        position: relative;
+        background-size: cover;
 
-    @media (max-width: 960px) {
-      height: 560px;
-      padding: 70px 0;
-      display: flex;
-      justify-content: center;
+        @media (max-width: 960px) {
+            height: 560px;
+            padding: 70px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-text {
+            position: absolute;
+            font-size: 14px;
+            line-height: 24px;
+            color: $dark75;
+            right: 134px;
+            bottom: 20px;
+            max-width: 300px;
+            text-align: right;
+
+            @media (max-width: 960px) {
+                display: none;
+            }
+        }
     }
-
-    &-text {
-      position: absolute;
-      font-size: 14px;
-      line-height: 24px;
-      color: $dark75;
-      right: 134px;
-      bottom: 20px;
-      max-width: 300px;
-      text-align: right;
-
-      @media (max-width: 960px) {
-        display: none;
-      }
-    }
-  }
 }

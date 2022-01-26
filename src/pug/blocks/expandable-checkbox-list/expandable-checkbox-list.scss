@@ -2,24 +2,24 @@
 @import '../../../scss/common/templates';
 
 .expandable-checkbox {
-  position: relative;
-  max-width: 266px;
+    position: relative;
+    max-width: 266px;
 
-  &__open-button {
-    right: 0;
+    &__open-button {
+        right: 0;
 
-    &_active {
-      transform: rotate(180deg);
+        &_active {
+            transform: rotate(180deg);
+        }
     }
-  }
 
-  &__inner {
-    position: absolute;
-    z-index: 2;
-    background-color: white;
+    &__inner {
+        position: absolute;
+        z-index: 2;
+        background-color: white;
 
-    &_hide {
-      display: none;
+        &_hide {
+            display: none;
+        }
     }
-  }
 }

@@ -2,124 +2,124 @@
 @import '../../../scss/common/templates';
 
 .dropdown {
-  max-width: 320px;
-  position: relative;
+    max-width: 320px;
+    position: relative;
 
-  &__open-button {
-    top: 50%;
-    transform: translateY(-25%);
-    right: 16px;
-  }
-
-  &__input-wrapper {
-    &_active .dropdown__open-button {
-      transform: rotate(180deg) translateY(50%);
-    }
-  }
-
-  & &__input {
-    display: block;
-    border: 1px solid $dark50;
-    cursor: pointer;
-    line-height: 18px;
-    color: $dark75;
-
-    &_active {
-      border-radius: 4px 4px 0 0;
-    }
-  }
-
-  &__list {
-    position: absolute;
-    width: 100%;
-    border: 1px solid $dark50;
-    border-top: none;
-    box-shadow: 0 10px 20px $dark5;
-    border-radius: 0 0 5px 5px;
-    padding: 5px 7px 13px 15px;
-    background-color: #fff;
-    display: none;
-    z-index: 4;
-
-    &_active {
-      display: block;
-    }
-  }
-
-  &__item {
-    color: $dark100;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &-container {
-      display: flex;
-      align-items: center;
-    }
-
-    &-minus {
-      border: 1px solid $dark50;
-      border-radius: 50%;
-      height: 30px;
-      width: 30px;
-      position: relative;
-      cursor: pointer;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 2px;
-        background-color: $dark50;
+    &__open-button {
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      &_inactive {
-        opacity: 0.5;
-      }
+        transform: translateY(-25%);
+        right: 16px;
     }
 
-    &-count {
-      margin: 0 9px;
-      width: 10px;
-      text-align: center;
+    &__input-wrapper {
+        &_active .dropdown__open-button {
+            transform: rotate(180deg) translateY(50%);
+        }
     }
 
-    &-plus {
-      @extend.dropdown__item-minus;
+    & &__input {
+        display: block;
+        border: 1px solid $dark50;
+        cursor: pointer;
+        line-height: 18px;
+        color: $dark75;
 
-      &::after {
-        content: '';
+        &_active {
+            border-radius: 4px 4px 0 0;
+        }
+    }
+
+    &__list {
         position: absolute;
-        width: 2px;
-        height: 8px;
-        background-color: $dark50;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+        width: 100%;
+        border: 1px solid $dark50;
+        border-top: none;
+        box-shadow: 0 10px 20px $dark5;
+        border-radius: 0 0 5px 5px;
+        padding: 5px 7px 13px 15px;
+        background-color: #fff;
+        display: none;
+        z-index: 4;
+
+        &_active {
+            display: block;
+        }
     }
-  }
 
-  &__item-interactive {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 21px;
-  }
+    &__item {
+        color: $dark100;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-  &__interactive-word {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $purple;
-    cursor: pointer;
-  }
+        &-container {
+            display: flex;
+            align-items: center;
+        }
+
+        &-minus {
+            border: 1px solid $dark50;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 2px;
+                background-color: $dark50;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &_inactive {
+                opacity: 0.5;
+            }
+        }
+
+        &-count {
+            margin: 0 9px;
+            width: 10px;
+            text-align: center;
+        }
+
+        &-plus {
+            @extend.dropdown__item-minus;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 8px;
+                background-color: $dark50;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__item-interactive {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 21px;
+    }
+
+    &__interactive-word {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $purple;
+        cursor: pointer;
+    }
 }

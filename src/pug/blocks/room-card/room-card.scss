@@ -1,140 +1,140 @@
 @import '../../../scss/common/colors';
 
 .room-card {
-  max-width: 270px;
-  box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
-  border-radius: 4px;
+    max-width: 270px;
+    box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
+    border-radius: 4px;
 
-  &__top {
-    height: 152px;
+    &__top {
+        height: 152px;
 
-    &-img {
-      border-top-right-radius: 4px;
-      border-top-left-radius: 4px;
-    }
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    padding: 6px 0;
-    justify-content: space-between;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid rgb(31 32 65 / 10%);
-    }
-  }
-
-  &__number {
-    font-size: 19px;
-    line-height: 23px;
-    color: $dark100;
-
-    &::before {
-      content: '№';
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 17px;
-      color: $dark100;
+        &-img {
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
     }
 
-    & strong {
-      font-size: 19px;
-      line-height: 23px;
-    }
-  }
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 6px 0;
+        justify-content: space-between;
 
-  &__type {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: $purple;
-    text-transform: uppercase;
-    margin-left: 3px;
-  }
-
-  &__price {
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark50;
-  }
-
-  &__reviews {
-    font-size: 14px;
-    line-height: 18px;
-    color: $dark50;
-  }
-
-  &__content {
-    padding: 18px 20px;
-    background: #fff;
-  }
-
-  &__arrow {
-    top: 50%;
-    color: white;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    font-size: 20px;
-    line-height: 24px;
-    z-index: 2;
-    height: 100%;
-    transform: translateY(-50%);
-    display: none !important;
-    width: 42px;
-
-    &_next {
-      right: 0;
-      background:
-        linear-gradient(
-          270deg,
-          rgb(0 0 0 / 50%) 0%,
-          rgb(0 0 0 / 0%) 99.99%,
-          rgb(255 255 255 / 0%) 100%
-        );
+        &:not(:last-child) {
+            border-bottom: 1px solid rgb(31 32 65 / 10%);
+        }
     }
 
-    &_prev {
-      background:
-        linear-gradient(
-          90deg,
-          rgb(0 0 0 / 50%) 0%,
-          rgb(0 0 0 / 0%) 99.99%,
-          rgb(255 255 255 / 0%) 100%
-        );
+    &__number {
+        font-size: 19px;
+        line-height: 23px;
+        color: $dark100;
+
+        &::before {
+            content: '№';
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark100;
+        }
+
+        & strong {
+            font-size: 19px;
+            line-height: 23px;
+        }
     }
-  }
 
-  &:hover &__arrow {
-    display: block !important;
-  }
+    &__type {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: $purple;
+        text-transform: uppercase;
+        margin-left: 3px;
+    }
 
-  &__dots {
-    display: flex;
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    gap: 4px;
-    z-index: 3;
+    &__price {
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark50;
+    }
 
-    & li {
-      cursor: pointer;
+    &__reviews {
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark50;
+    }
 
-      & button {
+    &__content {
+        padding: 18px 20px;
+        background: #fff;
+    }
+
+    &__arrow {
+        top: 50%;
+        color: white;
+        border: none;
+        position: absolute;
         cursor: pointer;
-        font-size: 0;
-        line-height: 0;
-        width: 8px;
-        height: 8px;
-        background: transparent;
-        border: 1px solid #fff;
-        border-radius: 50%;
-      }
+        font-size: 20px;
+        line-height: 24px;
+        z-index: 2;
+        height: 100%;
+        transform: translateY(-50%);
+        display: none !important;
+        width: 42px;
+
+        &_next {
+            right: 0;
+            background:
+                linear-gradient(
+                    270deg,
+                    rgb(0 0 0 / 50%) 0%,
+                    rgb(0 0 0 / 0%) 99.99%,
+                    rgb(255 255 255 / 0%) 100%
+                );
+        }
+
+        &_prev {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgb(0 0 0 / 50%) 0%,
+                    rgb(0 0 0 / 0%) 99.99%,
+                    rgb(255 255 255 / 0%) 100%
+                );
+        }
     }
 
-    & li.slick-active button {
-      background: white;
+    &:hover &__arrow {
+        display: block !important;
     }
-  }
+
+    &__dots {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        gap: 4px;
+        z-index: 3;
+
+        & li {
+            cursor: pointer;
+
+            & button {
+                cursor: pointer;
+                font-size: 0;
+                line-height: 0;
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                border: 1px solid #fff;
+                border-radius: 50%;
+            }
+        }
+
+        & li.slick-active button {
+            background: white;
+        }
+    }
 }

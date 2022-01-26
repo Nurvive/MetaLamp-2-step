@@ -1,60 +1,60 @@
 @import 'colors';
 
 .arrow {
-  position: relative;
-  width: 15px;
-  height: 2px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 10px;
+    position: relative;
+    width: 15px;
     height: 2px;
-    top: -3px;
-    right: -2px;
-    background-color: inherit;
-    transform: rotate(45deg);
-  }
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    top: 3px;
-    right: -2px;
-    background-color: inherit;
-    transform: rotate(-45deg);
-  }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        top: -3px;
+        right: -2px;
+        background-color: inherit;
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        top: 3px;
+        right: -2px;
+        background-color: inherit;
+        transform: rotate(-45deg);
+    }
 }
 
 %open-button-chevron-part {
-  position: absolute;
-  width: 2px;
-  height: 8px;
-  background-color: $dark50;
-  transform-origin: bottom;
-  right: 50%;
-  content: '';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background-color: $dark50;
+    transform-origin: bottom;
+    right: 50%;
+    content: '';
 }
 
 .open-button-chevron {
-  position: absolute;
-  cursor: pointer;
-  transition: 0.3s;
-  z-index: 1;
-  width: 15px;
-  height: 15px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
 
-  &::after {
-    @extend %open-button-chevron-part;
+    &::after {
+        @extend %open-button-chevron-part;
 
-    transform: rotate(-45deg);
-  }
+        transform: rotate(-45deg);
+    }
 
-  &::before {
-    @extend %open-button-chevron-part;
+    &::before {
+        @extend %open-button-chevron-part;
 
-    transform: rotate(45deg);
-  }
+        transform: rotate(45deg);
+    }
 }

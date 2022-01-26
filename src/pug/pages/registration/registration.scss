@@ -1,16 +1,16 @@
 @import '../../../scss/common/colors';
 
 .registration-page {
-  &__main {
-    background-image: url('../../../assets/images/registration.png');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    padding: 18px 0;
-    background-size: cover;
-  }
+    &__main {
+        background-image: url('../../../assets/images/registration.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding: 18px 0;
+        background-size: cover;
+    }
 
-  &__card-wrapper {
-    margin: 0 auto;
-    max-width: 374px;
-  }
+    &__card-wrapper {
+        margin: 0 auto;
+        max-width: 374px;
+    }
 }

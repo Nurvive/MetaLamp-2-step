@@ -2,53 +2,53 @@
 @import '../../../scss/common/templates';
 
 .date-dropdown {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  @media (max-width: 370px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__input {
-    max-width: 150px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    background-color: transparent;
-    position: relative;
 
     @media (max-width: 370px) {
-      max-width: 300px;
-      width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    &-title {
-      color: $dark100;
-      text-transform: uppercase;
-      font-weight: bold;
-      line-height: 15px;
-      font-size: 12px;
-      margin-bottom: 5px;
-    }
+    &__input {
+        max-width: 150px;
+        width: 100%;
+        background-color: transparent;
+        position: relative;
 
-    &-field {
-      cursor: pointer;
-      background-color: transparent;
-    }
+        @media (max-width: 370px) {
+            max-width: 300px;
+            width: 100%;
+        }
 
-    &-open-button {
-      bottom: 12px;
-      right: 16px;
-    }
+        &-title {
+            color: $dark100;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 15px;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
 
-    &_active .date-dropdown__input-open-button {
-      transform: rotate(180deg) translateY(40%);
-    }
+        &-field {
+            cursor: pointer;
+            background-color: transparent;
+        }
 
-    &_long {
-      max-width: 266px;
+        &-open-button {
+            bottom: 12px;
+            right: 16px;
+        }
+
+        &_active .date-dropdown__input-open-button {
+            transform: rotate(180deg) translateY(40%);
+        }
+
+        &_long {
+            max-width: 266px;
+        }
     }
-  }
 }

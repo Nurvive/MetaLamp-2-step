@@ -1,13 +1,13 @@
 .index {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-  gap: 20px;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
 
-  & > a {
-    font-size: 22px;
-    text-transform: uppercase;
-  }
+    & > a {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
 }

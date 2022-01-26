@@ -5,6 +5,7 @@
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "string-quotes": "single",
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "indentation": 4
   }
 }

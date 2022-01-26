@@ -2,138 +2,138 @@
 @import '../../../scss/common/functions';
 
 .header {
-  background-color: #fff;
-  width: 100%;
-  box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 16px;
-
-    @media (max-width: 960px) {
-      justify-content: center;
-    }
-  }
-
-  &__logo {
-    position: relative;
-
-    &-burger {
-      position: absolute;
-      left: -50%;
-      font-size: 2rem;
-      color: $purple;
-
-      @media (min-width: 960px) {
-        display: none;
-      }
-    }
-  }
-
-  &__menu-wrapper {
-    display: flex;
-    align-items: center;
-    z-index: 2;
-  }
-
-  &__nav {
-    @media (max-width: 960px) {
-      display: none;
-    }
-  }
-
-  &__menu {
-    display: flex;
-    align-items: center;
-
-    &-dropdown {
-      right: 0;
-      position: relative;
-      display: block;
-      cursor: pointer;
-
-      &_active::after {
-        transform: rotate(180deg);
-      }
-
-      &::after {
-        transition: 0.3s;
-        position: absolute;
-        content: url('../../../assets/images/arrow-down.png');
-        right: -17px;
-        top: 0;
-      }
-    }
-
-    &-item {
-      line-height: 17px;
-      color: $dark50;
-      position: relative;
-
-      & > .header__menu-dropdown {
-        margin-right: rem(44);
-      }
-
-      & a {
-        margin-right: rem(20);
-      }
-    }
-  }
-
-  &__dropdown-item {
-    display: none;
-    position: absolute;
-    border-radius: 8px;
-    left: 0;
-    border: 1px solid black;
-    font-weight: initial;
-    padding: 4px;
     background-color: #fff;
+    width: 100%;
+    box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
 
-    & a {
-      margin: 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+
+        @media (max-width: 960px) {
+            justify-content: center;
+        }
     }
 
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        top: $i * 30px;
-      }
-    }
-  }
+    &__logo {
+        position: relative;
 
-  &__buttons {
-    display: flex;
-    gap: 20px;
+        &-burger {
+            position: absolute;
+            left: -50%;
+            font-size: 2rem;
+            color: $purple;
 
-    @media (max-width: 960px) {
-      display: none;
+            @media (min-width: 960px) {
+                display: none;
+            }
+        }
     }
-  }
 
-  &__button {
-    & > div {
-      height: 34px;
+    &__menu-wrapper {
+        display: flex;
+        align-items: center;
+        z-index: 2;
     }
-  }
+
+    &__nav {
+        @media (max-width: 960px) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        &-dropdown {
+            right: 0;
+            position: relative;
+            display: block;
+            cursor: pointer;
+
+            &_active::after {
+                transform: rotate(180deg);
+            }
+
+            &::after {
+                transition: 0.3s;
+                position: absolute;
+                content: url('../../../assets/images/arrow-down.png');
+                right: -17px;
+                top: 0;
+            }
+        }
+
+        &-item {
+            line-height: 17px;
+            color: $dark50;
+            position: relative;
+
+            & > .header__menu-dropdown {
+                margin-right: rem(44);
+            }
+
+            & a {
+                margin-right: rem(20);
+            }
+        }
+    }
+
+    &__dropdown-item {
+        display: none;
+        position: absolute;
+        border-radius: 8px;
+        left: 0;
+        border: 1px solid black;
+        font-weight: initial;
+        padding: 4px;
+        background-color: #fff;
+
+        & a {
+            margin: 0;
+        }
+
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                top: $i * 30px;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+
+        @media (max-width: 960px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        & > div {
+            height: 34px;
+        }
+    }
 }
 
 .log-in-button {
-  width: 87px;
+    width: 87px;
 }
 
 .sign-up-button {
-  width: 196px;
+    width: 196px;
 }
 
 .cabinet {
-  line-height: 17px;
-  color: $dark50;
-  padding: 6px 0 6px 20px;
-  display: block;
-  border-left: 1px solid rgb(31 32 65 / 10%);
+    line-height: 17px;
+    color: $dark50;
+    padding: 6px 0 6px 20px;
+    display: block;
+    border-left: 1px solid rgb(31 32 65 / 10%);
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
 }
