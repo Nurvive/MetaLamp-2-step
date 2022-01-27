@@ -12,7 +12,7 @@
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
-      <div class="container form-elements__container">
+      <div class="form-elements__container">
         <div class="form-elements__inner">
           <div class="form-elements__label">
             <p>Text field</p>
@@ -22,54 +22,54 @@
             <p>dropdown</p>
             <div class="dropdown js-dropdown dropdown-default" id="dropdown">
               <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
-                <input class="text-field dropdown__input js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
+                <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
                 <li class="dropdown__item">
-                  <p class="dropdown__item-text" data-index="0">взрослые</p>
+                  <p class="dropdown__item-text js-dropdown__item-text" data-index="0">взрослые</p>
                   <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
-                    <div class="dropdown__item-count" data-index="0">0</div>
-                    <div class="dropdown__item-plus" data-type="plus" data-index="0"></div>
+                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
+                    <div class="dropdown__item-count js-dropdown__item-count" data-index="0">0</div>
+                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="0"></div>
                   </div>
                 </li>
                 <li class="dropdown__item">
-                  <p class="dropdown__item-text" data-index="1">дети</p>
+                  <p class="dropdown__item-text js-dropdown__item-text" data-index="1">дети</p>
                   <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
-                    <div class="dropdown__item-count" data-index="1">0</div>
-                    <div class="dropdown__item-plus" data-type="plus" data-index="1"></div>
+                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
+                    <div class="dropdown__item-count js-dropdown__item-count" data-index="1">0</div>
+                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="1"></div>
                   </div>
                 </li>
                 <li class="dropdown__item">
-                  <p class="dropdown__item-text" data-index="2">младенцы</p>
+                  <p class="dropdown__item-text js-dropdown__item-text" data-index="2">младенцы</p>
                   <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
-                    <div class="dropdown__item-count" data-index="2">0</div>
-                    <div class="dropdown__item-plus" data-type="plus" data-index="2"></div>
+                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
+                    <div class="dropdown__item-count js-dropdown__item-count" data-index="2">0</div>
+                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="2"></div>
                   </div>
                 </li>
                 <li class="dropdown__item-interactive">
-                  <p class="dropdown__interactive-word clear">очистить</p>
-                  <p class="dropdown__interactive-word confirm">применить</p>
+                  <p class="dropdown__interactive-word js-clear">очистить</p>
+                  <p class="dropdown__interactive-word js-confirm">применить</p>
                 </li>
               </ul>
             </div>
           </div>
           <div class="form-elements__label">
             <p>masked text field</p>
-            <input class="text-field masked-text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="masked-text-field"/>
+            <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="masked-text-field"/>
           </div>
           <div class="form-elements__label">
             <p>date Dropdown</p>
             <div class="date-dropdown">
               <div class="date-dropdown__input date-dropdown__input_default">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field js-form-elements__date-dropdown_start date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
               </div>
               <div class="date-dropdown__input date-dropdown__input_default">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field js-form-elements__date-dropdown_end date-dropdown__input-field" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
               </div>
             </div>
           </div>
@@ -78,46 +78,46 @@
             <div class="date-dropdown">
               <div class="date-dropdown__input date-dropdown__input_long">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field js-form-elements__filter-date-dropdown_start date-dropdown__input-field" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-form-elements__filter-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
               </div>
             </div>
           </div>
           <div class="form-elements__label">
             <p>subscription text field</p>
-            <div class="text-field-wrapper">
-              <button class="subscription-text-button"></button>
-              <input class="text-field subscription-input" placeholder="Email" type="text"/>
+            <div class="subscription-text-field">
+              <button class="subscription-text-field__button"></button>
+              <input class="text-field text-field_right" placeholder="Email" type="email"/>
             </div>
           </div>
           <div class="form-elements__label">
             <p>dropdown</p>
             <div class="dropdown js-dropdown dropdown-rooms" id="split-dropdown">
               <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
-                <input class="text-field dropdown__input js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
+                <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
                 <li class="dropdown__item">
-                  <p class="dropdown__item-text" data-index="0">спальни</p>
+                  <p class="dropdown__item-text js-dropdown__item-text" data-index="0">спальни</p>
                   <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
-                    <div class="dropdown__item-count" data-index="0">0</div>
-                    <div class="dropdown__item-plus" data-type="plus" data-index="0"></div>
+                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
+                    <div class="dropdown__item-count js-dropdown__item-count" data-index="0">0</div>
+                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="0"></div>
                   </div>
                 </li>
                 <li class="dropdown__item">
-                  <p class="dropdown__item-text" data-index="1">кровати</p>
+                  <p class="dropdown__item-text js-dropdown__item-text" data-index="1">кровати</p>
                   <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
-                    <div class="dropdown__item-count" data-index="1">0</div>
-                    <div class="dropdown__item-plus" data-type="plus" data-index="1"></div>
+                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
+                    <div class="dropdown__item-count js-dropdown__item-count" data-index="1">0</div>
+                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="1"></div>
                   </div>
                 </li>
                 <li class="dropdown__item">
-                  <p class="dropdown__item-text" data-index="2">ванные комнаты</p>
+                  <p class="dropdown__item-text js-dropdown__item-text" data-index="2">ванные комнаты</p>
                   <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
-                    <div class="dropdown__item-count" data-index="2">0</div>
-                    <div class="dropdown__item-plus" data-type="plus" data-index="2"></div>
+                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
+                    <div class="dropdown__item-count js-dropdown__item-count" data-index="2">0</div>
+                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="2"></div>
                   </div>
                 </li>
               </ul>
@@ -244,15 +244,15 @@
             <div>
               <div class="rate-button">
                 <div class="rate-button__inner">
-                  <input class="rate-button__item" id="rate-button__item5form-elements" value="5" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="false" id="rate-button__item5form-elements" value="5" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item5form-elements"></label>
-                  <input class="rate-button__item" id="rate-button__item4form-elements" value="4" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="false" id="rate-button__item4form-elements" value="4" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item4form-elements"></label>
-                  <input class="rate-button__item" id="rate-button__item3form-elements" value="3" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="false" id="rate-button__item3form-elements" value="3" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item3form-elements"></label>
-                  <input class="rate-button__item" id="rate-button__item2form-elements" value="2" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="false" id="rate-button__item2form-elements" value="2" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item2form-elements"></label>
-                  <input class="rate-button__item" checked="checked" id="rate-button__item1form-elements" value="1" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="true" id="rate-button__item1form-elements" value="1" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item1form-elements"></label>
                 </div>
               </div>
@@ -318,7 +318,7 @@
           </div>
         </div>
       </div>
-      <div class="low-container container">
+      <div class="low-container">
         <div class="pros">
           <div class="pros__container"><img src="assets/images/insert-emoticon.png"/>
             <div class="pros__inner">
