@@ -1,7 +1,10 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .form-elements {
     &__container {
+        @extend %container;
+
         padding: 140px 15px 132px;
         display: flex;
         justify-content: space-between;
@@ -32,6 +35,8 @@
 }
 
 .low-container {
+    @extend %container;
+
     display: flex;
     justify-content: space-between;
     margin-top: 100px;

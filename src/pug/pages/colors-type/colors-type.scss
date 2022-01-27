@@ -1,6 +1,9 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .colors-type__container {
+    @extend %container;
+
     padding: 145px 0;
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,6 @@
 @import '../../../scss/common/colors';
 @import '../../../scss/common/functions';
+@import '../../../scss/common/templates';
 
 %column-item {
     font-size: 14px;
@@ -37,9 +38,12 @@
 
     &__logo {
         margin-top: -3px;
+        display: block;
     }
 
     &__container {
+        @extend %container;
+
         padding: 0 15px;
 
         @media (max-width: 1060px) {
