@@ -3,7 +3,7 @@ import {Dropdown} from './Dropdown';
 export class DropdownRooms extends Dropdown {
     constructor(component, wordsDefault) {
         super(component, wordsDefault);
-        this.rooms = this.component.querySelectorAll('.dropdown__item-text');
+        this.rooms = this.component.querySelectorAll('.js-dropdown__item-text');
         this.obj = {};
         this.attachEventHandlers();
     }

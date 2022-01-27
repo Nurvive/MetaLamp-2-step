@@ -2,14 +2,14 @@ export class Dropdown {
     constructor(component, wordsDefault) {
         this.component = component;
         this.gCount = 0;
-        this.inputWrapper = this.component.querySelector('.dropdown__input-wrapper');
-        this.list = this.component.querySelector('.dropdown__list');
-        this.input = this.component.querySelector('.dropdown__input');
-        this.plus = this.component.querySelectorAll('.dropdown__item-plus');
-        this.minus = this.component.querySelectorAll('.dropdown__item-minus');
-        this.counters = this.component.querySelectorAll('.dropdown__item-count');
-        this.clears = this.component.querySelectorAll('.clear');
-        this.confirms = this.component.querySelectorAll('.confirm');
+        this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
+        this.list = this.component.querySelector('.js-dropdown__list');
+        this.input = this.component.querySelector('.js-dropdown__input');
+        this.plus = this.component.querySelectorAll('.js-dropdown__item-plus');
+        this.minus = this.component.querySelectorAll('.js-dropdown__item-minus');
+        this.counters = this.component.querySelectorAll('.js-dropdown__item-count');
+        this.clears = this.component.querySelectorAll('.js-clear');
+        this.confirms = this.component.querySelectorAll('.js-confirm');
         this.wordsDefault = wordsDefault;
     }
 
