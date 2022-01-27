@@ -1,6 +1,9 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .login {
+    @extend %card;
+
     display: flex;
     flex-direction: column;
     gap: 20px;

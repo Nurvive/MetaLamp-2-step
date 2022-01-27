@@ -1,6 +1,9 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .find-room {
+    @extend %card;
+
     max-width: 380px;
     height: 374px;
     width: 100%;

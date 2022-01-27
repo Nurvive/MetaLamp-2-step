@@ -1,6 +1,9 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .registration {
+    @extend %card;
+
     max-width: 380px;
     padding: 39px 30px 30px;
     width: 102%;
