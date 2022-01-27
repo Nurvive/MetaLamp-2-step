@@ -19,9 +19,9 @@ mixin registration
         .registration__layout
             p.registration__layout-text данные для входа в сервис
             .registration__input-wrapper
-                +text-field(placeholder='Email')(type='email')
+                +text-field(placeholder='Email' type='email')
             .registration__input-wrapper
-                +text-field(placeholder='Пароль')(type='password')
+                +text-field(placeholder='Пароль' type='password')
             +toggle({'checked':'Получать спецпредложения'})
         +button({text: 'Зарегистрироваться', size: 'long', arrow: true})
         .registration__bottom
