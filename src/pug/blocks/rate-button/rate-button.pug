@@ -6,10 +6,7 @@ mixin rate-button(count, unique)
         .rate-button__inner
             -var n = 5;
             while n > 0
-                if n === count
-                    input(checked id = 'rate-button__item' + n + unique class='rate-button__item' value=n type="radio" name='rating' + unique)
-                else
-                    input(id = 'rate-button__item' + n + unique class='rate-button__item' value=n type="radio" name='rating' + unique)
+                input(checked=`${n === count}` id = 'rate-button__item' + n + unique class='rate-button__item' value=n type="radio" name='rating' + unique)
                 label(class="rate-button__star" for='rate-button__item' + n + unique)
                 -n--;
 
