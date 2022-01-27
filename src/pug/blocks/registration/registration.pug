@@ -8,16 +8,20 @@ mixin registration
     .registration&attributes(attributes)
         .registration__layout
             p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
-            +text-field(placeholder='Имя' class='registration__input')
-            +text-field(placeholder='Фамилия' class='registration__input')
+            .registration__input-wrapper
+                +text-field(placeholder='Имя')
+            .registration__input-wrapper
+                +text-field(placeholder='Фамилия')
             +radio-buttons(['Мужчина', "Женщина"])
         .registration__layout
             p.registration__layout-text дата рождения
             +masked-text-field
         .registration__layout
             p.registration__layout-text данные для входа в сервис
-            +text-field(placeholder='Email' class='registration__input')
-            +text-field(placeholder='Пароль' class='registration__input')
+            .registration__input-wrapper
+                +text-field(placeholder='Email')
+            .registration__input-wrapper
+            +text-field(placeholder='Пароль')
             +toggle({'checked':'Получать спецпредложения'})
         +button({text: 'Зарегистрироваться', size: 'long', arrow: true})
         .registration__bottom

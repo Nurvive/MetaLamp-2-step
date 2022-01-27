@@ -11,7 +11,7 @@ mixin date-dropdown(options)
                 let size = option.size ? 'long' : 'default'
             .date-dropdown__input(class = options.class class = `date-dropdown__input_${size}`)
                 p.date-dropdown__input-title= title
-                +text-field(class= option.class class= 'date-dropdown__input-field' placeholder=placeholder readonly)
+                +text-field({dropdown:'dropdown'})(class=option.class  placeholder=placeholder readonly)
                 span.date-dropdown__input-open-button.open-button-chevron
 
 

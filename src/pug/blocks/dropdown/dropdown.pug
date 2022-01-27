@@ -3,11 +3,11 @@ include ../text-field/text-field
 mixin dropdown-item(obj)
     each val, index in obj
         li.dropdown__item&attributes(attributes)
-            p.dropdown__item-text(data-index=index)=val
+            p.dropdown__item-text.js-dropdown__item-text(data-index=index)=val
             .dropdown__item-container
-                div.dropdown__item-minus.dropdown__item-minus_inactive(data-type='minus', data-index=index)
-                div.dropdown__item-count(data-index=index) 0
-                div.dropdown__item-plus(data-type='plus' data-index=index)
+                div.dropdown__item-minus.js-dropdown__item-minus.dropdown__item-minus_inactive(data-type='minus', data-index=index)
+                div.dropdown__item-count.js-dropdown__item-count(data-index=index) 0
+                div.dropdown__item-plus.js-dropdown__item-plus(data-type='plus' data-index=index)
 
 mixin dropdown(id, type)
     -
@@ -26,10 +26,10 @@ mixin dropdown(id, type)
     div.dropdown.js-dropdown(id=id class=className)
         .dropdown__input-wrapper.js-dropdown__input-wrapper
             span.dropdown__open-button.open-button-chevron
-            +text-field(readonly='readonly' placeholder=placeholder class='dropdown__input js-dropdown__input')
+            +text-field({padding: 'right', dropdown: 'dropdown'})(readonly='readonly' placeholder=placeholder class='js-dropdown__input')
         ul.dropdown__list.js-dropdown__list
             +dropdown-item(obj)
             if hasButtons
                 li.dropdown__item-interactive
-                    p.dropdown__interactive-word.clear очистить
-                    p.dropdown__interactive-word.confirm применить
+                    p.dropdown__interactive-word.js-clear очистить
+                    p.dropdown__interactive-word.js-confirm применить
