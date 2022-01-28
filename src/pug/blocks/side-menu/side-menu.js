@@ -39,12 +39,3 @@ $burger.on('click', function () {
     $sideMenu.removeClass('side-menu_hide');
     $sideMenu.addClass('side-menu_active');
 });
-
-$(window).on('click', function (e) {
-    const target = e.target;
-    const countInnerElements = $sideMenu.children().filter(item => item === target).length;
-    if (target !== $burger[0] && target !== $sideMenu[0] && countInnerElements) {
-        $sideMenu.removeClass('side-menu_active');
-        $sideMenu.addClass('side-menu_hide');
-    }
-});

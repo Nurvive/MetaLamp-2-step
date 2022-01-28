@@ -24,7 +24,7 @@
 
         &-burger {
             position: absolute;
-            left: -50%;
+            left: 5%;
             font-size: 2rem;
             color: $purple;
 
@@ -38,6 +38,10 @@
         display: flex;
         align-items: center;
         z-index: 2;
+
+        @media (max-width: 960px) {
+            display: none;
+        }
     }
 
     &__nav {
