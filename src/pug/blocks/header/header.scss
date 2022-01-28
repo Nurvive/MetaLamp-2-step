@@ -113,30 +113,4 @@
             display: none;
         }
     }
-
-    &__button {
-        & > div {
-            height: 34px;
-        }
-    }
-}
-
-.log-in-button {
-    width: 87px;
-}
-
-.sign-up-button {
-    width: 196px;
-}
-
-.cabinet {
-    line-height: 17px;
-    color: $dark50;
-    padding: 6px 0 6px 20px;
-    display: block;
-    border-left: 1px solid rgb(31 32 65 / 10%);
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
