@@ -1,7 +1,4 @@
-mixin rate-button(count, unique)
-    -
-        var unique = unique || ''
-        var count = count || 0
+mixin rate-button(count = 0, unique = '')
     .rate-button
         .rate-button__inner
             -var n = 5;

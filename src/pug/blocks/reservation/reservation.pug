@@ -2,7 +2,7 @@ include ../buttons/button
 include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 
-mixin services(obj)
+mixin services(obj = [{}])
     ul.reservation__list
         each val in obj
             li.reservation__item

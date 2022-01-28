@@ -2,10 +2,8 @@ include ../buttons/button
 include ../side-menu/side-menu
 include ../log-in-buttons/log-in-buttons
 include ../cabinet-button/cabinet-button
-mixin header(isAuthorized, name)
+mixin header(isAuthorized = false, name = 'Имя Фамилия')
     -
-        var isAuthorized = isAuthorized || false
-        var name = name || 'Имя Фамилия'
         const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];
         const headerDropdownItems2 = ['О воде', 'О солях'];
     header.header

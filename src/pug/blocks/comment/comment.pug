@@ -1,12 +1,6 @@
 include ../like-button/like-button
 
-mixin comment(options)
-    -
-        const likes = options.likes || 0
-        const text = options.text || 'lorem'
-        const time = options.time || 'Сейчас'
-        const name = options.name || 'Имя Фамилия'
-        const img = options.img || '../../../assets/favicon/favicon.ico'
+mixin comment({likes = 0, text = 'lorem', time = 'Сейчас', name = 'Имя Фамилия', img = '../../../assets/favicon/favicon.ico'})
     .comment
         .comment__info
             .comment__info-img

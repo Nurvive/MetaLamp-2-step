@@ -1,14 +1,6 @@
 include ../rate-button/rate-button
 
-mixin room-card(options)
-    -
-        const images = options.images || []
-        const number = options.number || '1337'
-        const type = options.type || ''
-        const cost = options.cost || '666₽'
-        const rating = options.rating || 0
-        const reviews = options.reviews || 0
-        const uniqueID = options.uniqueID || ''
+mixin room-card({images = [], number = '1337', type = '', cost = '666₽', rating = 0, reviews = 0, uniqueID = ''})
     .room-card
         .room-card__top.js-room-card__top
             each src in images

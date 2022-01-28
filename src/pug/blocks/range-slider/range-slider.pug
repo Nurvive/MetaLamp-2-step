@@ -1,7 +1,4 @@
-mixin range-slider(options)
-    -
-        let jsClassInput = options.jsClassInput || ''
-        let jsClassCounter = options.jsClassCounter || ''
+mixin range-slider({jsClassInput = '', jsClassCounter = ''})
     .range-slider
         .range-slider__count(class = jsClassCounter)
         input(type="text" class="range-slider__slider" class = jsClassInput value="")

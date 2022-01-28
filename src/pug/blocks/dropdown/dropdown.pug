@@ -9,7 +9,7 @@ mixin dropdown-item(obj)
                 div.dropdown__item-count.js-dropdown__item-count(data-index=index) 0
                 div.dropdown__item-plus.js-dropdown__item-plus(data-type='plus' data-index=index)
 
-mixin dropdown(id, type)
+mixin dropdown(id, type = 'default')
     -
         var placeholder = ''
         var hasButtons = false

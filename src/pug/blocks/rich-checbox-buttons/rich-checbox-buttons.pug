@@ -6,9 +6,7 @@ mixin rich_check_button(obj)
                 p.rich-checkbox-buttons__item-text= text
             p.rich-checkbox-buttons__description= description
 
-mixin rich-checkbox-buttons(obj)
-    -
-        var obj = obj || {}
+mixin rich-checkbox-buttons(obj = {})
     .rich-checkbox-buttons
         ul.rich-checkbox-buttons__list
             +rich_check_button(obj)

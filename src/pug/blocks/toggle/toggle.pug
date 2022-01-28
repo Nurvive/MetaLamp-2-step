@@ -1,6 +1,4 @@
-mixin toggle(obj)
-    -
-        var obj = obj || {}
+mixin toggle(obj = {})
     .toggle
         each isChecked, val in obj
             label.toggle__label

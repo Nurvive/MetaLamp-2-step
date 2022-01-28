@@ -4,8 +4,6 @@ mixin radio-button(obj)
             input(name='radio' class='radio-buttons__button' type='radio')
             p.radio-buttons__text= val
 
-mixin radio-buttons(obj)
-    -
-        var obj = obj || []
+mixin radio-buttons(obj = [])
     .radio-buttons
         +radio-button(obj)

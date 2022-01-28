@@ -1,13 +1,5 @@
 import './expandable-checkbox-list.scss';
 
-// function ReverseObject(Obj) {
-//     let NewObj = [];
-//     $.each(Obj, (index, item) => {
-//         NewObj.unshift(item);
-//     });
-//     return NewObj;
-// }
-
 $().ready(() => {
     $('.js-expandable-checkbox__open-button').on('click', function () {
         const $inner = $(this).siblings('.js-expandable-checkbox__inner');
@@ -16,19 +8,6 @@ $().ready(() => {
         } else {
             $inner.addClass('expandable-checkbox__inner_hide');
         }
-        // const $list = $('.js-expandable-checkbox__list');
         $(this).toggleClass('expandable-checkbox__open-button_active');
-        // let $items = $list.children();
-        // if ($list.hasClass('expandable-checkbox__list_active')) {
-        //     $items = ReverseObject($items);
-        //     $.each($items, (index, item) => {
-        //         setTimeout(() => item.classList.remove('show'), 100, item);
-        //     });
-        // } else {
-        //     $.each($items, (index, item) => {
-        //         setTimeout(() => item.classList.add('show'), 100, item);
-        //     });
-        // }
-        // $list.toggleClass('expandable-checkbox__list_active');
     });
 });

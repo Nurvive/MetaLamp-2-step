@@ -1,7 +1,4 @@
-mixin checkbox-buttons(options)
-    -
-        const items = options.items || []
-        const jsClass = options.jsClass || ''
+mixin checkbox-buttons({items = [], jsClass = ''})
     ul.checkbox-buttons(class=jsClass)
         each val in items
             li.checkbox-buttons__item
