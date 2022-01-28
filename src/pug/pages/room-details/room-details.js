@@ -11,20 +11,21 @@ $(window).resize(function () {
     if (width > 900 && slickExist) {
         $gallery.slick('unslick');
         $gallery.append($galleryImages);
-    }
-});
-$(document).ready(() => {
-    const width = document.documentElement.clientWidth;
-    $gallery.on('init', () => {
-        slickExist = true;
-    });
-    if (width < 900) {
+        slickExist = false;
+    } else if (width < 900 && !slickExist) {
         $gallery.slick({
             slidesToShow: 1,
             arrows: false
         });
     }
 });
+
+$(document).ready(() => {
+    $gallery.on('init', () => {
+        slickExist = true;
+    });
+});
+
 Chart.register(...registerables);
 const ctx = document.getElementById('room-details__chart');
 const data = {
