@@ -1,0 +1,8 @@
+mixin canvas({colors = [], id = ''})
+    .canvas
+        span.canvas__count 260
+        span.canvas__word голосов
+        div.canvas__legend
+            each val, n in colors
+                p(class=`canvas__legend-colors color-${n}`)=val
+        canvas(id=id width="120" height="126" aria-label="Room Chart" role="chart")

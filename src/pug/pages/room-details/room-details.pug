@@ -5,7 +5,7 @@ include ../../blocks/footer/footer
 include ../../blocks/header/header
 include ../../blocks/pros/pros
 include ../../blocks/reservation/reservation
-
+include ../../blocks/canvas/canvas
 block title
     title room-details
 
@@ -44,13 +44,10 @@ block content
                         .room-details__rating
                             p.room-details__title Впечатления от номера
                             div.room-details__canvas-wrapper(style="position: relative; height:126px; width: 120px")
-                                span.canvas-count 260
-                                span.canvas-word голосов
-                                div.canvas-legend
-                                    -var colors = ['Великолепно','Хорошо','Удовлетворительно','Разочарован']
-                                    each val, n in colors
-                                        p(class=`canvas-legend__colors color-${n}`)=val
-                                <canvas class="room-details__chart" id="room-details__chart" width="120" height="126" aria-label="Room Chart" role="chart"></canvas>
+                                +canvas({
+                                    colors: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
+                                    id: 'room-details__chart'
+                                })
                     li.room-details__item
                         .room-details__reviews
                             p.room-details__title Отзывы посетителей номера
