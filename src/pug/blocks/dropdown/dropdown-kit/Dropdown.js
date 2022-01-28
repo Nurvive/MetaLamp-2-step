@@ -2,6 +2,8 @@ export class Dropdown {
     constructor(component, wordsDefault) {
         this.component = component;
         this.gCount = 0;
+        this.wordsDefault = wordsDefault;
+        this.obj = {};
         this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
         this.list = this.component.querySelector('.js-dropdown__list');
         this.input = this.component.querySelector('.js-dropdown__input');
@@ -10,7 +12,7 @@ export class Dropdown {
         this.counters = this.component.querySelectorAll('.js-dropdown__item-count');
         this.clears = this.component.querySelectorAll('.js-clear');
         this.confirms = this.component.querySelectorAll('.js-confirm');
-        this.wordsDefault = wordsDefault;
+        this.items = this.component.querySelectorAll('.js-dropdown__item-text');
     }
 
     static declOfNum(n, textForms) {
@@ -32,13 +34,13 @@ export class Dropdown {
         this.plus.forEach((node) => {
             node.addEventListener('click', (e) => {
                 this.increase(e);
-                this.countingGuests();
+                this.countingGuests(e);
             });
         });
         this.minus.forEach((node) => {
             node.addEventListener('click', (e) => {
                 this.decrease(e);
-                this.countingGuests();
+                this.countingGuests(e);
             });
         });
         this.clears.forEach((node) => {
@@ -71,12 +73,32 @@ export class Dropdown {
         this.gCount += 1;
     }
 
-    countingGuests() {
-        if (this.gCount > 0) {
-            this.input.value = `${this.gCount} ${Dropdown.declOfNum(this.gCount, this.wordsDefault)}`;
-        } else {
-            this.input.value = '';
+    countingGuests(event) {
+        let index = event.target.dataset.index;
+        let item = this.items[index].textContent;
+        let counter = this.counters[index];
+        this.obj[item] = Number(counter.textContent);
+        let a = '';
+        let b = '';
+        Object.entries(this.obj).forEach(([key, value]) => {
+            if (value > 0 && (key === 'взрослые' || key === 'дети')) {
+                const newValue = (this.obj['взрослые'] || 0) + (this.obj['дети'] || 0);
+                let val = Dropdown.declOfNum(newValue, this.wordsDefault[0]);
+                a = newValue + ' ' + val;
+            }
+            if (value > 0 && key === 'младенцы') {
+                let val = Dropdown.declOfNum(value, this.wordsDefault[1]);
+                b = value + ' ' + val;
+            }
+        });
+        let result = '';
+        let comma = ', ';
+        if (a) result += a;
+        else comma = '';
+        if (b) {
+            result += comma + b;
         }
+        this.input.value = result;
     }
 
     clear() {

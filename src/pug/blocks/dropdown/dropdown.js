@@ -5,7 +5,10 @@ import {DropdownDefault} from './dropdown-kit/DropdownDefault';
 (() => {
     document.querySelectorAll('.dropdown-default').forEach((node) => {
         // eslint-disable-next-line no-new
-        new DropdownDefault(node, ['гость', 'гостя', 'гостей']);
+        new DropdownDefault(node, [
+            ['гость', 'гостя', 'гостей'],
+            ['младенец', 'младенца', 'младенцев']
+        ]);
     });
 })();
 (() => {

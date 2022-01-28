@@ -3,8 +3,6 @@ import {Dropdown} from './Dropdown';
 export class DropdownRooms extends Dropdown {
     constructor(component, wordsDefault) {
         super(component, wordsDefault);
-        this.rooms = this.component.querySelectorAll('.js-dropdown__item-text');
-        this.obj = {};
         this.attachEventHandlers();
     }
 
@@ -21,9 +19,9 @@ export class DropdownRooms extends Dropdown {
         if (operation) this.increase(event);
         else this.decrease(event);
         let index = event.target.dataset.index;
-        let room = this.rooms[index].textContent;
+        let item = this.items[index].textContent;
         let counter = this.counters[index];
-        this.obj[room] = Number(counter.textContent);
+        this.obj[item] = Number(counter.textContent);
         let a = '';
         let b = '';
         let c = '';
@@ -48,7 +46,7 @@ export class DropdownRooms extends Dropdown {
         if (b) {
             result += comma + b;
             comma = ', ';
-        } else comma = '';
+        }
         if (c) result += comma + c;
         this.input.value = result;
     }
