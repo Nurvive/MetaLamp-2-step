@@ -16,7 +16,7 @@ const picker = new AirDatepicker('.js-search-room__filter-date-dropdown_start', 
     onHide: function () {
         input.parentNode.classList.remove('date-dropdown__input_active');
     },
-    dateFormat: 'dd.MMM',
+    dateFormat: 'dd MMM',
     buttons: ['clear', {
         content: 'Применить',
         onClick: (dp) => {

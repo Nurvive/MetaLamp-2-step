@@ -54,7 +54,7 @@ const picker2 = new AirDatepicker('.js-form-elements__filter-date-dropdown_start
     onHide: function () {
         input2.parentNode.classList.remove('date-dropdown__input_active');
     },
-    dateFormat: 'dd.MMM',
+    dateFormat: 'dd MMM',
     buttons: ['clear', button],
     prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
     nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
