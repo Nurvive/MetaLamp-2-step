@@ -2,7 +2,7 @@ mixin toggle(obj)
     -
         var obj = obj || {}
     .toggle
-        each val, isChecked in obj
+        each isChecked, val in obj
             label.toggle__label
-                input(checked=Boolean(isChecked) type='checkbox' class='toggle__button')
+                input(checked=isChecked type='checkbox' class='toggle__button')
                 p.toggle__text=val

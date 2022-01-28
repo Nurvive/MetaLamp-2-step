@@ -22,7 +22,7 @@ mixin registration
                 +text-field(placeholder='Email' type='email')
             .registration__input-wrapper
                 +text-field(placeholder='Пароль' type='password')
-            +toggle({'checked':'Получать спецпредложения'})
+            +toggle({'Получать спецпредложения': true})
         +button({text: 'Зарегистрироваться', size: 'long', arrow: true})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin

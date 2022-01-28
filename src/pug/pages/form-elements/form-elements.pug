@@ -68,7 +68,7 @@ block content
                 .form-elements__label
                     +expandable-checkbox({
                         text: 'expandable checkbox list',
-                        items: ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'],
+                        items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'],
                         jsClass: 'js-expandable-checkbox__list'
                     })
             .form-elements__inner
@@ -81,8 +81,8 @@ block content
                 .form-elements__label
                     p toggle
                     +toggle({
-                        'checked':'Получать спецпредложения',
-                        '':'Получать спецпредложения'
+                        'Получать спецпредложения': true,
+                        'Получать спам': false
                     })
                 .form-elements__label
                     p like button
@@ -95,8 +95,8 @@ block content
                 .form-elements__label
                     p rich Checkbox Buttons
                     +rich-checkbox-buttons({
-                        'Широкий коридор':'Ширина коридоров в номере не менее 91 см.',
-                        'Помощник для инвалидов':'На 1 этаже вас встретит специалист и проводит до номера.'
+                        'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
+                        'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
                     })
             .form-elements__inner
                 .form-elements__label
