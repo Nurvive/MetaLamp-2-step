@@ -33,3 +33,7 @@ const picker = new AirDatepicker('.js-landing__date-dropdown_start', {
     },
     startDate: new Date()
 });
+
+inputEnd?.addEventListener('click', function () {
+    picker.show();
+});

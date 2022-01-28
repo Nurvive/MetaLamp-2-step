@@ -34,3 +34,7 @@ const picker = new AirDatepicker('.js-reservation__date-dropdown_start', {
     },
     startDate: new Date()
 });
+
+inputEnd?.addEventListener('click', function () {
+    picker.show();
+});

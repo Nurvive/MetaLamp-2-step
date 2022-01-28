@@ -31,3 +31,7 @@ const picker = new AirDatepicker('.js-cards__date-dropdown_start', {
     },
     startDate: new Date()
 });
+
+inputEnd?.addEventListener('click', function () {
+    picker.show();
+});

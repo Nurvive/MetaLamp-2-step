@@ -38,6 +38,10 @@ const picker1 = new AirDatepicker('.js-form-elements__date-dropdown_start', {
     startDate: new Date()
 });
 
+inputEnd?.addEventListener('click', function () {
+    picker1.show();
+});
+
 const input2 = document.querySelector('.js-form-elements__filter-date-dropdown_start');
 // eslint-disable-next-line no-unused-vars
 const picker2 = new AirDatepicker('.js-form-elements__filter-date-dropdown_start', {
