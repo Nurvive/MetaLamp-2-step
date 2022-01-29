@@ -25,7 +25,7 @@ mixin dropdown(id, type = 'default')
             placeholder = 'Сколько комнат'
     div.dropdown.js-dropdown(id=id class=className)
         .dropdown__input-wrapper.js-dropdown__input-wrapper
-            span.dropdown__open-button.open-button-chevron
+            span.dropdown__open-button
             +text-field({padding: 'right', dropdown: 'dropdown'})(readonly='readonly' placeholder=placeholder class='js-dropdown__input')
         ul.dropdown__list.js-dropdown__list
             +dropdown-item(obj)

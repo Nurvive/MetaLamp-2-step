@@ -6,6 +6,8 @@
     position: relative;
 
     &__open-button {
+        @extend %open-button-chevron;
+
         top: 50%;
         transform: translateY(-25%);
         right: 16px;

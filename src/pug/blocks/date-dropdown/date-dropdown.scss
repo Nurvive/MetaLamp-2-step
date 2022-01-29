@@ -35,6 +35,8 @@
         }
 
         &-open-button {
+            @extend %open-button-chevron;
+
             bottom: 12px;
             right: 16px;
         }

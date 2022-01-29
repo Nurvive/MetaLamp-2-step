@@ -6,6 +6,8 @@
     max-width: 266px;
 
     &__open-button {
+        @extend %open-button-chevron;
+
         right: 0;
 
         &_active {
