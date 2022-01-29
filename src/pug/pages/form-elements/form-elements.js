@@ -4,6 +4,7 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './form-elements.scss';
 import './form-elements.pug';
+import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/expandable-checkbox-list';
 
 const inputStart = document.querySelector('.js-form-elements__date-dropdown_start');
 const inputEnd = document.querySelector('.js-form-elements__date-dropdown_end');
@@ -83,3 +84,6 @@ $('.js-form-elements-slider__slider').ionRangeSlider({
         $('.js-form-elements-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
     }
 });
+
+// eslint-disable-next-line no-unused-vars
+const list = new ExpandableCheckboxList('.js-form-elements-expandable-checkbox__button');

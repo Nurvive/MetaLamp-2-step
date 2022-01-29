@@ -3,6 +3,6 @@ include ../checkbox-buttons/checkbox-buttons
 mixin expandable-checkbox({text = 'text', items = [], jsClass = ''})
     .expandable-checkbox
         span.expandable-checkbox__text=text
-        span.expandable-checkbox__open-button.js-expandable-checkbox__open-button.open-button-chevron
+        span.expandable-checkbox__open-button.open-button-chevron(class=jsClass)
         .expandable-checkbox__inner.js-expandable-checkbox__inner
             +checkbox-buttons({jsClass: jsClass, items: items})
