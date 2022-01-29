@@ -58,6 +58,8 @@
     }
 
     &__arrow {
+        @extend %arrow;
+
         &-next {
             background-color: white;
             left: 50%;

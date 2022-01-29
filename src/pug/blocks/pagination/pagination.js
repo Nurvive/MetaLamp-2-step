@@ -22,8 +22,8 @@ class Pagination {
             pageRange: 1,
             autoHideNext: true,
             autoHidePrevious: true,
-            prevText: '<div class=\'pagination__arrow-prev arrow\'></div>',
-            nextText: '<div class=\'pagination__arrow-next arrow\'></div>',
+            prevText: '<div class=\'pagination__arrow-prev pagination__arrow\'></div>',
+            nextText: '<div class=\'pagination__arrow-next pagination__arrow\'></div>',
             callback: function (data, pagination) {
                 $('.js-pagination__info1').text(data[0]);
                 $('.js-pagination__info2').text(data[data.length - 1]);
