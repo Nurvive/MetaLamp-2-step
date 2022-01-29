@@ -50,6 +50,8 @@
     }
 
     &__arrow {
+        @extend %arrow;
+
         top: -8px;
         left: 45%;
         background-color: white;

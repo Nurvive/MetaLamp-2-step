@@ -10,6 +10,6 @@ mixin button({text = 'click me', size = '', type = '', arrow = false})
             className += ` button__${type}`;
     if (arrow)
         button(class=className)= text
-            span.arrow.button__arrow
+            span.button__arrow
     else
         button(class=className)= text

@@ -1,19 +1,32 @@
+@import '../../../scss/common/templates';
+
 .subscription-text-field {
     position: relative;
     max-width: 267px;
     height: 44px;
 
     &__button {
-        position: absolute;
-        z-index: 2;
-        background-image: url('../../../assets/images/arrow-forward.png');
-        background-repeat: no-repeat;
-        border: none;
-        background-position: center;
-        background-color: transparent;
-        right: 0;
         width: 44px;
         height: 44px;
+        border: none;
+        z-index: 2;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
         cursor: pointer;
+
+        span {
+            @extend %arrow;
+
+            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+            right: 0;
+            display: inline-block;
+            top: -3px;
+
+            &::before,
+            &::after {
+                background: inherit;
+            }
+        }
     }
 }
