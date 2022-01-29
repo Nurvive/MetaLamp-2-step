@@ -14,15 +14,15 @@
     <div class="wrapper search-room">
       <header class="header">
         <div class="header__container">
-          <div class="header__logo">
-            <div class="header__logo-burger fas fa-hamburger"></div><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a>
-          </div>
+          <div class="header__logo-burger fas fa-hamburger"></div>
+          <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
           <div class="header__menu-wrapper">
             <nav class="header__nav">
               <ul class="header__menu">
                 <li class="header__menu-item"><a>О нас</a></li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
+                    <div class="header__menu-dropdown-open-button"></div>
                     <li class="header__dropdown-item"><a>Покупка</a></li>
                     <li class="header__dropdown-item"><a>Покупка</a></li>
                     <li class="header__dropdown-item"><a>Покупка</a></li>
@@ -32,6 +32,7 @@
                 <li class="header__menu-item"><a>Новости</a></li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
+                    <div class="header__menu-dropdown-open-button"></div>
                     <li class="header__dropdown-item"><a>О воде</a></li>
                     <li class="header__dropdown-item"><a>О солях</a></li>
                   </ul>
@@ -80,7 +81,7 @@
                 <div class="date-dropdown">
                   <div class="date-dropdown__input date-dropdown__input_long">
                     <p class="date-dropdown__input-title">даты пребывания в отеле</p>
-                    <input class="text-field text-field_dropdown js-search-room__filter-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                    <input class="text-field text-field_dropdown js-search-room__filter-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                   </div>
                 </div>
               </div>
@@ -89,7 +90,7 @@
               <div class="search-room__layout search-room__dropdown-layout">
                 <p>Гости</p>
                 <div class="dropdown js-dropdown dropdown-default" id="search-room__dropdown">
-                  <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
+                  <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
                     <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
                   </div>
                   <ul class="dropdown__list js-dropdown__list">
@@ -180,7 +181,7 @@
             <li class="search-room__item">
               <div class="search-room__layout search-room__dropdown-layout">удобства номера</div>
               <div class="dropdown js-dropdown dropdown-rooms" id="search-room__dropdown">
-                <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
+                <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
                   <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
@@ -213,9 +214,9 @@
             </li>
             <li class="search-room__item">
               <div class="search-room__layout">
-                <div class="expandable-checkbox"><span class="expandable-checkbox__text">Дополнительные удобства</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button open-button-chevron"></span>
+                <div class="expandable-checkbox"><span class="expandable-checkbox__text">Дополнительные удобства</span><span class="expandable-checkbox__open-button js-search-room-expandable-checkbox__button"></span>
                   <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
-                    <ul class="checkbox-buttons js-expandable-checkbox__list">
+                    <ul class="checkbox-buttons">
                       <li class="checkbox-buttons__item">
                         <label>
                           <input class="checkbox-buttons__check" type="checkbox"/>
@@ -638,7 +639,7 @@
             </div>
           </div>
           <div class="search-room__pagination-wrapper">
-            <div class="pagination js-pagination"></div>
+            <div class="pagination js-search-room-pagination"></div>
             <div class="pagination__info"><span class='pagination__info1 js-pagination__info1'></span> – <span class='pagination__info2 js-pagination__info2'></span> из <span class='pagination__info3 js-pagination__info3'></span> вариантов аренды</div>
           </div>
         </div>
@@ -671,7 +672,7 @@
               <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
               <form action="#">
                 <div class="subscription-text-field">
-                  <button class="subscription-text-field__button"></button>
+                  <button class="subscription-text-field__button"><span></span></button>
                   <input class="text-field text-field_right" placeholder="Email" type="email"/>
                 </div>
               </form>

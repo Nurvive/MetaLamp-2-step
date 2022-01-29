@@ -21,7 +21,7 @@
           <div class="form-elements__label">
             <p>dropdown</p>
             <div class="dropdown js-dropdown dropdown-default" id="dropdown">
-              <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
+              <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
                 <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
@@ -58,18 +58,18 @@
           </div>
           <div class="form-elements__label">
             <p>masked text field</p>
-            <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="masked-text-field"/>
+            <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="js-form-elements-masked-text-field"/>
           </div>
           <div class="form-elements__label">
             <p>date Dropdown</p>
             <div class="date-dropdown">
               <div class="date-dropdown__input date-dropdown__input_default">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
               </div>
               <div class="date-dropdown__input date-dropdown__input_default">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
               </div>
             </div>
           </div>
@@ -78,21 +78,21 @@
             <div class="date-dropdown">
               <div class="date-dropdown__input date-dropdown__input_long">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field text-field_dropdown js-form-elements__filter-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-form-elements__filter-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
               </div>
             </div>
           </div>
           <div class="form-elements__label">
             <p>subscription text field</p>
             <div class="subscription-text-field">
-              <button class="subscription-text-field__button"></button>
+              <button class="subscription-text-field__button"><span></span></button>
               <input class="text-field text-field_right" placeholder="Email" type="email"/>
             </div>
           </div>
           <div class="form-elements__label">
             <p>dropdown</p>
             <div class="dropdown js-dropdown dropdown-rooms" id="split-dropdown">
-              <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
+              <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
                 <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
@@ -124,9 +124,9 @@
             </div>
           </div>
           <div class="form-elements__label">
-            <div class="expandable-checkbox"><span class="expandable-checkbox__text">expandable checkbox list</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button open-button-chevron"></span>
+            <div class="expandable-checkbox"><span class="expandable-checkbox__text">expandable checkbox list</span><span class="expandable-checkbox__open-button js-form-elements-expandable-checkbox__button"></span>
               <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
-                <ul class="checkbox-buttons js-expandable-checkbox__list">
+                <ul class="checkbox-buttons">
                   <li class="checkbox-buttons__item">
                     <label>
                       <input class="checkbox-buttons__check" type="checkbox"/>
@@ -226,14 +226,14 @@
               </label>
               <label class="toggle__label">
                 <input class="toggle__button" type="checkbox"/>
-                <p class="toggle__text">Получать спецпредложения</p>
+                <p class="toggle__text">Получать спам</p>
               </label>
             </div>
           </div>
           <div class="form-elements__label">
             <p>like button</p>
             <div>
-              <div class="like-button js-like-button"><i class="like-button__icon far fa-heart"></i>
+              <div class="like-button js-form-elements-like-button"><i class="like-button__icon far fa-heart"></i>
 <i class="like-button__icon_active fas fa-heart"></i>
                 <p class="like-button__count js-like-button__count">2</p>
               </div>
@@ -300,12 +300,12 @@
               <button class="button button__default button__text">clickkk meee</button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button__long">long click me<span class="arrow button__arrow"></span></button>
+              <button class="button button__long">long click me<span class="button__arrow"></span></button>
             </div>
           </div>
           <div class="form-elements__label">
             <p>pagination</p>
-            <div class="pagination js-pagination"></div>
+            <div class="pagination js-form-elements-pagination"></div>
             <div class="pagination__info"><span class='pagination__info1 js-pagination__info1'></span> – <span class='pagination__info2 js-pagination__info2'></span> из <span class='pagination__info3 js-pagination__info3'></span> вариантов аренды</div>
           </div>
           <div class="form-elements__label">
@@ -342,7 +342,7 @@
             </div>
           </div>
           <div class="comment__content">
-            <div class="like-button js-like-button"><i class="like-button__icon far fa-heart"></i>
+            <div class="like-button js-comment-like-button"><i class="like-button__icon far fa-heart"></i>
 <i class="like-button__icon_active fas fa-heart"></i>
               <p class="like-button__count js-like-button__count">2</p>
             </div>

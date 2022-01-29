@@ -14,15 +14,15 @@
     <div class="wrapper landing">
       <header class="header">
         <div class="header__container">
-          <div class="header__logo">
-            <div class="header__logo-burger fas fa-hamburger"></div><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a>
-          </div>
+          <div class="header__logo-burger fas fa-hamburger"></div>
+          <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
           <div class="header__menu-wrapper">
             <nav class="header__nav">
               <ul class="header__menu">
                 <li class="header__menu-item"><a>О нас</a></li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
+                    <div class="header__menu-dropdown-open-button"></div>
                     <li class="header__dropdown-item"><a>Покупка</a></li>
                     <li class="header__dropdown-item"><a>Покупка</a></li>
                     <li class="header__dropdown-item"><a>Покупка</a></li>
@@ -32,6 +32,7 @@
                 <li class="header__menu-item"><a>Новости</a></li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
+                    <div class="header__menu-dropdown-open-button"></div>
                     <li class="header__dropdown-item"><a>О воде</a></li>
                     <li class="header__dropdown-item"><a>О солях</a></li>
                   </ul>
@@ -79,18 +80,18 @@
             <div class="date-dropdown">
               <div class="date-dropdown__input date-dropdown__input_default">
                 <p class="date-dropdown__input-title">Прибытие</p>
-                <input class="text-field text-field_dropdown js-landing__date-dropdown_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-landing__date-dropdown_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
               </div>
               <div class="date-dropdown__input date-dropdown__input_default">
                 <p class="date-dropdown__input-title">Выезд</p>
-                <input class="text-field text-field_dropdown js-landing__date-dropdown_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button open-button-chevron"></span>
+                <input class="text-field text-field_dropdown js-landing__date-dropdown_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
               </div>
             </div>
           </div>
           <div class="find-room__layout">
             <p class="find-room__layout-text">гости</p>
             <div class="dropdown js-dropdown dropdown-default" id="find-room__dropdown">
-              <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button open-button-chevron"></span>
+              <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
                 <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
@@ -126,7 +127,7 @@
             </div>
           </div>
           <div class="find-room__long-button-wrapper">
-            <button class="button button__long">Подобрать номер<span class="arrow button__arrow"></span></button>
+            <button class="button button__long">Подобрать номер<span class="button__arrow"></span></button>
           </div>
         </div><span class="landing__main-text">Лучшие номера для вашей работы, отдыха и просто вдохновения</span>
       </div>
@@ -158,7 +159,7 @@
               <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
               <form action="#">
                 <div class="subscription-text-field">
-                  <button class="subscription-text-field__button"></button>
+                  <button class="subscription-text-field__button"><span></span></button>
                   <input class="text-field text-field_right" placeholder="Email" type="email"/>
                 </div>
               </form>

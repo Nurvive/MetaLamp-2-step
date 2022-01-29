@@ -16,15 +16,15 @@
         <div class="header-footer__wrapper">
           <header class="header">
             <div class="header__container">
-              <div class="header__logo">
-                <div class="header__logo-burger fas fa-hamburger"></div><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a>
-              </div>
+              <div class="header__logo-burger fas fa-hamburger"></div>
+              <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
               <div class="header__menu-wrapper">
                 <nav class="header__nav">
                   <ul class="header__menu">
                     <li class="header__menu-item"><a>О нас</a></li>
                     <li class="header__menu-item">
                       <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
+                        <div class="header__menu-dropdown-open-button"></div>
                         <li class="header__dropdown-item"><a>Покупка</a></li>
                         <li class="header__dropdown-item"><a>Покупка</a></li>
                         <li class="header__dropdown-item"><a>Покупка</a></li>
@@ -34,6 +34,7 @@
                     <li class="header__menu-item"><a>Новости</a></li>
                     <li class="header__menu-item">
                       <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
+                        <div class="header__menu-dropdown-open-button"></div>
                         <li class="header__dropdown-item"><a>О воде</a></li>
                         <li class="header__dropdown-item"><a>О солях</a></li>
                       </ul>
@@ -106,7 +107,7 @@
                   <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
                   <form action="#">
                     <div class="subscription-text-field">
-                      <button class="subscription-text-field__button"></button>
+                      <button class="subscription-text-field__button"><span></span></button>
                       <input class="text-field text-field_right" placeholder="Email" type="email"/>
                     </div>
                   </form>
