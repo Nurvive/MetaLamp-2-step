@@ -1,41 +1,57 @@
 import './side-menu.scss';
 
-let startingX;
-
-$('.js-side-menu__menu-dropdown').on('click', function () {
-    $(this).children('.js-side-menu__dropdown-item').toggle(400);
-});
-
-const $sideMenu = $('.js-side-menu');
-const $burger = $('.header__logo-burger');
-$sideMenu.on('touchstart', function (event) {
-    startingX = event.touches[0].clientX;
-});
-
-$sideMenu.on('touchmove', function (event) {
-    let touch = event.touches[0];
-    let change = startingX - touch.clientX;
-    if (change < 0) {
-        return;
+class SideMenu {
+    constructor(element, burger) {
+        this.element = $(element);
+        this.burger = $(burger);
+        this.menuDropdown = $('.js-side-menu__menu-dropdown');
+        this.startingX = 0;
+        this.init();
     }
-    this.style.left = '-' + change + 'px';
-    event.preventDefault();
-});
 
-$sideMenu.on('touchend', function (event) {
-    let change = startingX - event.changedTouches[0].clientX;
-    let threshold = window.screen.width / 3;
-    if (change < threshold) {
-        $(this).removeClass('side-menu_hide');
-        $(this).addClass('side-menu_active');
-    } else {
-        $(this).removeClass('side-menu_active');
-        $(this).addClass('side-menu_hide');
+    init() {
+        this.element.on('touchstart', this.touchStartHandler.bind(this));
+        this.element.on('touchmove', this.touchMoveHandler.bind(this));
+        this.element.on('touchend', this.touchEndHandler.bind(this));
+        this.menuDropdown.on('click', this.dropdownClickHandler.bind(this));
+        this.burger.on('click', this.burgerClickHandler.bind(this));
     }
-    this.style.left = null;
-});
 
-$burger.on('click', function () {
-    $sideMenu.removeClass('side-menu_hide');
-    $sideMenu.addClass('side-menu_active');
-});
+    touchStartHandler(event) {
+        this.startingX = event.touches[0].clientX;
+    }
+
+    touchMoveHandler(event) {
+        let touch = event.touches[0];
+        let change = this.startingX - touch.clientX;
+        if (change < 0) {
+            return;
+        }
+        this.element[0].style.left = '-' + change + 'px';
+        event.preventDefault();
+    }
+
+    touchEndHandler(event) {
+        const change = this.startingX - event.changedTouches[0].clientX;
+        const threshold = window.screen.width / 3;
+        if (change < threshold) {
+            this.element.removeClass('side-menu_hide');
+            this.element.addClass('side-menu_active');
+        } else {
+            this.element.removeClass('side-menu_active');
+            this.element.addClass('side-menu_hide');
+        }
+        this.element[0].style.left = null;
+    }
+
+    dropdownClickHandler() {
+        this.menuDropdown.children('.js-side-menu__dropdown-item').toggle(400);
+    }
+
+    burgerClickHandler() {
+        this.element.removeClass('side-menu_hide');
+        this.element.addClass('side-menu_active');
+    }
+}
+
+export default SideMenu;
