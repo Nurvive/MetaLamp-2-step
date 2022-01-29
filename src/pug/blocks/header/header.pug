@@ -19,15 +19,18 @@ mixin header(isAuthorized = false, name = 'Имя Фамилия')
                             a О нас
                         li.header__menu-item
                             ul.header__menu-dropdown.js-header__menu-dropdown Услуги
+                                .header__menu-dropdown-open-button
                                 each item in headerDropdownItems1
                                     li.header__dropdown-item
                                         a= item
+
                         li.header__menu-item
                             a Вакансии
                         li.header__menu-item
                             a Новости
                         li.header__menu-item
                             ul.header__menu-dropdown.js-header__menu-dropdown Соглашение
+                                .header__menu-dropdown-open-button
                                 each item in headerDropdownItems2
                                     li.header__dropdown-item
                                         a= item

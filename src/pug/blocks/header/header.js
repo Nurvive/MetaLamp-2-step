@@ -4,11 +4,11 @@ import SideMenu from '../side-menu/side-menu';
 $().ready(() => {
     $('.js-header__menu-dropdown').on('click', function () {
         if ($(this).hasClass('header__menu-dropdown_active')) {
-            $(this).children().css('display', 'none');
+            $(this).children(':not(.header__menu-dropdown-open-button)').css('display', 'none');
             $(this).removeClass('header__menu-dropdown_active');
         } else {
             $(this).addClass('header__menu-dropdown_active');
-            $(this).children().css('display', 'block');
+            $(this).children(':not(.header__menu-dropdown-open-button)').css('display', 'block');
         }
     });
     // eslint-disable-next-line no-unused-vars

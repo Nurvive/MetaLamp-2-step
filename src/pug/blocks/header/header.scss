@@ -60,17 +60,25 @@
             display: block;
             cursor: pointer;
 
-            &_active::after {
+            &-open-button {
+                @extend %open-button-chevron;
+
+                transform: translateY(25%);
+                top: 0;
+                right: -20px;
+            }
+
+            &_active &-open-button {
                 transform: rotate(180deg);
             }
 
-            &::after {
-                transition: 0.3s;
-                position: absolute;
-                content: url('../../../assets/images/arrow-down.png');
-                right: -17px;
-                top: 0;
-            }
+            //&::after {
+            //    transition: 0.3s;
+            //    position: absolute;
+            //    content: url('../../../assets/images/arrow-down.png');
+            //    right: -17px;
+            //    top: 0;
+            //}
         }
 
         &-item {
@@ -103,7 +111,7 @@
         }
 
         @for $i from 1 through 3 {
-            &:nth-child(#{$i}) {
+            &:nth-child(#{$i + 1}) {
                 top: $i * 30px;
             }
         }
