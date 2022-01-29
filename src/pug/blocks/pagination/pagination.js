@@ -1,9 +1,16 @@
 import './pagination.scss';
 import 'paginationjs';
 
-$().ready(() => {
-    if (document.querySelector('.js-pagination') !== null) {
-        $('.js-pagination').pagination({
+class Pagination {
+    constructor(element) {
+        this.element = $(element);
+        this.tag = element;
+        this.init();
+    }
+
+    init() {
+        if (document.querySelector(this.tag) === null) return;
+        this.element.pagination({
             dataSource: function (done) {
                 let result = [];
                 for (let i = 1; i < 180; i += 1) {
@@ -24,4 +31,6 @@ $().ready(() => {
             }
         });
     }
-});
+}
+
+export default Pagination;

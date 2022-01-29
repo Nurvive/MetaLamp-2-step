@@ -6,6 +6,8 @@ import './form-elements.scss';
 import './form-elements.pug';
 import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/expandable-checkbox-list';
 import LikeButton from '../../blocks/like-button/like-button';
+import MaskedTextField from '../../blocks/masked-text-field/masked-text-field';
+import Pagination from '../../blocks/pagination/pagination';
 
 const inputStart = document.querySelector('.js-form-elements__date-dropdown_start');
 const inputEnd = document.querySelector('.js-form-elements__date-dropdown_end');
@@ -90,3 +92,7 @@ $('.js-form-elements-slider__slider').ionRangeSlider({
 const list = new ExpandableCheckboxList('.js-form-elements-expandable-checkbox__button');
 // eslint-disable-next-line no-unused-vars
 const likeButton = new LikeButton('.js-form-elements-like-button');
+// eslint-disable-next-line no-unused-vars
+const maskedTextField = new MaskedTextField('js-form-elements-masked-text-field');
+// eslint-disable-next-line no-unused-vars
+const pagination = new Pagination('.js-form-elements-pagination');
