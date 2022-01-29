@@ -1,5 +1,5 @@
-mixin like-button(likes = 0)
-    .like-button.js-like-button
+mixin like-button({likes = 0, jsClass = ''})
+    .like-button(class=jsClass)
         <i class="like-button__icon far fa-heart"></i>
         <i class="like-button__icon_active fas fa-heart"></i>
         p.like-button__count.js-like-button__count= likes

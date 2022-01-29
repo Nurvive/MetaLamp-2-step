@@ -9,5 +9,5 @@ mixin comment({likes = 0, text = 'lorem', time = 'Сейчас', name = 'Имя 
                 .comment__info-author=name
                 .comment__info-time=time
         .comment__content
-            +like-button(likes)
+            +like-button({likes: likes, jsClass: 'js-comment-like-button'})
             p.comment__content-text=text
