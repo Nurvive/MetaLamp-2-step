@@ -49,6 +49,10 @@
         position: relative;
     }
 
+    &__flat {
+        height: 34px;
+    }
+
     &__arrow {
         @extend %arrow;
 
