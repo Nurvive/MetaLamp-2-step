@@ -1,14 +1,14 @@
-mixin button({text = 'click me', size = '', type = '', withArrow = false, modifier = ''})
+mixin button({text = 'click me', size = '', type = '', withArrow = false, modifier = ''} = {})
     -
         let sizeType = 'default';
         let className = 'button';
-        if (size) {
+        if (size === 'long') {
             sizeType = size;
             className += ` button__${sizeType}`;
         }
-        if (type)
+        if (type === 'transparent' || type === 'text')
             className += ` button__${type}`;
-        if (modifier)
+        if (modifier === 'flat')
             className += ` button__${modifier}`
     if (withArrow)
         button(class=className)= text

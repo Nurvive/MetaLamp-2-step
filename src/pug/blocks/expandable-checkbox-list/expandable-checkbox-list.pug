@@ -1,6 +1,6 @@
 include ../checkbox-buttons/checkbox-buttons
 
-mixin expandable-checkbox({text = 'text', items = [], jsClass = ''})
+mixin expandable-checkbox({text = 'text', items = [], jsClass = ''} = {})
     .expandable-checkbox
         span.expandable-checkbox__text=text
         span.expandable-checkbox__open-button(class=jsClass)

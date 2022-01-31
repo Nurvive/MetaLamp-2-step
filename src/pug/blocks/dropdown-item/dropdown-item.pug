@@ -1,4 +1,4 @@
-mixin dropdown-item(obj)
+mixin dropdown-item(obj = {})
     each val, index in obj
         li.dropdown__item&attributes(attributes)
             p.dropdown__item-text.js-dropdown__item-text(data-index=index)=val

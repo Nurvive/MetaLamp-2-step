@@ -1,7 +1,7 @@
 include ../log-in-buttons/log-in-buttons
 include ../cabinet-button/cabinet-button
 
-mixin side-menu({isAuthorized = false, jsClass = ''})
+mixin side-menu({isAuthorized = false, jsClass = ''} = {})
     .side-menu(class = jsClass)
         .side-menu__holder
         nav.side-menu__nav
