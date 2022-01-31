@@ -66,6 +66,8 @@
     }
 
     &__arrow {
+        @extend %arrow;
+
         background-color: $purple;
 
         &_left {

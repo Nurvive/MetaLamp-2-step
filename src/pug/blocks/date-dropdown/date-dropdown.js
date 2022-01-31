@@ -22,8 +22,8 @@ for (let i = 0; i < inputs.length; i += 1) {
                 dp.hide();
             }
         }],
-        prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
-        nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
+        prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_left"></span>',
+        nextHtml: '<span class="air-datepicker__arrow"></span>',
         navTitles: {
             days: 'MMMM yyyy'
         },
