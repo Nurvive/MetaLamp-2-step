@@ -21,7 +21,7 @@ block content
             .cards__item
                 +calendar
                 -
-                    var obj = {
+                    let roomCardOptions = {
                         images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
                         number: '888',
                         type: 'люкс',
@@ -30,9 +30,9 @@ block content
                         reviews: 145,
                         uniqueID: 'qwe'
                     }
-                +room-card(obj)
+                +room-card(roomCardOptions)
                 -
-                    var obj = {
+                    roomCardOptions = {
                         images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
                         number: '56',
                         type: '',
@@ -41,4 +41,4 @@ block content
                         reviews: 14,
                         uniqueID: 'rty'
                     }
-                +room-card(obj)
+                +room-card(roomCardOptions)

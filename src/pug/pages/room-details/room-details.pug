@@ -24,7 +24,7 @@ block content
                             .room-details__info
                                 p.room-details__title Сведения о номере
                                 -
-                                    var obj = [
+                                    const prosOptions = [
                                         {
                                             img: '../../../assets/images/insert-emoticon.png',
                                             title: 'Комфорт',
@@ -41,7 +41,7 @@ block content
                                             text: 'Номер оснащён камином'
                                         }
                                     ]
-                                +pros(obj)
+                                +pros(prosOptions)
                             .room-details__rating
                                 p.room-details__title Впечатления от номера
                                 div.room-details__canvas-wrapper(style="position: relative; height:126px; width: 120px")
@@ -70,11 +70,9 @@ block content
                         li.room-details__item
                             .room-details__rules
                                 p.room-details__title Правила
-                                -
-                                    var arr = ['Нельзя с питомцами',
-                                        'Без вечеринок и мероприятий',
-                                        'Время прибытия — после 13:00, а выезд до 12:00']
-                                +bullet-list(arr)
+                                +bullet-list(['Нельзя с питомцами',
+                                    'Без вечеринок и мероприятий',
+                                    'Время прибытия — после 13:00, а выезд до 12:00'])
                             .room-details__abort
                                 p.room-details__title Отмена
                                 p.room-details__abort-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

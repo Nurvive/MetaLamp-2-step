@@ -3,7 +3,7 @@ block title
     .colors-type__container
         .column
             ul.column__list
-                - var obj = {'Dark Shade 100%':'#1F2041', 'Dark Shade 75%':'#1F2041', 'Dark Shade 50%':'#1F2041', 'Dark Shade 25%':'#1F2041','Dark Shade 5%':'#1F2041', 'Purple':'#BC9CFF', 'Green':'#6FCF97' }
+                - const obj = {'Dark Shade 100%':'#1F2041', 'Dark Shade 75%':'#1F2041', 'Dark Shade 50%':'#1F2041', 'Dark Shade 25%':'#1F2041','Dark Shade 5%':'#1F2041', 'Purple':'#BC9CFF', 'Green':'#6FCF97' }
                 each text,title in obj
                     li.column__colors-list-item
                         .column__item-color
@@ -12,7 +12,7 @@ block title
                             .column__info-text= text
         .column
             ul.column__list
-                -var obj2 = {'H1':'This one is the sub-section or widget title', 'H2':'Next one is the item title inside widgets', "H3":'This is a label or CTA text', "Body":'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
+                - const obj2 = {'H1':'This one is the sub-section or widget title', 'H2':'Next one is the item title inside widgets', "H3":'This is a label or CTA text', "Body":'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
                 each text,tag in obj2
                     li.column__type-list-item
                         p.column__item-tag=tag

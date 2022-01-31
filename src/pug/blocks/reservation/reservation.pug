@@ -23,7 +23,7 @@ mixin reservation()
             +dropdown('reservation__dropdown', 'default')
         .reservation__services
             -
-                var obj = [
+                const reservationItems = [
                     {
                         text: '9 990₽ х 4 суток',
                         hasInfo: false,
@@ -44,7 +44,7 @@ mixin reservation()
                     }
                 ]
             ul.reservation__list
-                each val in obj
+                each val in reservationItems
                     li.reservation__item
                         p.reservation__service=val.text
                         if val.hasInfo

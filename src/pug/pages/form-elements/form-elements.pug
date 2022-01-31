@@ -110,14 +110,12 @@ block content
                     +pagination('js-form-elements-pagination')
                 .form-elements__label
                     p bullet list
-                    -
-                        var arr = ['Нельзя с питомцами',
-                            'Без вечеринок и мероприятий',
-                            'Время прибытия — после 13:00, а выезд до 12:00']
-                    +bullet-list(arr)
+                    +bullet-list(['Нельзя с питомцами',
+                        'Без вечеринок и мероприятий',
+                        'Время прибытия — после 13:00, а выезд до 12:00'])
         .low-container
             -
-                var obj = [
+                const prosOptions = [
                     {
                         img: '../../../assets/images/insert-emoticon.png',
                         title: 'Комфорт',
@@ -129,7 +127,7 @@ block content
                         text: 'Окно в каждой из спален'
                     }
                 ]
-            +pros(obj)
+            +pros(prosOptions)
             +comment({
                 name: 'Мурад Сарафанов',
                 time: '5 дней назад',
