@@ -2,16 +2,6 @@ include ../buttons/button
 include ../date-dropdown-double/date-dropdown-double
 include ../dropdown/dropdown
 
-mixin services(obj = [{}])
-    ul.reservation__list
-        each val in obj
-            li.reservation__item
-                p.reservation__service=val.text
-                if val.info
-                    div.reservation__info-label
-                        span.reservation__info-label-text=val.infoText
-                p.reservation__price=val.price
-
 mixin reservation()
     .reservation
         .reservation__info
@@ -53,7 +43,14 @@ mixin reservation()
                         price: '300₽'
                     }
                 ]
-            +services(obj)
+            ul.reservation__list
+                each val in obj
+                    li.reservation__item
+                        p.reservation__service=val.text
+                        if val.info
+                            div.reservation__info-label
+                                span.reservation__info-label-text=val.infoText
+                        p.reservation__price=val.price
         .reservation__total
             p.reservation__total-text Итого
             .reservation__total-border
