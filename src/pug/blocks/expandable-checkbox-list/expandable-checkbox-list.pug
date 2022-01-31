@@ -5,4 +5,4 @@ mixin expandable-checkbox({text = 'text', items = [], jsClass = ''})
         span.expandable-checkbox__text=text
         span.expandable-checkbox__open-button(class=jsClass)
         .expandable-checkbox__inner.js-expandable-checkbox__inner
-            +checkbox-buttons({jsClass: jsClass, items: items})
+            +checkbox-buttons(items)
