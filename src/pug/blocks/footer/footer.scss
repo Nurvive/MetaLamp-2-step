@@ -77,14 +77,6 @@
         }
     }
 
-    &__column-list {
-        @extend %column-list;
-    }
-
-    &__column-item {
-        @extend %column-item;
-    }
-
     &__subscribe {
         @extend %column-list;
 

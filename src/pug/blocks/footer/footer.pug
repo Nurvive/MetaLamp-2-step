@@ -1,10 +1,5 @@
 include ../subscription-text-field/subscription-text-field
-
-mixin column(title,text)
-    ul.footer__column-list= title
-        each val in text
-            li
-                a.footer__column-item= val
+include ../column-list/column-list
 
 mixin footer()
     footer.footer
@@ -14,15 +9,9 @@ mixin footer()
                     a.footer__logo
                         img(src='../../../assets/images/logo.svg')
                     p.footer__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                - var text = ["О нас", "Новости", "Служба поддержки", "Услуги"];
-                - var title = "Навигация";
-                +column(title, text)
-                - var text = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"];
-                - var title = "О нас";
-                +column(title, text)
-                - var text = ["Соглашения", "Сообщества", "Связь с нами"];
-                - var title = "Служба поддержки";
-                +column(title, text)
+                +column-list({title: "Навигация", text: ["О нас", "Новости", "Служба поддержки", "Услуги"]})
+                +column-list({title: "О нас", text: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]})
+                +column-list({title: "Служба поддержки", text: ["Соглашения", "Сообщества", "Связь с нами"]})
                 .footer__subscribe
                     p.footer__subscribe-title Подписка
                     p.footer__subscribe-text Получайте специальные предложения и новости сервиса

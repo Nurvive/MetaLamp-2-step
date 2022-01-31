@@ -1,0 +1,5 @@
+mixin column-list({title = 'title', text =[]} = {})
+    ul.column-list= title
+        each val in text
+            li
+                a.column-list__item= val
