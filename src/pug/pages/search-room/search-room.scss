@@ -1,5 +1,14 @@
 @import '../../../scss/common/colors';
 
+%layout {
+    color: $dark100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
 .search-room {
     &__main {
         display: flex;
@@ -44,6 +53,7 @@
             justify-content: center;
             position: relative;
             width: 100%;
+            flex-basis: 40%;
         }
 
         & .small-menu__content {
@@ -90,15 +100,12 @@
     }
 
     &__layout {
-        color: $dark100;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        margin-bottom: 16px;
+        @extend %layout;
     }
 
     &__dropdown-layout {
+        @extend %layout;
+
         margin-bottom: 5px;
 
         & > p {
@@ -107,6 +114,8 @@
     }
 
     &__slider-layout {
+        @extend %layout;
+
         margin-bottom: -15px;
     }
 

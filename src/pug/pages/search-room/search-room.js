@@ -16,10 +16,7 @@ $().ready(() => {
             $moveObjects.detach().appendTo('.search-room__list');
         }
     });
-    $('.small-menu__content *:not(.dropdown__input-wrapper, .dropdown__open-button, .dropdown__input)').on('click', function (e) {
-        e.stopPropagation();
-    });
-    $('.small-menu-title').on('click', function () {
+    $('.js-small-menu-title').on('click', function () {
         $(this).parent().children(':not(.search-room__layout)').toggle(100);
     });
 
