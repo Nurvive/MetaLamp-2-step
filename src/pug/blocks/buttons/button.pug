@@ -1,4 +1,4 @@
-mixin button({text = 'click me', size = '', type = '', arrow = false})
+mixin button({text = 'click me', size = '', type = '', withArrow = false})
     -
         let sizeType = 'default';
         let className = 'button';
@@ -8,7 +8,7 @@ mixin button({text = 'click me', size = '', type = '', arrow = false})
         }
         if (type)
             className += ` button__${type}`;
-    if (arrow)
+    if (withArrow)
         button(class=className)= text
             span.button__arrow
     else

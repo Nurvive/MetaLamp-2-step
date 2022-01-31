@@ -23,7 +23,7 @@ mixin registration
             .registration__input-wrapper
                 +text-field(placeholder='Пароль' type='password')
             +toggle({'Получать спецпредложения': true})
-        +button({text: 'Зарегистрироваться', size: 'long', arrow: true})
+        +button({text: 'Зарегистрироваться', size: 'long', withArrow: true})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin
             +button({text: 'Войти', size: 'default', type: 'transparent'})

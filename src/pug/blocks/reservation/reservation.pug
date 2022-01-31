@@ -26,19 +26,19 @@ mixin reservation()
                 var obj = [
                     {
                         text: '9 990₽ х 4 суток',
-                        info: false,
+                        hasInfo: false,
                         price: '39 960₽'
                     },
 
                     {
                         text: 'Сбор за услуги: скидка 2 179₽',
-                        info: true,
+                        hasInfo: true,
                         infoText: 'Скидка за красивые глаза',
                         price: '0₽'
                     },
                     {
                         text: 'Сбор за дополнительные услуги',
-                        info: true,
+                        hasInfo: true,
                         infoText: 'Сбор за красивые глаза',
                         price: '300₽'
                     }
@@ -47,7 +47,7 @@ mixin reservation()
                 each val in obj
                     li.reservation__item
                         p.reservation__service=val.text
-                        if val.info
+                        if val.hasInfo
                             div.reservation__info-label
                                 span.reservation__info-label-text=val.infoText
                         p.reservation__price=val.price
@@ -56,4 +56,4 @@ mixin reservation()
             .reservation__total-border
             p.reservation__total-price 38 081₽
         .reservation__button
-            +button({text: 'Забронировать', size: 'long', arrow: true})
+            +button({text: 'Забронировать', size: 'long', withArrow: true})
