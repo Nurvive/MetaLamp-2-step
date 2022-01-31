@@ -4,6 +4,7 @@ include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/comment/comment
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
 include ../../blocks/date-dropdown/date-dropdown
+include ../../blocks/date-dropdown-double/date-dropdown-double
 include ../../blocks/like-button/like-button
 include ../../blocks/bullet-list/bullet-list
 include ../../blocks/dropdown/dropdown
@@ -37,28 +38,17 @@ block content
                 .form-elements__label
                     p date Dropdown
                     -
-                        var obj = [
-                            {
-                                class: 'js-form-elements__date-dropdown_start',
-                                placeholder: 'ДД.ММ.ГГГГ'
-                            },
-                            {
-                                class: 'js-form-elements__date-dropdown_end',
-                                placeholder: 'ДД.ММ.ГГГГ'
-                            }
-                        ]
-                    +date-dropdown(obj)
+                        const doubleDateDropdownOptions = {
+                            placeholder: 'ДД.ММ.ГГГГ'
+                        }
+                    +date-dropdown-double(doubleDateDropdownOptions)
                 .form-elements__label
                     p filter date dropdown
                     -
-                        var obj = [
-                            {
-                                class: 'js-form-elements__filter-date-dropdown_start',
-                                placeholder: 'ДД.ММ. - ДД.ММ.',
-                                size: 'long'
-                            }
-                        ]
-                    +date-dropdown(obj)
+                        const dateDropdownOptions = {
+                            placeholder: 'ДД.ММ. - ДД.ММ.',
+                        }
+                    +date-dropdown(dateDropdownOptions)
                 .form-elements__label
                     p subscription text field
                     +subscription-text-field

@@ -20,17 +20,13 @@ block content
             aside.search-room__aside
                 ul.search-room__list
                     li.search-room__item.search-room__item_small-margin(data-move="no")
-                        -
-                            var options = [
-                                {
-                                    class: 'js-search-room__filter-date-dropdown_start',
+                        .search-room__layout.search-room__dropdown-layout
+                            -
+                                const dateDropdownOptions = {
                                     placeholder: 'ДД.ММ. - ДД.ММ.',
-                                    size: 'long',
                                     title: 'даты пребывания в отеле'
                                 }
-                            ]
-                        .search-room__layout.search-room__dropdown-layout
-                            +date-dropdown(options)
+                            +date-dropdown(dateDropdownOptions)
                     li.search-room__item(data-move="no")
                         .search-room__layout.search-room__dropdown-layout
                             p Гости

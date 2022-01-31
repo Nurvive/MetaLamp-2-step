@@ -10,19 +10,6 @@ block content
     .wrapper.landing
         +header(false)
         .landing__main
-            -
-                var obj = [
-                    {
-                        title: 'Прибытие',
-                        class: 'js-landing__date-dropdown_start',
-                        placeholder: 'ДД.ММ.ГГГГ'
-                    },
-                    {
-                        title: 'Выезд',
-                        class: 'js-landing__date-dropdown_end',
-                        placeholder: 'ДД.ММ.ГГГГ'
-                    }
-                ]
-            +find-room(obj)
+            +find-room
             span.landing__main-text Лучшие номера для вашей работы, отдыха и просто вдохновения
         +footer

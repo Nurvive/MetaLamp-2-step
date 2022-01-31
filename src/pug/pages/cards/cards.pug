@@ -13,20 +13,7 @@ block content
     .wrapper
         .cards__container
             .cards__item
-                -
-                    var obj = [
-                        {
-                            title: 'Прибытие',
-                            class: 'js-cards__date-dropdown_start',
-                            placeholder: 'ДД.ММ.ГГГГ'
-                        },
-                        {
-                            title: 'Выезд',
-                            class: 'js-cards__date-dropdown_end',
-                            placeholder: 'ДД.ММ.ГГГГ'
-                        }
-                    ]
-                +find-room(obj)
+                +find-room
                 +registration
             .cards__item
                 +reservation

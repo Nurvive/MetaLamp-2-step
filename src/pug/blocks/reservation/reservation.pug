@@ -1,5 +1,5 @@
 include ../buttons/button
-include ../date-dropdown/date-dropdown
+include ../date-dropdown-double/date-dropdown-double
 include ../dropdown/dropdown
 
 mixin services(obj = [{}])
@@ -14,19 +14,6 @@ mixin services(obj = [{}])
 
 mixin reservation()
     .reservation
-        -
-            var obj = [
-                        {
-                            title: 'Прибытие',
-                            class: 'js-reservation__date-dropdown_start',
-                            placeholder: 'ДД.ММ.ГГГГ'
-                        },
-                        {
-                            title: 'Выезд',
-                            class: 'js-reservation__date-dropdown_end',
-                            placeholder: 'ДД.ММ.ГГГГ'
-                        }
-                    ]
         .reservation__info
             p.reservation__info-number 888
                 span.reservation__info-type люкс
@@ -34,7 +21,13 @@ mixin reservation()
                 strong 9 990₽
                 span в сутки
         .reservation__dates
-            +date-dropdown(obj)
+            -
+                const dateDropdownDoubleOptions = {
+                    title1: 'Прибытие',
+                    title2: 'Выезд',
+                    placeholder: 'ДД.ММ.ГГГГ'
+                }
+            +date-dropdown-double(dateDropdownDoubleOptions)
         .reservation__layout
             p.reservation__layout-text гости
             +dropdown('reservation__dropdown', 'default')

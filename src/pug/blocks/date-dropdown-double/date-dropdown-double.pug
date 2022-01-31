@@ -1,0 +1,13 @@
+include ../text-field/text-field
+
+mixin date-dropdown-double({title1 = '', title2 = '', placeholder = ''} = {})
+    .date-dropdown-double
+        .date-dropdown-double__input
+            p.date-dropdown-double__input-title= title1
+            +text-field({dropdown: 'dropdown'})(class='js-date-dropdown-double_start' placeholder=placeholder readonly)
+            span.date-dropdown-double__input-open-button
+        .date-dropdown-double__input
+            p.date-dropdown-double__input-title= title2
+            +text-field({dropdown: 'dropdown'})(class='js-date-dropdown-double_end' placeholder=placeholder readonly)
+            span.date-dropdown-double__input-open-button
+

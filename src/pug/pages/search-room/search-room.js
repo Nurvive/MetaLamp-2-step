@@ -1,37 +1,8 @@
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './search-room.scss';
 import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/expandable-checkbox-list';
 import Pagination from '../../blocks/pagination/pagination';
-
-const input = document.querySelector('.js-search-room__filter-date-dropdown_start');
-// eslint-disable-next-line no-unused-vars
-const picker = new AirDatepicker('.js-search-room__filter-date-dropdown_start', {
-    multipleDates: true,
-    range: true,
-    multipleDatesSeparator: ' - ',
-    onShow: function () {
-        input.parentNode.classList.add('date-dropdown__input_active');
-    },
-    onHide: function () {
-        input.parentNode.classList.remove('date-dropdown__input_active');
-    },
-    dateFormat: 'dd MMM',
-    buttons: ['clear', {
-        content: 'Применить',
-        onClick: (dp) => {
-            dp.hide();
-        }
-    }],
-    prevHtml: '<span class="arrow air-datepicker__arrow air-datepicker__arrow_left"></span>',
-    nextHtml: '<span class="arrow air-datepicker__arrow"></span>',
-    navTitles: {
-        days: 'MMMM yyyy'
-    },
-    startDate: new Date()
-});
 
 $().ready(() => {
     let width = ($(window).width());
