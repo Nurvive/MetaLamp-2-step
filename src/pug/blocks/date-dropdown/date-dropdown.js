@@ -8,14 +8,23 @@ for (let i = 0; i < inputs.length; i += 1) {
     const picker = new AirDatepicker(inputs[i], {
         multipleDates: true,
         range: true,
-        multipleDatesSeparator: ' - ',
+        onSelect(fd) {
+            const date = fd.formattedDate.split(',');
+            inputs[i].value = date.length > 1 ? `${date[0].substr(0, date[0].length - 1)} - ${date[1].substr(0, date[0].length - 1)}` : `${date[0].substr(0, date[0].length - 1)}`;
+        },
         onShow: function () {
             inputs[i].parentNode.classList.add('date-dropdown__input_active');
         },
         onHide: function () {
             inputs[i].parentNode.classList.remove('date-dropdown__input_active');
         },
-        dateFormat: 'dd MMM',
+        dateFormat(date) {
+            return date.toLocaleString('ru', {
+                day: '2-digit',
+                month: 'short'
+            });
+        },
+        multipleDatesSeparator: ' - ',
         buttons: ['clear', {
             content: 'Применить',
             onClick: (dp) => {
@@ -27,8 +36,6 @@ for (let i = 0; i < inputs.length; i += 1) {
         navTitles: {
             days: 'MMMM yyyy'
         },
-        startDate: new Date(),
-        autoClose: true
-
+        startDate: new Date()
     });
 }
