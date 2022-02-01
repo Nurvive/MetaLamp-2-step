@@ -5,6 +5,8 @@
     &__container {
         @extend %container;
 
+        background-color: #f4f4f6;
+        justify-content: center;
         display: flex;
         gap: 40px;
         padding: 80px 0;
