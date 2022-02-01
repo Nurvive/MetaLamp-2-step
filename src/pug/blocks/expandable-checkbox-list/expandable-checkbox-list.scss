@@ -8,7 +8,8 @@
     &__open-button {
         @extend %open-button-chevron;
 
-        right: 0;
+        right: 15px;
+        bottom: 3px;
 
         &_active {
             transform: rotate(180deg);
