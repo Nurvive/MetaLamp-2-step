@@ -2,7 +2,6 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './form-elements.scss';
 import './form-elements.pug';
-import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/expandable-checkbox-list';
 import Pagination from '../../blocks/pagination/pagination';
 
 $('.js-form-elements-slider__slider').ionRangeSlider({
@@ -23,7 +22,6 @@ $('.js-form-elements-slider__slider').ionRangeSlider({
     }
 });
 
-// eslint-disable-next-line no-unused-vars
-const list = new ExpandableCheckboxList('.js-form-elements-expandable-checkbox__button');
+
 // eslint-disable-next-line no-unused-vars
 const pagination = new Pagination('.js-form-elements-pagination');
