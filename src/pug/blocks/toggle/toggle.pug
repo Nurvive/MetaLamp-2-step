@@ -1,6 +1,4 @@
-mixin toggle(obj = {})
-    .toggle
-        each isChecked, val in obj
-            label.toggle__label
-                input(checked=isChecked type='checkbox' class='toggle__button')
-                p.toggle__text=val
+mixin toggle({isChecked = true, text = 'text'} = {})
+    label.toggle__label
+        input(checked=isChecked type='checkbox' class='toggle__button')
+        p.toggle__text=text

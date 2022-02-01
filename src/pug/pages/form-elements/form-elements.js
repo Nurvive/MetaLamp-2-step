@@ -22,6 +22,5 @@ $('.js-form-elements-slider__slider').ionRangeSlider({
     }
 });
 
-
 // eslint-disable-next-line no-unused-vars
 const pagination = new Pagination('.js-form-elements-pagination');

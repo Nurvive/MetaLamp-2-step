@@ -69,10 +69,13 @@ block content
                     +radio-buttons(['Мужчина', 'Женщина'])
                 .form-elements__label
                     p toggle
-                    +toggle({
-                        'Получать спецпредложения': true,
-                        'Получать спам': false
-                    })
+                    -
+                        const toggleOptions = [
+                            {isChecked: true, text: 'Получать спецпредложения'},
+                            {isChecked: false, text: 'Получать спам'}
+                        ]
+                    each obj in toggleOptions
+                        +toggle(obj)
                 .form-elements__label
                     p like button
                     div
