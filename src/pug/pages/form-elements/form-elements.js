@@ -2,7 +2,6 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './form-elements.scss';
 import './form-elements.pug';
-import Pagination from '../../blocks/pagination/pagination';
 
 $('.js-form-elements-slider__slider').ionRangeSlider({
     skin: 'round',
@@ -21,6 +20,3 @@ $('.js-form-elements-slider__slider').ionRangeSlider({
         $('.js-form-elements-slider__count').text(`${data.from } ₽ - ${data.to} ₽`);
     }
 });
-
-// eslint-disable-next-line no-unused-vars
-const pagination = new Pagination('.js-form-elements-pagination');

@@ -1,7 +1,6 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 import './search-room.scss';
-import Pagination from '../../blocks/pagination/pagination';
 
 $().ready(() => {
     let width = ($(window).width());
@@ -37,6 +36,3 @@ $().ready(() => {
         }
     });
 });
-
-// eslint-disable-next-line no-unused-vars
-const pagination = new Pagination('.js-search-room-pagination');

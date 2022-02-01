@@ -2,9 +2,9 @@ import './pagination.scss';
 import 'paginationjs';
 
 class Pagination {
-    constructor(element) {
-        this.element = $(element);
-        this.tag = element;
+    constructor() {
+        this.element = $('.js-pagination');
+        this.tag = '.js-pagination';
         this.init();
     }
 
