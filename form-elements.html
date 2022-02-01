@@ -58,18 +58,18 @@
           </div>
           <div class="form-elements__label">
             <p>masked text field</p>
-            <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" id="js-form-elements-masked-text-field"/>
+            <input class="text-field js-masked-text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
           </div>
           <div class="form-elements__label">
             <p>date Dropdown</p>
-            <div class="date-dropdown">
-              <div class="date-dropdown__input date-dropdown__input_default">
-                <p class="date-dropdown__input-title"></p>
-                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
+            <div class="date-dropdown-double">
+              <div class="date-dropdown-double__input">
+                <p class="date-dropdown-double__input-title"></p>
+                <input class="text-field text-field_dropdown js-date-dropdown-double_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
               </div>
-              <div class="date-dropdown__input date-dropdown__input_default">
-                <p class="date-dropdown__input-title"></p>
-                <input class="text-field text-field_dropdown js-form-elements__date-dropdown_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
+              <div class="date-dropdown-double__input">
+                <p class="date-dropdown-double__input-title"></p>
+                <input class="text-field text-field_dropdown js-date-dropdown-double_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@
             <div class="date-dropdown">
               <div class="date-dropdown__input date-dropdown__input_long">
                 <p class="date-dropdown__input-title"></p>
-                <input class="text-field text-field_dropdown js-form-elements__filter-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
+                <input class="text-field text-field_dropdown js-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@
             </div>
           </div>
           <div class="form-elements__label">
-            <div class="expandable-checkbox"><span class="expandable-checkbox__text">expandable checkbox list</span><span class="expandable-checkbox__open-button js-form-elements-expandable-checkbox__button"></span>
+            <div class="expandable-checkbox"><span class="expandable-checkbox__text">expandable checkbox list</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
               <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
                 <ul class="checkbox-buttons">
                   <li class="checkbox-buttons__item">
@@ -219,21 +219,19 @@
           </div>
           <div class="form-elements__label">
             <p>toggle</p>
-            <div class="toggle">
-              <label class="toggle__label">
-                <input class="toggle__button" checked="checked" type="checkbox"/>
-                <p class="toggle__text">Получать спецпредложения</p>
-              </label>
-              <label class="toggle__label">
-                <input class="toggle__button" type="checkbox"/>
-                <p class="toggle__text">Получать спам</p>
-              </label>
-            </div>
+            <label class="toggle__label">
+              <input class="toggle__button" checked="checked" type="checkbox"/>
+              <p class="toggle__text">Получать спецпредложения</p>
+            </label>
+            <label class="toggle__label">
+              <input class="toggle__button" type="checkbox"/>
+              <p class="toggle__text">Получать спам</p>
+            </label>
           </div>
           <div class="form-elements__label">
             <p>like button</p>
             <div>
-              <div class="like-button js-form-elements-like-button"><i class="like-button__icon far fa-heart"></i>
+              <div class="like-button js-like-button"><i class="like-button__icon far fa-heart"></i>
 <i class="like-button__icon_active fas fa-heart"></i>
                 <p class="like-button__count js-like-button__count">2</p>
               </div>
@@ -244,15 +242,15 @@
             <div>
               <div class="rate-button">
                 <div class="rate-button__inner">
-                  <input class="rate-button__item" checked="false" id="rate-button__item5form-elements" value="5" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="checked" id="rate-button__item5form-elements" value="5" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item5form-elements"></label>
-                  <input class="rate-button__item" checked="false" id="rate-button__item4form-elements" value="4" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="checked" id="rate-button__item4form-elements" value="4" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item4form-elements"></label>
-                  <input class="rate-button__item" checked="false" id="rate-button__item3form-elements" value="3" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="checked" id="rate-button__item3form-elements" value="3" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item3form-elements"></label>
-                  <input class="rate-button__item" checked="false" id="rate-button__item2form-elements" value="2" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="checked" id="rate-button__item2form-elements" value="2" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item2form-elements"></label>
-                  <input class="rate-button__item" checked="true" id="rate-button__item1form-elements" value="1" type="radio" name="ratingform-elements"/>
+                  <input class="rate-button__item" checked="checked" id="rate-button__item1form-elements" value="1" type="radio" name="ratingform-elements"/>
                   <label class="rate-button__star" for="rate-button__item1form-elements"></label>
                 </div>
               </div>
@@ -291,21 +289,21 @@
           <div class="form-elements__label">
             <p>buttons</p>
             <div class="form-elements__button-wrapper">
-              <button class="button button__default">click me</button>
+              <button class="button">click me</button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button__default button__transparent">click ME</button>
+              <button class="button button__transparent">click ME</button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button__default button__text">clickkk meee</button>
+              <button class="button button__text">clickkk meee</button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button__long">long click me<span class="button__arrow"></span></button>
+              <button class="button button__long">long click me</button>
             </div>
           </div>
           <div class="form-elements__label">
             <p>pagination</p>
-            <div class="pagination js-form-elements-pagination"></div>
+            <div class="pagination js-pagination"></div>
             <div class="pagination__info"><span class='pagination__info1 js-pagination__info1'></span> – <span class='pagination__info2 js-pagination__info2'></span> из <span class='pagination__info3 js-pagination__info3'></span> вариантов аренды</div>
           </div>
           <div class="form-elements__label">
@@ -342,7 +340,7 @@
             </div>
           </div>
           <div class="comment__content">
-            <div class="like-button js-comment-like-button"><i class="like-button__icon far fa-heart"></i>
+            <div class="like-button js-like-button"><i class="like-button__icon far fa-heart"></i>
 <i class="like-button__icon_active fas fa-heart"></i>
               <p class="like-button__count js-like-button__count">2</p>
             </div>
