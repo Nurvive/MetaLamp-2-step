@@ -24,13 +24,13 @@
         opacity: 0.5;
     }
 
-    &__transparent {
+    &_transparent {
         background: white;
         border: 2px solid #bc9cff;
         color: #bc9cff;
     }
 
-    &__text {
+    &_text {
         cursor: pointer;
         display: inline-block;
         color: #bc9cff;
@@ -42,14 +42,14 @@
         }
     }
 
-    &__long {
+    &_long {
         text-align: center;
         max-width: 320px;
         width: 100%;
         position: relative;
     }
 
-    &__flat {
+    &_flat {
         height: 34px;
     }
 
