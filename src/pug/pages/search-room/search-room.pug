@@ -14,152 +14,151 @@ block title
     title search-room
 
 block content
-    .wrapper
-        .search-room
-            +header(false)
-            main.search-room__main
-                aside.search-room__aside
-                    ul.search-room__list
-                        li.search-room__item.search-room__item_small-margin(data-move="no")
-                            .search-room__dropdown-layout
-                                -
-                                    const dateDropdownOptions = {
-                                        placeholder: 'ДД.ММ. - ДД.ММ.',
-                                        title: 'даты пребывания в отеле'
-                                    }
-                                +date-dropdown(dateDropdownOptions)
-                        li.search-room__item(data-move="no")
-                            .search-room__dropdown-layout
-                                p Гости
-                                +dropdown('search-room__dropdown', 'default')
-                        li.search-room__item(data-move="no")
-                            .search-room__slider-layout диапазон цены
-                            +range-slider
-                            span.search-room__item-extra-text Стоимость за сутки пребывания в номере
-                        li.search-room__item
-                            .search-room__layout правила дома
-                                +checkbox-buttons(['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])
-                        li.search-room__item.search-room__item_small-margin
-                            .search-room__layout доступность
-                            +rich-checkbox-buttons({
-                                'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
-                                'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
-                            })
+    .search-room
+        +header(false)
+        main.search-room__main
+            aside.search-room__aside
+                ul.search-room__list
+                    li.search-room__item.search-room__item_small-margin(data-move="no")
+                        .search-room__dropdown-layout
+                            -
+                                const dateDropdownOptions = {
+                                    placeholder: 'ДД.ММ. - ДД.ММ.',
+                                    title: 'даты пребывания в отеле'
+                                }
+                            +date-dropdown(dateDropdownOptions)
+                    li.search-room__item(data-move="no")
+                        .search-room__dropdown-layout
+                            p Гости
+                            +dropdown('search-room__dropdown', 'default')
+                    li.search-room__item(data-move="no")
+                        .search-room__slider-layout диапазон цены
+                        +range-slider
+                        span.search-room__item-extra-text Стоимость за сутки пребывания в номере
+                    li.search-room__item
+                        .search-room__layout правила дома
+                            +checkbox-buttons(['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])
+                    li.search-room__item.search-room__item_small-margin
+                        .search-room__layout доступность
+                        +rich-checkbox-buttons({
+                            'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
+                            'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
+                        })
 
-                        li.search-room__item
-                            .search-room__dropdown-layout удобства номера
-                            +dropdown('search-room__dropdown', 'rooms')
-                        li.search-room__item
-                            .search-room__layout
-                                +expandable-checkbox({
-                                    text: 'Дополнительные удобства',
-                                    items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'],
-                                })
-                        ul.search-room__small-menu
-                            p.search-room__layout.js-small-menu-title(data-attr="small-menu-title") фильтр
-                            .small-menu__content
-                .search-room__content
-                    p.search-room__content-title Номера, которые мы для вас подобрали
-                    -
-                        const roomsArray = [{
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '888',
-                            type: 'люкс',
-                            cost: '9 990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'qwe'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '111',
-                            type: 'люкс',
-                            cost: '9 456₽',
-                            rating: 2,
-                            reviews: 15,
-                            uniqueID: 'qw'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '111',
-                            type: 'люкс',
-                            cost: '9 456₽',
-                            rating: 2,
-                            reviews: 15,
-                            uniqueID: 'qw'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '88',
-                            type: '',
-                            cost: '990₽',
-                            rating: 5,
-                            reviews: 14,
-                            uniqueID: 'wer'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '18',
-                            type: 'люкс',
-                            cost: '9 990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'ert'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '234',
-                            type: 'люкс',
-                            cost: '9 8990₽',
-                            rating: 5,
-                            reviews: 95,
-                            uniqueID: 'rty'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '668',
-                            type: 'люкс',
-                            cost: '9 990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'tyu'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '888',
-                            type: 'люкс',
-                            cost: '9990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'iop'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '888',
-                            type: 'люкс',
-                            cost: '9 990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'asd'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '888',
-                            type: '',
-                            cost: '9 990₽',
-                            rating: 1,
-                            reviews: 5,
-                            uniqueID: 'sdf'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '888',
-                            type: 'люкс',
-                            cost: '9 990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'zxc'
-                        }, {
-                            images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
-                            number: '888',
-                            type: 'люкс',
-                            cost: '9 990₽',
-                            rating: 5,
-                            reviews: 145,
-                            uniqueID: 'xcv'
-                        }]
-                    each obj in roomsArray
-                        +room-card(obj)
-                    .search-room__pagination-wrapper
-                        +pagination
-            +footer
+                    li.search-room__item
+                        .search-room__dropdown-layout удобства номера
+                        +dropdown('search-room__dropdown', 'rooms')
+                    li.search-room__item
+                        .search-room__layout
+                            +expandable-checkbox({
+                                text: 'Дополнительные удобства',
+                                items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'],
+                            })
+                    ul.search-room__small-menu
+                        p.search-room__layout.js-small-menu-title(data-attr="small-menu-title") фильтр
+                        .small-menu__content
+            .search-room__content
+                p.search-room__content-title Номера, которые мы для вас подобрали
+                -
+                    const roomsArray = [{
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'qwe'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '111',
+                        type: 'люкс',
+                        cost: '9 456₽',
+                        rating: 2,
+                        reviews: 15,
+                        uniqueID: 'qw'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '111',
+                        type: 'люкс',
+                        cost: '9 456₽',
+                        rating: 2,
+                        reviews: 15,
+                        uniqueID: 'qw'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '88',
+                        type: '',
+                        cost: '990₽',
+                        rating: 5,
+                        reviews: 14,
+                        uniqueID: 'wer'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '18',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'ert'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '234',
+                        type: 'люкс',
+                        cost: '9 8990₽',
+                        rating: 5,
+                        reviews: 95,
+                        uniqueID: 'rty'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '668',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'tyu'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'iop'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'asd'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: '',
+                        cost: '9 990₽',
+                        rating: 1,
+                        reviews: 5,
+                        uniqueID: 'sdf'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'zxc'
+                    }, {
+                        images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
+                        number: '888',
+                        type: 'люкс',
+                        cost: '9 990₽',
+                        rating: 5,
+                        reviews: 145,
+                        uniqueID: 'xcv'
+                    }]
+                each obj in roomsArray
+                    +room-card(obj)
+                .search-room__pagination-wrapper
+                    +pagination
+        +footer

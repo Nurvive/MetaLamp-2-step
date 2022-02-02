@@ -1,6 +1,9 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .room-details {
+    @extend %wrapper;
+
     &__gallery {
         grid-template-areas:
             'A A C'

@@ -2,6 +2,8 @@
 @import '../../../scss/common/templates';
 
 .cards {
+    @extend %wrapper;
+
     &__container {
         @extend %container;
 

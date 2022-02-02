@@ -1,6 +1,9 @@
 @import '../../../scss/common/colors';
+@import '../../../scss/common/templates';
 
 .landing {
+    @extend %wrapper;
+
     &__main {
         height: 830px;
         background-image: url('../../../assets/images/landing-background.png');

@@ -1,4 +1,8 @@
+@import '../../../scss/common/templates';
+
 .index {
+    @extend %wrapper;
+
     display: flex;
     align-items: center;
     height: 100%;
