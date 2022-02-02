@@ -13,7 +13,7 @@ class SideMenu {
         this.element.on('touchstart', this.touchStartHandler.bind(this));
         this.element.on('touchmove', this.touchMoveHandler.bind(this));
         this.element.on('touchend', this.touchEndHandler.bind(this));
-        this.menuDropdown.on('click', this.dropdownClickHandler.bind(this));
+        this.menuDropdown.on('click', SideMenu.dropdownClickHandler.bind(this));
         this.burger.on('click', this.burgerClickHandler.bind(this));
     }
 
@@ -44,8 +44,8 @@ class SideMenu {
         this.element[0].style.left = null;
     }
 
-    dropdownClickHandler() {
-        this.menuDropdown.children('.js-side-menu__dropdown-item').toggle(400);
+    static dropdownClickHandler(e) {
+        $(e.target).children('.js-side-menu__dropdown-item').toggle(400);
     }
 
     burgerClickHandler() {

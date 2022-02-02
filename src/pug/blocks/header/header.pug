@@ -3,9 +3,6 @@ include ../side-menu/side-menu
 include ../log-in-buttons/log-in-buttons
 include ../cabinet-button/cabinet-button
 mixin header(isAuthorized = false, name = 'Имя Фамилия')
-    -
-        const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];
-        const headerDropdownItems2 = ['О воде', 'О солях'];
     header.header
         .header__container
             .header__logo-burger.fas.fa-hamburger
@@ -15,25 +12,24 @@ mixin header(isAuthorized = false, name = 'Имя Фамилия')
             div.header__menu-wrapper
                 nav.header__nav
                     ul.header__menu
-                        li.header__menu-item
-                            a О нас
-                        li.header__menu-item
-                            ul.header__menu-dropdown.js-header__menu-dropdown Услуги
-                                .header__menu-dropdown-open-button
-                                each item in headerDropdownItems1
-                                    li.header__dropdown-item
-                                        a= item
-
-                        li.header__menu-item
-                            a Вакансии
-                        li.header__menu-item
-                            a Новости
-                        li.header__menu-item
-                            ul.header__menu-dropdown.js-header__menu-dropdown Соглашение
-                                .header__menu-dropdown-open-button
-                                each item in headerDropdownItems2
-                                    li.header__dropdown-item
-                                        a= item
+                        -
+                            const options = [
+                                {text: 'О нас', isDropdown: false},
+                                {text: 'Услуги',items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                                {text: 'Вакансии', isDropdown: false},
+                                {text: 'Новости', isDropdown: false},
+                                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+                            ]
+                        each option in options
+                            li.header__menu-item
+                                if (option.isDropdown)
+                                    ul.header__menu-dropdown.js-header__menu-dropdown= option.text
+                                        .header__menu-dropdown-open-button
+                                        each item in option.items
+                                            li.header__dropdown-item
+                                                a= item
+                                else
+                                    a= option.text
                 .header__buttons
                     if !isAuthorized
                         +log-in-buttons
