@@ -40,6 +40,11 @@
     width: 318px;
     border: 1px solid $dark25;
     font-family: Montserrat, sans-serif;
+    box-shadow: none;
+
+    &--pointer {
+        display: none;
+    }
 
     &-nav {
         margin-top: 11px;
