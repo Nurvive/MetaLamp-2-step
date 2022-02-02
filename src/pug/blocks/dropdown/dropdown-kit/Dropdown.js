@@ -1,7 +1,6 @@
 export class Dropdown {
     constructor(component, wordsDefault) {
         this.component = component;
-        this.gCount = 0;
         this.wordsDefault = wordsDefault;
         this.obj = {};
         this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
@@ -57,7 +56,6 @@ export class Dropdown {
         let node = this.minus[index];
         if (counter.innerHTML > 0) {
             counter.innerHTML = Number(counter.innerHTML) - 1;
-            this.gCount -= 1;
         }
         if (Number(counter.innerHTML) === 0) {
             node.classList.add('dropdown__item-minus_inactive');
@@ -70,7 +68,6 @@ export class Dropdown {
         let minus = this.minus[index];
         minus.classList.remove('dropdown__item-minus_inactive');
         counter.innerHTML = Number(counter.innerHTML) + 1;
-        this.gCount += 1;
     }
 
     countingGuests(event) {
@@ -102,7 +99,7 @@ export class Dropdown {
     }
 
     clear() {
-        this.gCount = 0;
+        this.obj = {};
         this.input.value = '';
         this.counters.forEach((node) => {
             // eslint-disable-next-line no-param-reassign
