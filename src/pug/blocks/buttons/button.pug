@@ -10,8 +10,6 @@ mixin button({text = 'click me', size = '', type = '', withArrow = false, modifi
             className += ` button__${type}`;
         if (modifier === 'flat')
             className += ` button__${modifier}`
-    if (withArrow)
-        button(class=className)= text
+    button(class=className)= text
+        if (withArrow)
             span.button__arrow
-    else
-        button(class=className)= text
