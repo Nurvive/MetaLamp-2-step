@@ -11,183 +11,119 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
-    <div class="wrapper">
-      <div class="search-room">
-        <header class="header">
-          <div class="header__container">
-            <div class="header__logo-burger fas fa-hamburger"></div>
-            <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
-            <div class="header__menu-wrapper">
-              <nav class="header__nav">
-                <ul class="header__menu">
-                  <li class="header__menu-item"><a>О нас</a></li>
-                  <li class="header__menu-item">
-                    <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
-                      <div class="header__menu-dropdown-open-button"></div>
-                      <li class="header__dropdown-item"><a>Покупка</a></li>
-                      <li class="header__dropdown-item"><a>Покупка</a></li>
-                      <li class="header__dropdown-item"><a>Покупка</a></li>
-                    </ul>
-                  </li>
-                  <li class="header__menu-item"><a>Вакансии</a></li>
-                  <li class="header__menu-item"><a>Новости</a></li>
-                  <li class="header__menu-item">
-                    <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
-                      <div class="header__menu-dropdown-open-button"></div>
-                      <li class="header__dropdown-item"><a>О воде</a></li>
-                      <li class="header__dropdown-item"><a>О солях</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <div class="header__buttons"><a class="log-in-button header__button">
-                  <button class="button button__transparent button__flat">Войти</button></a><a class="sign-up-button header__button">
-                  <button class="button button__long button__flat">Зарегистрироваться</button></a>
-              </div>
+    <div class="search-room">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo-burger fas fa-hamburger"></div>
+          <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
+          <div class="header__menu-wrapper">
+            <nav class="header__nav">
+              <ul class="header__menu">
+                <li class="header__menu-item"><a>О нас</a>
+                </li>
+                <li class="header__menu-item">
+                  <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
+                    <div class="header__menu-dropdown-open-button"></div>
+                    <li class="header__dropdown-item"><a>Покупка</a></li>
+                    <li class="header__dropdown-item"><a>Покупка</a></li>
+                    <li class="header__dropdown-item"><a>Покупка</a></li>
+                  </ul>
+                </li>
+                <li class="header__menu-item"><a>Вакансии</a>
+                </li>
+                <li class="header__menu-item"><a>Новости</a>
+                </li>
+                <li class="header__menu-item">
+                  <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
+                    <div class="header__menu-dropdown-open-button"></div>
+                    <li class="header__dropdown-item"><a>О воде</a></li>
+                    <li class="header__dropdown-item"><a>О солях</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__buttons"><a class="log-in-button">
+                <button class="button button_transparent button_flat">Войти
+                </button></a><a class="sign-up-button">
+                <button class="button button_long button_flat">Зарегистрироваться
+                </button></a>
             </div>
           </div>
-        </header>
-        <div class="side-menu js-side-menu">
-          <div class="side-menu__holder"></div>
-          <nav class="side-menu__nav">
-            <ul class="side-menu__menu">
-              <li class="side-menu__menu-item"><a>О нас</a></li>
-              <li class="side-menu__menu-item">
-                <ul class="side-menu__menu-dropdown js-side-menu__menu-dropdown">Услуги
-                  <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
-                  <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
-                  <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
-                </ul>
-              </li>
-              <li class="side-menu__menu-item"><a>Вакансии</a></li>
-              <li class="side-menu__menu-item"><a>Новости</a></li>
-              <li class="side-menu__menu-item">
-                <ul class="side-menu__menu-dropdown js-side-menu__menu-dropdown">Соглашение
-                  <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О воде</a></li>
-                  <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О солях</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <div class="side-menu__buttons"><a class="log-in-button header__button">
-              <button class="button button__transparent button__flat">Войти</button></a><a class="sign-up-button header__button">
-              <button class="button button__long button__flat">Зарегистрироваться</button></a>
-          </div>
         </div>
-        <main class="search-room__main">
-          <aside class="search-room__aside">
-            <ul class="search-room__list">
-              <li class="search-room__item search-room__item_small-margin" data-move="no">
-                <div class="search-room__dropdown-layout">
-                  <div class="date-dropdown">
-                    <div class="date-dropdown__input date-dropdown__input_long">
-                      <p class="date-dropdown__input-title">даты пребывания в отеле</p>
-                      <input class="text-field text-field_dropdown js-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
-                    </div>
+      </header>
+      <div class="side-menu js-side-menu">
+        <div class="side-menu__holder"></div>
+        <nav class="side-menu__nav">
+          <ul class="side-menu__menu">
+            <li class="side-menu__menu-item"><a>О нас</a>
+            </li>
+            <li class="side-menu__menu-item">
+              <ul class="side-menu__menu-dropdown js-side-menu__menu-dropdown">Услуги
+                <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
+                <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
+                <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
+              </ul>
+            </li>
+            <li class="side-menu__menu-item"><a>Вакансии</a>
+            </li>
+            <li class="side-menu__menu-item"><a>Новости</a>
+            </li>
+            <li class="side-menu__menu-item">
+              <ul class="side-menu__menu-dropdown js-side-menu__menu-dropdown">Соглашение
+                <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О воде</a></li>
+                <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О солях</a></li>
+              </ul>
+            </li>
+            <!--li.side-menu__menu-item-->
+            <!--    a О нас-->
+            <!--li.side-menu__menu-item-->
+            <!--    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Услуги-->
+            <!--        - const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];-->
+            <!--        each item in headerDropdownItems1-->
+            <!--            li.side-menu__dropdown-item.js-side-menu__dropdown-item-->
+            <!--                a= item-->
+            <!--li.side-menu__menu-item-->
+            <!--    a Вакансии-->
+            <!--li.side-menu__menu-item-->
+            <!--    a Новости-->
+            <!--li.side-menu__menu-item-->
+            <!--    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Соглашение-->
+            <!--        - const headerDropdownItems2 = ['О воде', 'О солях'];-->
+            <!--        each item in headerDropdownItems2-->
+            <!--            li.side-menu__dropdown-item.js-side-menu__dropdown-item-->
+            <!--                a= item-->
+          </ul>
+        </nav>
+        <div class="side-menu__buttons"><a class="log-in-button">
+            <button class="button button_transparent button_flat">Войти
+            </button></a><a class="sign-up-button">
+            <button class="button button_long button_flat">Зарегистрироваться
+            </button></a>
+        </div>
+      </div>
+      <main class="search-room__main">
+        <aside class="search-room__aside">
+          <ul class="search-room__list">
+            <li class="search-room__item search-room__item_small-margin" data-move="no">
+              <div class="search-room__dropdown-layout">
+                <div class="date-dropdown">
+                  <div class="date-dropdown__input date-dropdown__input_long">
+                    <p class="date-dropdown__input-title">даты пребывания в отеле</p>
+                    <input class="text-field text-field_dropdown js-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                   </div>
                 </div>
-              </li>
-              <li class="search-room__item" data-move="no">
-                <div class="search-room__dropdown-layout">
-                  <p>Гости</p>
-                  <div class="dropdown js-dropdown dropdown-default" id="search-room__dropdown">
-                    <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-                      <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
-                    </div>
-                    <ul class="dropdown__list js-dropdown__list">
-                      <li class="dropdown__item">
-                        <p class="dropdown__item-text js-dropdown__item-text" data-index="0">взрослые</p>
-                        <div class="dropdown__item-container">
-                          <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
-                          <div class="dropdown__item-count js-dropdown__item-count" data-index="0">0</div>
-                          <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="0"></div>
-                        </div>
-                      </li>
-                      <li class="dropdown__item">
-                        <p class="dropdown__item-text js-dropdown__item-text" data-index="1">дети</p>
-                        <div class="dropdown__item-container">
-                          <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
-                          <div class="dropdown__item-count js-dropdown__item-count" data-index="1">0</div>
-                          <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="1"></div>
-                        </div>
-                      </li>
-                      <li class="dropdown__item">
-                        <p class="dropdown__item-text js-dropdown__item-text" data-index="2">младенцы</p>
-                        <div class="dropdown__item-container">
-                          <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
-                          <div class="dropdown__item-count js-dropdown__item-count" data-index="2">0</div>
-                          <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="2"></div>
-                        </div>
-                      </li>
-                      <li class="dropdown__item-interactive">
-                        <p class="dropdown__interactive-word js-clear">очистить</p>
-                        <p class="dropdown__interactive-word js-confirm">применить</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="search-room__item" data-move="no">
-                <div class="search-room__slider-layout">диапазон цены</div>
-                <div class="range-slider">
-                  <div class="range-slider__count js-search-room-slider__count"></div>
-                  <input class="range-slider__slider js-search-room-slider__slider" type="text" value=""/>
-                </div><span class="search-room__item-extra-text">Стоимость за сутки пребывания в номере</span>
-              </li>
-              <li class="search-room__item">
-                <div class="search-room__layout">правила дома
-                  <ul class="checkbox-buttons">
-                    <li class="checkbox-buttons__item">
-                      <label>
-                        <input class="checkbox-buttons__check" type="checkbox"/>
-                        <p class="checkbox-buttons__item-text">Можно курить</p>
-                      </label>
-                    </li>
-                    <li class="checkbox-buttons__item">
-                      <label>
-                        <input class="checkbox-buttons__check" type="checkbox"/>
-                        <p class="checkbox-buttons__item-text">Можно с питомцами</p>
-                      </label>
-                    </li>
-                    <li class="checkbox-buttons__item">
-                      <label>
-                        <input class="checkbox-buttons__check" type="checkbox"/>
-                        <p class="checkbox-buttons__item-text">Можно пригласить гостей (до 10 человек)</p>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="search-room__item search-room__item_small-margin">
-                <div class="search-room__layout">доступность</div>
-                <div class="rich-checkbox-buttons">
-                  <ul class="rich-checkbox-buttons__list">
-                    <li class="rich-checkbox-buttons__item">
-                      <label>
-                        <input class="rich-checkbox-buttons__check" type="checkbox"/>
-                        <p class="rich-checkbox-buttons__item-text">Широкий коридор</p>
-                      </label>
-                      <p class="rich-checkbox-buttons__description">Ширина коридоров в номере не менее 91 см.</p>
-                    </li>
-                    <li class="rich-checkbox-buttons__item">
-                      <label>
-                        <input class="rich-checkbox-buttons__check" type="checkbox"/>
-                        <p class="rich-checkbox-buttons__item-text">Помощник для инвалидов</p>
-                      </label>
-                      <p class="rich-checkbox-buttons__description">На 1 этаже вас встретит специалист и проводит до номера.</p>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="search-room__item">
-                <div class="search-room__dropdown-layout">удобства номера</div>
-                <div class="dropdown js-dropdown dropdown-rooms" id="search-room__dropdown">
+              </div>
+            </li>
+            <li class="search-room__item" data-move="no">
+              <div class="search-room__dropdown-layout">
+                <p>Гости</p>
+                <div class="dropdown js-dropdown dropdown-default" id="search-room__dropdown">
                   <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-                    <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
+                    <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
                   </div>
                   <ul class="dropdown__list js-dropdown__list">
                     <li class="dropdown__item">
-                      <p class="dropdown__item-text js-dropdown__item-text" data-index="0">спальни</p>
+                      <p class="dropdown__item-text js-dropdown__item-text" data-index="0">взрослые</p>
                       <div class="dropdown__item-container">
                         <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
                         <div class="dropdown__item-count js-dropdown__item-count" data-index="0">0</div>
@@ -195,7 +131,7 @@
                       </div>
                     </li>
                     <li class="dropdown__item">
-                      <p class="dropdown__item-text js-dropdown__item-text" data-index="1">кровати</p>
+                      <p class="dropdown__item-text js-dropdown__item-text" data-index="1">дети</p>
                       <div class="dropdown__item-container">
                         <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
                         <div class="dropdown__item-count js-dropdown__item-count" data-index="1">0</div>
@@ -203,496 +139,586 @@
                       </div>
                     </li>
                     <li class="dropdown__item">
-                      <p class="dropdown__item-text js-dropdown__item-text" data-index="2">ванные комнаты</p>
+                      <p class="dropdown__item-text js-dropdown__item-text" data-index="2">младенцы</p>
                       <div class="dropdown__item-container">
                         <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
                         <div class="dropdown__item-count js-dropdown__item-count" data-index="2">0</div>
                         <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="2"></div>
                       </div>
                     </li>
+                    <li class="dropdown__item-interactive">
+                      <p class="dropdown__interactive-word js-clear">очистить</p>
+                      <p class="dropdown__interactive-word js-confirm">применить</p>
+                    </li>
                   </ul>
                 </div>
-              </li>
-              <li class="search-room__item">
-                <div class="search-room__layout">
-                  <div class="expandable-checkbox"><span class="expandable-checkbox__text">Дополнительные удобства</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
-                    <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
-                      <ul class="checkbox-buttons">
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Завтрак</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Письменный стол</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Стул для кормления</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Кроватка</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Телевизор</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Шампунь</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Телевизор</p>
-                          </label>
-                        </li>
-                        <li class="checkbox-buttons__item">
-                          <label>
-                            <input class="checkbox-buttons__check" type="checkbox"/>
-                            <p class="checkbox-buttons__item-text">Шампунь</p>
-                          </label>
-                        </li>
-                      </ul>
+              </div>
+            </li>
+            <li class="search-room__item" data-move="no">
+              <div class="search-room__slider-layout">диапазон цены</div>
+              <div class="range-slider">
+                <div class="range-slider__count js-range-slider__count"></div>
+                <input class="range-slider__slider js-range-slider__slider" type="text" value=""/>
+              </div><span class="search-room__item-extra-text">Стоимость за сутки пребывания в номере</span>
+            </li>
+            <li class="search-room__item">
+              <div class="search-room__layout">правила дома
+                <ul class="checkbox-buttons">
+                  <li class="checkbox-buttons__item">
+                    <label>
+                      <input class="checkbox-buttons__check" type="checkbox"/>
+                      <p class="checkbox-buttons__item-text">Можно курить</p>
+                    </label>
+                  </li>
+                  <li class="checkbox-buttons__item">
+                    <label>
+                      <input class="checkbox-buttons__check" type="checkbox"/>
+                      <p class="checkbox-buttons__item-text">Можно с питомцами</p>
+                    </label>
+                  </li>
+                  <li class="checkbox-buttons__item">
+                    <label>
+                      <input class="checkbox-buttons__check" type="checkbox"/>
+                      <p class="checkbox-buttons__item-text">Можно пригласить гостей (до 10 человек)</p>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-room__item search-room__item_small-margin">
+              <div class="search-room__layout">доступность</div>
+              <div class="rich-checkbox-buttons">
+                <ul class="rich-checkbox-buttons__list">
+                  <li class="rich-checkbox-buttons__item">
+                    <label>
+                      <input class="rich-checkbox-buttons__check" type="checkbox"/>
+                      <p class="rich-checkbox-buttons__item-text">Широкий коридор</p>
+                    </label>
+                    <p class="rich-checkbox-buttons__description">Ширина коридоров в номере не менее 91 см.</p>
+                  </li>
+                  <li class="rich-checkbox-buttons__item">
+                    <label>
+                      <input class="rich-checkbox-buttons__check" type="checkbox"/>
+                      <p class="rich-checkbox-buttons__item-text">Помощник для инвалидов</p>
+                    </label>
+                    <p class="rich-checkbox-buttons__description">На 1 этаже вас встретит специалист и проводит до номера.</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-room__item">
+              <div class="search-room__dropdown-layout">удобства номера</div>
+              <div class="dropdown js-dropdown dropdown-rooms" id="search-room__dropdown">
+                <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
+                  <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
+                </div>
+                <ul class="dropdown__list js-dropdown__list">
+                  <li class="dropdown__item">
+                    <p class="dropdown__item-text js-dropdown__item-text" data-index="0">спальни</p>
+                    <div class="dropdown__item-container">
+                      <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
+                      <div class="dropdown__item-count js-dropdown__item-count" data-index="0">0</div>
+                      <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="0"></div>
                     </div>
+                  </li>
+                  <li class="dropdown__item">
+                    <p class="dropdown__item-text js-dropdown__item-text" data-index="1">кровати</p>
+                    <div class="dropdown__item-container">
+                      <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
+                      <div class="dropdown__item-count js-dropdown__item-count" data-index="1">0</div>
+                      <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="1"></div>
+                    </div>
+                  </li>
+                  <li class="dropdown__item">
+                    <p class="dropdown__item-text js-dropdown__item-text" data-index="2">ванные комнаты</p>
+                    <div class="dropdown__item-container">
+                      <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
+                      <div class="dropdown__item-count js-dropdown__item-count" data-index="2">0</div>
+                      <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="2"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-room__item">
+              <div class="search-room__layout">
+                <div class="expandable-checkbox"><span class="expandable-checkbox__text">Дополнительные удобства</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
+                  <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
+                    <ul class="checkbox-buttons">
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Завтрак</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Письменный стол</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Стул для кормления</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Кроватка</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Телевизор</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Шампунь</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Телевизор</p>
+                        </label>
+                      </li>
+                      <li class="checkbox-buttons__item">
+                        <label>
+                          <input class="checkbox-buttons__check" type="checkbox"/>
+                          <p class="checkbox-buttons__item-text">Шампунь</p>
+                        </label>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </li>
-              <ul class="search-room__small-menu">
-                <p class="search-room__layout js-small-menu-title" data-attr="small-menu-title">фильтр</p>
-                <div class="small-menu__content"></div>
-              </ul>
+              </div>
+            </li>
+            <ul class="search-room__small-menu">
+              <p class="search-room__layout js-small-menu-title" data-attr="small-menu-title">фильтр</p>
+              <div class="small-menu__content"></div>
             </ul>
-          </aside>
-          <div class="search-room__content">
-            <p class="search-room__content-title">Номера, которые мы для вас подобрали</p>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5qwe" value="5" type="radio" name="ratingqwe"/>
-                        <label class="rate-button__star" for="rate-button__item5qwe"></label>
-                        <input class="rate-button__item" id="rate-button__item4qwe" value="4" type="radio" name="ratingqwe"/>
-                        <label class="rate-button__star" for="rate-button__item4qwe"></label>
-                        <input class="rate-button__item" id="rate-button__item3qwe" value="3" type="radio" name="ratingqwe"/>
-                        <label class="rate-button__star" for="rate-button__item3qwe"></label>
-                        <input class="rate-button__item" id="rate-button__item2qwe" value="2" type="radio" name="ratingqwe"/>
-                        <label class="rate-button__star" for="rate-button__item2qwe"></label>
-                        <input class="rate-button__item" id="rate-button__item1qwe" value="1" type="radio" name="ratingqwe"/>
-                        <label class="rate-button__star" for="rate-button__item1qwe"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
+          </ul>
+        </aside>
+        <div class="search-room__content">
+          <p class="search-room__content-title">Номера, которые мы для вас подобрали</p>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
             </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>111</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 456₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5qw" value="5" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item5qw"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item4qw" value="4" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item4qw"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item3qw" value="3" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item3qw"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item2qw" value="2" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item2qw"></label>
-                        <input class="rate-button__item" id="rate-button__item1qw" value="1" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item1qw"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">15</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>111</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 456₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5qw" value="5" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item5qw"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item4qw" value="4" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item4qw"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item3qw" value="3" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item3qw"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item2qw" value="2" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item2qw"></label>
-                        <input class="rate-button__item" id="rate-button__item1qw" value="1" type="radio" name="ratingqw"/>
-                        <label class="rate-button__star" for="rate-button__item1qw"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">15</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>88</strong>
-                    </div>
-                    <div class="room-card__price"><strong>990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5wer" value="5" type="radio" name="ratingwer"/>
-                        <label class="rate-button__star" for="rate-button__item5wer"></label>
-                        <input class="rate-button__item" id="rate-button__item4wer" value="4" type="radio" name="ratingwer"/>
-                        <label class="rate-button__star" for="rate-button__item4wer"></label>
-                        <input class="rate-button__item" id="rate-button__item3wer" value="3" type="radio" name="ratingwer"/>
-                        <label class="rate-button__star" for="rate-button__item3wer"></label>
-                        <input class="rate-button__item" id="rate-button__item2wer" value="2" type="radio" name="ratingwer"/>
-                        <label class="rate-button__star" for="rate-button__item2wer"></label>
-                        <input class="rate-button__item" id="rate-button__item1wer" value="1" type="radio" name="ratingwer"/>
-                        <label class="rate-button__star" for="rate-button__item1wer"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">14</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>18</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5ert" value="5" type="radio" name="ratingert"/>
-                        <label class="rate-button__star" for="rate-button__item5ert"></label>
-                        <input class="rate-button__item" id="rate-button__item4ert" value="4" type="radio" name="ratingert"/>
-                        <label class="rate-button__star" for="rate-button__item4ert"></label>
-                        <input class="rate-button__item" id="rate-button__item3ert" value="3" type="radio" name="ratingert"/>
-                        <label class="rate-button__star" for="rate-button__item3ert"></label>
-                        <input class="rate-button__item" id="rate-button__item2ert" value="2" type="radio" name="ratingert"/>
-                        <label class="rate-button__star" for="rate-button__item2ert"></label>
-                        <input class="rate-button__item" id="rate-button__item1ert" value="1" type="radio" name="ratingert"/>
-                        <label class="rate-button__star" for="rate-button__item1ert"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>234</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 8990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5rty" value="5" type="radio" name="ratingrty"/>
-                        <label class="rate-button__star" for="rate-button__item5rty"></label>
-                        <input class="rate-button__item" id="rate-button__item4rty" value="4" type="radio" name="ratingrty"/>
-                        <label class="rate-button__star" for="rate-button__item4rty"></label>
-                        <input class="rate-button__item" id="rate-button__item3rty" value="3" type="radio" name="ratingrty"/>
-                        <label class="rate-button__star" for="rate-button__item3rty"></label>
-                        <input class="rate-button__item" id="rate-button__item2rty" value="2" type="radio" name="ratingrty"/>
-                        <label class="rate-button__star" for="rate-button__item2rty"></label>
-                        <input class="rate-button__item" id="rate-button__item1rty" value="1" type="radio" name="ratingrty"/>
-                        <label class="rate-button__star" for="rate-button__item1rty"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">95</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>668</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5tyu" value="5" type="radio" name="ratingtyu"/>
-                        <label class="rate-button__star" for="rate-button__item5tyu"></label>
-                        <input class="rate-button__item" id="rate-button__item4tyu" value="4" type="radio" name="ratingtyu"/>
-                        <label class="rate-button__star" for="rate-button__item4tyu"></label>
-                        <input class="rate-button__item" id="rate-button__item3tyu" value="3" type="radio" name="ratingtyu"/>
-                        <label class="rate-button__star" for="rate-button__item3tyu"></label>
-                        <input class="rate-button__item" id="rate-button__item2tyu" value="2" type="radio" name="ratingtyu"/>
-                        <label class="rate-button__star" for="rate-button__item2tyu"></label>
-                        <input class="rate-button__item" id="rate-button__item1tyu" value="1" type="radio" name="ratingtyu"/>
-                        <label class="rate-button__star" for="rate-button__item1tyu"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5iop" value="5" type="radio" name="ratingiop"/>
-                        <label class="rate-button__star" for="rate-button__item5iop"></label>
-                        <input class="rate-button__item" id="rate-button__item4iop" value="4" type="radio" name="ratingiop"/>
-                        <label class="rate-button__star" for="rate-button__item4iop"></label>
-                        <input class="rate-button__item" id="rate-button__item3iop" value="3" type="radio" name="ratingiop"/>
-                        <label class="rate-button__star" for="rate-button__item3iop"></label>
-                        <input class="rate-button__item" id="rate-button__item2iop" value="2" type="radio" name="ratingiop"/>
-                        <label class="rate-button__star" for="rate-button__item2iop"></label>
-                        <input class="rate-button__item" id="rate-button__item1iop" value="1" type="radio" name="ratingiop"/>
-                        <label class="rate-button__star" for="rate-button__item1iop"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5asd" value="5" type="radio" name="ratingasd"/>
-                        <label class="rate-button__star" for="rate-button__item5asd"></label>
-                        <input class="rate-button__item" id="rate-button__item4asd" value="4" type="radio" name="ratingasd"/>
-                        <label class="rate-button__star" for="rate-button__item4asd"></label>
-                        <input class="rate-button__item" id="rate-button__item3asd" value="3" type="radio" name="ratingasd"/>
-                        <label class="rate-button__star" for="rate-button__item3asd"></label>
-                        <input class="rate-button__item" id="rate-button__item2asd" value="2" type="radio" name="ratingasd"/>
-                        <label class="rate-button__star" for="rate-button__item2asd"></label>
-                        <input class="rate-button__item" id="rate-button__item1asd" value="1" type="radio" name="ratingasd"/>
-                        <label class="rate-button__star" for="rate-button__item1asd"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>888</strong>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5sdf" value="5" type="radio" name="ratingsdf"/>
-                        <label class="rate-button__star" for="rate-button__item5sdf"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item4sdf" value="4" type="radio" name="ratingsdf"/>
-                        <label class="rate-button__star" for="rate-button__item4sdf"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item3sdf" value="3" type="radio" name="ratingsdf"/>
-                        <label class="rate-button__star" for="rate-button__item3sdf"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item2sdf" value="2" type="radio" name="ratingsdf"/>
-                        <label class="rate-button__star" for="rate-button__item2sdf"></label>
-                        <input class="rate-button__item" checked="checked" id="rate-button__item1sdf" value="1" type="radio" name="ratingsdf"/>
-                        <label class="rate-button__star" for="rate-button__item1sdf"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">5</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5zxc" value="5" type="radio" name="ratingzxc"/>
-                        <label class="rate-button__star" for="rate-button__item5zxc"></label>
-                        <input class="rate-button__item" id="rate-button__item4zxc" value="4" type="radio" name="ratingzxc"/>
-                        <label class="rate-button__star" for="rate-button__item4zxc"></label>
-                        <input class="rate-button__item" id="rate-button__item3zxc" value="3" type="radio" name="ratingzxc"/>
-                        <label class="rate-button__star" for="rate-button__item3zxc"></label>
-                        <input class="rate-button__item" id="rate-button__item2zxc" value="2" type="radio" name="ratingzxc"/>
-                        <label class="rate-button__star" for="rate-button__item2zxc"></label>
-                        <input class="rate-button__item" id="rate-button__item1zxc" value="1" type="radio" name="ratingzxc"/>
-                        <label class="rate-button__star" for="rate-button__item1zxc"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="room-card">
-              <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
-              </div>
-              <div class="room-card__content">
-                <ul class="room-card__list">
-                  <li class="room-card__item">
-                    <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
-                    </div>
-                    <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
-                  </li>
-                  <li class="room-card__item">
-                    <div class="rate-button">
-                      <div class="rate-button__inner">
-                        <input class="rate-button__item" checked="checked" id="rate-button__item5xcv" value="5" type="radio" name="ratingxcv"/>
-                        <label class="rate-button__star" for="rate-button__item5xcv"></label>
-                        <input class="rate-button__item" id="rate-button__item4xcv" value="4" type="radio" name="ratingxcv"/>
-                        <label class="rate-button__star" for="rate-button__item4xcv"></label>
-                        <input class="rate-button__item" id="rate-button__item3xcv" value="3" type="radio" name="ratingxcv"/>
-                        <label class="rate-button__star" for="rate-button__item3xcv"></label>
-                        <input class="rate-button__item" id="rate-button__item2xcv" value="2" type="radio" name="ratingxcv"/>
-                        <label class="rate-button__star" for="rate-button__item2xcv"></label>
-                        <input class="rate-button__item" id="rate-button__item1xcv" value="1" type="radio" name="ratingxcv"/>
-                        <label class="rate-button__star" for="rate-button__item1xcv"></label>
-                      </div>
-                    </div>
-                    <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="search-room__pagination-wrapper">
-              <div class="pagination js-pagination"></div>
-              <div class="pagination__info"><span class='pagination__info1 js-pagination__info1'></span> – <span class='pagination__info2 js-pagination__info2'></span> из <span class='pagination__info3 js-pagination__info3'></span> вариантов аренды</div>
-            </div>
-          </div>
-        </main>
-        <footer class="footer">
-          <div class="footer__container">
-            <div class="footer__top">
-              <div class="footer__top-description"><a class="footer__logo"><img src="assets/fonts/logo.svg"/></a>
-                <p class="footer__description-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
-              </div>
-              <div class="footer__column-list-wrapper">
-                <ul class="column-list">Навигация
-                  <li><a class="column-list__item">О нас</a></li>
-                  <li><a class="column-list__item">Новости</a></li>
-                  <li><a class="column-list__item">Служба поддержки</a></li>
-                  <li><a class="column-list__item">Услуги</a></li>
-                </ul>
-              </div>
-              <div class="footer__column-list-wrapper">
-                <ul class="column-list">О нас
-                  <li><a class="column-list__item">О сервисе</a></li>
-                  <li><a class="column-list__item">Наша команда</a></li>
-                  <li><a class="column-list__item">Вакансии</a></li>
-                  <li><a class="column-list__item">Инвесторы</a></li>
-                </ul>
-              </div>
-              <div class="footer__column-list-wrapper">
-                <ul class="column-list">Служба поддержки
-                  <li><a class="column-list__item">Соглашения</a></li>
-                  <li><a class="column-list__item">Сообщества</a></li>
-                  <li><a class="column-list__item">Связь с нами</a></li>
-                </ul>
-              </div>
-              <div class="footer__subscribe">
-                <p class="footer__subscribe-title">Подписка</p>
-                <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
-                <form action="#">
-                  <div class="subscription-text-field">
-                    <button class="subscription-text-field__button"><span></span></button>
-                    <input class="text-field text-field_right" placeholder="Email" type="email"/>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
                   </div>
-                </form>
-              </div>
-            </div>
-            <div class="footer__down">
-              <p class="footer__down-copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
-              <div class="footer__social-media"><a class="footer__social-media-link twitter"><i class="fab fa-twitter"></i></a><a class="footer__social-media-link facebook"><i class="fab fa-facebook-square"></i></a><a class="footer__social-media-link instagram"><i class="fab fa-instagram"></i></a></div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5qwe" value="5" type="radio" name="ratingqwe"/>
+                      <label class="rate-button__star" for="rate-button__item5qwe"></label>
+                      <input class="rate-button__item" id="rate-button__item4qwe" value="4" type="radio" name="ratingqwe"/>
+                      <label class="rate-button__star" for="rate-button__item4qwe"></label>
+                      <input class="rate-button__item" id="rate-button__item3qwe" value="3" type="radio" name="ratingqwe"/>
+                      <label class="rate-button__star" for="rate-button__item3qwe"></label>
+                      <input class="rate-button__item" id="rate-button__item2qwe" value="2" type="radio" name="ratingqwe"/>
+                      <label class="rate-button__star" for="rate-button__item2qwe"></label>
+                      <input class="rate-button__item" id="rate-button__item1qwe" value="1" type="radio" name="ratingqwe"/>
+                      <label class="rate-button__star" for="rate-button__item1qwe"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="footer-line"></div>
-        </footer>
-      </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>111</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 456₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5qw" value="5" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item5qw"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item4qw" value="4" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item4qw"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item3qw" value="3" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item3qw"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item2qw" value="2" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item2qw"></label>
+                      <input class="rate-button__item" id="rate-button__item1qw" value="1" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item1qw"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">15</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>111</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 456₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5qw" value="5" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item5qw"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item4qw" value="4" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item4qw"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item3qw" value="3" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item3qw"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item2qw" value="2" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item2qw"></label>
+                      <input class="rate-button__item" id="rate-button__item1qw" value="1" type="radio" name="ratingqw"/>
+                      <label class="rate-button__star" for="rate-button__item1qw"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">15</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>88</strong>
+                  </div>
+                  <div class="room-card__price"><strong>990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5wer" value="5" type="radio" name="ratingwer"/>
+                      <label class="rate-button__star" for="rate-button__item5wer"></label>
+                      <input class="rate-button__item" id="rate-button__item4wer" value="4" type="radio" name="ratingwer"/>
+                      <label class="rate-button__star" for="rate-button__item4wer"></label>
+                      <input class="rate-button__item" id="rate-button__item3wer" value="3" type="radio" name="ratingwer"/>
+                      <label class="rate-button__star" for="rate-button__item3wer"></label>
+                      <input class="rate-button__item" id="rate-button__item2wer" value="2" type="radio" name="ratingwer"/>
+                      <label class="rate-button__star" for="rate-button__item2wer"></label>
+                      <input class="rate-button__item" id="rate-button__item1wer" value="1" type="radio" name="ratingwer"/>
+                      <label class="rate-button__star" for="rate-button__item1wer"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">14</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>18</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5ert" value="5" type="radio" name="ratingert"/>
+                      <label class="rate-button__star" for="rate-button__item5ert"></label>
+                      <input class="rate-button__item" id="rate-button__item4ert" value="4" type="radio" name="ratingert"/>
+                      <label class="rate-button__star" for="rate-button__item4ert"></label>
+                      <input class="rate-button__item" id="rate-button__item3ert" value="3" type="radio" name="ratingert"/>
+                      <label class="rate-button__star" for="rate-button__item3ert"></label>
+                      <input class="rate-button__item" id="rate-button__item2ert" value="2" type="radio" name="ratingert"/>
+                      <label class="rate-button__star" for="rate-button__item2ert"></label>
+                      <input class="rate-button__item" id="rate-button__item1ert" value="1" type="radio" name="ratingert"/>
+                      <label class="rate-button__star" for="rate-button__item1ert"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>234</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 8990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5rty" value="5" type="radio" name="ratingrty"/>
+                      <label class="rate-button__star" for="rate-button__item5rty"></label>
+                      <input class="rate-button__item" id="rate-button__item4rty" value="4" type="radio" name="ratingrty"/>
+                      <label class="rate-button__star" for="rate-button__item4rty"></label>
+                      <input class="rate-button__item" id="rate-button__item3rty" value="3" type="radio" name="ratingrty"/>
+                      <label class="rate-button__star" for="rate-button__item3rty"></label>
+                      <input class="rate-button__item" id="rate-button__item2rty" value="2" type="radio" name="ratingrty"/>
+                      <label class="rate-button__star" for="rate-button__item2rty"></label>
+                      <input class="rate-button__item" id="rate-button__item1rty" value="1" type="radio" name="ratingrty"/>
+                      <label class="rate-button__star" for="rate-button__item1rty"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">95</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>668</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5tyu" value="5" type="radio" name="ratingtyu"/>
+                      <label class="rate-button__star" for="rate-button__item5tyu"></label>
+                      <input class="rate-button__item" id="rate-button__item4tyu" value="4" type="radio" name="ratingtyu"/>
+                      <label class="rate-button__star" for="rate-button__item4tyu"></label>
+                      <input class="rate-button__item" id="rate-button__item3tyu" value="3" type="radio" name="ratingtyu"/>
+                      <label class="rate-button__star" for="rate-button__item3tyu"></label>
+                      <input class="rate-button__item" id="rate-button__item2tyu" value="2" type="radio" name="ratingtyu"/>
+                      <label class="rate-button__star" for="rate-button__item2tyu"></label>
+                      <input class="rate-button__item" id="rate-button__item1tyu" value="1" type="radio" name="ratingtyu"/>
+                      <label class="rate-button__star" for="rate-button__item1tyu"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5iop" value="5" type="radio" name="ratingiop"/>
+                      <label class="rate-button__star" for="rate-button__item5iop"></label>
+                      <input class="rate-button__item" id="rate-button__item4iop" value="4" type="radio" name="ratingiop"/>
+                      <label class="rate-button__star" for="rate-button__item4iop"></label>
+                      <input class="rate-button__item" id="rate-button__item3iop" value="3" type="radio" name="ratingiop"/>
+                      <label class="rate-button__star" for="rate-button__item3iop"></label>
+                      <input class="rate-button__item" id="rate-button__item2iop" value="2" type="radio" name="ratingiop"/>
+                      <label class="rate-button__star" for="rate-button__item2iop"></label>
+                      <input class="rate-button__item" id="rate-button__item1iop" value="1" type="radio" name="ratingiop"/>
+                      <label class="rate-button__star" for="rate-button__item1iop"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5asd" value="5" type="radio" name="ratingasd"/>
+                      <label class="rate-button__star" for="rate-button__item5asd"></label>
+                      <input class="rate-button__item" id="rate-button__item4asd" value="4" type="radio" name="ratingasd"/>
+                      <label class="rate-button__star" for="rate-button__item4asd"></label>
+                      <input class="rate-button__item" id="rate-button__item3asd" value="3" type="radio" name="ratingasd"/>
+                      <label class="rate-button__star" for="rate-button__item3asd"></label>
+                      <input class="rate-button__item" id="rate-button__item2asd" value="2" type="radio" name="ratingasd"/>
+                      <label class="rate-button__star" for="rate-button__item2asd"></label>
+                      <input class="rate-button__item" id="rate-button__item1asd" value="1" type="radio" name="ratingasd"/>
+                      <label class="rate-button__star" for="rate-button__item1asd"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>888</strong>
+                  </div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5sdf" value="5" type="radio" name="ratingsdf"/>
+                      <label class="rate-button__star" for="rate-button__item5sdf"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item4sdf" value="4" type="radio" name="ratingsdf"/>
+                      <label class="rate-button__star" for="rate-button__item4sdf"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item3sdf" value="3" type="radio" name="ratingsdf"/>
+                      <label class="rate-button__star" for="rate-button__item3sdf"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item2sdf" value="2" type="radio" name="ratingsdf"/>
+                      <label class="rate-button__star" for="rate-button__item2sdf"></label>
+                      <input class="rate-button__item" checked="checked" id="rate-button__item1sdf" value="1" type="radio" name="ratingsdf"/>
+                      <label class="rate-button__star" for="rate-button__item1sdf"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">5</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5zxc" value="5" type="radio" name="ratingzxc"/>
+                      <label class="rate-button__star" for="rate-button__item5zxc"></label>
+                      <input class="rate-button__item" id="rate-button__item4zxc" value="4" type="radio" name="ratingzxc"/>
+                      <label class="rate-button__star" for="rate-button__item4zxc"></label>
+                      <input class="rate-button__item" id="rate-button__item3zxc" value="3" type="radio" name="ratingzxc"/>
+                      <label class="rate-button__star" for="rate-button__item3zxc"></label>
+                      <input class="rate-button__item" id="rate-button__item2zxc" value="2" type="radio" name="ratingzxc"/>
+                      <label class="rate-button__star" for="rate-button__item2zxc"></label>
+                      <input class="rate-button__item" id="rate-button__item1zxc" value="1" type="radio" name="ratingzxc"/>
+                      <label class="rate-button__star" for="rate-button__item1zxc"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card__top js-room-card__top"><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/><img class="room-card__top-img" src="assets/images/room.png"/>
+            </div>
+            <div class="room-card__content">
+              <ul class="room-card__list">
+                <li class="room-card__item">
+                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  </div>
+                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                </li>
+                <li class="room-card__item">
+                  <div class="rate-button">
+                    <div class="rate-button__inner">
+                      <input class="rate-button__item" checked="checked" id="rate-button__item5xcv" value="5" type="radio" name="ratingxcv"/>
+                      <label class="rate-button__star" for="rate-button__item5xcv"></label>
+                      <input class="rate-button__item" id="rate-button__item4xcv" value="4" type="radio" name="ratingxcv"/>
+                      <label class="rate-button__star" for="rate-button__item4xcv"></label>
+                      <input class="rate-button__item" id="rate-button__item3xcv" value="3" type="radio" name="ratingxcv"/>
+                      <label class="rate-button__star" for="rate-button__item3xcv"></label>
+                      <input class="rate-button__item" id="rate-button__item2xcv" value="2" type="radio" name="ratingxcv"/>
+                      <label class="rate-button__star" for="rate-button__item2xcv"></label>
+                      <input class="rate-button__item" id="rate-button__item1xcv" value="1" type="radio" name="ratingxcv"/>
+                      <label class="rate-button__star" for="rate-button__item1xcv"></label>
+                    </div>
+                  </div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="search-room__pagination-wrapper">
+            <div class="pagination js-pagination"></div>
+            <div class="pagination__info"><span class='pagination__info1 js-pagination__info1'></span> – <span class='pagination__info2 js-pagination__info2'></span> из <span class='pagination__info3 js-pagination__info3'></span> вариантов аренды</div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="footer__top-description"><a class="footer__logo"><img src="assets/fonts/logo.svg"/></a>
+              <p class="footer__description-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+            </div>
+            <div class="footer__column-list-wrapper">
+              <ul class="column-list">Навигация
+                <li><a class="column-list__item">О нас</a></li>
+                <li><a class="column-list__item">Новости</a></li>
+                <li><a class="column-list__item">Служба поддержки</a></li>
+                <li><a class="column-list__item">Услуги</a></li>
+              </ul>
+            </div>
+            <div class="footer__column-list-wrapper">
+              <ul class="column-list">О нас
+                <li><a class="column-list__item">О сервисе</a></li>
+                <li><a class="column-list__item">Наша команда</a></li>
+                <li><a class="column-list__item">Вакансии</a></li>
+                <li><a class="column-list__item">Инвесторы</a></li>
+              </ul>
+            </div>
+            <div class="footer__column-list-wrapper">
+              <ul class="column-list">Служба поддержки
+                <li><a class="column-list__item">Соглашения</a></li>
+                <li><a class="column-list__item">Сообщества</a></li>
+                <li><a class="column-list__item">Связь с нами</a></li>
+              </ul>
+            </div>
+            <div class="footer__subscribe">
+              <p class="footer__subscribe-title">Подписка</p>
+              <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
+              <form action="#">
+                <div class="subscription-text-field">
+                  <button class="subscription-text-field__button"><span></span></button>
+                  <input class="text-field text-field_right" placeholder="Email" type="email"/>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer__down">
+            <p class="footer__down-copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
+            <div class="footer__social-media"><a class="footer__social-media-link"><i class="fab fa-twitter"></i></a><a class="footer__social-media-link"><i class="fab fa-facebook-square"></i></a><a class="footer__social-media-link"><i class="fab fa-instagram"></i></a></div>
+          </div>
+        </div>
+        <div class="footer-line"></div>
+      </footer>
     </div>
   </body>
 </html>

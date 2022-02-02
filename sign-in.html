@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
-    <div class="wrapper sign-in">
+    <div class="sign-in">
       <header class="header">
         <div class="header__container">
           <div class="header__logo-burger fas fa-hamburger"></div>
@@ -19,7 +19,8 @@
           <div class="header__menu-wrapper">
             <nav class="header__nav">
               <ul class="header__menu">
-                <li class="header__menu-item"><a>О нас</a></li>
+                <li class="header__menu-item"><a>О нас</a>
+                </li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
                     <div class="header__menu-dropdown-open-button"></div>
@@ -28,8 +29,10 @@
                     <li class="header__dropdown-item"><a>Покупка</a></li>
                   </ul>
                 </li>
-                <li class="header__menu-item"><a>Вакансии</a></li>
-                <li class="header__menu-item"><a>Новости</a></li>
+                <li class="header__menu-item"><a>Вакансии</a>
+                </li>
+                <li class="header__menu-item"><a>Новости</a>
+                </li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
                     <div class="header__menu-dropdown-open-button"></div>
@@ -39,9 +42,11 @@
                 </li>
               </ul>
             </nav>
-            <div class="header__buttons"><a class="log-in-button header__button">
-                <button class="button button__transparent button__flat">Войти</button></a><a class="sign-up-button header__button">
-                <button class="button button__long button__flat">Зарегистрироваться</button></a>
+            <div class="header__buttons"><a class="log-in-button">
+                <button class="button button_transparent button_flat">Войти
+                </button></a><a class="sign-up-button">
+                <button class="button button_long button_flat">Зарегистрироваться
+                </button></a>
             </div>
           </div>
         </div>
@@ -50,7 +55,8 @@
         <div class="side-menu__holder"></div>
         <nav class="side-menu__nav">
           <ul class="side-menu__menu">
-            <li class="side-menu__menu-item"><a>О нас</a></li>
+            <li class="side-menu__menu-item"><a>О нас</a>
+            </li>
             <li class="side-menu__menu-item">
               <ul class="side-menu__menu-dropdown js-side-menu__menu-dropdown">Услуги
                 <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
@@ -58,19 +64,41 @@
                 <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>Покупка</a></li>
               </ul>
             </li>
-            <li class="side-menu__menu-item"><a>Вакансии</a></li>
-            <li class="side-menu__menu-item"><a>Новости</a></li>
+            <li class="side-menu__menu-item"><a>Вакансии</a>
+            </li>
+            <li class="side-menu__menu-item"><a>Новости</a>
+            </li>
             <li class="side-menu__menu-item">
               <ul class="side-menu__menu-dropdown js-side-menu__menu-dropdown">Соглашение
                 <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О воде</a></li>
                 <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О солях</a></li>
               </ul>
             </li>
+            <!--li.side-menu__menu-item-->
+            <!--    a О нас-->
+            <!--li.side-menu__menu-item-->
+            <!--    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Услуги-->
+            <!--        - const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];-->
+            <!--        each item in headerDropdownItems1-->
+            <!--            li.side-menu__dropdown-item.js-side-menu__dropdown-item-->
+            <!--                a= item-->
+            <!--li.side-menu__menu-item-->
+            <!--    a Вакансии-->
+            <!--li.side-menu__menu-item-->
+            <!--    a Новости-->
+            <!--li.side-menu__menu-item-->
+            <!--    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Соглашение-->
+            <!--        - const headerDropdownItems2 = ['О воде', 'О солях'];-->
+            <!--        each item in headerDropdownItems2-->
+            <!--            li.side-menu__dropdown-item.js-side-menu__dropdown-item-->
+            <!--                a= item-->
           </ul>
         </nav>
-        <div class="side-menu__buttons"><a class="log-in-button header__button">
-            <button class="button button__transparent button__flat">Войти</button></a><a class="sign-up-button header__button">
-            <button class="button button__long button__flat">Зарегистрироваться</button></a>
+        <div class="side-menu__buttons"><a class="log-in-button">
+            <button class="button button_transparent button_flat">Войти
+            </button></a><a class="sign-up-button">
+            <button class="button button_long button_flat">Зарегистрироваться
+            </button></a>
         </div>
       </div>
       <main class="sign-in__main">
@@ -84,11 +112,13 @@
               <input class="text-field" placeholder="Пароль" type="password"/>
             </div>
             <div class="login__button">
-              <button class="button button__long">Войти<span class="button__arrow"></span></button>
+              <button class="button button_long">Войти<span class="button__arrow"></span>
+              </button>
             </div>
             <div class="login__bottom">
               <p class="login__bottom-text">Нет аккаунта на Toxin?</p>
-              <button class="button button__transparent">Создать</button>
+              <button class="button button_transparent">Создать
+              </button>
             </div>
           </div>
         </div>
@@ -135,7 +165,7 @@
           </div>
           <div class="footer__down">
             <p class="footer__down-copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
-            <div class="footer__social-media"><a class="footer__social-media-link twitter"><i class="fab fa-twitter"></i></a><a class="footer__social-media-link facebook"><i class="fab fa-facebook-square"></i></a><a class="footer__social-media-link instagram"><i class="fab fa-instagram"></i></a></div>
+            <div class="footer__social-media"><a class="footer__social-media-link"><i class="fab fa-twitter"></i></a><a class="footer__social-media-link"><i class="fab fa-facebook-square"></i></a><a class="footer__social-media-link"><i class="fab fa-instagram"></i></a></div>
           </div>
         </div>
         <div class="footer-line"></div>
