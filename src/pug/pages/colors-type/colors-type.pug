@@ -1,19 +1,20 @@
 block title
     title colors & type
-    .colors-type__container
-        .column
-            ul.column__list
-                - const obj = {'Dark Shade 100%':'#1F2041', 'Dark Shade 75%':'#1F2041', 'Dark Shade 50%':'#1F2041', 'Dark Shade 25%':'#1F2041','Dark Shade 5%':'#1F2041', 'Purple':'#BC9CFF', 'Green':'#6FCF97' }
-                each text,title in obj
-                    li.column__colors-list-item
-                        .column__item-color
-                        .column__item-info
-                            .column__info-title= title
-                            .column__info-text= text
-        .column
-            ul.column__list
-                - const obj2 = {'H1':'This one is the sub-section or widget title', 'H2':'Next one is the item title inside widgets', "H3":'This is a label or CTA text', "Body":'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
-                each text,tag in obj2
-                    li.column__type-list-item
-                        p.column__item-tag=tag
-                        p.column__item-text=text
+    .colors-type
+        .colors-type__container
+            .colors-type__list-wrapper
+                ul.colors-type__list
+                    - const obj = {'Dark Shade 100%':'#1F2041', 'Dark Shade 75%':'#1F2041', 'Dark Shade 50%':'#1F2041', 'Dark Shade 25%':'#1F2041','Dark Shade 5%':'#1F2041', 'Purple':'#BC9CFF', 'Green':'#6FCF97' }
+                    each text,title in obj
+                        li.colors-type__list-item
+                            .colors-type__list-item-color
+                            .colors-type__list-item-info
+                                .colors-type__list-item-info-title= title
+                                .colors-type__list-item-info-text= text
+            .colors-type__list-wrapper
+                ul.colors-type__list
+                    - const obj2 = {'H1':'This one is the sub-section or widget title', 'H2':'Next one is the item title inside widgets', "H3":'This is a label or CTA text', "Body":'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
+                    each text,tag in obj2
+                        li.colors-type__list-item-text
+                            p.colors-type__list-item-text-tag=tag
+                            p.colors-type__list-item-text-inner=text
