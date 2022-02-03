@@ -1,6 +1,15 @@
 @import '../../../scss/common/colors';
 @import '../../../scss/common/templates';
 
+%interactive-button {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple;
+    cursor: pointer;
+}
+
 .dropdown {
     max-width: 320px;
     position: relative;
@@ -43,12 +52,10 @@
         }
     }
 
-    &__interactive-word {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: $purple;
-        cursor: pointer;
+    &__interactive {
+        &-clear,
+        &-confirm {
+            @extend %interactive-button;
+        }
     }
 }

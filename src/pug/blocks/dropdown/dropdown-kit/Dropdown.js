@@ -9,8 +9,8 @@ export class Dropdown {
         this.plus = this.component.querySelectorAll('.js-dropdown__item-plus');
         this.minus = this.component.querySelectorAll('.js-dropdown__item-minus');
         this.counters = this.component.querySelectorAll('.js-dropdown__item-count');
-        this.clears = this.component.querySelectorAll('.js-clear');
-        this.confirms = this.component.querySelectorAll('.js-confirm');
+        this.clears = this.component.querySelectorAll('.js-dropdown__interactive-clear');
+        this.confirms = this.component.querySelectorAll('.js-dropdown__interactive-confirm');
         this.items = this.component.querySelectorAll('.js-dropdown__item-text');
     }
 
