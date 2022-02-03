@@ -1,12 +1,10 @@
 mixin button({text = 'click me', size = '', type = '', withArrow = false, modifier = ''} = {})
     -
-        let sizeType = 'default';
         let className = 'button';
         if (size === 'long') {
-            sizeType = size;
-            className += ` button_${sizeType}`;
+            className += ` button_${size}`;
         }
-        if (type === 'transparent' || type === 'text')
+        if (type === 'transparent' || type === 'with-text')
             className += ` button_${type}`;
         if (modifier === 'flat')
             className += ` button_${modifier}`
