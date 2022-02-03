@@ -9,9 +9,9 @@ mixin registration
         .registration__layout
             p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
             .registration__input-wrapper
-                +text-field(placeholder='Имя')
+                +text-field({placeholder: 'Имя'})
             .registration__input-wrapper
-                +text-field(placeholder='Фамилия')
+                +text-field({placeholder: 'Фамилия'})
             +radio-buttons(['Мужчина', "Женщина"])
         .registration__layout
             p.registration__layout-text дата рождения
@@ -19,9 +19,9 @@ mixin registration
         .registration__layout
             p.registration__layout-text данные для входа в сервис
             .registration__input-wrapper
-                +text-field(placeholder='Email' type='email')
+                +text-field({placeholder: 'Email', type: 'email'})
             .registration__input-wrapper
-                +text-field(placeholder='Пароль' type='password')
+                +text-field({placeholder: 'Пароль', type: 'password'})
             - const toggleOptions = [{isChecked: true, text: 'Получать спецпредложения'}]
             each obj in toggleOptions
                 +toggle(obj)

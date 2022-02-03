@@ -6,8 +6,8 @@ mixin login
         .login__title
             p.login__title-text Войти
         .login__inputs
-            +text-field(placeholder='Email' type='email')
-            +text-field(placeholder='Пароль' type='password')
+            +text-field({placeholder: 'Email', type: 'email'})
+            +text-field({placeholder: 'Пароль', type: 'password'})
         .login__button
             +button({text: 'Войти', size: 'long', withArrow: true})
         .login__bottom
