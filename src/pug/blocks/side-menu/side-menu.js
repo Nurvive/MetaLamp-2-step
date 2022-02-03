@@ -1,5 +1,3 @@
-import './side-menu.scss';
-
 class SideMenu {
     constructor(element, burger) {
         this.element = $(element);

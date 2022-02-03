@@ -1,4 +1,3 @@
-import './pagination.scss';
 import 'paginationjs';
 
 class Pagination {

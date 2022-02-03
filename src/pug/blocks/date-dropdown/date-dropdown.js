@@ -1,6 +1,5 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
-import './date-dropdown.scss';
 
 const inputs = document.querySelectorAll('.js-date-dropdown_start');
 for (let i = 0; i < inputs.length; i += 1) {

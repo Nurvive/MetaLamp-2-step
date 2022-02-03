@@ -1,6 +1,5 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
-import './search-room.scss';
 
 $().ready(() => {
     let width = ($(window).width());

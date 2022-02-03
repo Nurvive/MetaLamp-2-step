@@ -1,5 +1,3 @@
-import './like-button.scss';
-
 class LikeButton {
     constructor() {
         this.element = $('.js-like-button');

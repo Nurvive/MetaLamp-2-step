@@ -1,4 +1,3 @@
-import './header.scss';
 import SideMenu from '../side-menu/side-menu';
 
 class Header {

@@ -1,5 +1,3 @@
-import './expandable-checkbox-list.scss';
-
 class ExpandableCheckboxList {
     constructor() {
         this.element = $('.js-expandable-checkbox__open-button');
