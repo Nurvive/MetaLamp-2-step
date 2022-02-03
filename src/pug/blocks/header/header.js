@@ -18,7 +18,7 @@ class Header {
                 }
             });
             // eslint-disable-next-line no-unused-vars
-            const sideMenu = new SideMenu('.js-side-menu', '.header__logo-burger');
+            const sideMenu = new SideMenu('.header__logo-burger');
         });
     }
 }

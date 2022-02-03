@@ -1,8 +1,8 @@
 include ../log-in-buttons/log-in-buttons
 include ../cabinet-button/cabinet-button
 
-mixin side-menu({isAuthorized = false, jsClass = ''} = {})
-    .side-menu(class = jsClass)
+mixin side-menu({isAuthorized = false} = {})
+    .side-menu.js-side-menu
         .side-menu__holder
         nav.side-menu__nav
             ul.side-menu__menu
@@ -23,24 +23,6 @@ mixin side-menu({isAuthorized = false, jsClass = ''} = {})
                                         a= item
                         else
                             a= option.text
-                //li.side-menu__menu-item
-                //    a О нас
-                //li.side-menu__menu-item
-                //    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Услуги
-                //        - const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];
-                //        each item in headerDropdownItems1
-                //            li.side-menu__dropdown-item.js-side-menu__dropdown-item
-                //                a= item
-                //li.side-menu__menu-item
-                //    a Вакансии
-                //li.side-menu__menu-item
-                //    a Новости
-                //li.side-menu__menu-item
-                //    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Соглашение
-                //        - const headerDropdownItems2 = ['О воде', 'О солях'];
-                //        each item in headerDropdownItems2
-                //            li.side-menu__dropdown-item.js-side-menu__dropdown-item
-                //                a= item
         .side-menu__buttons
             if !isAuthorized
                 +log-in-buttons
