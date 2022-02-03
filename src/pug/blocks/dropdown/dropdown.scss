@@ -52,6 +52,12 @@
         }
     }
 
+    &-rooms {
+        .dropdown__list {
+            padding-bottom: 0;
+        }
+    }
+
     &__interactive {
         &-clear,
         &-confirm {
