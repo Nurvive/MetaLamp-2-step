@@ -19,4 +19,14 @@ mixin room-card({images = [], number = '1337', type = '', cost = '666₽', ratin
                     +rate-button(rating, uniqueID)
                     .room-card__reviews
                         strong.room-card__reviews-text=reviews
-                        span  отзывов
+                        -
+                            const value = reviews % 100
+                            const n1 = reviews % 10
+                        if (value > 10 && value < 20)
+                            span  отзывов
+                        else if (n1 > 1 && n1 < 5)
+                            span  отзыва
+                        else if (n1 === 1)
+                            span  отзыв
+                        else
+                            span  отзывов
