@@ -8,7 +8,7 @@ block title
 
 block content
     .sign-in
-        +header(false)
+        +header({isAuthorized: false})
         main.sign-in__main
             .sign-in__card-wrapper
                 +login

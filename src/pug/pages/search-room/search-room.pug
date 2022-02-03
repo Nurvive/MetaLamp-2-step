@@ -15,7 +15,7 @@ block title
 
 block content
     .search-room
-        +header(false)
+        +header({isAuthorized: false})
         main.search-room__main
             aside.search-room__aside
                 ul.search-room__list
@@ -30,7 +30,7 @@ block content
                     li.search-room__item(data-move="no")
                         .search-room__dropdown-layout
                             p Гости
-                            +dropdown('search-room__dropdown', 'default')
+                            +dropdown({type:'default'})
                     li.search-room__item(data-move="no")
                         .search-room__slider-layout диапазон цены
                         +range-slider
@@ -47,7 +47,7 @@ block content
 
                     li.search-room__item
                         .search-room__dropdown-layout удобства номера
-                        +dropdown('search-room__dropdown', 'rooms')
+                        +dropdown({type:'rooms'})
                     li.search-room__item
                         .search-room__layout
                             +expandable-checkbox({

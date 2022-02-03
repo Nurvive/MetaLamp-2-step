@@ -9,8 +9,8 @@ block content
     .header-footer
         .header-footer__container
             .header-footer__wrapper
-                +header(false)
+                +header({isAuthorized: false})
             //.header-footer__wrapper
-            //    +header(true, 'Юлий Цезарь')
+            //    +header({isAuthorized: true, name: 'Юлий Цезарь'})
             .header-footer__wrapper
                 +footer

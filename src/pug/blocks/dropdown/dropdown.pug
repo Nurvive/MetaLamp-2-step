@@ -1,7 +1,7 @@
 include ../text-field/text-field
 include ../dropdown-item/dropdown-item
 
-mixin dropdown(id = '', type = 'default')
+mixin dropdown({type = 'default'} = {})
     -
         let placeholder = ''
         let hasButtons = false
@@ -16,7 +16,7 @@ mixin dropdown(id = '', type = 'default')
         -
             wordsArray = ["спальни", 'кровати', "ванные комнаты"]
             placeholder = 'Сколько комнат'
-    div.dropdown.js-dropdown(id=id class=className)
+    div.dropdown.js-dropdown(class=className)
         .dropdown__input-wrapper.js-dropdown__input-wrapper
             span.dropdown__open-button
             +text-field({withPadding: true, withDropdown: true})(readonly='readonly' placeholder=placeholder class='js-dropdown__input')

@@ -30,7 +30,7 @@ block content
                 +text-field
             .form-elements__label
                 p dropdown
-                +dropdown('dropdown', 'default')
+                +dropdown({type: 'default'})
             .form-elements__label
                 p masked text field
                 +masked-text-field
@@ -53,7 +53,7 @@ block content
                 +subscription-text-field
             .form-elements__label
                 p dropdown
-                +dropdown('split-dropdown', 'rooms')
+                +dropdown({type:'rooms'})
             .form-elements__label
                 +expandable-checkbox({
                     text: 'expandable checkbox list',
@@ -78,11 +78,11 @@ block content
             .form-elements__label
                 p like button
                 div
-                    +like-button(2)
+                    +like-button({likes: 2})
             .form-elements__label
                 p rate button
                 div
-                    +rate-button(1, 'form-elements')
+                    +rate-button({count: 1, unique: 'form-elements'})
             .form-elements__label
                 p rich Checkbox Buttons
                 +rich-checkbox-buttons({

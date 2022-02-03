@@ -27,4 +27,4 @@ mixin side-menu({isAuthorized = false} = {})
             if !isAuthorized
                 +log-in-buttons
             else
-                +cabinet-button('Юлий Цезарь')
+                +cabinet-button({name: 'Юлий Цезарь'})

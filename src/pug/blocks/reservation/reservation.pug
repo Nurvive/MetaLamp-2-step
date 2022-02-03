@@ -20,7 +20,7 @@ mixin reservation()
             +date-dropdown-double(dateDropdownDoubleOptions)
         .reservation__layout
             p.reservation__layout-text гости
-            +dropdown('reservation__dropdown', 'default')
+            +dropdown({type: 'default'})
         .reservation__services
             -
                 const reservationItems = [
