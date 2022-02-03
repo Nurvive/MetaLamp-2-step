@@ -12,11 +12,11 @@
     border: 1px solid $dark25;
     background-color: transparent;
 
-    &_right {
+    &_with-padding {
         padding-right: 44px;
     }
 
-    &_dropdown {
+    &_with-dropdown {
         border: 1px solid $dark25;
         cursor: pointer;
         line-height: 18px;
