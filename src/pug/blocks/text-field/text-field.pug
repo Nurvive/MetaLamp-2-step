@@ -1,5 +1,5 @@
-mixin text-field({padding = false, dropdown = false} = {})
+mixin text-field({withPadding = false, withDropdown = false} = {})
     -
-        const paddingClass = padding ? 'text-field_with-padding' : ''
-        const dropdownClass = dropdown ? 'text-field_with-dropdown' : ''
+        const paddingClass = withPadding ? 'text-field_with-padding' : ''
+        const dropdownClass = withDropdown ? 'text-field_with-dropdown' : ''
     input.text-field(placeholder='Email' type='text' class=paddingClass class=dropdownClass)&attributes(attributes)
