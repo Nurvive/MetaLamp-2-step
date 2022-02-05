@@ -2,9 +2,9 @@ include ../text-field/text-field
 
 mixin date-dropdown({title = '', placeholder = ''} = {})
     .date-dropdown
-        .date-dropdown__input.date-dropdown__input_long
+        .date-dropdown__input.date-dropdown__input_long.js-date-dropdown__input
             p.date-dropdown__input-title= title
-            +text-field({withDropdown: true, placeholder: placeholder})(class='js-date-dropdown_start' readonly)
+            +text-field({withDropdown: true, placeholder: placeholder})(readonly)
             span.date-dropdown__input-open-button
 
 

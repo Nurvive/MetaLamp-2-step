@@ -5,7 +5,7 @@ export class Dropdown {
         this.obj = {};
         this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
         this.list = this.component.querySelector('.js-dropdown__list');
-        this.input = this.component.querySelector('.js-dropdown__input');
+        this.input = this.component.querySelector('.js-dropdown__input-wrapper input');
         this.plus = this.component.querySelectorAll('.js-dropdown__item-plus');
         this.minus = this.component.querySelectorAll('.js-dropdown__item-minus');
         this.counters = this.component.querySelectorAll('.js-dropdown__item-count');
