@@ -2,12 +2,17 @@
 
 .pros {
     width: 280px;
+    padding-left: 5px;
 
     &__container {
         padding: 20px 0;
         border-bottom: 1px solid rgb(31 32 65 / 10%);
         display: flex;
         align-items: center;
+
+        &:first-child {
+            padding-top: 25px;
+        }
 
         &:last-child {
             border: none;
