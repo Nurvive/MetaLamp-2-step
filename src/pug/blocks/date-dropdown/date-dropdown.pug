@@ -4,7 +4,7 @@ mixin date-dropdown({title = '', placeholder = ''} = {})
     .date-dropdown
         .date-dropdown__input.date-dropdown__input_long.js-date-dropdown__input
             p.date-dropdown__input-title= title
-            +text-field({withDropdown: true, placeholder: placeholder})(readonly)
+            +text-field({withDropdown: true, placeholder: placeholder, isReadonly: true})
             span.date-dropdown__input-open-button
 
 
