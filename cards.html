@@ -18,21 +18,21 @@
             <p class="find-room__title">Найдём номера под ваши пожелания</p>
             <div class="find-room__dates">
               <div class="date-dropdown-double">
-                <div class="date-dropdown-double__input">
+                <div class="date-dropdown-double__input js-date-dropdown-double__input">
                   <p class="date-dropdown-double__input-title">Прибытие</p>
-                  <input class="text-field text-field_dropdown js-date-dropdown-double_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+                  <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
                 </div>
-                <div class="date-dropdown-double__input">
+                <div class="date-dropdown-double__input js-date-dropdown-double__input">
                   <p class="date-dropdown-double__input-title">Выезд</p>
-                  <input class="text-field text-field_dropdown js-date-dropdown-double_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+                  <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
                 </div>
               </div>
             </div>
             <div class="find-room__layout">
               <p class="find-room__layout-text">гости</p>
-              <div class="dropdown js-dropdown dropdown-default" id="find-room__dropdown">
+              <div class="dropdown js-dropdown dropdown-default">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-                  <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
+                  <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько гостей" type="text" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
                   <li class="dropdown__item">
@@ -60,8 +60,8 @@
                     </div>
                   </li>
                   <li class="dropdown__item-interactive">
-                    <p class="dropdown__interactive-word js-clear">очистить</p>
-                    <p class="dropdown__interactive-word js-confirm">применить</p>
+                    <p class="dropdown__interactive-clear js-dropdown__interactive-clear">очистить</p>
+                    <p class="dropdown__interactive-confirm js-dropdown__interactive-confirm">применить</p>
                   </li>
                 </ul>
               </div>
@@ -75,10 +75,10 @@
             <div class="registration__layout">
               <p class="registration__layout-text registration__layout-text_big">Регистрация аккаунта</p>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Имя" type="text"/>
+                <input class="text-field" placeholder="Имя" type="text" readonly="readonly"/>
               </div>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Фамилия" type="text"/>
+                <input class="text-field" placeholder="Фамилия" type="text" readonly="readonly"/>
               </div>
               <div class="radio-buttons">
                 <label class="radio-buttons__label">
@@ -93,15 +93,17 @@
             </div>
             <div class="registration__layout">
               <p class="registration__layout-text">дата рождения</p>
-              <input class="text-field js-masked-text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
+              <div class="js-masked-text-field">
+                <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/>
+              </div>
             </div>
             <div class="registration__layout">
               <p class="registration__layout-text">данные для входа в сервис</p>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Email" type="email"/>
+                <input class="text-field" placeholder="Email" type="email" readonly="readonly"/>
               </div>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Пароль" type="password"/>
+                <input class="text-field" placeholder="Пароль" type="password" readonly="readonly"/>
               </div>
               <label class="toggle__label">
                 <input class="toggle__button" checked="checked" type="checkbox"/>
@@ -125,21 +127,21 @@
             </div>
             <div class="reservation__dates">
               <div class="date-dropdown-double">
-                <div class="date-dropdown-double__input">
+                <div class="date-dropdown-double__input js-date-dropdown-double__input">
                   <p class="date-dropdown-double__input-title">Прибытие</p>
-                  <input class="text-field text-field_dropdown js-date-dropdown-double_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+                  <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
                 </div>
-                <div class="date-dropdown-double__input">
+                <div class="date-dropdown-double__input js-date-dropdown-double__input">
                   <p class="date-dropdown-double__input-title">Выезд</p>
-                  <input class="text-field text-field_dropdown js-date-dropdown-double_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+                  <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
                 </div>
               </div>
             </div>
             <div class="reservation__layout">
               <p class="reservation__layout-text">гости</p>
-              <div class="dropdown js-dropdown dropdown-default" id="reservation__dropdown">
+              <div class="dropdown js-dropdown dropdown-default">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-                  <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
+                  <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько гостей" type="text" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
                   <li class="dropdown__item">
@@ -167,8 +169,8 @@
                     </div>
                   </li>
                   <li class="dropdown__item-interactive">
-                    <p class="dropdown__interactive-word js-clear">очистить</p>
-                    <p class="dropdown__interactive-word js-confirm">применить</p>
+                    <p class="dropdown__interactive-clear js-dropdown__interactive-clear">очистить</p>
+                    <p class="dropdown__interactive-confirm js-dropdown__interactive-confirm">применить</p>
                   </li>
                 </ul>
               </div>
@@ -206,8 +208,8 @@
               <p class="login__title-text">Войти</p>
             </div>
             <div class="login__inputs">
-              <input class="text-field" placeholder="Email" type="email"/>
-              <input class="text-field" placeholder="Пароль" type="password"/>
+              <input class="text-field" placeholder="Email" type="email" readonly="readonly"/>
+              <input class="text-field" placeholder="Пароль" type="password" readonly="readonly"/>
             </div>
             <div class="login__button">
               <button class="button button_long">Войти<span class="button__arrow"></span>
@@ -249,7 +251,8 @@
                       <label class="rate-button__star" for="rate-button__item1qwe"></label>
                     </div>
                   </div>
-                  <div class="room-card__reviews"><strong class="room-card__reviews-text">145</strong><span> отзывов</span></div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">3</strong><span> отзыва</span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -279,7 +282,8 @@
                       <label class="rate-button__star" for="rate-button__item1rty"></label>
                     </div>
                   </div>
-                  <div class="room-card__reviews"><strong class="room-card__reviews-text">14</strong><span> отзывов</span></div>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">14</strong><span> отзывов</span>
+                  </div>
                 </li>
               </ul>
             </div>

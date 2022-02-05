@@ -15,13 +15,13 @@
       <div class="form-elements__inner">
         <div class="form-elements__label">
           <p>Text field</p>
-          <input class="text-field" placeholder="Email" type="text"/>
+          <input class="text-field" placeholder="Email" type="text" readonly="readonly"/>
         </div>
         <div class="form-elements__label">
           <p>dropdown</p>
-          <div class="dropdown js-dropdown dropdown-default" id="dropdown">
+          <div class="dropdown js-dropdown dropdown-default">
             <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-              <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько гостей" type="text" readonly="readonly"/>
+              <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько гостей" type="text" readonly="readonly"/>
             </div>
             <ul class="dropdown__list js-dropdown__list">
               <li class="dropdown__item">
@@ -49,35 +49,37 @@
                 </div>
               </li>
               <li class="dropdown__item-interactive">
-                <p class="dropdown__interactive-word js-clear">очистить</p>
-                <p class="dropdown__interactive-word js-confirm">применить</p>
+                <p class="dropdown__interactive-clear js-dropdown__interactive-clear">очистить</p>
+                <p class="dropdown__interactive-confirm js-dropdown__interactive-confirm">применить</p>
               </li>
             </ul>
           </div>
         </div>
         <div class="form-elements__label">
           <p>masked text field</p>
-          <input class="text-field js-masked-text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
+          <div class="js-masked-text-field">
+            <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/>
+          </div>
         </div>
         <div class="form-elements__label">
           <p>date Dropdown</p>
           <div class="date-dropdown-double">
-            <div class="date-dropdown-double__input">
+            <div class="date-dropdown-double__input js-date-dropdown-double__input">
               <p class="date-dropdown-double__input-title"></p>
-              <input class="text-field text-field_dropdown js-date-dropdown-double_start" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+              <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
             </div>
-            <div class="date-dropdown-double__input">
+            <div class="date-dropdown-double__input js-date-dropdown-double__input">
               <p class="date-dropdown-double__input-title"></p>
-              <input class="text-field text-field_dropdown js-date-dropdown-double_end" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+              <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
             </div>
           </div>
         </div>
         <div class="form-elements__label">
           <p>filter date dropdown</p>
           <div class="date-dropdown">
-            <div class="date-dropdown__input date-dropdown__input_long">
+            <div class="date-dropdown__input date-dropdown__input_long js-date-dropdown__input">
               <p class="date-dropdown__input-title"></p>
-              <input class="text-field text-field_dropdown js-date-dropdown_start" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
+              <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
             </div>
           </div>
         </div>
@@ -85,14 +87,14 @@
           <p>subscription text field</p>
           <div class="subscription-text-field">
             <button class="subscription-text-field__button"><span></span></button>
-            <input class="text-field text-field_right" placeholder="Email" type="email"/>
+            <input class="text-field text-field_with-padding" placeholder="Email" type="email" readonly="readonly"/>
           </div>
         </div>
         <div class="form-elements__label">
           <p>dropdown</p>
-          <div class="dropdown js-dropdown dropdown-rooms" id="split-dropdown">
+          <div class="dropdown js-dropdown dropdown-rooms">
             <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
-              <input class="text-field text-field_right text-field_dropdown js-dropdown__input" placeholder="Сколько комнат" type="text" readonly="readonly"/>
+              <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько комнат" type="text" readonly="readonly"/>
             </div>
             <ul class="dropdown__list js-dropdown__list">
               <li class="dropdown__item">
@@ -296,7 +298,7 @@
             </button>
           </div>
           <div class="form-elements__button-wrapper">
-            <button class="button button_text">clickkk meee
+            <button class="button button_with-text">clickkk meee
             </button>
           </div>
           <div class="form-elements__button-wrapper">

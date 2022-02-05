@@ -76,24 +76,6 @@
                     <li class="side-menu__dropdown-item js-side-menu__dropdown-item"><a>О солях</a></li>
                   </ul>
                 </li>
-                <!--li.side-menu__menu-item-->
-                <!--    a О нас-->
-                <!--li.side-menu__menu-item-->
-                <!--    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Услуги-->
-                <!--        - const headerDropdownItems1 = ['Покупка', 'Покупка', 'Покупка'];-->
-                <!--        each item in headerDropdownItems1-->
-                <!--            li.side-menu__dropdown-item.js-side-menu__dropdown-item-->
-                <!--                a= item-->
-                <!--li.side-menu__menu-item-->
-                <!--    a Вакансии-->
-                <!--li.side-menu__menu-item-->
-                <!--    a Новости-->
-                <!--li.side-menu__menu-item-->
-                <!--    ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown Соглашение-->
-                <!--        - const headerDropdownItems2 = ['О воде', 'О солях'];-->
-                <!--        each item in headerDropdownItems2-->
-                <!--            li.side-menu__dropdown-item.js-side-menu__dropdown-item-->
-                <!--                a= item-->
               </ul>
             </nav>
             <div class="side-menu__buttons"><a class="log-in-button">
@@ -105,7 +87,7 @@
           </div>
         </div>
         <!--.header-footer__wrapper-->
-        <!--    +header(true, 'Юлий Цезарь')-->
+        <!--    +header({isAuthorized: true, name: 'Юлий Цезарь'})-->
         <div class="header-footer__wrapper">
           <footer class="footer">
             <div class="footer__container">
@@ -142,7 +124,7 @@
                   <form action="#">
                     <div class="subscription-text-field">
                       <button class="subscription-text-field__button"><span></span></button>
-                      <input class="text-field text-field_right" placeholder="Email" type="email"/>
+                      <input class="text-field text-field_with-padding" placeholder="Email" type="email" readonly="readonly"/>
                     </div>
                   </form>
                 </div>
