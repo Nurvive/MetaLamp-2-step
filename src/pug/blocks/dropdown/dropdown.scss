@@ -23,15 +23,15 @@
     }
 
     &__input-wrapper {
-        &_active .dropdown__open-button {
-            transform: rotate(180deg) translateY(50%);
-        }
-    }
-
-    & &__input {
         &_active {
-            border-radius: 4px 4px 0 0;
-            border-color: $dark50;
+            & .dropdown__open-button {
+                transform: rotate(180deg) translateY(50%);
+            }
+
+            & input {
+                border-radius: 4px 4px 0 0;
+                border-color: $dark50;
+            }
         }
     }
 
