@@ -1,7 +1,17 @@
-mixin canvas({colors = [], id = ''} = {})
+mixin canvas({colors = [], id = '', count = 0} = {})
     .canvas
-        span.canvas__count 260
-        span.canvas__word голосов
+        span.canvas__count= count
+        -
+            const value = count % 100
+            const n1 = count % 10
+        if (value > 10 && value < 20)
+            span.canvas__word  голосов
+        else if (n1 > 1 && n1 < 5)
+            span.canvas__word  голоса
+        else if (n1 === 1)
+            span.canvas__word  голос
+        else
+            span.canvas__word  голосов
         div.canvas__legend
             each val, n in colors
                 p(class=`canvas__legend-colors color-${n}`)=val
