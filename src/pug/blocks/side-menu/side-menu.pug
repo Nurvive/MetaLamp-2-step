@@ -1,4 +1,4 @@
-include ../log-in-buttons/log-in-buttons
+include ../enter-buttons/enter-buttons
 include ../cabinet-button/cabinet-button
 
 mixin side-menu({isAuthorized = false} = {})
@@ -26,6 +26,6 @@ mixin side-menu({isAuthorized = false} = {})
                             a= option.text
         .side-menu__buttons
             if !isAuthorized
-                +log-in-buttons
+                +enter-buttons
             else
                 +cabinet-button({name: 'Юлий Цезарь'})
