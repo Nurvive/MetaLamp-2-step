@@ -3,6 +3,7 @@ class SideMenu {
         this.element = $('.js-side-menu');
         this.burger = $(burger);
         this.menuDropdown = $('.js-side-menu__menu-dropdown');
+        this.close = $('.js-side-menu__close');
         this.startingX = 0;
         this.init();
     }
@@ -13,6 +14,7 @@ class SideMenu {
         this.element.on('touchend', this.touchEndHandler.bind(this));
         this.menuDropdown.on('click', SideMenu.dropdownClickHandler.bind(this));
         this.burger.on('click', this.burgerClickHandler.bind(this));
+        this.close.on('click', this.closeHandler.bind(this));
     }
 
     touchStartHandler(event) {
@@ -49,6 +51,11 @@ class SideMenu {
     burgerClickHandler() {
         this.element.removeClass('side-menu_hide');
         this.element.addClass('side-menu_active');
+    }
+
+    closeHandler() {
+        this.element.removeClass('side-menu_active');
+        this.element.addClass('side-menu_hide');
     }
 }
 

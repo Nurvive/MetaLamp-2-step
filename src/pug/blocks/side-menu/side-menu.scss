@@ -35,6 +35,25 @@
         background-color: transparent;
     }
 
+    &__close {
+        position: absolute;
+        height: 18px;
+        width: 3px;
+        background-color: black;
+        right: 50px;
+        top: 20px;
+        transform: rotate(45deg);
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 18px;
+            width: 3px;
+            background-color: black;
+            transform: rotate(-90deg);
+        }
+    }
+
     &__menu {
         display: flex;
         flex-direction: column;
