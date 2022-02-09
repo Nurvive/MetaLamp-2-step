@@ -2,11 +2,13 @@ include ../buttons/button
 include ../side-menu/side-menu
 include ../enter-buttons/enter-buttons
 include ../cabinet-button/cabinet-button
+include ../burger-icon/burger-icon
 
 mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
     header.header
         .header__container
-            .header__logo-burger.fas.fa-hamburger
+            .header__logo-burger
+                +burger-icon
             .header__logo
                 a.header__logo-link
                     img(src="../../../assets/images/logo.svg")
