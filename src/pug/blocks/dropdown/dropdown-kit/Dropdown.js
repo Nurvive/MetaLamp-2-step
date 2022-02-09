@@ -6,12 +6,12 @@ export class Dropdown {
         this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
         this.list = this.component.querySelector('.js-dropdown__list');
         this.input = this.component.querySelector('.js-dropdown__input-wrapper input');
-        this.plus = this.component.querySelectorAll('.js-dropdown__item-plus');
-        this.minus = this.component.querySelectorAll('.js-dropdown__item-minus');
-        this.counters = this.component.querySelectorAll('.js-dropdown__item-count');
+        this.plus = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper div[data-type="plus"]');
+        this.minus = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper div[data-type="minus"]');
+        this.counters = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper div[data-type="count"]');
         this.clears = this.component.querySelectorAll('.js-dropdown__interactive-clear');
         this.confirms = this.component.querySelectorAll('.js-dropdown__interactive-confirm');
-        this.items = this.component.querySelectorAll('.js-dropdown__item-text');
+        this.items = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper p');
     }
 
     static declOfNum(n, textForms) {
@@ -58,7 +58,7 @@ export class Dropdown {
             counter.innerHTML = Number(counter.innerHTML) - 1;
         }
         if (Number(counter.innerHTML) === 0) {
-            node.classList.add('dropdown__item-minus_inactive');
+            node.classList.add('dropdown-item-minus_inactive');
         }
     }
 
@@ -66,7 +66,7 @@ export class Dropdown {
         let index = event.target.dataset.index;
         let counter = this.counters[index];
         let minus = this.minus[index];
-        minus.classList.remove('dropdown__item-minus_inactive');
+        minus.classList.remove('dropdown-item-minus_inactive');
         counter.innerHTML = Number(counter.innerHTML) + 1;
     }
 
@@ -106,7 +106,7 @@ export class Dropdown {
             node.innerHTML = 0;
         });
         this.minus.forEach((node) => {
-            node.classList.add('dropdown__item-minus_inactive');
+            node.classList.add('dropdown-item-minus_inactive');
         });
     }
 

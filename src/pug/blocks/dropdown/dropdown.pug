@@ -21,8 +21,9 @@ mixin dropdown({type = 'default'} = {})
             span.dropdown__open-button
             +text-field({withPadding: true, withDropdown: true,  placeholder: placeholder, isReadonly: true})
         ul.dropdown__list.js-dropdown__list
-            +dropdown-item(wordsArray)
+            .dropdown__dropdown-item-wrapper
+                +dropdown-item(wordsArray)
             if hasButtons
-                li.dropdown__item-interactive
+                li.dropdown__interactive
                     p.dropdown__interactive-clear.js-dropdown__interactive-clear очистить
                     p.dropdown__interactive-confirm.js-dropdown__interactive-confirm применить

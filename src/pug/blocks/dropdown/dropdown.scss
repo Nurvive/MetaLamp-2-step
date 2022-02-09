@@ -59,6 +59,10 @@
     }
 
     &__interactive {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 21px;
+
         &-clear,
         &-confirm {
             @extend %interactive-button;
