@@ -14,7 +14,9 @@
     <div class="registration-page">
       <header class="header">
         <div class="header__container">
-          <div class="header__logo-burger fas fa-hamburger"></div>
+          <div class="header__logo-burger">
+            <div class="fas fa-hamburger"></div>
+          </div>
           <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
           <div class="header__menu-wrapper">
             <nav class="header__nav">
@@ -42,9 +44,9 @@
                 </li>
               </ul>
             </nav>
-            <div class="header__buttons"><a class="log-in-button">
+            <div class="header__buttons"><a class="enter-buttons__log-in-button">
                 <button class="button button_transparent button_flat">Войти
-                </button></a><a class="sign-up-button">
+                </button></a><a class="enter-buttons__sign-up-button">
                 <button class="button button_long button_flat">Зарегистрироваться
                 </button></a>
             </div>
@@ -53,6 +55,7 @@
       </header>
       <div class="side-menu js-side-menu">
         <div class="side-menu__holder"></div>
+        <div class="side-menu__close js-side-menu__close"></div>
         <nav class="side-menu__nav">
           <ul class="side-menu__menu">
             <li class="side-menu__menu-item"><a>О нас</a>
@@ -76,9 +79,9 @@
             </li>
           </ul>
         </nav>
-        <div class="side-menu__buttons"><a class="log-in-button">
+        <div class="side-menu__buttons"><a class="enter-buttons__log-in-button">
             <button class="button button_transparent button_flat">Войти
-            </button></a><a class="sign-up-button">
+            </button></a><a class="enter-buttons__sign-up-button">
             <button class="button button_long button_flat">Зарегистрироваться
             </button></a>
         </div>
@@ -89,10 +92,10 @@
             <div class="registration__layout">
               <p class="registration__layout-text registration__layout-text_big">Регистрация аккаунта</p>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Имя" type="text" readonly="readonly"/>
+                <input class="text-field" placeholder="Имя" type="text"/>
               </div>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Фамилия" type="text" readonly="readonly"/>
+                <input class="text-field" placeholder="Фамилия" type="text"/>
               </div>
               <div class="radio-buttons">
                 <label class="radio-buttons__label">
@@ -108,16 +111,16 @@
             <div class="registration__layout">
               <p class="registration__layout-text">дата рождения</p>
               <div class="js-masked-text-field">
-                <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/>
+                <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
               </div>
             </div>
             <div class="registration__layout">
               <p class="registration__layout-text">данные для входа в сервис</p>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Email" type="email" readonly="readonly"/>
+                <input class="text-field" placeholder="Email" type="email"/>
               </div>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Пароль" type="password" readonly="readonly"/>
+                <input class="text-field" placeholder="Пароль" type="password"/>
               </div>
               <label class="toggle__label">
                 <input class="toggle__button" checked="checked" type="checkbox"/>
@@ -169,7 +172,7 @@
               <form action="#">
                 <div class="subscription-text-field">
                   <button class="subscription-text-field__button"><span></span></button>
-                  <input class="text-field text-field_with-padding" placeholder="Email" type="email" readonly="readonly"/>
+                  <input class="text-field text-field_with-padding" placeholder="Email" type="email"/>
                 </div>
               </form>
             </div>

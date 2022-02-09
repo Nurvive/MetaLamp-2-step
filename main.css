@@ -792,7 +792,7 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.dropdown__item {
+.dropdown-item {
   color: #1f2041;
   font-weight: bold;
   font-size: 12px;
@@ -803,11 +803,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.dropdown__item-container {
+.dropdown-item-container {
   display: flex;
   align-items: center;
 }
-.dropdown__item-minus, .dropdown__item-plus {
+.dropdown-item-minus, .dropdown-item-plus {
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 50%;
   height: 30px;
@@ -815,7 +815,7 @@
   position: relative;
   cursor: pointer;
 }
-.dropdown__item-minus::before, .dropdown__item-plus::before {
+.dropdown-item-minus::before, .dropdown-item-plus::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -825,17 +825,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.dropdown__item-minus_inactive {
+.dropdown-item-minus_inactive {
   opacity: 0.5;
   cursor: initial;
 }
-.dropdown__item-count {
+.dropdown-item-count {
   margin-left: 9px;
   margin-right: 12px;
   width: 10px;
   text-align: center;
 }
-.dropdown__item-plus::after {
+.dropdown-item-plus::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -844,11 +844,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.dropdown__item-interactive {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 21px;
 }
 .dropdown__open-button::before, .dropdown__open-button::after {
   position: absolute;
@@ -917,6 +912,17 @@
 }
 .dropdown-rooms .dropdown__list {
   padding-bottom: 0;
+}
+.dropdown__interactive {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 21px;
+}
+.enter-buttons__log-in-button {
+  width: 87px;
+}
+.enter-buttons__sign-up-button {
+  width: 196px;
 }
 .expandable-checkbox__open-button::before, .expandable-checkbox__open-button::after {
   position: absolute;
@@ -1361,13 +1367,6 @@
 }
 .like-button_active .like-button__count {
   color: #bc9cff;
-}
-.log-in-button {
-  width: 87px;
-}
-
-.sign-up-button {
-  width: 196px;
 }
 .login {
   padding: 40px 30px 30px;
@@ -2032,6 +2031,23 @@
   right: -5%;
   top: 0;
   background-color: transparent;
+}
+.side-menu__close {
+  position: absolute;
+  height: 18px;
+  width: 3px;
+  background-color: black;
+  right: 50px;
+  top: 20px;
+  transform: rotate(45deg);
+}
+.side-menu__close::after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 3px;
+  background-color: black;
+  transform: rotate(-90deg);
 }
 .side-menu__menu {
   display: flex;

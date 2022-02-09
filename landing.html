@@ -14,7 +14,9 @@
     <div class="landing">
       <header class="header">
         <div class="header__container">
-          <div class="header__logo-burger fas fa-hamburger"></div>
+          <div class="header__logo-burger">
+            <div class="fas fa-hamburger"></div>
+          </div>
           <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
           <div class="header__menu-wrapper">
             <nav class="header__nav">
@@ -42,9 +44,9 @@
                 </li>
               </ul>
             </nav>
-            <div class="header__buttons"><a class="log-in-button">
+            <div class="header__buttons"><a class="enter-buttons__log-in-button">
                 <button class="button button_transparent button_flat">Войти
-                </button></a><a class="sign-up-button">
+                </button></a><a class="enter-buttons__sign-up-button">
                 <button class="button button_long button_flat">Зарегистрироваться
                 </button></a>
             </div>
@@ -53,6 +55,7 @@
       </header>
       <div class="side-menu js-side-menu">
         <div class="side-menu__holder"></div>
+        <div class="side-menu__close js-side-menu__close"></div>
         <nav class="side-menu__nav">
           <ul class="side-menu__menu">
             <li class="side-menu__menu-item"><a>О нас</a>
@@ -76,9 +79,9 @@
             </li>
           </ul>
         </nav>
-        <div class="side-menu__buttons"><a class="log-in-button">
+        <div class="side-menu__buttons"><a class="enter-buttons__log-in-button">
             <button class="button button_transparent button_flat">Войти
-            </button></a><a class="sign-up-button">
+            </button></a><a class="enter-buttons__sign-up-button">
             <button class="button button_long button_flat">Зарегистрироваться
             </button></a>
         </div>
@@ -105,31 +108,33 @@
                 <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько гостей" type="text" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
-                <li class="dropdown__item">
-                  <p class="dropdown__item-text js-dropdown__item-text" data-index="0">взрослые</p>
-                  <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="0"></div>
-                    <div class="dropdown__item-count js-dropdown__item-count" data-index="0">0</div>
-                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="0"></div>
-                  </div>
-                </li>
-                <li class="dropdown__item">
-                  <p class="dropdown__item-text js-dropdown__item-text" data-index="1">дети</p>
-                  <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="1"></div>
-                    <div class="dropdown__item-count js-dropdown__item-count" data-index="1">0</div>
-                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="1"></div>
-                  </div>
-                </li>
-                <li class="dropdown__item">
-                  <p class="dropdown__item-text js-dropdown__item-text" data-index="2">младенцы</p>
-                  <div class="dropdown__item-container">
-                    <div class="dropdown__item-minus js-dropdown__item-minus dropdown__item-minus_inactive" data-type="minus" data-index="2"></div>
-                    <div class="dropdown__item-count js-dropdown__item-count" data-index="2">0</div>
-                    <div class="dropdown__item-plus js-dropdown__item-plus" data-type="plus" data-index="2"></div>
-                  </div>
-                </li>
-                <li class="dropdown__item-interactive">
+                <div class="dropdown__dropdown-item-wrapper">
+                  <li class="dropdown-item">
+                    <p class="dropdown-item-text" data-index="0">взрослые</p>
+                    <div class="dropdown-item-container">
+                      <div class="dropdown-item-minus dropdown-item-minus_inactive" data-type="minus" data-index="0"></div>
+                      <div class="dropdown-item-count" data-type="count" data-index="0">0</div>
+                      <div class="dropdown-item-plus" data-type="plus" data-index="0"></div>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <p class="dropdown-item-text" data-index="1">дети</p>
+                    <div class="dropdown-item-container">
+                      <div class="dropdown-item-minus dropdown-item-minus_inactive" data-type="minus" data-index="1"></div>
+                      <div class="dropdown-item-count" data-type="count" data-index="1">0</div>
+                      <div class="dropdown-item-plus" data-type="plus" data-index="1"></div>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <p class="dropdown-item-text" data-index="2">младенцы</p>
+                    <div class="dropdown-item-container">
+                      <div class="dropdown-item-minus dropdown-item-minus_inactive" data-type="minus" data-index="2"></div>
+                      <div class="dropdown-item-count" data-type="count" data-index="2">0</div>
+                      <div class="dropdown-item-plus" data-type="plus" data-index="2"></div>
+                    </div>
+                  </li>
+                </div>
+                <li class="dropdown__interactive">
                   <p class="dropdown__interactive-clear js-dropdown__interactive-clear">очистить</p>
                   <p class="dropdown__interactive-confirm js-dropdown__interactive-confirm">применить</p>
                 </li>
@@ -177,7 +182,7 @@
               <form action="#">
                 <div class="subscription-text-field">
                   <button class="subscription-text-field__button"><span></span></button>
-                  <input class="text-field text-field_with-padding" placeholder="Email" type="email" readonly="readonly"/>
+                  <input class="text-field text-field_with-padding" placeholder="Email" type="email"/>
                 </div>
               </form>
             </div>
