@@ -1,9 +1,9 @@
 import {Chart, registerables} from 'chart.js';
 
 class Canvas {
-    constructor() {
+    constructor(element) {
         Chart.register(...registerables);
-        this.ctx = document.getElementById('room-details__chart');
+        this.ctx = element;
         this.data = {
             labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
             datasets: [{

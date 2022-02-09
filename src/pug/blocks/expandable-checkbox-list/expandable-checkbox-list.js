@@ -1,6 +1,6 @@
 class ExpandableCheckboxList {
-    constructor() {
-        this.element = $('.js-expandable-checkbox__open-button');
+    constructor(element) {
+        this.element = $(element);
         this.init();
     }
 

@@ -1,6 +1,6 @@
 class LikeButton {
-    constructor() {
-        this.element = $('.js-like-button');
+    constructor(element) {
+        this.element = $(element);
         this.init();
     }
 

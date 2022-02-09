@@ -1,8 +1,8 @@
 import SideMenu from '../side-menu/side-menu';
 
 class Header {
-    constructor() {
-        this.element = $('.js-header__menu-dropdown');
+    constructor(element) {
+        this.element = $(element);
         this.init();
     }
 

@@ -2,8 +2,8 @@ import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
 
 class RoomCard {
-    constructor() {
-        this.element = $('.js-room-card__top');
+    constructor(element) {
+        this.element = $(element);
         this.init();
     }
 

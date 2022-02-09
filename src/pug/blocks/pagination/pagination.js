@@ -1,14 +1,13 @@
 import 'paginationjs';
 
 class Pagination {
-    constructor() {
-        this.element = $('.js-pagination');
-        this.tag = '.js-pagination';
+    constructor(element) {
+        this.element = $(element);
         this.init();
     }
 
     init() {
-        if (document.querySelector(this.tag) === null) return;
+        if (this.element[0] == null) return;
         this.element.pagination({
             dataSource: function (done) {
                 let result = [];
