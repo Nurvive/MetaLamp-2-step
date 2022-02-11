@@ -3,8 +3,8 @@ import 'air-datepicker/air-datepicker.css';
 
 const inputs = document.querySelectorAll('.js-date-dropdown__input input');
 for (let i = 0; i < inputs.length; i += 1) {
-    // eslint-disable-next-line no-unused-vars
-    const picker = new AirDatepicker(inputs[i], {
+    // eslint-disable-next-line no-new
+    new AirDatepicker(inputs[i], {
         multipleDates: true,
         range: true,
         onSelect(fd) {

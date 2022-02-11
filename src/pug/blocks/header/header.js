@@ -17,8 +17,7 @@ class Header {
                     $(this).children(':not(.header__menu-dropdown-open-button)').css('display', 'block');
                 }
             });
-            // eslint-disable-next-line no-unused-vars
-            const sideMenu = new SideMenu('.header__logo-burger');
+            return new SideMenu('.header__logo-burger');
         });
     }
 }
