@@ -58,7 +58,7 @@ export class Dropdown {
             counter.innerHTML = Number(counter.innerHTML) - 1;
         }
         if (Number(counter.innerHTML) === 0) {
-            node.classList.add('dropdown-item-minus_inactive');
+            node.classList.add('dropdown-item__minus_inactive');
         }
     }
 
@@ -66,7 +66,7 @@ export class Dropdown {
         let index = event.target.dataset.index;
         let counter = this.counters[index];
         let minus = this.minus[index];
-        minus.classList.remove('dropdown-item-minus_inactive');
+        minus.classList.remove('dropdown-item__minus_inactive');
         counter.innerHTML = Number(counter.innerHTML) + 1;
     }
 
@@ -106,7 +106,7 @@ export class Dropdown {
             node.innerHTML = 0;
         });
         this.minus.forEach((node) => {
-            node.classList.add('dropdown-item-minus_inactive');
+            node.classList.add('dropdown-item__minus_inactive');
         });
     }
 

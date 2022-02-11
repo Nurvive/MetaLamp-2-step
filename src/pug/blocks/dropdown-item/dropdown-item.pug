@@ -1,8 +1,8 @@
 mixin dropdown-item(obj = {})
     each val, index in obj
         li.dropdown-item
-            p.dropdown-item-text(data-index=index)=val
-            .dropdown-item-container
-                div.dropdown-item-minus.dropdown-item-minus_inactive(data-type='minus', data-index=index)
-                div.dropdown-item-count(data-type='count' data-index=index) 0
-                div.dropdown-item-plus(data-type='plus' data-index=index)
+            p.dropdown-item__text(data-index=index)=val
+            .dropdown-item__container
+                div.dropdown-item__minus.dropdown-item__minus_inactive(data-type='minus', data-index=index)
+                div.dropdown-item__count(data-type='count' data-index=index) 0
+                div.dropdown-item__plus(data-type='plus' data-index=index)

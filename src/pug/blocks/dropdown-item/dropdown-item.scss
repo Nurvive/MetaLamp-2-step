@@ -11,12 +11,12 @@
     justify-content: space-between;
     align-items: center;
 
-    &-container {
+    &__container {
         display: flex;
         align-items: center;
     }
 
-    &-minus {
+    &__minus {
         border: 1px solid $dark50;
         border-radius: 50%;
         height: 30px;
@@ -41,15 +41,15 @@
         }
     }
 
-    &-count {
+    &__count {
         margin-left: 9px;
         margin-right: 12px;
         width: 10px;
         text-align: center;
     }
 
-    &-plus {
-        @extend.dropdown-item-minus;
+    &__plus {
+        @extend.dropdown-item__minus;
 
         &::after {
             content: '';
