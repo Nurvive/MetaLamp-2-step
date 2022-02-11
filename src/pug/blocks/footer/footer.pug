@@ -1,5 +1,6 @@
 include ../subscription-text-field/subscription-text-field
 include ../column-list/column-list
+include ../font-awesome-icon/font-awesome-icon
 
 mixin footer()
     footer.footer
@@ -24,9 +25,18 @@ mixin footer()
                 p.footer__down-copyright Copyright © 2018 Toxin отель. Все права защищены.
                 .footer__social-media
                     a.footer__social-media-link
-                        <i class="fab fa-twitter"></i>
+                        +font-awesome-icon({
+                            typeClass: 'fab',
+                            iconClass: 'fa-twitter'
+                        })
                     a.footer__social-media-link
-                        <i class="fab fa-facebook-square"></i>
+                        +font-awesome-icon({
+                            typeClass: 'fab',
+                            iconClass: 'fa-facebook-square'
+                        })
                     a.footer__social-media-link
-                        <i class="fab fa-instagram"></i>
+                        +font-awesome-icon({
+                            typeClass: 'fab',
+                            iconClass: 'fa-instagram'
+                        })
         .footer-line

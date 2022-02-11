@@ -1,5 +1,15 @@
+include ../font-awesome-icon/font-awesome-icon
+
 mixin like-button({likes = 0} = {})
     .like-button.js-like-button
-        <i class="like-button__icon far fa-heart"></i>
-        <i class="like-button__icon_active fas fa-heart"></i>
+        .like-button__icon
+            +font-awesome-icon({
+                typeClass: 'far',
+                iconClass: 'fa-heart'
+            })
+        .like-button__icon_active
+            +font-awesome-icon({
+                typeClass: 'fas',
+                iconClass: 'fa-heart'
+            })
         p.like-button__count.js-like-button__count= likes
