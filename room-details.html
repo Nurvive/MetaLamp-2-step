@@ -124,7 +124,7 @@
                       <p class="canvas__legend-colors color-2">Удовлетворительно</p>
                       <p class="canvas__legend-colors color-3">Разочарован</p>
                     </div>
-                    <canvas class="js-canvas__area" width="120" height="126" aria-label="Room Chart" role="chart"></canvas>
+                    <canvas class="js-canvas__area" data-bad="0" data-ok="65" data-good="65" data-super="130" width="120" height="126" aria-label="Room Chart" role="chart"></canvas>
                   </div>
                 </div>
               </div>
@@ -141,8 +141,13 @@
                     </div>
                   </div>
                   <div class="comment__content">
-                    <div class="like-button js-like-button"><i class="like-button__icon far fa-heart"></i>
-<i class="like-button__icon_active fas fa-heart"></i>
+                    <div class="like-button js-like-button">
+                      <div class="like-button__icon">
+                        <div class="far fa-heart"></div>
+                      </div>
+                      <div class="like-button__icon_active">
+                        <div class="fas fa-heart"></div>
+                      </div>
                       <p class="like-button__count js-like-button__count">2</p>
                     </div>
                     <p class="comment__content-text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
@@ -157,8 +162,13 @@
                     </div>
                   </div>
                   <div class="comment__content">
-                    <div class="like-button js-like-button"><i class="like-button__icon far fa-heart"></i>
-<i class="like-button__icon_active fas fa-heart"></i>
+                    <div class="like-button js-like-button">
+                      <div class="like-button__icon">
+                        <div class="far fa-heart"></div>
+                      </div>
+                      <div class="like-button__icon_active">
+                        <div class="fas fa-heart"></div>
+                      </div>
                       <p class="like-button__count js-like-button__count">0</p>
                     </div>
                     <p class="comment__content-text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</p>
@@ -208,27 +218,27 @@
                   <ul class="dropdown__list js-dropdown__list">
                     <div class="dropdown__dropdown-item-wrapper">
                       <li class="dropdown-item">
-                        <p class="dropdown-item-text" data-index="0">взрослые</p>
-                        <div class="dropdown-item-container">
-                          <div class="dropdown-item-minus dropdown-item-minus_inactive" data-type="minus" data-index="0"></div>
-                          <div class="dropdown-item-count" data-type="count" data-index="0">0</div>
-                          <div class="dropdown-item-plus" data-type="plus" data-index="0"></div>
+                        <p class="dropdown-item__text" data-index="0">взрослые</p>
+                        <div class="dropdown-item__container">
+                          <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="0"></div>
+                          <div class="dropdown-item__count" data-type="count" data-index="0">0</div>
+                          <div class="dropdown-item__plus" data-type="plus" data-index="0"></div>
                         </div>
                       </li>
                       <li class="dropdown-item">
-                        <p class="dropdown-item-text" data-index="1">дети</p>
-                        <div class="dropdown-item-container">
-                          <div class="dropdown-item-minus dropdown-item-minus_inactive" data-type="minus" data-index="1"></div>
-                          <div class="dropdown-item-count" data-type="count" data-index="1">0</div>
-                          <div class="dropdown-item-plus" data-type="plus" data-index="1"></div>
+                        <p class="dropdown-item__text" data-index="1">дети</p>
+                        <div class="dropdown-item__container">
+                          <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="1"></div>
+                          <div class="dropdown-item__count" data-type="count" data-index="1">0</div>
+                          <div class="dropdown-item__plus" data-type="plus" data-index="1"></div>
                         </div>
                       </li>
                       <li class="dropdown-item">
-                        <p class="dropdown-item-text" data-index="2">младенцы</p>
-                        <div class="dropdown-item-container">
-                          <div class="dropdown-item-minus dropdown-item-minus_inactive" data-type="minus" data-index="2"></div>
-                          <div class="dropdown-item-count" data-type="count" data-index="2">0</div>
-                          <div class="dropdown-item-plus" data-type="plus" data-index="2"></div>
+                        <p class="dropdown-item__text" data-index="2">младенцы</p>
+                        <div class="dropdown-item__container">
+                          <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="2"></div>
+                          <div class="dropdown-item__count" data-type="count" data-index="2">0</div>
+                          <div class="dropdown-item__plus" data-type="plus" data-index="2"></div>
                         </div>
                       </li>
                     </div>
@@ -312,7 +322,10 @@
           </div>
           <div class="footer__down">
             <p class="footer__down-copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
-            <div class="footer__social-media"><a class="footer__social-media-link"><i class="fab fa-twitter"></i></a><a class="footer__social-media-link"><i class="fab fa-facebook-square"></i></a><a class="footer__social-media-link"><i class="fab fa-instagram"></i></a></div>
+            <div class="footer__social-media"><a class="footer__social-media-link">
+                <div class="fab fa-twitter"></div></a><a class="footer__social-media-link">
+                <div class="fab fa-facebook-square"></div></a><a class="footer__social-media-link">
+                <div class="fab fa-instagram"></div></a></div>
           </div>
         </div>
         <div class="footer-line"></div>
