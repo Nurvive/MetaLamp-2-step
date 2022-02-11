@@ -4,11 +4,15 @@ class Canvas {
     constructor(element) {
         Chart.register(...registerables);
         this.ctx = element;
+        const badParam = this.ctx.dataset.bad;
+        const okParam = this.ctx.dataset.ok;
+        const goodParam = this.ctx.dataset.good;
+        const superParam = this.ctx.dataset.super;
         this.data = {
             labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
             datasets: [{
                 label: 'My First Dataset',
-                data: [0, 65, 65, 130],
+                data: [badParam, okParam, goodParam, superParam],
                 backgroundColor: [
                     '#919191',
                     '#BC9CFF',

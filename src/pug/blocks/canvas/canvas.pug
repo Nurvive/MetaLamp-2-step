@@ -1,4 +1,4 @@
-mixin canvas({colors = [], count = 0} = {})
+mixin canvas({colors = [], count = 0, options = {}} = {})
     .canvas
         span.canvas__count= count
         -
@@ -15,4 +15,5 @@ mixin canvas({colors = [], count = 0} = {})
         div.canvas__legend
             each val, n in colors
                 p(class=`canvas__legend-colors color-${n}`)=val
-        canvas(class='js-canvas__area' width="120" height="126" aria-label="Room Chart" role="chart")
+        canvas(data-bad=options.bad data-ok=options.ok data-good=options.good data-super=options.super
+            class='js-canvas__area' width="120" height="126" aria-label="Room Chart" role="chart")
