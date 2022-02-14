@@ -39,6 +39,7 @@
         "object-curly-spacing": [
             "error",
             "never"
-        ]
+        ],
+        "no-param-reassign": 0
     }
 }

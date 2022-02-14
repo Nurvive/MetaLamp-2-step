@@ -102,7 +102,6 @@ export class Dropdown {
         this.obj = {};
         this.input.value = '';
         this.counters.forEach((node) => {
-            // eslint-disable-next-line no-param-reassign
             node.innerHTML = 0;
         });
         this.minus.forEach((node) => {

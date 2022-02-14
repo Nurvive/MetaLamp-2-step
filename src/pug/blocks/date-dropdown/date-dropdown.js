@@ -2,20 +2,19 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
 const inputs = document.querySelectorAll('.js-date-dropdown__input input');
-for (let i = 0; i < inputs.length; i += 1) {
-    // eslint-disable-next-line no-new
-    new AirDatepicker(inputs[i], {
+inputs.forEach((input) => {
+    return new AirDatepicker(input, {
         multipleDates: true,
         range: true,
         onSelect(fd) {
             const date = fd.formattedDate.split(',');
-            inputs[i].value = date.length > 1 ? `${date[0].substr(0, date[0].length - 1)} - ${date[1].substr(0, date[0].length - 1)}` : `${date[0].substr(0, date[0].length - 1)}`;
+            input.value = date.length > 1 ? `${date[0].substr(0, date[0].length - 1)} - ${date[1].substr(0, date[0].length - 1)}` : `${date[0].substr(0, date[0].length - 1)}`;
         },
         onShow: function () {
-            inputs[i].parentNode.classList.add('date-dropdown__input_active');
+            input.parentNode.classList.add('date-dropdown__input_active');
         },
         onHide: function () {
-            inputs[i].parentNode.classList.remove('date-dropdown__input_active');
+            input.parentNode.classList.remove('date-dropdown__input_active');
         },
         dateFormat(date) {
             return date.toLocaleString('ru', {
@@ -37,4 +36,4 @@ for (let i = 0; i < inputs.length; i += 1) {
         },
         startDate: new Date()
     });
-}
+});
