@@ -1,4 +1,13 @@
 .enter-buttons {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 960px) {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
     &__log-in-button {
         width: 87px;
     }
