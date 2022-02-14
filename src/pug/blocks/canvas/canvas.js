@@ -27,8 +27,7 @@ class Canvas {
 
     init() {
         if (this.ctx) {
-            // eslint-disable-next-line no-new
-            new Chart(this.ctx, {
+            (() => (new Chart(this.ctx, {
                 type: 'doughnut',
                 data: this.data,
                 options: {
@@ -62,7 +61,7 @@ class Canvas {
                         point: {}
                     }
                 }
-            });
+            })))();
         }
     }
 }

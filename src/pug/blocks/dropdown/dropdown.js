@@ -3,8 +3,7 @@ import {DropdownDefault} from './dropdown-kit/DropdownDefault';
 
 (() => {
     document.querySelectorAll('.dropdown-default').forEach((node) => {
-        // eslint-disable-next-line no-new
-        new DropdownDefault(node, [
+        return new DropdownDefault(node, [
             ['гость', 'гостя', 'гостей'],
             ['младенец', 'младенца', 'младенцев']
         ]);
@@ -12,8 +11,7 @@ import {DropdownDefault} from './dropdown-kit/DropdownDefault';
 })();
 (() => {
     document.querySelectorAll('.dropdown-rooms').forEach((node) => {
-        // eslint-disable-next-line no-new
-        new DropdownRooms(node, [
+        return new DropdownRooms(node, [
             ['спальня', 'спальни', 'спален'],
             ['кровать', 'кровати', 'кроватей'],
             ['ванная комната', 'ванные комнаты', 'ванных комнат']
