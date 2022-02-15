@@ -1,10 +1,10 @@
 class LikeButton {
     constructor(element) {
-        this.element = $(element);
-        this.init();
+        this.init(element);
     }
 
-    init() {
+    init(element) {
+        this.element = $(element);
         this.element.on('click', function () {
             if ($(this).hasClass('like-button_active')) {
                 $(this).removeClass('like-button_active');

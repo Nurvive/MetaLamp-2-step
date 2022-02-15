@@ -2,11 +2,11 @@ import SideMenu from '../side-menu/side-menu';
 
 class Header {
     constructor(element) {
-        this.element = $(element);
-        this.init();
+        this.init(element);
     }
 
-    init() {
+    init(element) {
+        this.element = $(element);
         $().ready(() => {
             this.element.on('click', function () {
                 if ($(this).hasClass('header__menu-dropdown_active')) {

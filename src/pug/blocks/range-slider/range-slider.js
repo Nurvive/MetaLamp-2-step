@@ -3,12 +3,12 @@ import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 
 class RangeSlider {
     constructor(element) {
-        this.element = $(element).children('.js-range-slider__slider');
-        this.counter = $(element).children('.js-range-slider__count');
-        this.init();
+        this.init(element);
     }
 
-    init() {
+    init(element) {
+        this.element = $(element).children('.js-range-slider__slider');
+        this.counter = $(element).children('.js-range-slider__count');
         this.element.ionRangeSlider({
             skin: 'round',
             min: 0,

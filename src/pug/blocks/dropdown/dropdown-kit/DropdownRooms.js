@@ -1,6 +1,6 @@
 import {Dropdown} from './Dropdown';
 
-export class DropdownRooms extends Dropdown {
+class DropdownRooms extends Dropdown {
     constructor(component, wordsDefault) {
         super(component, wordsDefault);
         this.attachEventHandlers();
@@ -51,3 +51,5 @@ export class DropdownRooms extends Dropdown {
         this.input.value = result;
     }
 }
+
+export {DropdownRooms};

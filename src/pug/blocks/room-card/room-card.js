@@ -3,11 +3,11 @@ import 'slick-carousel/slick/slick.css';
 
 class RoomCard {
     constructor(element) {
-        this.element = $(element);
-        this.init();
+        this.init(element);
     }
 
-    init() {
+    init(element) {
+        this.element = $(element);
         this.element.slick({
             dots: true,
             prevArrow: '<button class="room-card__arrow room-card__arrow_prev fas fa-chevron-left"></button>',

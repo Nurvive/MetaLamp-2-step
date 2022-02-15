@@ -2,8 +2,12 @@ import {Chart, registerables} from 'chart.js';
 
 class Canvas {
     constructor(element) {
-        Chart.register(...registerables);
+        this.init(element);
+    }
+
+    init(element) {
         this.ctx = element;
+        Chart.register(...registerables);
         const badParam = this.ctx.dataset.bad;
         const okParam = this.ctx.dataset.ok;
         const goodParam = this.ctx.dataset.good;
@@ -22,10 +26,6 @@ class Canvas {
 
             }]
         };
-        this.init();
-    }
-
-    init() {
         if (this.ctx) {
             (() => (new Chart(this.ctx, {
                 type: 'doughnut',

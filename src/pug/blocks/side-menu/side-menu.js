@@ -1,14 +1,14 @@
 class SideMenu {
     constructor(burger) {
+        this.startingX = 0;
+        this.init(burger);
+    }
+
+    init(burger) {
         this.element = $('.js-side-menu');
         this.burger = $(burger);
         this.menuDropdown = $('.js-side-menu__menu-dropdown');
         this.close = $('.js-side-menu__close');
-        this.startingX = 0;
-        this.init();
-    }
-
-    init() {
         this.element.on('touchstart', this.touchStartHandler.bind(this));
         this.element.on('touchmove', this.touchMoveHandler.bind(this));
         this.element.on('touchend', this.touchEndHandler.bind(this));

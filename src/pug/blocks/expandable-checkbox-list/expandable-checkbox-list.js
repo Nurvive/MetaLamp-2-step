@@ -1,10 +1,10 @@
 class ExpandableCheckboxList {
     constructor(element) {
-        this.element = $(element);
-        this.init();
+        this.init(element);
     }
 
-    init() {
+    init(element) {
+        this.element = $(element);
         this.element.on('click', function () {
             const $inner = $(this).siblings('.js-expandable-checkbox__inner');
             if ($inner.hasClass('expandable-checkbox__inner_hide')) {

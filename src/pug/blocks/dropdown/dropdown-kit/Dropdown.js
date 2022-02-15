@@ -1,4 +1,4 @@
-export class Dropdown {
+class Dropdown {
     constructor(component, wordsDefault) {
         this.component = component;
         this.wordsDefault = wordsDefault;
@@ -119,3 +119,5 @@ export class Dropdown {
         this.inputWrapper.classList.remove('dropdown__input-wrapper_active');
     }
 }
+
+export {Dropdown};

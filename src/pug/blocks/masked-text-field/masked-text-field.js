@@ -2,11 +2,11 @@ import IMask from 'imask';
 
 class MaskedTextField {
     constructor(element) {
-        this.element = element;
-        this.init();
+        this.init(element);
     }
 
-    init() {
+    init(element) {
+        this.element = element;
         if (this.element !== null) {
             IMask(
                 this.element,
