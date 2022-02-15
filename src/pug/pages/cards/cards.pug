@@ -19,7 +19,11 @@ block content
                 +reservation
                 +login
             .cards__item
-                +date-dropdown
+                -
+                    const dateDropdownOptions = {
+                        placeholder: 'ДД.ММ. - ДД.ММ.',
+                    }
+                +date-dropdown(dateDropdownOptions)
                 -
                     let roomCardOptions = {
                         images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],

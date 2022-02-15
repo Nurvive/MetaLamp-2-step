@@ -29,18 +29,22 @@ export class Dropdown {
         return textForms[2];
     }
 
+    plusEventHandler(e) {
+        this.increase(e);
+        this.countingGuests(e);
+    }
+
+    minusEventHandler(e) {
+        this.decrease(e);
+        this.countingGuests(e);
+    }
+
     attachEventHandlers() {
         this.plus.forEach((node) => {
-            node.addEventListener('click', (e) => {
-                this.increase(e);
-                this.countingGuests(e);
-            });
+            node.addEventListener('click', this.plusEventHandler);
         });
         this.minus.forEach((node) => {
-            node.addEventListener('click', (e) => {
-                this.decrease(e);
-                this.countingGuests(e);
-            });
+            node.addEventListener('click', this.minusEventHandler);
         });
         this.clears.forEach((node) => {
             node.addEventListener('click', (e) => this.clear(e));

@@ -1,6 +1,10 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
+function pickerClickHandler(picker) {
+    picker?.show();
+}
+
 const inputs = document.querySelectorAll('.js-date-dropdown-double__input input');
 for (let i = 0; i < inputs.length; i += 2) {
     const picker = new AirDatepicker(inputs[i], {
@@ -32,7 +36,5 @@ for (let i = 0; i < inputs.length; i += 2) {
         startDate: new Date()
     });
 
-    inputs[i + 1]?.addEventListener('click', function () {
-        picker.show();
-    });
+    inputs[i + 1]?.addEventListener('click', () => pickerClickHandler(picker));
 }
