@@ -1,6 +1,6 @@
 extends ../../templates/template
 include ../../blocks/find-room/find-room
-include ../../blocks/calendar/calendar
+include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/login/login
 include ../../blocks/registration/registration
 include ../../blocks/reservation/reservation
@@ -19,7 +19,7 @@ block content
                 +reservation
                 +login
             .cards__item
-                +calendar
+                +date-dropdown
                 -
                     let roomCardOptions = {
                         images: ['../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png', '../../../assets/images/room.png'],
