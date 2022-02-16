@@ -29,31 +29,25 @@ block content
                 p Text field
                 +text-field
             .form-elements__label
-                p dropdown
-                +dropdown({type: 'default'})
+                +dropdown({type: 'default', title: 'dropdown'})
             .form-elements__label
                 p masked text field
                 +masked-text-field
             .form-elements__label
                 p date Dropdown
-                -
-                    const doubleDateDropdownOptions = {
-                        placeholder: 'ДД.ММ.ГГГГ'
-                    }
-                +date-dropdown-double(doubleDateDropdownOptions)
+                +date-dropdown-double({
+                    placeholder: 'ДД.ММ.ГГГГ'
+                })
             .form-elements__label
                 p filter date dropdown
-                -
-                    const dateDropdownOptions = {
-                        placeholder: 'ДД.ММ. - ДД.ММ.',
-                    }
-                +date-dropdown(dateDropdownOptions)
+                +date-dropdown({
+                    placeholder: 'ДД.ММ. - ДД.ММ.'
+                })
             .form-elements__label
                 p subscription text field
                 +subscription-text-field
             .form-elements__label
-                p dropdown
-                +dropdown({type:'rooms'})
+                +dropdown({type: 'rooms', title: 'dropdown'})
             .form-elements__label
                 +expandable-checkbox({
                     text: 'expandable checkbox list',

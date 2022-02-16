@@ -29,8 +29,7 @@ block content
                             +date-dropdown(dateDropdownOptions)
                     li.search-room__item.js-search-room__item(data-move="no")
                         .search-room__dropdown-layout
-                            p Гости
-                            +dropdown({type:'default'})
+                            +dropdown({type:'default', title: 'Гости'})
                     li.search-room__item.js-search-room__item(data-move="no")
                         .search-room__slider-layout диапазон цены
                         +range-slider
@@ -46,8 +45,7 @@ block content
                         })
 
                     li.search-room__item.js-search-room__item
-                        .search-room__dropdown-layout удобства номера
-                        +dropdown({type:'rooms'})
+                        +dropdown({type:'rooms', title: 'удобства номера'})
                     li.search-room__item.js-search-room__item
                         .search-room__layout
                             +expandable-checkbox({

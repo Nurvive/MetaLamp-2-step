@@ -17,7 +17,7 @@
     &__open-button {
         @extend %open-button-chevron;
 
-        top: 50%;
+        top: 65%;
         transform: translateY(-25%);
         right: 16px;
     }
@@ -32,6 +32,15 @@
                 border-radius: 4px 4px 0 0;
                 border-color: $dark50;
             }
+        }
+
+        &-title {
+            color: $dark100;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 15px;
+            font-size: 12px;
+            margin-bottom: 5px;
         }
     }
 
