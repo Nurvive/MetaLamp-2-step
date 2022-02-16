@@ -6,6 +6,7 @@ import RangeSlider from '../pug/blocks/range-slider/range-slider';
 import RoomCard from '../pug/blocks/room-card/room-card';
 import Header from '../pug/blocks/header/header';
 import Canvas from '../pug/blocks/canvas/canvas';
+import DateDropdown from '../pug/blocks/date-dropdown/date-dropdown';
 
 $(() => {
     $('.js-like-button').each((_, element) => new LikeButton(element));
@@ -16,4 +17,5 @@ $(() => {
     $('.js-room-card__top').each((_, element) => new RoomCard(element));
     $('.js-header__menu-dropdown').each((_, element) => new Header(element));
     $('.js-canvas__area').each((_, element) => new Canvas(element));
+    $('.js-date-dropdown').each((_, element) => new DateDropdown(element));
 });

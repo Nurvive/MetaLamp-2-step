@@ -4,7 +4,6 @@ include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/comment/comment
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
 include ../../blocks/date-dropdown/date-dropdown
-include ../../blocks/date-dropdown-double/date-dropdown-double
 include ../../blocks/like-button/like-button
 include ../../blocks/bullet-list/bullet-list
 include ../../blocks/dropdown/dropdown
@@ -35,13 +34,15 @@ block content
                 +masked-text-field
             .form-elements__label
                 p date Dropdown
-                +date-dropdown-double({
-                    placeholder: 'ДД.ММ.ГГГГ'
+                +date-dropdown({
+                    placeholder: 'ДД.ММ.ГГГГ',
+                    type: 'double',
                 })
             .form-elements__label
-                p filter date dropdown
                 +date-dropdown({
-                    placeholder: 'ДД.ММ. - ДД.ММ.'
+                    placeholder: 'ДД.ММ. - ДД.ММ.',
+                    type: 'single',
+                    title: ['filter date dropdown']
                 })
             .form-elements__label
                 p subscription text field

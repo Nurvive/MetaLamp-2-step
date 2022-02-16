@@ -24,7 +24,8 @@ block content
                             -
                                 const dateDropdownOptions = {
                                     placeholder: 'ДД.ММ. - ДД.ММ.',
-                                    title: 'даты пребывания в отеле'
+                                    title: ['даты пребывания в отеле'],
+                                    type: 'single'
                                 }
                             +date-dropdown(dateDropdownOptions)
                     li.search-room__item.js-search-room__item(data-move="no")

@@ -1,39 +1,98 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
-const inputs = document.querySelectorAll('.js-date-dropdown__input input');
-inputs.forEach((input) => {
-    return new AirDatepicker(input, {
-        multipleDates: true,
-        range: true,
-        onSelect(fd) {
-            const date = fd.formattedDate.split(',');
-            input.value = date.length > 1 ? `${date[0].substr(0, date[0].length - 1)} - ${date[1].substr(0, date[0].length - 1)}` : `${date[0].substr(0, date[0].length - 1)}`;
-        },
-        onShow: function () {
-            input.parentNode.classList.add('date-dropdown__input_active');
-        },
-        onHide: function () {
-            input.parentNode.classList.remove('date-dropdown__input_active');
-        },
-        dateFormat(date) {
-            return date.toLocaleString('ru', {
-                day: '2-digit',
-                month: 'short'
-            });
-        },
-        multipleDatesSeparator: ' - ',
-        buttons: ['clear', {
-            content: 'Применить',
-            onClick: (dp) => {
-                dp.hide();
-            }
-        }],
-        prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_left"></span>',
-        nextHtml: '<span class="air-datepicker__arrow"></span>',
-        navTitles: {
-            days: 'MMMM yyyy'
-        },
-        startDate: new Date()
-    });
-});
+class DateDropdown {
+    constructor(element) {
+        this.init(element);
+    }
+
+    init(element) {
+        this.element = element;
+        const inputs = this.element.querySelectorAll('.js-date-dropdown__input input');
+        const isDouble = this.element.dataset.double === 'true';
+        if (isDouble) {
+            DateDropdown.doubleCreate(inputs);
+        } else {
+            DateDropdown.singleCreate(inputs);
+        }
+    }
+
+    static pickerClickHandler(picker) {
+        picker?.show();
+    }
+
+    static doubleCreate(inputs) {
+        const picker = new AirDatepicker(inputs[0], {
+            multipleDates: true,
+            range: true,
+            onSelect(fd) {
+                inputs[0].value = fd.formattedDate[0] ? fd.formattedDate[0] : '';
+                inputs[1].value = fd.formattedDate[1] ? fd.formattedDate[1] : '';
+            },
+            onShow: function () {
+                inputs[0].parentNode.classList.add('date-dropdown-double__input_active');
+                inputs[1].parentNode.classList.add('date-dropdown-double__input_active');
+            },
+            onHide: function () {
+                inputs[0].parentNode.classList.remove('date-dropdown-double__input_active');
+                inputs[1].parentNode.classList.remove('date-dropdown-double__input_active');
+            },
+            buttons: ['clear', {
+                content: 'Применить',
+                onClick: (dp) => {
+                    dp.hide();
+                }
+            }],
+            prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_left"></span>',
+            nextHtml: '<span class="air-datepicker__arrow"></span>',
+            navTitles: {
+                days: 'MMMM yyyy'
+            },
+            startDate: new Date()
+        });
+
+        inputs[1]?.addEventListener('click', () => DateDropdown.pickerClickHandler(picker));
+    }
+
+    static singleCreate(inputs) {
+        const input = inputs[0];
+        return new AirDatepicker(input, {
+            multipleDates: true,
+            range: true,
+            onSelect(fd) {
+                if (Array.isArray(fd.formattedDate)) {
+                    return;
+                }
+                const date = fd.formattedDate.split(',');
+                input.value = date.length > 1 ? `${date[0].substr(0, date[0].length - 1)} - ${date[1].substr(0, date[0].length - 1)}` : `${date[0].substr(0, date[0].length - 1)}`;
+            },
+            onShow: function () {
+                input.parentNode.classList.add('date-dropdown__input_active');
+            },
+            onHide: function () {
+                input.parentNode.classList.remove('date-dropdown__input_active');
+            },
+            dateFormat(date) {
+                return date.toLocaleString('ru', {
+                    day: '2-digit',
+                    month: 'short'
+                });
+            },
+            multipleDatesSeparator: ' - ',
+            buttons: ['clear', {
+                content: 'Применить',
+                onClick: (dp) => {
+                    dp.hide();
+                }
+            }],
+            prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_left"></span>',
+            nextHtml: '<span class="air-datepicker__arrow"></span>',
+            navTitles: {
+                days: 'MMMM yyyy'
+            },
+            startDate: new Date()
+        });
+    }
+}
+
+export default DateDropdown;

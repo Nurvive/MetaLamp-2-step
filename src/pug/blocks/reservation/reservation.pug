@@ -1,5 +1,5 @@
 include ../button/button
-include ../date-dropdown-double/date-dropdown-double
+include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 
 mixin reservation()
@@ -13,11 +13,11 @@ mixin reservation()
         .reservation__dates
             -
                 const dateDropdownDoubleOptions = {
-                    title1: 'Прибытие',
-                    title2: 'Выезд',
-                    placeholder: 'ДД.ММ.ГГГГ'
+                    title: ['Прибытие', 'Выезд'],
+                    placeholder: 'ДД.ММ.ГГГГ',
+                    type: 'double'
                 }
-            +date-dropdown-double(dateDropdownDoubleOptions)
+            +date-dropdown(dateDropdownDoubleOptions)
         .reservation__layout
             +dropdown({type: 'default', title: 'гости'})
         .reservation__services
