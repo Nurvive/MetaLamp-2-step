@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const PAGES = fs.readdirSync(path.join(__dirname, './src/pug/pages'));
+// const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: './src/js/main.js',
     mode: 'development',
@@ -34,6 +35,17 @@ module.exports = {
                     }, {
                         loader: 'resolve-url-loader',
                         options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    'autoprefixer'
+                                ]
+                            },
                             sourceMap: true
                         }
                     },
