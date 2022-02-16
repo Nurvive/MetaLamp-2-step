@@ -1,7 +1,7 @@
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
 
-const $gallery = $('#room-details__gallery');
+const $gallery = $('.js-room-details__gallery');
 const $galleryImages = $gallery.children();
 let slickExist = null;
 $(window).resize(function () {

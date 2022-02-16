@@ -3,7 +3,7 @@ import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 
 $().ready(() => {
     let width = ($(window).width());
-    let $moveObjects = $('li.search-room__item:not([data-move="no"])');
+    let $moveObjects = $('li.js-search-room__item:not([data-move="no"])');
     if (width < 900) $moveObjects.detach().appendTo('.small-menu__content');
 
     $(window).resize(function () {

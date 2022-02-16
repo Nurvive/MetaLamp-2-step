@@ -6,12 +6,12 @@ class Dropdown {
         this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
         this.list = this.component.querySelector('.js-dropdown__list');
         this.input = this.component.querySelector('.js-dropdown__input-wrapper input');
-        this.plus = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper div[data-type="plus"]');
-        this.minus = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper div[data-type="minus"]');
-        this.counters = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper div[data-type="count"]');
+        this.plus = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper div[data-type="plus"]');
+        this.minus = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper div[data-type="minus"]');
+        this.counters = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper div[data-type="count"]');
         this.clears = this.component.querySelectorAll('.js-dropdown__interactive-clear');
         this.confirms = this.component.querySelectorAll('.js-dropdown__interactive-confirm');
-        this.items = this.component.querySelectorAll('.dropdown__dropdown-item-wrapper p');
+        this.items = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper p');
     }
 
     static declOfNum(n, textForms) {

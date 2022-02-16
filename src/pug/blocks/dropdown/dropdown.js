@@ -2,7 +2,7 @@ import {DropdownRooms} from './dropdown-kit/DropdownRooms';
 import {DropdownDefault} from './dropdown-kit/DropdownDefault';
 
 (() => {
-    document.querySelectorAll('.dropdown-default').forEach((node) => {
+    document.querySelectorAll('.js-dropdown-default').forEach((node) => {
         return new DropdownDefault(node, [
             ['гость', 'гостя', 'гостей'],
             ['младенец', 'младенца', 'младенцев']
@@ -10,7 +10,7 @@ import {DropdownDefault} from './dropdown-kit/DropdownDefault';
     });
 })();
 (() => {
-    document.querySelectorAll('.dropdown-rooms').forEach((node) => {
+    document.querySelectorAll('.js-dropdown-rooms').forEach((node) => {
         return new DropdownRooms(node, [
             ['спальня', 'спальни', 'спален'],
             ['кровать', 'кровати', 'кроватей'],
