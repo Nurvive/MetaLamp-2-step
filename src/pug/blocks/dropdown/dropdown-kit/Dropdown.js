@@ -40,11 +40,13 @@ class Dropdown {
     }
 
     attachEventHandlers() {
+        this.plusEventHandler = this.plusEventHandler.bind(this);
+        this.minusEventHandler = this.minusEventHandler.bind(this);
         this.plus.forEach((node) => {
-            node.addEventListener('click', this.plusEventHandler.bind(this));
+            node.addEventListener('click', this.plusEventHandler);
         });
         this.minus.forEach((node) => {
-            node.addEventListener('click', this.minusEventHandler.bind(this));
+            node.addEventListener('click', this.minusEventHandler);
         });
         this.clears.forEach((node) => {
             node.addEventListener('click', (e) => this.clear(e));

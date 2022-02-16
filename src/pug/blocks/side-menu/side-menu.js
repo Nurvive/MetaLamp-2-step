@@ -9,12 +9,18 @@ class SideMenu {
         this.burger = $(burger);
         this.menuDropdown = $('.js-side-menu__menu-dropdown');
         this.close = $('.js-side-menu__close');
-        this.element.on('touchstart', this.touchStartHandler.bind(this));
-        this.element.on('touchmove', this.touchMoveHandler.bind(this));
-        this.element.on('touchend', this.touchEndHandler.bind(this));
-        this.menuDropdown.on('click', SideMenu.dropdownClickHandler.bind(this));
-        this.burger.on('click', this.burgerClickHandler.bind(this));
-        this.close.on('click', this.closeHandler.bind(this));
+        this.touchStartHandler = this.touchStartHandler.bind(this);
+        this.touchMoveHandler = this.touchMoveHandler.bind(this);
+        this.touchEndHandler = this.touchEndHandler.bind(this);
+        SideMenu.dropdownClickHandler = SideMenu.dropdownClickHandler.bind(this);
+        this.burgerClickHandler = this.burgerClickHandler.bind(this);
+        this.closeHandler = this.closeHandler.bind(this);
+        this.element.on('touchstart', this.touchStartHandler);
+        this.element.on('touchmove', this.touchMoveHandler);
+        this.element.on('touchend', this.touchEndHandler);
+        this.menuDropdown.on('click', SideMenu.dropdownClickHandler);
+        this.burger.on('click', this.burgerClickHandler);
+        this.close.on('click', this.closeHandler);
     }
 
     touchStartHandler(event) {
