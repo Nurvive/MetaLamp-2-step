@@ -56,6 +56,12 @@
             }
         }
     }
+
+    &_inline {
+        & .date-dropdown__input > *:not(.air-datepicker) {
+            display: none;
+        }
+    }
 }
 
 .air-datepicker {

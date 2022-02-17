@@ -10,8 +10,11 @@ class DateDropdown {
         this.element = element;
         const inputs = this.element.querySelectorAll('.js-date-dropdown__input input');
         const isDouble = this.element.dataset.double === 'true';
+        const isInline = this.element.dataset.inline === 'true';
         if (isDouble) {
             DateDropdown.doubleCreate(inputs);
+        } else if (isInline) {
+            DateDropdown.inlineCreate(inputs);
         } else {
             DateDropdown.singleCreate(inputs);
         }
@@ -79,6 +82,26 @@ class DateDropdown {
                 });
             },
             multipleDatesSeparator: ' - ',
+            buttons: ['clear', {
+                content: 'Применить',
+                onClick: (dp) => {
+                    dp.hide();
+                }
+            }],
+            prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_left"></span>',
+            nextHtml: '<span class="air-datepicker__arrow"></span>',
+            navTitles: {
+                days: 'MMMM yyyy'
+            },
+            startDate: new Date()
+        });
+    }
+
+    static inlineCreate(inputs) {
+        const input = inputs[0];
+        return new AirDatepicker(input, {
+            range: true,
+            inline: true,
             buttons: ['clear', {
                 content: 'Применить',
                 onClick: (dp) => {
