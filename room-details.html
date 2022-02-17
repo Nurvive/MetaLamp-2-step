@@ -89,7 +89,7 @@
         </div>
       </div>
       <main class="room-details__main">
-        <div class="room-details__gallery" id="room-details__gallery"><img src="assets/images/gallery1.png"><img src="assets/images/gallery2.png"><img src="assets/images/gallery3.png"></div>
+        <div class="room-details__gallery js-room-details__gallery"><img src="assets/images/gallery1.png"><img src="assets/images/gallery2.png"><img src="assets/images/gallery3.png"></div>
         <div class="room-details__inner">
           <ul class="room-details__list">
             <li class="room-details__item">
@@ -200,25 +200,25 @@
                 <p class="reservation__info-cost"><strong>9 990₽</strong><span>в сутки</span></p>
               </div>
               <div class="reservation__dates">
-                <div class="date-dropdown-double">
-                  <div class="date-dropdown-double__input js-date-dropdown-double__input">
-                    <p class="date-dropdown-double__input-title">Прибытие</p>
-                    <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+                <div class="date-dropdown js-date-dropdown date-dropdown_double" data-double="true">
+                  <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
+                    <p class="date-dropdown__input-title">Прибытие</p>
+                    <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                   </div>
-                  <div class="date-dropdown-double__input js-date-dropdown-double__input">
-                    <p class="date-dropdown-double__input-title">Выезд</p>
-                    <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown-double__input-open-button"></span>
+                  <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
+                    <p class="date-dropdown__input-title">Выезд</p>
+                    <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                   </div>
                 </div>
               </div>
               <div class="reservation__layout">
-                <p class="reservation__layout-text">гости</p>
-                <div class="dropdown js-dropdown dropdown-default">
-                  <div class="dropdown__input-wrapper js-dropdown__input-wrapper"><span class="dropdown__open-button"></span>
+                <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
+                  <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
+                    <p class="dropdown__input-wrapper-title">гости</p><span class="dropdown__open-button"></span>
                     <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько гостей" type="text" readonly="readonly"/>
                   </div>
                   <ul class="dropdown__list js-dropdown__list">
-                    <div class="dropdown__dropdown-item-wrapper">
+                    <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
                       <li class="dropdown-item">
                         <p class="dropdown-item__text" data-index="0">взрослые</p>
                         <div class="dropdown-item__container">
