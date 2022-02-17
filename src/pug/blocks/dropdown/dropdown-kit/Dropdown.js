@@ -29,19 +29,17 @@ class Dropdown {
         return textForms[2];
     }
 
-    plusEventHandler(e) {
+    plusEventHandler = (e) => {
         this.increase(e);
         this.countingGuests(e);
-    }
+    };
 
-    minusEventHandler(e) {
+    minusEventHandler = (e) => {
         this.decrease(e);
         this.countingGuests(e);
-    }
+    };
 
     attachEventHandlers() {
-        this.plusEventHandler = this.plusEventHandler.bind(this);
-        this.minusEventHandler = this.minusEventHandler.bind(this);
         this.plus.forEach((node) => {
             node.addEventListener('click', this.plusEventHandler);
         });

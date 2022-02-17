@@ -19,12 +19,12 @@ class RangeSlider {
             step: 20,
             hide_min_max: true,
             hide_from_to: true,
-            onStart: function (data) {
+            onStart: (data) => {
                 this.counter.text(`${data.from} ₽ - ${data.to} ₽`);
-            }.bind(this),
-            onChange: function (data) {
+            },
+            onChange: (data) => {
                 this.counter.text(`${data.from} ₽ - ${data.to} ₽`);
-            }.bind(this)
+            }
         });
     }
 }

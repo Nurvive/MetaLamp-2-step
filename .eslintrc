@@ -12,7 +12,8 @@
     ],
     "parserOptions": {
         "sourceType": "module",
-        "allowImportExportEverywhere": true
+        "allowImportExportEverywhere": true,
+        "ecmaVersion": "latest"
     },
     "rules": {
         "linebreak-style": [
