@@ -1,10 +1,10 @@
 class SideMenu {
     constructor(burger) {
-        this.startingX = 0;
         this.init(burger);
     }
 
     init(burger) {
+        this.startingX = 0;
         this.element = $('.js-side-menu');
         this.burger = $(burger);
         this.menuDropdown = $('.js-side-menu__menu-dropdown');

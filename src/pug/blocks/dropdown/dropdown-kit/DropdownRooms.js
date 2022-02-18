@@ -8,19 +8,17 @@ class DropdownRooms extends Dropdown {
 
     attachEventHandlers() {
         this.plus.forEach((node) => {
-            node.addEventListener('click', (e) => this.countingGuests(e, true));
+            node.addEventListener('click', this.handlePlusClick);
         });
         this.minus.forEach((node) => {
-            node.addEventListener('click', (e) => this.countingGuests(e, false));
+            node.addEventListener('click', this.handleMinusClick);
         });
     }
 
-    countingGuests(event, operation) {
-        if (operation) this.increase(event);
-        else this.decrease(event);
-        let index = event.target.dataset.index;
-        let item = this.items[index].textContent;
-        let counter = this.counters[index];
+    countingGuests(event) {
+        const index = event.target.dataset.index;
+        const item = this.items[index].textContent;
+        const counter = this.counters[index];
         this.obj[item] = Number(counter.textContent);
         let a = '';
         let b = '';

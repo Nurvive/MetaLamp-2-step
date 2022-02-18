@@ -1,5 +1,9 @@
 class Dropdown {
     constructor(component, wordsDefault) {
+        this.init(component, wordsDefault);
+    }
+
+    init(component, wordsDefault) {
         this.component = component;
         this.wordsDefault = wordsDefault;
         this.obj = {};
@@ -14,50 +18,52 @@ class Dropdown {
         this.items = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper p');
     }
 
-    static declOfNum(n, textForms) {
-        let value = Math.abs(n) % 100;
-        let n1 = n % 10;
-        if (value > 10 && value < 20) {
-            return textForms[2];
-        }
-        if (n1 > 1 && n1 < 5) {
-            return textForms[1];
-        }
-        if (n1 === 1) {
-            return textForms[0];
-        }
-        return textForms[2];
-    }
+    handleClearClick = () => {
+        this.obj = {};
+        this.input.value = '';
+        this.counters.forEach((node) => {
+            node.innerHTML = 0;
+        });
+        this.minus.forEach((node) => {
+            node.classList.add('dropdown-item__minus_inactive');
+        });
+    };
 
-    plusEventHandler = (e) => {
+    handleConfirmClick = () => {
+        this.input.classList.remove('dropdown__input_active');
+        this.list.classList.remove('dropdown__list_active');
+        this.inputWrapper.classList.remove('dropdown__input-wrapper_active');
+    };
+
+    handlePlusClick = (e) => {
         this.increase(e);
         this.countingGuests(e);
     };
 
-    minusEventHandler = (e) => {
+    handleMinusClick = (e) => {
         this.decrease(e);
         this.countingGuests(e);
     };
 
     attachEventHandlers() {
         this.plus.forEach((node) => {
-            node.addEventListener('click', this.plusEventHandler);
+            node.addEventListener('click', this.handlePlusClick);
         });
         this.minus.forEach((node) => {
-            node.addEventListener('click', this.minusEventHandler);
+            node.addEventListener('click', this.handleMinusClick);
         });
         this.clears.forEach((node) => {
-            node.addEventListener('click', (e) => this.clear(e));
+            node.addEventListener('click', this.handleClearClick);
         });
         this.confirms.forEach((node) => {
-            node.addEventListener('click', (e) => this.confirm(e));
+            node.addEventListener('click', this.handleConfirmClick);
         });
     }
 
     decrease(event) {
-        let index = event.target.dataset.index;
-        let counter = this.counters[index];
-        let node = this.minus[index];
+        const index = event.target.dataset.index;
+        const counter = this.counters[index];
+        const node = this.minus[index];
         if (counter.innerHTML > 0) {
             counter.innerHTML = Number(counter.innerHTML) - 1;
         }
@@ -67,17 +73,17 @@ class Dropdown {
     }
 
     increase(event) {
-        let index = event.target.dataset.index;
-        let counter = this.counters[index];
-        let minus = this.minus[index];
+        const index = event.target.dataset.index;
+        const counter = this.counters[index];
+        const minus = this.minus[index];
         minus.classList.remove('dropdown-item__minus_inactive');
         counter.innerHTML = Number(counter.innerHTML) + 1;
     }
 
     countingGuests(event) {
-        let index = event.target.dataset.index;
-        let item = this.items[index].textContent;
-        let counter = this.counters[index];
+        const index = event.target.dataset.index;
+        const item = this.items[index].textContent;
+        const counter = this.counters[index];
         this.obj[item] = Number(counter.textContent);
         let a = '';
         let b = '';
@@ -102,21 +108,19 @@ class Dropdown {
         this.input.value = result;
     }
 
-    clear() {
-        this.obj = {};
-        this.input.value = '';
-        this.counters.forEach((node) => {
-            node.innerHTML = 0;
-        });
-        this.minus.forEach((node) => {
-            node.classList.add('dropdown-item__minus_inactive');
-        });
-    }
-
-    confirm() {
-        this.input.classList.remove('dropdown__input_active');
-        this.list.classList.remove('dropdown__list_active');
-        this.inputWrapper.classList.remove('dropdown__input-wrapper_active');
+    static declOfNum(n, textForms) {
+        let value = Math.abs(n) % 100;
+        let n1 = n % 10;
+        if (value > 10 && value < 20) {
+            return textForms[2];
+        }
+        if (n1 > 1 && n1 < 5) {
+            return textForms[1];
+        }
+        if (n1 === 1) {
+            return textForms[0];
+        }
+        return textForms[2];
     }
 }
 

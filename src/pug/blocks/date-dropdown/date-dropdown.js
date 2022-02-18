@@ -20,9 +20,9 @@ class DateDropdown {
         }
     }
 
-    static pickerClickHandler(picker) {
+    static handlePickerClick = (picker) => () => {
         picker?.show();
-    }
+    };
 
     static doubleCreate(inputs) {
         const picker = new AirDatepicker(inputs[0], {
@@ -54,7 +54,7 @@ class DateDropdown {
             startDate: new Date()
         });
 
-        inputs[1]?.addEventListener('click', () => DateDropdown.pickerClickHandler(picker));
+        inputs[1]?.addEventListener('click', DateDropdown.handlePickerClick(picker));
     }
 
     static singleCreate(inputs) {
