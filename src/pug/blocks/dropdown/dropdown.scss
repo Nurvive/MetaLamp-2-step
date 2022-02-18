@@ -1,15 +1,6 @@
 @import '../../../scss/common/colors';
 @import '../../../scss/common/templates';
 
-%interactive-button {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $purple;
-    cursor: pointer;
-}
-
 .dropdown {
     max-width: 320px;
     position: relative;
@@ -71,10 +62,5 @@
         display: flex;
         justify-content: space-between;
         margin-top: 21px;
-
-        &-clear,
-        &-confirm {
-            @extend %interactive-button;
-        }
     }
 }

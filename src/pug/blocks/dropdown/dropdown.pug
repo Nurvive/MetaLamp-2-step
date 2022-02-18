@@ -1,5 +1,6 @@
 include ../text-field/text-field
 include ../dropdown-item/dropdown-item
+include ../button/button
 
 mixin dropdown({type = 'default', title = 'Гости'} = {})
     -
@@ -26,5 +27,7 @@ mixin dropdown({type = 'default', title = 'Гости'} = {})
                 +dropdown-item(wordsArray)
             if hasButtons
                 li.dropdown__interactive
-                    p.dropdown__interactive-clear.js-dropdown__interactive-clear очистить
-                    p.dropdown__interactive-confirm.js-dropdown__interactive-confirm применить
+                    .js-dropdown__interactive-clear
+                        +button({text: 'очистить', type: 'with-text'})
+                    .js-dropdown__interactive-confirm
+                        +button({text: 'применить', type: 'with-text'})

@@ -253,6 +253,14 @@
                 span {
                     font-family: Montserrat, sans-serif;
                 }
+
+                &:hover {
+                    background: initial;
+
+                    & span {
+                        color: $dark50;
+                    }
+                }
             }
         }
     }
