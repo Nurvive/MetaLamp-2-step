@@ -18,8 +18,10 @@ $(window).resize(function () {
     }
 });
 
+const handleGalleryInit = () => {
+    slickExist = true;
+};
+
 $(document).ready(() => {
-    $gallery.on('init', () => {
-        slickExist = true;
-    });
+    $gallery.on('init', handleGalleryInit);
 });

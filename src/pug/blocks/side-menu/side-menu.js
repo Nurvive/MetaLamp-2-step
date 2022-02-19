@@ -9,19 +9,19 @@ class SideMenu {
         this.burger = $(burger);
         this.menuDropdown = $('.js-side-menu__menu-dropdown');
         this.close = $('.js-side-menu__close');
-        this.element.on('touchstart', this.touchStartHandler);
-        this.element.on('touchmove', this.touchMoveHandler);
-        this.element.on('touchend', this.touchEndHandler);
-        this.menuDropdown.on('click', SideMenu.dropdownClickHandler);
-        this.burger.on('click', this.burgerClickHandler);
-        this.close.on('click', this.closeHandler);
+        this.element.on('touchstart', this.handleSideMenuTouchStart);
+        this.element.on('touchmove', this.handleSideMenuTouchMove);
+        this.element.on('touchend', this.handleSideMenuTouchEnd);
+        this.menuDropdown.on('click', SideMenu.handleMenuDropdownClick);
+        this.burger.on('click', this.handleBurgerClick);
+        this.close.on('click', this.handleCloseClick);
     }
 
-    touchStartHandler = (event) => {
+    handleSideMenuTouchStart = (event) => {
         this.startingX = event.touches[0].clientX;
     };
 
-    touchMoveHandler = (event) => {
+    handleSideMenuTouchMove = (event) => {
         let touch = event.touches[0];
         let change = this.startingX - touch.clientX;
         if (change < 0) {
@@ -31,7 +31,7 @@ class SideMenu {
         event.preventDefault();
     };
 
-    touchEndHandler = (event) => {
+    handleSideMenuTouchEnd = (event) => {
         const change = this.startingX - event.changedTouches[0].clientX;
         const threshold = window.screen.width / 3;
         if (change < threshold) {
@@ -44,16 +44,16 @@ class SideMenu {
         this.element[0].style.left = null;
     };
 
-    static dropdownClickHandler(e) {
+    static handleMenuDropdownClick(e) {
         $(e.target).children('.js-side-menu__dropdown-item').toggle(400);
     }
 
-    burgerClickHandler = () => {
+    handleBurgerClick = () => {
         this.element.removeClass('side-menu_hide');
         this.element.addClass('side-menu_active');
     };
 
-    closeHandler = () => {
+    handleCloseClick = () => {
         this.element.removeClass('side-menu_active');
         this.element.addClass('side-menu_hide');
     };

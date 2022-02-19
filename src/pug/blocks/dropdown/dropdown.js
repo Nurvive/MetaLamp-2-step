@@ -18,16 +18,21 @@ import {DropdownDefault} from './dropdown-kit/DropdownDefault';
         ]);
     });
 })();
+
+function handleDropdownClick(e) {
+    e.preventDefault();
+    $(e.currentTarget).find('.js-dropdown__input').toggleClass('dropdown__input_active');
+    $(e.currentTarget).find('.js-dropdown__list').toggleClass('dropdown__list_active');
+    $(e.currentTarget).find('.js-dropdown__input-wrapper').toggleClass('dropdown__input-wrapper_active');
+    e.stopPropagation();
+}
+
+function handleDropdownListClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
 $().ready(function () {
-    $('.js-dropdown').on('click', function (e) {
-        e.preventDefault();
-        $(this).find('.js-dropdown__input').toggleClass('dropdown__input_active');
-        $(this).find('.js-dropdown__list').toggleClass('dropdown__list_active');
-        $(this).find('.js-dropdown__input-wrapper').toggleClass('dropdown__input-wrapper_active');
-        e.stopPropagation();
-    });
-    $('.js-dropdown__list').on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-    });
+    $('.js-dropdown').on('click', handleDropdownClick);
+    $('.js-dropdown__list').on('click', handleDropdownListClick);
 });
