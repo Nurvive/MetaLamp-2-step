@@ -12,7 +12,7 @@ class DateDropdown {
         const isDouble = this.element.dataset.double === 'true';
         const isInline = this.element.dataset.inline === 'true';
         if (isDouble) {
-            DateDropdown.doubleCreate(inputs);
+            this.doubleCreate(inputs);
         } else if (isInline) {
             DateDropdown.inlineCreate(inputs);
         } else {
@@ -20,12 +20,12 @@ class DateDropdown {
         }
     }
 
-    static handlePickerClick = (picker) => () => {
-        picker?.show();
+    handleInputClick = () => {
+        this.picker.show();
     };
 
-    static doubleCreate(inputs) {
-        const picker = new AirDatepicker(inputs[0], {
+    doubleCreate(inputs) {
+        this.picker = new AirDatepicker(inputs[0], {
             multipleDates: true,
             range: true,
             onSelect(fd) {
@@ -54,7 +54,7 @@ class DateDropdown {
             startDate: new Date()
         });
 
-        inputs[1]?.addEventListener('click', DateDropdown.handlePickerClick(picker));
+        inputs[1].addEventListener('click', this.handleInputClick);
     }
 
     static singleCreate(inputs) {
