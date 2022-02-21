@@ -755,6 +755,12 @@
 .air-datepicker--buttons .air-datepicker-buttons .air-datepicker-button span {
   font-family: Montserrat, sans-serif;
 }
+.air-datepicker--buttons .air-datepicker-buttons .air-datepicker-button:hover {
+  background: initial;
+}
+.air-datepicker--buttons .air-datepicker-buttons .air-datepicker-button:hover span {
+  color: rgba(31, 32, 65, 0.5);
+}
 .dropdown-item {
   color: #1f2041;
   font-weight: bold;
@@ -831,15 +837,6 @@
 }
 .dropdown__open-button::before {
   transform: rotate(45deg);
-}
-
-.dropdown__interactive-clear, .dropdown__interactive-confirm {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #bc9cff;
-  cursor: pointer;
 }
 
 .dropdown {
@@ -1319,6 +1316,7 @@
   cursor: pointer;
   align-items: baseline;
   line-height: initial;
+  font-weight: initial;
 }
 .like-button__icon {
   font-size: 10px;
@@ -2584,7 +2582,7 @@
     flex-basis: 40%;
   }
 }
-.search-room__small-menu .small-menu__content {
+.search-room__small-menu-content {
   display: none;
   top: 50px;
   position: absolute;
