@@ -32,7 +32,7 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
                                     ul.header__menu-dropdown.js-header__menu-dropdown= option.text
                                         .header__menu-dropdown-open-button
                                         each item in option.items
-                                            li.header__dropdown-item
+                                            li.header__dropdown-item.header__dropdown-item_hide.js-header__dropdown-item
                                                 a= item
                                 else
                                     a= option.text

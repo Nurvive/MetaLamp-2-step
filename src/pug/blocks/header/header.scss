@@ -89,7 +89,7 @@
     }
 
     &__dropdown-item {
-        display: none;
+        display: block;
         position: absolute;
         border-radius: 8px;
         left: 0;
@@ -97,6 +97,10 @@
         font-weight: initial;
         padding: 4px;
         background-color: #fff;
+
+        &_hide {
+            display: none;
+        }
 
         & a {
             margin: 0;

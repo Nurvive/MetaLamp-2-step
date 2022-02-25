@@ -15,11 +15,11 @@ class Header {
 
     static handleMenuDropdownClick(e) {
         if ($(e.currentTarget).hasClass('header__menu-dropdown_active')) {
-            $(e.currentTarget).children(':not(.header__menu-dropdown-open-button)').css('display', 'none');
+            $(e.currentTarget).children('.js-header__dropdown-item').addClass('header__dropdown-item_hide');
             $(e.currentTarget).removeClass('header__menu-dropdown_active');
         } else {
             $(e.currentTarget).addClass('header__menu-dropdown_active');
-            $(e.currentTarget).children(':not(.header__menu-dropdown-open-button)').css('display', 'block');
+            $(e.currentTarget).children('.js-header__dropdown-item').removeClass('header__dropdown-item_hide');
         }
     }
 }
