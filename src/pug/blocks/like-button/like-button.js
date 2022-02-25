@@ -5,18 +5,18 @@ class LikeButton {
 
     init(element) {
         this.element = $(element);
-        this.element.on('click', LikeButton.handleLikeButtonClick);
+        this.element.on('click', this.handleLikeButtonClick);
     }
 
-    static handleLikeButtonClick(e) {
-        if ($(e.currentTarget).hasClass('like-button_active')) {
-            $(e.currentTarget).removeClass('like-button_active');
-            $(e.currentTarget).children('.js-like-button__count').text($(e.currentTarget).text() - 1);
+    handleLikeButtonClick = () => {
+        if (this.element.hasClass('like-button_active')) {
+            this.element.removeClass('like-button_active');
+            this.element.children('.js-like-button__count').text(this.element.text() - 1);
         } else {
-            $(e.currentTarget).addClass('like-button_active');
-            $(e.currentTarget).children('.js-like-button__count').text(Number($(e.currentTarget).text()) + 1);
+            this.element.addClass('like-button_active');
+            this.element.children('.js-like-button__count').text(Number(this.element.text()) + 1);
         }
-    }
+    };
 }
 
 export default LikeButton;

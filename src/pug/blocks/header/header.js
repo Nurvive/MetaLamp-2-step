@@ -13,12 +13,13 @@ class Header {
     }
 
     static handleMenuDropdownClick(e) {
-        if ($(e.currentTarget).hasClass('header__menu-dropdown_active')) {
-            $(e.currentTarget).children('.js-header__dropdown-item').addClass('header__dropdown-item_hide');
-            $(e.currentTarget).removeClass('header__menu-dropdown_active');
+        const dropdown = $(e.currentTarget);
+        if (dropdown.hasClass('header__menu-dropdown_active')) {
+            dropdown.children('.js-header__dropdown-item').addClass('header__dropdown-item_hide');
+            dropdown.removeClass('header__menu-dropdown_active');
         } else {
-            $(e.currentTarget).addClass('header__menu-dropdown_active');
-            $(e.currentTarget).children('.js-header__dropdown-item').removeClass('header__dropdown-item_hide');
+            dropdown.addClass('header__menu-dropdown_active');
+            dropdown.children('.js-header__dropdown-item').removeClass('header__dropdown-item_hide');
         }
     }
 }
