@@ -5,7 +5,7 @@ include ../cabinet-button/cabinet-button
 include ../font-awesome-icon/font-awesome-icon
 
 mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
-    header.header
+    header.header.js-header
         .header__container
             .header__logo-burger
                 +font-awesome-icon({

@@ -7,10 +7,9 @@ class Header {
 
     init(element) {
         this.element = $(element);
-        $().ready(() => {
-            this.element.on('click', Header.handleMenuDropdownClick);
-            return new SideMenu('.header__logo-burger');
-        });
+        this.menuDropdown = this.element.find('.js-header__menu-dropdown');
+        this.menuDropdown.on('click', Header.handleMenuDropdownClick);
+        (() => new SideMenu('.header__logo-burger'))();
     }
 
     static handleMenuDropdownClick(e) {
