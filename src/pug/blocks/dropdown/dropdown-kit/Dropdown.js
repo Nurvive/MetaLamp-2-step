@@ -98,14 +98,7 @@ class Dropdown {
                 b = value + ' ' + val;
             }
         });
-        let result = '';
-        let comma = ', ';
-        if (a) result += a;
-        else comma = '';
-        if (b) {
-            result += comma + b;
-        }
-        this.input.value = result;
+        this.input.value = [a, b].filter(el => el).join(', ');
     }
 
     static declOfNum(n, textForms) {

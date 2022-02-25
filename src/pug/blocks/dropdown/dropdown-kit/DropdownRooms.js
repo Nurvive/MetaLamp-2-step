@@ -37,16 +37,7 @@ class DropdownRooms extends Dropdown {
                 c = value + ' ' + val;
             }
         });
-        let result = '';
-        let comma = ', ';
-        if (a) result += a;
-        else comma = '';
-        if (b) {
-            result += comma + b;
-            comma = ', ';
-        }
-        if (c) result += comma + c;
-        this.input.value = result;
+        this.input.value = [a, b, c].filter(el => el).join(', ');
     }
 }
 
