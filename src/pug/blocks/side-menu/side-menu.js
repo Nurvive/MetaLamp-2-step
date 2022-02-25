@@ -35,11 +35,9 @@ class SideMenu {
         const change = this.startingX - event.changedTouches[0].clientX;
         const threshold = window.screen.width / 3;
         if (change < threshold) {
-            this.element.removeClass('side-menu_hide');
             this.element.addClass('side-menu_active');
         } else {
             this.element.removeClass('side-menu_active');
-            this.element.addClass('side-menu_hide');
         }
         this.element[0].style.left = null;
     };
@@ -49,13 +47,11 @@ class SideMenu {
     }
 
     handleBurgerClick = () => {
-        this.element.removeClass('side-menu_hide');
         this.element.addClass('side-menu_active');
     };
 
     handleCloseClick = () => {
         this.element.removeClass('side-menu_active');
-        this.element.addClass('side-menu_hide');
     };
 }
 
