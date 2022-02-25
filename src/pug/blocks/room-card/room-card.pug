@@ -14,7 +14,7 @@ mixin room-card({images = [], number = '1337', type = '', cost = '666₽', ratin
                             span.room-card__type=type
                     .room-card__price
                         strong=cost
-                        span  в сутки
+                        span.room-card__price-date  в сутки
                 li.room-card__item
                     +rate-button({count: rating, unique: uniqueID})
                     .room-card__reviews

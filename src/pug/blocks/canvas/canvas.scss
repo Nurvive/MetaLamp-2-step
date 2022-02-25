@@ -1,22 +1,26 @@
 @import '../../../scss/common/colors';
 
-.canvas {
-    span {
-        position: absolute;
-        color: $purple;
-        font-weight: bold;
-        left: 50%;
-        transform: translate(-50%);
-        z-index: -1;
-    }
+%text {
+    position: absolute;
+    color: $purple;
+    font-weight: bold;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
 
+.canvas {
     &__count {
+        @extend %text;
+
         font-size: 24px;
         line-height: 29px;
         top: 30%;
     }
 
     &__word {
+        @extend %text;
+
         font-size: 12px;
         line-height: 15px;
         top: 55%;

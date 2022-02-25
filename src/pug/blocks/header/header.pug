@@ -33,9 +33,9 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
                                         .header__menu-dropdown-open-button
                                         each item in option.items
                                             li.header__dropdown-item.header__dropdown-item_hide.js-header__dropdown-item
-                                                a= item
+                                                a.header__dropdown-item-link= item
                                 else
-                                    a= option.text
+                                    a.header__menu-item-link= option.text
                 .header__buttons
                     if !isAuthorized
                         +enter-buttons

@@ -43,11 +43,11 @@
         &-cost {
             color: $dark50;
 
-            & strong {
+            &-price {
                 font-size: 14px;
             }
 
-            & span {
+            &-date {
                 font-size: 12px;
             }
         }

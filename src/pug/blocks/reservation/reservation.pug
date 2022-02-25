@@ -8,8 +8,8 @@ mixin reservation()
             p.reservation__info-number 888
                 span.reservation__info-type люкс
             p.reservation__info-cost
-                strong 9 990₽
-                span в сутки
+                strong.reservation__info-cost-price 9 990₽
+                span.reservation__info-cost-date  в сутки
         .reservation__dates
             -
                 const dateDropdownDoubleOptions = {
