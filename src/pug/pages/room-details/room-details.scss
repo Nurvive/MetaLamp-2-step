@@ -89,7 +89,7 @@
         .room-details__title {
             position: relative;
 
-            span {
+            &-reviews {
                 position: absolute;
                 right: 0;
                 bottom: 4px;
