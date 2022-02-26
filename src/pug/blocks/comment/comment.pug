@@ -3,8 +3,8 @@ include ../like-button/like-button
 mixin comment({likes = 0, text = 'lorem', time = 'Сейчас', name = 'Имя Фамилия', img = '../../../assets/favicon/favicon.ico'} = {})
     .comment
         .comment__info
-            .comment__info-img
-                img(src=img alt=name)
+            .comment__info-img-wrapper
+                img.comment__info-img(src=img alt=name)
             .comment__info-inner
                 .comment__info-author=name
                 .comment__info-time=time

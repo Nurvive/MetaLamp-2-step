@@ -3,7 +3,7 @@ mixin rich-checkbox-buttons(obj = {})
         ul.rich-checkbox-buttons__list
             each description, text in obj
                 li.rich-checkbox-buttons__item
-                    label
+                    label.rich-checkbox-buttons__item-inner
                         input(type='checkbox' class='rich-checkbox-buttons__check')
                         p.rich-checkbox-buttons__item-text= text
                     p.rich-checkbox-buttons__description= description

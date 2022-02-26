@@ -25,15 +25,15 @@ block content
     .form-elements__container
         .form-elements__inner
             .form-elements__label
-                p Text field
+                p.form-elements__label-inner Text field
                 +text-field
             .form-elements__label
                 +dropdown({type: 'default', title: 'dropdown'})
             .form-elements__label
-                p masked text field
+                p.form-elements__label-inner masked text field
                 +masked-text-field
             .form-elements__label
-                p date Dropdown
+                p.form-elements__label-inner date Dropdown
                 +date-dropdown({
                     placeholder: 'ДД.ММ.ГГГГ',
                     type: 'double',
@@ -45,7 +45,7 @@ block content
                     title: ['filter date dropdown']
                 })
             .form-elements__label
-                p subscription text field
+                p.form-elements__label-inner subscription text field
                 +subscription-text-field
             .form-elements__label
                 +dropdown({type: 'rooms', title: 'dropdown'})
@@ -56,13 +56,13 @@ block content
                 })
         .form-elements__inner
             .form-elements__label
-                p Checkbox Buttons
+                p.form-elements__label-inner Checkbox Buttons
                 +checkbox-buttons(['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])
             .form-elements__label
-                p radio buttons
+                p.form-elements__label-inner radio buttons
                 +radio-buttons(['Мужчина', 'Женщина'])
             .form-elements__label
-                p toggle
+                p.form-elements__label-inner toggle
                 -
                     const toggleOptions = [
                         {isChecked: true, text: 'Получать спецпредложения'},
@@ -71,25 +71,25 @@ block content
                 each obj in toggleOptions
                     +toggle(obj)
             .form-elements__label
-                p like button
+                p.form-elements__label-inner like button
                 div
                     +like-button({likes: 2})
             .form-elements__label
-                p rate button
+                p.form-elements__label-inner rate button
                 div
                     +rate-button({count: 1, unique: 'form-elements'})
             .form-elements__label
-                p rich Checkbox Buttons
+                p.form-elements__label-inner rich Checkbox Buttons
                 +rich-checkbox-buttons({
                     'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
                     'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
                 })
         .form-elements__inner
             .form-elements__label
-                p range slider
+                p.form-elements__label-inner range slider
                 +range-slider
             .form-elements__label
-                p buttons
+                p.form-elements__label-inner buttons
                 .form-elements__button-wrapper
                     +button({text: 'click me', size: 'default'})
                 .form-elements__button-wrapper
@@ -99,10 +99,10 @@ block content
                 .form-elements__button-wrapper
                     +button({text: 'long click me', size: 'long', withArrow: true})
             .form-elements__label
-                p pagination
+                p.form-elements__label-inner pagination
                 +pagination
             .form-elements__label
-                p bullet list
+                p.form-elements__label-inner bullet list
                 +bullet-list(['Нельзя с питомцами',
                     'Без вечеринок и мероприятий',
                     'Время прибытия — после 13:00, а выезд до 12:00'])

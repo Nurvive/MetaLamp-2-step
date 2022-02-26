@@ -47,8 +47,7 @@
             color: $dark100;
         }
 
-        & strong {
-            font-size: 19px;
+        &-text {
             line-height: 23px;
             margin-left: 4px;
         }
@@ -68,6 +67,11 @@
         line-height: 18px;
         color: $dark50;
 
+        &-inner {
+            line-height: 23px;
+            margin-left: 4px;
+        }
+
         &-date {
             font-size: 12px;
         }
@@ -77,6 +81,11 @@
         font-size: 14px;
         line-height: 18px;
         color: $dark50;
+
+        &-text {
+            line-height: 23px;
+            margin-left: 4px;
+        }
     }
 
     &__content {

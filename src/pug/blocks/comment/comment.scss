@@ -1,5 +1,12 @@
 @import '../../../scss/common/colors';
 
+%info-author {
+    color: $dark75;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
 .comment {
     max-width: 710px;
 
@@ -8,27 +15,24 @@
         margin-bottom: 13px;
 
         &-img {
-            width: 48px;
-            height: 48px;
-            border: 2px solid #fff;
-            filter: drop-shadow(0 10px 20px rgb(31 32 65 / 10%));
-            border-radius: 32px;
-            margin-right: 10px;
+            border-radius: 50%;
 
-            & img {
-                border-radius: 50%;
+            &-wrapper {
+                width: 48px;
+                height: 48px;
+                border: 2px solid #fff;
+                filter: drop-shadow(0 10px 20px rgb(31 32 65 / 10%));
+                border-radius: 32px;
+                margin-right: 10px;
             }
         }
 
         &-author {
-            color: $dark75;
-            font-size: 14px;
-            line-height: 24px;
-            font-weight: bold;
+            @extend %info-author;
         }
 
         &-time {
-            @extend.comment__info-author;
+            @extend %info-author;
 
             font-weight: normal;
         }
@@ -38,7 +42,7 @@
         display: flex;
 
         &-text {
-            @extend.comment__info-author;
+            @extend %info-author;
 
             font-weight: normal;
             margin-left: 15px;

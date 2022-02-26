@@ -2,4 +2,4 @@ mixin text-field({withPadding = false, withDropdown = false, placeholder = 'Emai
     -
         const paddingClass = withPadding ? 'text-field_with-padding' : ''
         const dropdownClass = withDropdown ? 'text-field_with-dropdown' : ''
-    input.text-field(placeholder=placeholder type=type class=paddingClass class=dropdownClass readonly=isReadonly)
+    input.text-field.js-text-field(placeholder=placeholder type=type class=paddingClass class=dropdownClass readonly=isReadonly)

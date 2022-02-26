@@ -9,11 +9,11 @@ mixin room-card({images = [], number = '1337', type = '', cost = '666₽', ratin
             ul.room-card__list
                 li.room-card__item
                     .room-card__number
-                        strong=number
+                        strong.room-card__number-text=number
                         if type
                             span.room-card__type=type
                     .room-card__price
-                        strong=cost
+                        strong.room-card__price-inner=cost
                         span.room-card__price-date  в сутки
                 li.room-card__item
                     +rate-button({count: rating, unique: uniqueID})

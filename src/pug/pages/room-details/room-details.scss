@@ -10,27 +10,27 @@
             'A A B';
         display: grid;
 
-        & img {
+        &-img {
             max-width: 100%;
             width: 100%;
             height: 100%;
-        }
 
-        & img:nth-child(1) {
-            grid-area: A;
-        }
+            &:nth-child(1) {
+                grid-area: A;
+            }
 
-        & img:nth-child(2) {
-            grid-area: B;
-        }
+            &:nth-child(2) {
+                grid-area: B;
+            }
 
-        & img:nth-child(3) {
-            grid-area: C;
-            display: grid;
-        }
+            &:nth-child(3) {
+                grid-area: C;
+                display: grid;
+            }
 
-        & img:not(:first-child) {
-            display: grid;
+            &:not(:first-child) {
+                display: grid;
+            }
         }
     }
 
