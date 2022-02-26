@@ -12,7 +12,7 @@
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
     <div class="registration-page">
-      <header class="header">
+      <header class="header js-header">
         <div class="header__container">
           <div class="header__logo-burger">
             <div class="fas fa-hamburger"></div>
@@ -21,25 +21,25 @@
           <div class="header__menu-wrapper">
             <nav class="header__nav">
               <ul class="header__menu">
-                <li class="header__menu-item"><a>О нас</a>
+                <li class="header__menu-item"><a class="header__menu-item-link">О нас</a>
                 </li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
                     <div class="header__menu-dropdown-open-button"></div>
-                    <li class="header__dropdown-item"><a>Покупка</a></li>
-                    <li class="header__dropdown-item"><a>Покупка</a></li>
-                    <li class="header__dropdown-item"><a>Покупка</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
                   </ul>
                 </li>
-                <li class="header__menu-item"><a>Вакансии</a>
+                <li class="header__menu-item"><a class="header__menu-item-link">Вакансии</a>
                 </li>
-                <li class="header__menu-item"><a>Новости</a>
+                <li class="header__menu-item"><a class="header__menu-item-link">Новости</a>
                 </li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
                     <div class="header__menu-dropdown-open-button"></div>
-                    <li class="header__dropdown-item"><a>О воде</a></li>
-                    <li class="header__dropdown-item"><a>О солях</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">О воде</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">О солях</a></li>
                   </ul>
                 </li>
               </ul>
@@ -94,10 +94,10 @@
             <div class="registration__layout">
               <p class="registration__layout-text registration__layout-text_big">Регистрация аккаунта</p>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Имя" type="text"/>
+                <input class="text-field js-text-field" placeholder="Имя" type="text"/>
               </div>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Фамилия" type="text"/>
+                <input class="text-field js-text-field" placeholder="Фамилия" type="text"/>
               </div>
               <div class="radio-buttons">
                 <label class="radio-buttons__label">
@@ -113,16 +113,16 @@
             <div class="registration__layout">
               <p class="registration__layout-text">дата рождения</p>
               <div class="js-masked-text-field">
-                <input class="text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
+                <input class="text-field js-text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
               </div>
             </div>
             <div class="registration__layout">
               <p class="registration__layout-text">данные для входа в сервис</p>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Email" type="email"/>
+                <input class="text-field js-text-field" placeholder="Email" type="email"/>
               </div>
               <div class="registration__input-wrapper">
-                <input class="text-field" placeholder="Пароль" type="password"/>
+                <input class="text-field js-text-field" placeholder="Пароль" type="password"/>
               </div>
               <label class="toggle__label">
                 <input class="toggle__button" checked="checked" type="checkbox"/>
@@ -173,8 +173,8 @@
               <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
               <form action="#">
                 <div class="subscription-text-field">
-                  <button class="subscription-text-field__button"><span></span></button>
-                  <input class="text-field text-field_with-padding" placeholder="Email" type="email"/>
+                  <button class="subscription-text-field__button"><span class="subscription-text-field__button-inner"></span></button>
+                  <input class="text-field js-text-field text-field_with-padding" placeholder="Email" type="email"/>
                 </div>
               </form>
             </div>

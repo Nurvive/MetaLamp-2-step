@@ -12,7 +12,7 @@
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
     <div class="search-room">
-      <header class="header">
+      <header class="header js-header">
         <div class="header__container">
           <div class="header__logo-burger">
             <div class="fas fa-hamburger"></div>
@@ -21,25 +21,25 @@
           <div class="header__menu-wrapper">
             <nav class="header__nav">
               <ul class="header__menu">
-                <li class="header__menu-item"><a>О нас</a>
+                <li class="header__menu-item"><a class="header__menu-item-link">О нас</a>
                 </li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
                     <div class="header__menu-dropdown-open-button"></div>
-                    <li class="header__dropdown-item"><a>Покупка</a></li>
-                    <li class="header__dropdown-item"><a>Покупка</a></li>
-                    <li class="header__dropdown-item"><a>Покупка</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
                   </ul>
                 </li>
-                <li class="header__menu-item"><a>Вакансии</a>
+                <li class="header__menu-item"><a class="header__menu-item-link">Вакансии</a>
                 </li>
-                <li class="header__menu-item"><a>Новости</a>
+                <li class="header__menu-item"><a class="header__menu-item-link">Новости</a>
                 </li>
                 <li class="header__menu-item">
                   <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
                     <div class="header__menu-dropdown-open-button"></div>
-                    <li class="header__dropdown-item"><a>О воде</a></li>
-                    <li class="header__dropdown-item"><a>О солях</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">О воде</a></li>
+                    <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">О солях</a></li>
                   </ul>
                 </li>
               </ul>
@@ -96,7 +96,7 @@
                 <div class="date-dropdown js-date-dropdown" data-double="false" data-inline="false">
                   <div class="date-dropdown__input date-dropdown__input_long js-date-dropdown__input">
                     <p class="date-dropdown__input-title">даты пребывания в отеле</p>
-                    <input class="text-field text-field_with-dropdown" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
+                    <input class="text-field js-text-field text-field_with-dropdown" placeholder="ДД.ММ. - ДД.ММ." type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                   </div>
                 </div>
               </div>
@@ -106,7 +106,7 @@
                 <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
                   <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                     <p class="dropdown__input-wrapper-title">Гости</p><span class="dropdown__open-button"></span>
-                    <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько гостей" type="text" readonly="readonly"/>
+                    <input class="dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
                   </div>
                   <ul class="dropdown__list js-dropdown__list">
                     <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -185,14 +185,14 @@
               <div class="rich-checkbox-buttons">
                 <ul class="rich-checkbox-buttons__list">
                   <li class="rich-checkbox-buttons__item">
-                    <label>
+                    <label class="rich-checkbox-buttons__item-inner">
                       <input class="rich-checkbox-buttons__check" type="checkbox"/>
                       <p class="rich-checkbox-buttons__item-text">Широкий коридор</p>
                     </label>
                     <p class="rich-checkbox-buttons__description">Ширина коридоров в номере не менее 91 см.</p>
                   </li>
                   <li class="rich-checkbox-buttons__item">
-                    <label>
+                    <label class="rich-checkbox-buttons__item-inner">
                       <input class="rich-checkbox-buttons__check" type="checkbox"/>
                       <p class="rich-checkbox-buttons__item-text">Помощник для инвалидов</p>
                     </label>
@@ -205,7 +205,7 @@
               <div class="dropdown js-dropdown dropdown-rooms js-dropdown-rooms">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                   <p class="dropdown__input-wrapper-title">удобства номера</p><span class="dropdown__open-button"></span>
-                  <input class="text-field text-field_with-padding text-field_with-dropdown" placeholder="Сколько комнат" type="text" readonly="readonly"/>
+                  <input class="dropdown__input" placeholder="Сколько комнат" type="rooms" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
                   <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -309,9 +309,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">888</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -340,9 +340,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>111</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">111</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 456₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 456₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -371,9 +371,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>111</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">111</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 456₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 456₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -402,9 +402,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>88</strong>
+                  <div class="room-card__number"><strong class="room-card__number-text">88</strong>
                   </div>
-                  <div class="room-card__price"><strong>990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -433,9 +433,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>18</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">18</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -464,9 +464,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>234</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">234</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 8990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 8990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -495,9 +495,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>668</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">668</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -526,9 +526,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">888</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -557,9 +557,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">888</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -588,9 +588,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>888</strong>
+                  <div class="room-card__number"><strong class="room-card__number-text">888</strong>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -619,9 +619,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">888</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -650,9 +650,9 @@
             <div class="room-card__content">
               <ul class="room-card__list">
                 <li class="room-card__item">
-                  <div class="room-card__number"><strong>888</strong><span class="room-card__type">люкс</span>
+                  <div class="room-card__number"><strong class="room-card__number-text">888</strong><span class="room-card__type">люкс</span>
                   </div>
-                  <div class="room-card__price"><strong>9 990₽</strong><span> в сутки</span></div>
+                  <div class="room-card__price"><strong class="room-card__price-inner">9 990₽</strong><span class="room-card__price-date"> в сутки</span></div>
                 </li>
                 <li class="room-card__item">
                   <div class="rate-button">
@@ -715,8 +715,8 @@
               <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
               <form action="#">
                 <div class="subscription-text-field">
-                  <button class="subscription-text-field__button"><span></span></button>
-                  <input class="text-field text-field_with-padding" placeholder="Email" type="email"/>
+                  <button class="subscription-text-field__button"><span class="subscription-text-field__button-inner"></span></button>
+                  <input class="text-field js-text-field text-field_with-padding" placeholder="Email" type="email"/>
                 </div>
               </form>
             </div>
