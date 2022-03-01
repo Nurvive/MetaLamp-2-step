@@ -1,20 +1,12 @@
 include ../enter-buttons/enter-buttons
 include ../cabinet-button/cabinet-button
 
-mixin side-menu({isAuthorized = false} = {})
+mixin side-menu({isAuthorized = false, options = []} = {})
     .side-menu.js-side-menu
         .side-menu__holder
         .side-menu__close.js-side-menu__close
         nav.side-menu__nav
             ul.side-menu__menu
-                -
-                    const options = [
-                        {text: 'О нас', isDropdown: false},
-                        {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
-                        {text: 'Вакансии', isDropdown: false},
-                        {text: 'Новости', isDropdown: false},
-                        {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
-                    ]
                 each option in options
                     li.side-menu__menu-item
                         if (option.isDropdown)

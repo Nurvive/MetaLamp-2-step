@@ -9,8 +9,16 @@ block content
     .header-footer
         .header-footer__container
             .header-footer__wrapper
-                +header({isAuthorized: false})
+                -
+                    const headerOptions = [
+                        {text: 'О нас', isDropdown: false},
+                        {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                        {text: 'Вакансии', isDropdown: false},
+                        {text: 'Новости', isDropdown: false},
+                        {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+                    ]
+                +header({isAuthorized: false, options: headerOptions})
             //.header-footer__wrapper
-            //    +header({isAuthorized: true, name: 'Юлий Цезарь'})
+            //    +header({isAuthorized: true, name: 'Юлий Цезарь', options: headerOptions})
             .header-footer__wrapper
                 +footer

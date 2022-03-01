@@ -11,7 +11,15 @@ block title
 
 block content
     .room-details
-        +header({isAuthorized: false})
+        -
+            const headerOptions = [
+                {text: 'О нас', isDropdown: false},
+                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                {text: 'Вакансии', isDropdown: false},
+                {text: 'Новости', isDropdown: false},
+                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+            ]
+        +header({isAuthorized: false, options: headerOptions})
         main.room-details__main
             .room-details__gallery.js-room-details__gallery
                 img.room-details__gallery-img(src='../../../assets/images/gallery1.png')

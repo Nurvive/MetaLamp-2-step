@@ -8,7 +8,15 @@ block title
 
 block content
     .landing
-        +header({isAuthorized: false})
+        -
+            const headerOptions = [
+                {text: 'О нас', isDropdown: false},
+                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                {text: 'Вакансии', isDropdown: false},
+                {text: 'Новости', isDropdown: false},
+                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+            ]
+        +header({isAuthorized: false, options: headerOptions})
         .landing__main
             +find-room
             span.landing__main-text Лучшие номера для вашей работы, отдыха и просто вдохновения

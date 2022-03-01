@@ -4,7 +4,7 @@ include ../enter-buttons/enter-buttons
 include ../cabinet-button/cabinet-button
 include ../font-awesome-icon/font-awesome-icon
 
-mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
+mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []} = {})
     header.header.js-header
         .header__container
             .header__logo-burger
@@ -18,14 +18,6 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
             div.header__menu-wrapper
                 nav.header__nav
                     ul.header__menu
-                        -
-                            const options = [
-                                {text: 'О нас', isDropdown: false},
-                                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
-                                {text: 'Вакансии', isDropdown: false},
-                                {text: 'Новости', isDropdown: false},
-                                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
-                            ]
                         each option in options
                             li.header__menu-item
                                 if (option.isDropdown)
@@ -42,5 +34,6 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия'} = {})
                     else
                         +cabinet-button({name: name})
     +side-menu({
-        isAuthorized: isAuthorized
+        isAuthorized: isAuthorized,
+        options: options
     })

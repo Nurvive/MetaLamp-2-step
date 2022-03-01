@@ -8,7 +8,15 @@ block title
 
 block content
     .registration-page
-        +header({isAuthorized: false})
+        -
+            const headerOptions = [
+                {text: 'О нас', isDropdown: false},
+                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                {text: 'Вакансии', isDropdown: false},
+                {text: 'Новости', isDropdown: false},
+                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+            ]
+        +header({isAuthorized: false, options: headerOptions})
         main.registration-page__main
             .registration-page__card-wrapper
                 +registration

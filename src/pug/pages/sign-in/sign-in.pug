@@ -8,7 +8,15 @@ block title
 
 block content
     .sign-in
-        +header({isAuthorized: false})
+        -
+            const headerOptions = [
+                {text: 'О нас', isDropdown: false},
+                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                {text: 'Вакансии', isDropdown: false},
+                {text: 'Новости', isDropdown: false},
+                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+            ]
+        +header({isAuthorized: false, options: headerOptions})
         main.sign-in__main
             .sign-in__card-wrapper
                 +login

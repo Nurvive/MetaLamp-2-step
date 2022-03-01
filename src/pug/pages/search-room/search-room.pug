@@ -15,7 +15,15 @@ block title
 
 block content
     .search-room
-        +header({isAuthorized: false})
+        -
+            const headerOptions = [
+                {text: 'О нас', isDropdown: false},
+                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
+                {text: 'Вакансии', isDropdown: false},
+                {text: 'Новости', isDropdown: false},
+                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
+            ]
+        +header({isAuthorized: false, options: headerOptions})
         main.search-room__main
             aside.search-room__aside
                 ul.search-room__list
