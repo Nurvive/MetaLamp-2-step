@@ -19,7 +19,6 @@
         max-width: 320px;
         height: 44px;
         width: 100%;
-        padding: 8px 15px;
         display: block;
         border-radius: 4px;
         background-color: transparent;
@@ -28,6 +27,7 @@
         cursor: pointer;
         line-height: 18px;
         color: $dark75;
+        padding: 8px 44px 8px 15px;
 
         &:hover,
         &:focus {
