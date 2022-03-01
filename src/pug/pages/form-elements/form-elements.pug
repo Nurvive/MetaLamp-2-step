@@ -22,109 +22,110 @@ block title
     title form-elements
 
 block content
-    .form-elements__container
-        .form-elements__inner
-            .form-elements__label
-                p.form-elements__label-inner Text field
-                +text-field
-            .form-elements__label
-                +dropdown({type: 'default', title: 'dropdown'})
-            .form-elements__label
-                p.form-elements__label-inner masked text field
-                +masked-text-field
-            .form-elements__label
-                p.form-elements__label-inner date Dropdown
-                +date-dropdown({
-                    placeholder: 'ДД.ММ.ГГГГ',
-                    type: 'double',
-                })
-            .form-elements__label
-                +date-dropdown({
-                    placeholder: 'ДД.ММ. - ДД.ММ.',
-                    type: 'single',
-                    title: ['filter date dropdown']
-                })
-            .form-elements__label
-                p.form-elements__label-inner subscription text field
-                +subscription-text-field
-            .form-elements__label
-                +dropdown({type: 'rooms', title: 'dropdown'})
-            .form-elements__label
-                +expandable-checkbox({
-                    text: 'expandable checkbox list',
-                    items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь']
-                })
-        .form-elements__inner
-            .form-elements__label
-                p.form-elements__label-inner Checkbox Buttons
-                +checkbox-buttons(['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])
-            .form-elements__label
-                p.form-elements__label-inner radio buttons
-                +radio-buttons(['Мужчина', 'Женщина'])
-            .form-elements__label
-                p.form-elements__label-inner toggle
-                -
-                    const toggleOptions = [
-                        {isChecked: true, text: 'Получать спецпредложения'},
-                        {isChecked: false, text: 'Получать спам'}
-                    ]
-                each obj in toggleOptions
-                    +toggle(obj)
-            .form-elements__label
-                p.form-elements__label-inner like button
-                div
-                    +like-button({likes: 2})
-            .form-elements__label
-                p.form-elements__label-inner rate button
-                div
-                    +rate-button({count: 1, unique: 'form-elements'})
-            .form-elements__label
-                p.form-elements__label-inner rich Checkbox Buttons
-                +rich-checkbox-buttons({
-                    'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
-                    'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
-                })
-        .form-elements__inner
-            .form-elements__label
-                p.form-elements__label-inner range slider
-                +range-slider
-            .form-elements__label
-                p.form-elements__label-inner buttons
-                .form-elements__button-wrapper
-                    +button({text: 'click me', size: 'default'})
-                .form-elements__button-wrapper
-                    +button({text: 'click ME', size: 'default', type: 'transparent'})
-                .form-elements__button-wrapper
-                    +button({text: 'clickkk meee', size: 'default', type: 'with-text'})
-                .form-elements__button-wrapper
-                    +button({text: 'long click me', size: 'long', withArrow: true})
-            .form-elements__label
-                p.form-elements__label-inner pagination
-                +pagination
-            .form-elements__label
-                p.form-elements__label-inner bullet list
-                +bullet-list(['Нельзя с питомцами',
-                    'Без вечеринок и мероприятий',
-                    'Время прибытия — после 13:00, а выезд до 12:00'])
-    .low-container
-        -
-            const prosOptions = [
-                {
-                    img: '../../../assets/images/insert-emoticon.png',
-                    title: 'Комфорт',
-                    text: 'Шумопоглощающие стены'
-                },
-                {
-                    img: '../../../assets/images/location-city.png',
-                    title: 'Удобство',
-                    text: 'Окно в каждой из спален'
-                }
-            ]
-        +pros(prosOptions)
-        +comment({
-            name: 'Мурад Сарафанов',
-            time: '5 дней назад',
-            text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-            likes: 2,
-            img: '../../../assets/images/man.png'
-        })
+    .form-elements
+        .form-elements__container
+            .form-elements__inner
+                .form-elements__label
+                    p.form-elements__label-inner Text field
+                    +text-field
+                .form-elements__label
+                    +dropdown({type: 'default', title: 'dropdown'})
+                .form-elements__label
+                    p.form-elements__label-inner masked text field
+                    +masked-text-field
+                .form-elements__label
+                    p.form-elements__label-inner date Dropdown
+                    +date-dropdown({
+                        placeholder: 'ДД.ММ.ГГГГ',
+                        type: 'double',
+                    })
+                .form-elements__label
+                    +date-dropdown({
+                        placeholder: 'ДД.ММ. - ДД.ММ.',
+                        type: 'single',
+                        title: ['filter date dropdown']
+                    })
+                .form-elements__label
+                    p.form-elements__label-inner subscription text field
+                    +subscription-text-field
+                .form-elements__label
+                    +dropdown({type: 'rooms', title: 'dropdown'})
+                .form-elements__label
+                    +expandable-checkbox({
+                        text: 'expandable checkbox list',
+                        items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь']
+                    })
+            .form-elements__inner
+                .form-elements__label
+                    p.form-elements__label-inner Checkbox Buttons
+                    +checkbox-buttons(['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'])
+                .form-elements__label
+                    p.form-elements__label-inner radio buttons
+                    +radio-buttons(['Мужчина', 'Женщина'])
+                .form-elements__label
+                    p.form-elements__label-inner toggle
+                    -
+                        const toggleOptions = [
+                            {isChecked: true, text: 'Получать спецпредложения'},
+                            {isChecked: false, text: 'Получать спам'}
+                        ]
+                    each obj in toggleOptions
+                        +toggle(obj)
+                .form-elements__label
+                    p.form-elements__label-inner like button
+                    div
+                        +like-button({likes: 2})
+                .form-elements__label
+                    p.form-elements__label-inner rate button
+                    div
+                        +rate-button({count: 1, unique: 'form-elements'})
+                .form-elements__label
+                    p.form-elements__label-inner rich Checkbox Buttons
+                    +rich-checkbox-buttons({
+                        'Широкий коридор': 'Ширина коридоров в номере не менее 91 см.',
+                        'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
+                    })
+            .form-elements__inner
+                .form-elements__label
+                    p.form-elements__label-inner range slider
+                    +range-slider
+                .form-elements__label
+                    p.form-elements__label-inner buttons
+                    .form-elements__button-wrapper
+                        +button({text: 'click me', size: 'default'})
+                    .form-elements__button-wrapper
+                        +button({text: 'click ME', size: 'default', type: 'transparent'})
+                    .form-elements__button-wrapper
+                        +button({text: 'clickkk meee', size: 'default', type: 'with-text'})
+                    .form-elements__button-wrapper
+                        +button({text: 'long click me', size: 'long', withArrow: true})
+                .form-elements__label
+                    p.form-elements__label-inner pagination
+                    +pagination
+                .form-elements__label
+                    p.form-elements__label-inner bullet list
+                    +bullet-list(['Нельзя с питомцами',
+                        'Без вечеринок и мероприятий',
+                        'Время прибытия — после 13:00, а выезд до 12:00'])
+        .form-elements__low-container
+            -
+                const prosOptions = [
+                    {
+                        img: '../../../assets/images/insert-emoticon.png',
+                        title: 'Комфорт',
+                        text: 'Шумопоглощающие стены'
+                    },
+                    {
+                        img: '../../../assets/images/location-city.png',
+                        title: 'Удобство',
+                        text: 'Окно в каждой из спален'
+                    }
+                ]
+            +pros(prosOptions)
+            +comment({
+                name: 'Мурад Сарафанов',
+                time: '5 дней назад',
+                text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                likes: 2,
+                img: '../../../assets/images/man.png'
+            })

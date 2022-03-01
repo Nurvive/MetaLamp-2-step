@@ -34,13 +34,13 @@
     &__button-wrapper {
         margin-bottom: 30px;
     }
-}
 
-.low-container {
-    @extend %container;
+    &__low-container {
+        @extend %container;
 
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
-    padding-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
 }
