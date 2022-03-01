@@ -2317,7 +2317,7 @@
   max-width: 370px;
   margin-bottom: 50px;
 }
-.low-container, .form-elements__container {
+.form-elements__low-container, .form-elements__container {
   max-width: 1190px;
   margin: 0 auto;
 }
@@ -2351,8 +2351,7 @@
 .form-elements__button-wrapper {
   margin-bottom: 30px;
 }
-
-.low-container {
+.form-elements__low-container {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
