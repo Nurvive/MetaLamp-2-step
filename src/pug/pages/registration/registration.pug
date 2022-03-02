@@ -1,6 +1,4 @@
-extends ../../templates/template
-include ../../blocks/footer/footer
-include ../../blocks/header/header
+extends ../../templates/page-template
 include ../../blocks/registration/registration
 
 block title
@@ -8,16 +6,6 @@ block title
 
 block content
     .registration-page
-        -
-            const headerOptions = [
-                {text: 'О нас', isDropdown: false},
-                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
-                {text: 'Вакансии', isDropdown: false},
-                {text: 'Новости', isDropdown: false},
-                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
-            ]
-        +header({isAuthorized: false, options: headerOptions})
         main.registration-page__main
             .registration-page__card-wrapper
                 +registration
-        +footer

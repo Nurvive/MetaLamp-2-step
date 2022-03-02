@@ -1,8 +1,6 @@
-extends ../../templates/template
+extends ../../templates/page-template
 include ../../blocks/comment/comment
 include ../../blocks/bullet-list/bullet-list
-include ../../blocks/footer/footer
-include ../../blocks/header/header
 include ../../blocks/pros/pros
 include ../../blocks/reservation/reservation
 include ../../blocks/canvas/canvas
@@ -11,15 +9,6 @@ block title
 
 block content
     .room-details
-        -
-            const headerOptions = [
-                {text: 'О нас', isDropdown: false},
-                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
-                {text: 'Вакансии', isDropdown: false},
-                {text: 'Новости', isDropdown: false},
-                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
-            ]
-        +header({isAuthorized: false, options: headerOptions})
         main.room-details__main
             .room-details__gallery.js-room-details__gallery
                 img.room-details__gallery-img(src='../../../assets/images/gallery1.png')
@@ -91,4 +80,3 @@ block content
                             p.room-details__abort-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
                 .room-details__reservation-wrapper
                     +reservation
-        +footer

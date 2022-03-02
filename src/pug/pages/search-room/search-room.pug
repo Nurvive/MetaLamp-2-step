@@ -1,10 +1,8 @@
-extends ../../templates/template
+extends ../../templates/page-template
 include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox-buttons/checkbox-buttons
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
-include ../../blocks/footer/footer
-include ../../blocks/header/header
 include ../../blocks/pagination/pagination
 include ../../blocks/range-slider/range-slider
 include ../../blocks/rich-checbox-buttons/rich-checbox-buttons
@@ -15,15 +13,6 @@ block title
 
 block content
     .search-room
-        -
-            const headerOptions = [
-                {text: 'О нас', isDropdown: false},
-                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
-                {text: 'Вакансии', isDropdown: false},
-                {text: 'Новости', isDropdown: false},
-                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
-            ]
-        +header({isAuthorized: false, options: headerOptions})
         main.search-room__main
             aside.search-room__aside
                 ul.search-room__list
@@ -168,4 +157,3 @@ block content
                     +room-card(obj)
                 .search-room__pagination-wrapper
                     +pagination
-        +footer

@@ -1,6 +1,4 @@
-extends ../../templates/template
-include ../../blocks/header/header
-include ../../blocks/footer/footer
+extends ../../templates/page-template
 include ../../blocks/login/login
 
 block title
@@ -8,16 +6,6 @@ block title
 
 block content
     .sign-in
-        -
-            const headerOptions = [
-                {text: 'О нас', isDropdown: false},
-                {text: 'Услуги', items: ['Покупка', 'Покупка', 'Покупка'], isDropdown: true},
-                {text: 'Вакансии', isDropdown: false},
-                {text: 'Новости', isDropdown: false},
-                {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
-            ]
-        +header({isAuthorized: false, options: headerOptions})
         main.sign-in__main
             .sign-in__card-wrapper
                 +login
-        +footer
