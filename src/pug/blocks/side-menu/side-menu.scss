@@ -59,6 +59,10 @@
         text-transform: uppercase;
         text-decoration: underline;
 
+        &-item {
+            cursor: pointer;
+        }
+
         &-dropdown {
             display: flex;
             flex-direction: column;

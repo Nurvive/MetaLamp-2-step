@@ -12,7 +12,7 @@ class SideMenu {
         this.element.on('touchstart', this.handleSideMenuTouchStart);
         this.element.on('touchmove', this.handleSideMenuTouchMove);
         this.element.on('touchend', this.handleSideMenuTouchEnd);
-        this.menuDropdown.on('touchend', SideMenu.handleMenuDropdownClick);
+        this.menuDropdown.on('click', SideMenu.handleMenuDropdownClick);
         this.burger.on('click', this.handleBurgerClick);
         this.close.on('click', this.handleCloseClick);
     }
