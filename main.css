@@ -2067,6 +2067,9 @@
   text-transform: uppercase;
   text-decoration: underline;
 }
+.side-menu__menu-item {
+  cursor: pointer;
+}
 .side-menu__menu-dropdown {
   display: flex;
   flex-direction: column;
