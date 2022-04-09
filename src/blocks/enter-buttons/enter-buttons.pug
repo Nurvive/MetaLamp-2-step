@@ -1,6 +1,6 @@
 mixin enter-buttons
     .enter-buttons
-        a.enter-buttons__log-in-button
+        a(href='sign-in.html').enter-buttons__log-in-button
             +button({text: 'Войти', type: 'transparent', size: 'default', modifier: 'flat'})
-        a.enter-buttons__sign-up-button
+        a(href='registration.html').enter-buttons__sign-up-button
             +button({text: 'Зарегистрироваться', size: 'long', modifier: 'flat'})

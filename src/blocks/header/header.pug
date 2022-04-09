@@ -13,7 +13,7 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []
                     iconClass: 'fa-hamburger'
                 })
             .header__logo
-                a.header__logo-link
+                a(href='landing.html').header__logo-link
                     img(src="../../assets/images/logo.svg")
             div.header__menu-wrapper
                 nav.header__nav
@@ -25,9 +25,9 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []
                                         .header__menu-dropdown-open-button
                                         each item in option.items
                                             li.header__dropdown-item.header__dropdown-item_hide.js-header__dropdown-item
-                                                a.header__dropdown-item-link= item
+                                                a(href='change').header__dropdown-item-link= item
                                 else
-                                    a.header__menu-item-link= option.text
+                                    a(href='change').header__menu-item-link= option.text
                 .header__buttons
                     if !isAuthorized
                         +enter-buttons

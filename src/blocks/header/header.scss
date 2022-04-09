@@ -84,6 +84,7 @@
 
             &-link {
                 margin-right: rem(20);
+                color: rgb(31 32 65 / 50%);
             }
         }
     }
@@ -104,6 +105,7 @@
 
         &-link {
             margin: 0;
+            color: rgb(31 32 65 / 50%);
         }
 
         @for $i from 1 through 3 {
