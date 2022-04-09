@@ -5,7 +5,7 @@ include ../text-field/text-field
 include ../toggle/toggle
 
 mixin registration
-    .registration
+    form(action='change').registration
         .registration__layout
             p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
             .registration__input-wrapper
@@ -25,7 +25,7 @@ mixin registration
             - const toggleOptions = [{isChecked: true, text: 'Получать спецпредложения'}]
             each obj in toggleOptions
                 +toggle(obj)
-        +button({text: 'Зарегистрироваться', size: 'long', withArrow: true})
+        +button({text: 'Зарегистрироваться', size: 'long', withArrow: true, htmlType: 'submit'})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin
             +button({text: 'Войти', size: 'default', type: 'transparent'})

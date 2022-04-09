@@ -3,7 +3,7 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 
 mixin reservation()
-    .reservation
+    form(action='change').reservation
         .reservation__info
             p.reservation__info-number 888
                 span.reservation__info-type люкс
@@ -55,4 +55,4 @@ mixin reservation()
             .reservation__total-border
             p.reservation__total-price 38 081₽
         .reservation__button
-            +button({text: 'Забронировать', size: 'long', withArrow: true})
+            +button({text: 'Забронировать', size: 'long', withArrow: true, htmlType: 'submit'})

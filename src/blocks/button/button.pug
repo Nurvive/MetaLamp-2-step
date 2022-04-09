@@ -1,4 +1,4 @@
-mixin button({text = 'click me', size = '', type = '', withArrow = false, modifier = ''} = {})
+mixin button({text = 'click me', size = '', type = '', withArrow = false, modifier = '', htmlType = 'button'} = {})
     -
         let className = 'button';
         if (size === 'long') {
@@ -8,6 +8,6 @@ mixin button({text = 'click me', size = '', type = '', withArrow = false, modifi
             className += ` button_${type}`;
         if (modifier === 'flat')
             className += ` button_${modifier}`
-    button(class=className)= text
+    button(class=className, type=htmlType)= text
         if (withArrow)
             span.button__arrow

@@ -3,7 +3,7 @@ include ../button/button
 include ../dropdown/dropdown
 
 mixin find-room()
-    .find-room
+    form(action='change').find-room
         p.find-room__title Найдём номера под ваши пожелания
         .find-room__dates
             -
@@ -16,4 +16,4 @@ mixin find-room()
         div.find-room__layout
             +dropdown({type: 'default', title: 'гости'})
         .find-room__long-button-wrapper
-            +button({text: 'Подобрать номер', size: 'long', withArrow: true})
+            +button({text: 'Подобрать номер', size: 'long', withArrow: true, htmlType: 'submit'})

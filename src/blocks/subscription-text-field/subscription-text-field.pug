@@ -1,8 +1,8 @@
 include ../text-field/text-field
 
 mixin subscription-text-field
-    .subscription-text-field
-        button.subscription-text-field__button
+    form(action='change').subscription-text-field
+        button(type='submit').subscription-text-field__button
             span.subscription-text-field__button-inner
         +text-field({withPadding: true, type: 'email'})
 

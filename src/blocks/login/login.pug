@@ -2,14 +2,14 @@ include ../button/button
 include ../text-field/text-field
 
 mixin login
-    .login
+    form(action='change').login
         .login__title
             p.login__title-text Войти
         .login__inputs
             +text-field({placeholder: 'Email', type: 'email'})
             +text-field({placeholder: 'Пароль', type: 'password'})
         .login__button
-            +button({text: 'Войти', size: 'long', withArrow: true})
+            +button({text: 'Войти', size: 'long', withArrow: true, htmlType: 'submit'})
         .login__bottom
             p.login__bottom-text Нет аккаунта на Toxin?
             +button({text: 'Создать', size: 'default', type: 'transparent'})
