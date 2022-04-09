@@ -8,20 +8,23 @@ class DateDropdown {
 
     init(element) {
         this.element = element;
-        const inputs = this.element.querySelectorAll('.js-date-dropdown__input input');
+        this.inputs = this.element.querySelectorAll('.js-date-dropdown__input input');
         const isDouble = this.element.dataset.double === 'true';
         const isInline = this.element.dataset.inline === 'true';
         if (isDouble) {
-            this.doubleCreate(inputs);
+            this.doubleCreate(this.inputs);
         } else if (isInline) {
-            DateDropdown.inlineCreate(inputs);
+            DateDropdown.inlineCreate(this.inputs);
         } else {
-            DateDropdown.singleCreate(inputs);
+            DateDropdown.singleCreate(this.inputs);
         }
     }
 
     handleInputClick = () => {
-        this.picker.show();
+        this.picker.inFocus = false;
+        if (!this.picker.visible) {
+            this.inputs[0].focus();
+        }
     };
 
     doubleCreate(inputs) {
@@ -51,7 +54,8 @@ class DateDropdown {
             navTitles: {
                 days: 'MMMM yyyy'
             },
-            startDate: new Date()
+            startDate: new Date(),
+            autoClose: true
         });
 
         inputs[1].addEventListener('click', this.handleInputClick);

@@ -28,7 +28,7 @@
         }
 
         &_active .date-dropdown__input-open-button {
-            transform: rotate(180deg) translateY(40%);
+            transform: rotate(180deg) translateY(35%);
         }
 
         &_long {
@@ -54,6 +54,10 @@
                 max-width: 300px;
                 width: 100%;
             }
+        }
+
+        & .date-dropdown-double__input_active .date-dropdown__input-open-button {
+            transform: rotate(180deg) translateY(35%);
         }
     }
 
