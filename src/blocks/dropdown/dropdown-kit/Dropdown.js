@@ -1,21 +1,34 @@
+const dropdownTypes = {
+    default: 'default',
+    separate: 'separate'
+};
+
 class Dropdown {
-    constructor(component, wordsDefault) {
-        this.init(component, wordsDefault);
+    constructor(component, words, type, withButtons, defaultTypeWords = []) {
+        this.init(component, words, type, withButtons, defaultTypeWords);
     }
 
-    init(component, wordsDefault) {
+    init(component, words, type, withButtons, defaultTypeWords) {
         this.component = component;
-        this.wordsDefault = wordsDefault;
+        this.words = words;
+        this.type = type;
+        this.withButtons = withButtons;
         this.obj = {};
         this.inputWrapper = this.component.querySelector('.js-dropdown__input-wrapper');
         this.list = this.component.querySelector('.js-dropdown__list');
-        this.input = this.component.querySelector('.js-dropdown__input-wrapper input');
+        this.input = this.component.querySelector('.js-dropdown__input');
         this.plus = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper div[data-type="plus"]');
         this.minus = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper div[data-type="minus"]');
         this.counters = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper div[data-type="count"]');
-        this.clears = this.component.querySelectorAll('.js-dropdown__interactive-clear');
-        this.confirms = this.component.querySelectorAll('.js-dropdown__interactive-confirm');
         this.items = this.component.querySelectorAll('.js-dropdown__dropdown-item-wrapper p');
+        if (this.withButtons) {
+            this.clears = this.component.querySelectorAll('.js-dropdown__interactive-clear');
+            this.confirms = this.component.querySelectorAll('.js-dropdown__interactive-confirm');
+        }
+        if (this.type === dropdownTypes.default) {
+            this.defaultTypeWords = defaultTypeWords;
+        }
+        this.attachEventHandlers();
     }
 
     handleClearClick = () => {
@@ -37,12 +50,33 @@ class Dropdown {
 
     handlePlusClick = (e) => {
         this.increase(e);
-        this.countingGuests(e);
+        if (this.type === dropdownTypes.default) {
+            this.countingGuestsDefault(e);
+        } else if (this.type === dropdownTypes.separate) {
+            this.countingGuestsSeparate(e);
+        }
     };
 
     handleMinusClick = (e) => {
         this.decrease(e);
-        this.countingGuests(e);
+        if (this.type === dropdownTypes.default) {
+            this.countingGuestsDefault(e);
+        } else if (this.type === dropdownTypes.separate) {
+            this.countingGuestsSeparate(e);
+        }
+    };
+
+    static handleDropdownListClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    handleDropdownClick = (e) => {
+        e.preventDefault();
+        this.input.classList.toggle('dropdown__input_active');
+        this.list.classList.toggle('dropdown__list_active');
+        this.inputWrapper.classList.toggle('dropdown__input-wrapper_active');
+        e.stopPropagation();
     };
 
     attachEventHandlers() {
@@ -52,12 +86,16 @@ class Dropdown {
         this.minus.forEach((node) => {
             node.addEventListener('click', this.handleMinusClick);
         });
-        this.clears.forEach((node) => {
-            node.addEventListener('click', this.handleClearClick);
-        });
-        this.confirms.forEach((node) => {
-            node.addEventListener('click', this.handleConfirmClick);
-        });
+        this.list.addEventListener('click', Dropdown.handleDropdownListClick);
+        this.component.addEventListener('click', this.handleDropdownClick);
+        if (this.withButtons) {
+            this.clears.forEach((node) => {
+                node.addEventListener('click', this.handleClearClick);
+            });
+            this.confirms.forEach((node) => {
+                node.addEventListener('click', this.handleConfirmClick);
+            });
+        }
     }
 
     decrease(event) {
@@ -80,7 +118,7 @@ class Dropdown {
         counter.innerHTML = Number(counter.innerHTML) + 1;
     }
 
-    countingGuests(event) {
+    countingGuestsDefault(event) {
         const index = event.target.dataset.index;
         const item = this.items[index].textContent;
         const counter = this.counters[index];
@@ -88,17 +126,44 @@ class Dropdown {
         let a = '';
         let b = '';
         Object.entries(this.obj).forEach(([key, value]) => {
-            if (value > 0 && (key === 'взрослые' || key === 'дети')) {
-                const newValue = (this.obj['взрослые'] || 0) + (this.obj['дети'] || 0);
-                let val = Dropdown.declOfNum(newValue, this.wordsDefault[0]);
+            if (value > 0 && (key === this.defaultTypeWords[0]
+                || key === this.defaultTypeWords[1])) {
+                const newValue = (this.obj[this.defaultTypeWords[0]] || 0)
+                    + (this.obj[this.defaultTypeWords[1]] || 0);
+                let val = Dropdown.declOfNum(newValue, this.words[0]);
                 a = newValue + ' ' + val;
             }
-            if (value > 0 && key === 'младенцы') {
-                let val = Dropdown.declOfNum(value, this.wordsDefault[1]);
+            if (value > 0 && key === this.defaultTypeWords[2]) {
+                let val = Dropdown.declOfNum(value, this.words[1]);
                 b = value + ' ' + val;
             }
         });
         this.input.value = [a, b].filter(el => el).join(', ');
+    }
+
+    countingGuestsSeparate(event) {
+        const index = event.target.dataset.index;
+        const item = this.items[index].textContent;
+        const counter = this.counters[index];
+        this.obj[item] = Number(counter.textContent);
+        let a = '';
+        let b = '';
+        let c = '';
+        Object.entries(this.obj).forEach(([key, value]) => {
+            if (value > 0 && key === this.words[0][1]) {
+                let val = Dropdown.declOfNum(value, this.words[0]);
+                a = value + ' ' + val;
+            }
+            if (value > 0 && key === this.words[1][1]) {
+                let val = Dropdown.declOfNum(value, this.words[1]);
+                b = value + ' ' + val;
+            }
+            if (value > 0 && key === this.words[2][1]) {
+                let val = Dropdown.declOfNum(value, this.words[2]);
+                c = value + ' ' + val;
+            }
+        });
+        this.input.value = [a, b, c].filter(el => el).join(', ');
     }
 
     static declOfNum(n, textForms) {
@@ -117,4 +182,7 @@ class Dropdown {
     }
 }
 
-export {Dropdown};
+export {
+    Dropdown
+};
+export default dropdownTypes;

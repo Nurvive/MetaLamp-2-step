@@ -20,7 +20,7 @@ mixin dropdown({type = 'default', title = 'Гости'} = {})
         .dropdown__input-wrapper.js-dropdown__input-wrapper
             p.dropdown__input-wrapper-title= title
             span.dropdown__open-button
-            input.dropdown__input(placeholder=placeholder type=type readonly=true)
+            input.dropdown__input.js-dropdown__input(placeholder=placeholder type=type readonly=true)
         ul.dropdown__list.js-dropdown__list
             .dropdown__dropdown-item-wrapper.js-dropdown__dropdown-item-wrapper
                 +dropdown-item(wordsArray)

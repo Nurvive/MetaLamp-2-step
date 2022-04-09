@@ -1,38 +1,20 @@
-import {DropdownRooms} from './dropdown-kit/DropdownRooms';
-import {DropdownDefault} from './dropdown-kit/DropdownDefault';
+import {Dropdown} from './dropdown-kit/Dropdown';
+import dropdownTypes from './dropdown-kit/Dropdown';
 
 (() => {
     document.querySelectorAll('.js-dropdown-default').forEach((node) => {
-        return new DropdownDefault(node, [
+        return new Dropdown(node, [
             ['гость', 'гостя', 'гостей'],
             ['младенец', 'младенца', 'младенцев']
-        ]);
+        ], dropdownTypes.default, true, ['взрослые', 'дети', 'младенцы']);
     });
 })();
 (() => {
     document.querySelectorAll('.js-dropdown-rooms').forEach((node) => {
-        return new DropdownRooms(node, [
+        return new Dropdown(node, [
             ['спальня', 'спальни', 'спален'],
             ['кровать', 'кровати', 'кроватей'],
             ['ванная комната', 'ванные комнаты', 'ванных комнат']
-        ]);
+        ], dropdownTypes.separate, false);
     });
 })();
-
-function handleDropdownClick(e) {
-    e.preventDefault();
-    $(e.currentTarget).find('.js-dropdown__input').toggleClass('dropdown__input_active');
-    $(e.currentTarget).find('.js-dropdown__list').toggleClass('dropdown__list_active');
-    $(e.currentTarget).find('.js-dropdown__input-wrapper').toggleClass('dropdown__input-wrapper_active');
-    e.stopPropagation();
-}
-
-function handleDropdownListClick(e) {
-    e.preventDefault();
-    e.stopPropagation();
-}
-
-$().ready(function () {
-    $('.js-dropdown').on('click', handleDropdownClick);
-    $('.js-dropdown__list').on('click', handleDropdownListClick);
-});
