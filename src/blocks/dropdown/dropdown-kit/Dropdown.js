@@ -79,6 +79,14 @@ class Dropdown {
         e.stopPropagation();
     };
 
+    handleNotDropdownClick = (e) => {
+        if (e.target !== this.component) {
+            this.input.classList.remove('dropdown__input_active');
+            this.list.classList.remove('dropdown__list_active');
+            this.inputWrapper.classList.remove('dropdown__input-wrapper_active');
+        }
+    };
+
     attachEventHandlers() {
         this.plus.forEach((node) => {
             node.addEventListener('click', this.handlePlusClick);
@@ -88,6 +96,7 @@ class Dropdown {
         });
         this.list.addEventListener('click', Dropdown.handleDropdownListClick);
         this.component.addEventListener('click', this.handleDropdownClick);
+        document.addEventListener('click', this.handleNotDropdownClick);
         if (this.withButtons) {
             this.clears.forEach((node) => {
                 node.addEventListener('click', this.handleClearClick);
