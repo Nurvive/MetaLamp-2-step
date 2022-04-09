@@ -1,0 +1,52 @@
+@import '../../scss/common/colors';
+
+.like-button {
+    border-radius: 10px;
+    display: inline-flex;
+    border: 1px solid $dark25;
+    min-width: 40px;
+    height: 20px;
+    padding: 3px 4px 4px;
+    cursor: pointer;
+    align-items: baseline;
+    line-height: initial;
+    font-weight: initial;
+
+    &__icon {
+        font-size: 10px;
+        margin-right: 7px;
+        color: $dark25;
+
+        &_active {
+            opacity: 0;
+            width: 0;
+            color: $purple;
+            font-size: 10px;
+        }
+
+        .like-button_active &_active {
+            opacity: 1;
+            width: initial;
+            margin-right: 7px;
+        }
+    }
+
+    &_active &__icon {
+        display: none;
+    }
+
+    &__count {
+        font-size: 10px;
+        line-height: 12px;
+        color: $dark25;
+        text-transform: initial;
+    }
+
+    &_active {
+        border: 1px solid $purple;
+
+        & .like-button__count {
+            color: $purple;
+        }
+    }
+}

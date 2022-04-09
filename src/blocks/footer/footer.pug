@@ -1,0 +1,42 @@
+include ../subscription-text-field/subscription-text-field
+include ../column-list/column-list
+include ../font-awesome-icon/font-awesome-icon
+
+mixin footer()
+    footer.footer
+        .footer__container
+            .footer__top
+                .footer__top-description
+                    a.footer__logo
+                        img(src='../../assets/images/logo.svg')
+                    p.footer__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                .footer__column-list-wrapper
+                    +column-list({title: "Навигация", text: ["О нас", "Новости", "Служба поддержки", "Услуги"]})
+                .footer__column-list-wrapper
+                    +column-list({title: "О нас", text: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]})
+                .footer__column-list-wrapper
+                    +column-list({title: "Служба поддержки", text: ["Соглашения", "Сообщества", "Связь с нами"]})
+                .footer__subscribe
+                    p.footer__subscribe-title Подписка
+                    p.footer__subscribe-text Получайте специальные предложения и новости сервиса
+                    form(action='#')
+                        +subscription-text-field
+            .footer__down
+                p.footer__down-copyright Copyright © 2018 Toxin отель. Все права защищены.
+                .footer__social-media
+                    a.footer__social-media-link
+                        +font-awesome-icon({
+                            typeClass: 'fab',
+                            iconClass: 'fa-twitter'
+                        })
+                    a.footer__social-media-link
+                        +font-awesome-icon({
+                            typeClass: 'fab',
+                            iconClass: 'fa-facebook-square'
+                        })
+                    a.footer__social-media-link
+                        +font-awesome-icon({
+                            typeClass: 'fab',
+                            iconClass: 'fa-instagram'
+                        })
+        .footer-line

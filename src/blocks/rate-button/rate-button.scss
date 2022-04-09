@@ -1,0 +1,43 @@
+@import '../../scss/common/colors';
+
+.rate-button {
+    display: inline-block;
+
+    &__inner {
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__star {
+        height: 100%;
+        cursor: pointer;
+        margin-right: 5px;
+
+        &::before {
+            content: url('../../assets/images/star-border.svg');
+            display: block;
+        }
+
+        &:hover::before,
+        &:hover ~ &::before {
+            content: url('../../assets/images/star.svg');
+        }
+    }
+
+    &__item {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+
+        &:checked,
+        &:checked ~ .rate-button__star::before {
+            content: url('../../assets/images/star.svg');
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/templates';
+
+.colors-type {
+    &__container {
+        @extend %container;
+
+        padding: 145px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &-color {
+                height: 70px;
+                width: 70px;
+                border-radius: 6px;
+                margin-right: 40px;
+
+                .colors-type__list-item:nth-child(1) > & {
+                    background-color: $dark100;
+                }
+
+                .colors-type__list-item:nth-child(2) > & {
+                    background-color: $dark75;
+                }
+
+                .colors-type__list-item:nth-child(3) > & {
+                    background-color: $dark50;
+                }
+
+                .colors-type__list-item:nth-child(4) > & {
+                    background-color: $dark25;
+                }
+
+                .colors-type__list-item:nth-child(5) > & {
+                    background-color: $dark5;
+                }
+
+                .colors-type__list-item:nth-child(6) > & {
+                    background-color: $purple;
+                }
+
+                .colors-type__list-item:nth-child(7) > & {
+                    background-color: $green;
+                }
+            }
+
+            &-info {
+                &-title {
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: $dark100;
+                    line-height: 28px;
+                }
+
+                &-text {
+                    @extend.colors-type__list-item-info-title;
+
+                    font-weight: 400;
+                }
+            }
+
+            &-text {
+                display: flex;
+
+                &:first-child > * {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                &:nth-child(2) > * {
+                    font-size: 19px;
+                    line-height: 23px;
+                }
+
+                &:nth-child(3) > * {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+
+                &:nth-child(4) > * {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) > .colors-type__list-item-text-inner {
+                        font-weight: bold;
+                    }
+                }
+
+                &-tag {
+                    color: rgb(31 32 65 / 25%);
+                    margin-right: 30px;
+                    text-align: right;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &-inner {
+                    max-width: 370px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}

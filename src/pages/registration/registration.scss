@@ -1,0 +1,19 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/templates';
+
+.registration-page {
+    @extend %wrapper;
+
+    &__main {
+        background-image: url('../../assets/images/registration.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding: 18px 0;
+        background-size: cover;
+    }
+
+    &__card-wrapper {
+        margin: 0 auto;
+        max-width: 380px;
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/functions';
+
+.column-list {
+    max-width: rem(150);
+    text-transform: uppercase;
+    color: $dark100;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    @media (max-width: 1060px) {
+        display: none;
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 17px;
+        font-style: normal;
+        font-weight: normal;
+        color: $dark50;
+        text-transform: none;
+        margin-top: 22px;
+        display: block;
+    }
+}

@@ -1,0 +1,64 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/templates';
+
+.button {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 22px;
+    height: 44px;
+    max-width: 99px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &_transparent {
+        background: white;
+        border: 2px solid #bc9cff;
+        color: #bc9cff;
+    }
+
+    &_with-text {
+        cursor: pointer;
+        display: inline-block;
+        color: #bc9cff;
+        background: none;
+        height: initial;
+
+        &:hover {
+            color: $dark100;
+        }
+    }
+
+    &_long {
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+        position: relative;
+    }
+
+    &_flat {
+        height: 34px;
+    }
+
+    &__arrow {
+        @extend %arrow;
+
+        top: -8px;
+        left: 45%;
+        background-color: white;
+        transform: translateX(-50%);
+    }
+}

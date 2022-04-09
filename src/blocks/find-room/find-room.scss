@@ -1,0 +1,42 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/templates';
+
+.find-room {
+    @extend %card;
+
+    max-width: 380px;
+    height: 374px;
+    width: 100%;
+
+    @media (max-width: 370px) {
+        height: initial;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: $dark100;
+    }
+
+    &__dates {
+        display: flex;
+        justify-content: space-between;
+        margin: 21px 0;
+    }
+
+    &__layout {
+        &-text {
+            color: $dark100;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__long-button-wrapper {
+        margin-top: 30px;
+    }
+}

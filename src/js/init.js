@@ -1,12 +1,12 @@
-import LikeButton from '../pug/blocks/like-button/like-button';
-import MaskedTextField from '../pug/blocks/masked-text-field/masked-text-field';
-import ExpandableCheckboxList from '../pug/blocks/expandable-checkbox-list/expandable-checkbox-list';
-import Pagination from '../pug/blocks/pagination/pagination';
-import RangeSlider from '../pug/blocks/range-slider/range-slider';
-import RoomCard from '../pug/blocks/room-card/room-card';
-import Header from '../pug/blocks/header/header';
-import Canvas from '../pug/blocks/canvas/canvas';
-import DateDropdown from '../pug/blocks/date-dropdown/date-dropdown';
+import LikeButton from '../blocks/like-button/like-button';
+import MaskedTextField from '../blocks/masked-text-field/masked-text-field';
+import ExpandableCheckboxList from '../blocks/expandable-checkbox-list/expandable-checkbox-list';
+import Pagination from '../blocks/pagination/pagination';
+import RangeSlider from '../blocks/range-slider/range-slider';
+import RoomCard from '../blocks/room-card/room-card';
+import Header from '../blocks/header/header';
+import Canvas from '../blocks/canvas/canvas';
+import DateDropdown from '../blocks/date-dropdown/date-dropdown';
 
 $(() => {
     $('.js-like-button').each((_, element) => new LikeButton(element));

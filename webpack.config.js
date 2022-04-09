@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const webpack = require('webpack');
-const PAGES = fs.readdirSync(path.join(__dirname, './src/pug/pages'));
+const PAGES = fs.readdirSync(path.join(__dirname, './src/pages'));
 // const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: './src/js/main.js',
@@ -121,7 +121,7 @@ module.exports = {
         ...PAGES.map(
             (page) => new HtmlWebpackPlugin({
                 filename: `${page}.html`,
-                template: `./src/pug/pages/${page}/${page}.pug`
+                template: `./src/pages/${page}/${page}.pug`
             })
         ),
         new CleanWebpackPlugin(),

@@ -1,0 +1,22 @@
+@import '../../scss/common/colors';
+@import '../../scss/common/templates';
+
+.cards {
+    @extend %wrapper;
+
+    &__container {
+        @extend %container;
+
+        background-color: #f4f4f6;
+        justify-content: center;
+        display: flex;
+        gap: 40px;
+        padding: 80px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+    }
+}
