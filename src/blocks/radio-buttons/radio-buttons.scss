@@ -41,11 +41,10 @@
             top: 50%;
             transform: translateY(-66%);
             opacity: 0;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             transition: 0.2s;
-            border: 1px solid $dark25;
             z-index: 2;
         }
     }
