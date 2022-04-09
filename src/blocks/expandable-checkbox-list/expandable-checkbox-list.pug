@@ -1,8 +1,8 @@
 include ../checkbox-buttons/checkbox-buttons
 
 mixin expandable-checkbox({text = 'text', items = []} = {})
-    .expandable-checkbox
-        span.expandable-checkbox__text=text
+    .expandable-checkbox.js-expandable-checkbox
+        span.expandable-checkbox__text.js-expandable-checkbox__text=text
         span.expandable-checkbox__open-button.js-expandable-checkbox__open-button
         .expandable-checkbox__inner.js-expandable-checkbox__inner
             +checkbox-buttons(items)

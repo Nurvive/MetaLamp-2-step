@@ -4,19 +4,22 @@
 .expandable-checkbox {
     position: relative;
     max-width: 266px;
+    cursor: pointer;
 
     &__open-button {
         @extend %open-button-chevron;
 
         right: 15px;
         bottom: 3px;
+        top: 2px;
 
         &_active {
-            transform: rotate(180deg);
+            transform: rotate(180deg) translateY(35%);
         }
     }
 
     &__inner {
+        cursor: initial;
         position: absolute;
         z-index: 2;
         background-color: white;
