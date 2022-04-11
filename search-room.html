@@ -16,38 +16,38 @@
         <div class="header__logo-burger">
           <div class="fas fa-hamburger"></div>
         </div>
-        <div class="header__logo"><a class="header__logo-link"><img src="assets/fonts/logo.svg"/></a></div>
+        <div class="header__logo"><a class="header__logo-link" href="landing.html"><img src="assets/fonts/logo.svg"/></a></div>
         <div class="header__menu-wrapper">
           <nav class="header__nav">
             <ul class="header__menu">
-              <li class="header__menu-item"><a class="header__menu-item-link">О нас</a>
+              <li class="header__menu-item"><a class="header__menu-item-link" href="change">О нас</a>
               </li>
               <li class="header__menu-item">
                 <ul class="header__menu-dropdown js-header__menu-dropdown">Услуги
                   <div class="header__menu-dropdown-open-button"></div>
-                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
-                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
-                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">Покупка</a></li>
+                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link" href="change">Покупка</a></li>
+                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link" href="change">Покупка</a></li>
+                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link" href="change">Покупка</a></li>
                 </ul>
               </li>
-              <li class="header__menu-item"><a class="header__menu-item-link">Вакансии</a>
+              <li class="header__menu-item"><a class="header__menu-item-link" href="change">Вакансии</a>
               </li>
-              <li class="header__menu-item"><a class="header__menu-item-link">Новости</a>
+              <li class="header__menu-item"><a class="header__menu-item-link" href="change">Новости</a>
               </li>
               <li class="header__menu-item">
                 <ul class="header__menu-dropdown js-header__menu-dropdown">Соглашение
                   <div class="header__menu-dropdown-open-button"></div>
-                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">О воде</a></li>
-                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link">О солях</a></li>
+                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link" href="change">О воде</a></li>
+                  <li class="header__dropdown-item header__dropdown-item_hide js-header__dropdown-item"><a class="header__dropdown-item-link" href="change">О солях</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
           <div class="header__buttons">
-            <div class="enter-buttons"><a class="enter-buttons__log-in-button">
-                <button class="button button_transparent button_flat">Войти
-                </button></a><a class="enter-buttons__sign-up-button">
-                <button class="button button_long button_flat">Зарегистрироваться
+            <div class="enter-buttons"><a class="enter-buttons__log-in-button" href="sign-in.html">
+                <button class="button button_transparent button_flat" type="button">Войти
+                </button></a><a class="enter-buttons__sign-up-button" href="registration.html">
+                <button class="button button_long button_flat" type="button">Зарегистрироваться
                 </button></a></div>
           </div>
         </div>
@@ -80,14 +80,14 @@
         </ul>
       </nav>
       <div class="side-menu__buttons">
-        <div class="enter-buttons"><a class="enter-buttons__log-in-button">
-            <button class="button button_transparent button_flat">Войти
-            </button></a><a class="enter-buttons__sign-up-button">
-            <button class="button button_long button_flat">Зарегистрироваться
+        <div class="enter-buttons"><a class="enter-buttons__log-in-button" href="sign-in.html">
+            <button class="button button_transparent button_flat" type="button">Войти
+            </button></a><a class="enter-buttons__sign-up-button" href="registration.html">
+            <button class="button button_long button_flat" type="button">Зарегистрироваться
             </button></a></div>
       </div>
     </div>
-    <div class="search-room">
+    <div class="search-room js-search-room">
       <main class="search-room__main">
         <aside class="search-room__aside">
           <ul class="search-room__list">
@@ -106,7 +106,7 @@
                 <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
                   <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                     <p class="dropdown__input-wrapper-title">Гости</p><span class="dropdown__open-button"></span>
-                    <input class="dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
+                    <input class="dropdown__input js-dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
                   </div>
                   <ul class="dropdown__list js-dropdown__list">
                     <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -137,11 +137,11 @@
                     </div>
                     <li class="dropdown__interactive">
                       <div class="js-dropdown__interactive-clear">
-                        <button class="button button_with-text">очистить
+                        <button class="button button_with-text" type="button">очистить
                         </button>
                       </div>
                       <div class="js-dropdown__interactive-confirm">
-                        <button class="button button_with-text">применить
+                        <button class="button button_with-text" type="button">применить
                         </button>
                       </div>
                     </li>
@@ -205,7 +205,7 @@
               <div class="dropdown js-dropdown dropdown-rooms js-dropdown-rooms">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                   <p class="dropdown__input-wrapper-title">удобства номера</p><span class="dropdown__open-button"></span>
-                  <input class="dropdown__input" placeholder="Сколько комнат" type="rooms" readonly="readonly"/>
+                  <input class="dropdown__input js-dropdown__input" placeholder="Сколько комнат" type="rooms" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
                   <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -239,7 +239,7 @@
             </li>
             <li class="search-room__item js-search-room__item">
               <div class="search-room__layout">
-                <div class="expandable-checkbox"><span class="expandable-checkbox__text">Дополнительные удобства</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
+                <div class="expandable-checkbox js-expandable-checkbox"><span class="expandable-checkbox__text js-expandable-checkbox__text">Дополнительные удобства</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
                   <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
                     <ul class="checkbox-buttons">
                       <li class="checkbox-buttons__item">
@@ -685,48 +685,46 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__top">
-          <div class="footer__top-description"><a class="footer__logo"><img src="assets/fonts/logo.svg"/></a>
+          <div class="footer__top-description"><a class="footer__logo" href="landing.html"><img src="assets/fonts/logo.svg"/></a>
             <p class="footer__description-text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
           </div>
           <div class="footer__column-list-wrapper">
             <ul class="column-list">Навигация
-              <li><a class="column-list__item">О нас</a></li>
-              <li><a class="column-list__item">Новости</a></li>
-              <li><a class="column-list__item">Служба поддержки</a></li>
-              <li><a class="column-list__item">Услуги</a></li>
+              <li><a class="column-list__item" href="change">О нас</a></li>
+              <li><a class="column-list__item" href="change">Новости</a></li>
+              <li><a class="column-list__item" href="change">Служба поддержки</a></li>
+              <li><a class="column-list__item" href="change">Услуги</a></li>
             </ul>
           </div>
           <div class="footer__column-list-wrapper">
             <ul class="column-list">О нас
-              <li><a class="column-list__item">О сервисе</a></li>
-              <li><a class="column-list__item">Наша команда</a></li>
-              <li><a class="column-list__item">Вакансии</a></li>
-              <li><a class="column-list__item">Инвесторы</a></li>
+              <li><a class="column-list__item" href="change">О сервисе</a></li>
+              <li><a class="column-list__item" href="change">Наша команда</a></li>
+              <li><a class="column-list__item" href="change">Вакансии</a></li>
+              <li><a class="column-list__item" href="change">Инвесторы</a></li>
             </ul>
           </div>
           <div class="footer__column-list-wrapper">
             <ul class="column-list">Служба поддержки
-              <li><a class="column-list__item">Соглашения</a></li>
-              <li><a class="column-list__item">Сообщества</a></li>
-              <li><a class="column-list__item">Связь с нами</a></li>
+              <li><a class="column-list__item" href="change">Соглашения</a></li>
+              <li><a class="column-list__item" href="change">Сообщества</a></li>
+              <li><a class="column-list__item" href="change">Связь с нами</a></li>
             </ul>
           </div>
           <div class="footer__subscribe">
             <p class="footer__subscribe-title">Подписка</p>
             <p class="footer__subscribe-text">Получайте специальные предложения и новости сервиса</p>
-            <form action="#">
-              <div class="subscription-text-field">
-                <button class="subscription-text-field__button"><span class="subscription-text-field__button-inner"></span></button>
-                <input class="text-field js-text-field text-field_with-padding" placeholder="Email" type="email"/>
-              </div>
+            <form class="subscription-text-field" action="change">
+              <button class="subscription-text-field__button" type="submit"><span class="subscription-text-field__button-inner"></span></button>
+              <input class="text-field js-text-field text-field_with-padding" placeholder="Email" type="email"/>
             </form>
           </div>
         </div>
         <div class="footer__down">
           <p class="footer__down-copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
-          <div class="footer__social-media"><a class="footer__social-media-link">
-              <div class="fab fa-twitter"></div></a><a class="footer__social-media-link">
-              <div class="fab fa-facebook-square"></div></a><a class="footer__social-media-link">
+          <div class="footer__social-media"><a class="footer__social-media-link" href="change">
+              <div class="fab fa-twitter"></div></a><a class="footer__social-media-link" href="change">
+              <div class="fab fa-facebook-square"></div></a><a class="footer__social-media-link" href="change">
               <div class="fab fa-instagram"></div></a></div>
         </div>
       </div>

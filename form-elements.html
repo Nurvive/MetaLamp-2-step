@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
-    <div class="form-elements">
+    <div class="form-elements js-form-elements">
       <div class="form-elements__container">
         <div class="form-elements__inner">
           <div class="form-elements__label">
@@ -22,7 +22,7 @@
             <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
               <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                 <p class="dropdown__input-wrapper-title">dropdown</p><span class="dropdown__open-button"></span>
-                <input class="dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
+                <input class="dropdown__input js-dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
                 <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -53,11 +53,11 @@
                 </div>
                 <li class="dropdown__interactive">
                   <div class="js-dropdown__interactive-clear">
-                    <button class="button button_with-text">очистить
+                    <button class="button button_with-text" type="button">очистить
                     </button>
                   </div>
                   <div class="js-dropdown__interactive-confirm">
-                    <button class="button button_with-text">применить
+                    <button class="button button_with-text" type="button">применить
                     </button>
                   </div>
                 </li>
@@ -93,16 +93,16 @@
           </div>
           <div class="form-elements__label">
             <p class="form-elements__label-inner">subscription text field</p>
-            <div class="subscription-text-field">
-              <button class="subscription-text-field__button"><span class="subscription-text-field__button-inner"></span></button>
+            <form class="subscription-text-field" action="change">
+              <button class="subscription-text-field__button" type="submit"><span class="subscription-text-field__button-inner"></span></button>
               <input class="text-field js-text-field text-field_with-padding" placeholder="Email" type="email"/>
-            </div>
+            </form>
           </div>
           <div class="form-elements__label">
             <div class="dropdown js-dropdown dropdown-rooms js-dropdown-rooms">
               <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                 <p class="dropdown__input-wrapper-title">dropdown</p><span class="dropdown__open-button"></span>
-                <input class="dropdown__input" placeholder="Сколько комнат" type="rooms" readonly="readonly"/>
+                <input class="dropdown__input js-dropdown__input" placeholder="Сколько комнат" type="rooms" readonly="readonly"/>
               </div>
               <ul class="dropdown__list js-dropdown__list">
                 <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -135,7 +135,7 @@
             </div>
           </div>
           <div class="form-elements__label">
-            <div class="expandable-checkbox"><span class="expandable-checkbox__text">expandable checkbox list</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
+            <div class="expandable-checkbox js-expandable-checkbox"><span class="expandable-checkbox__text js-expandable-checkbox__text">expandable checkbox list</span><span class="expandable-checkbox__open-button js-expandable-checkbox__open-button"></span>
               <div class="expandable-checkbox__inner js-expandable-checkbox__inner">
                 <ul class="checkbox-buttons">
                   <li class="checkbox-buttons__item">
@@ -305,19 +305,19 @@
           <div class="form-elements__label">
             <p class="form-elements__label-inner">buttons</p>
             <div class="form-elements__button-wrapper">
-              <button class="button">click me
+              <button class="button" type="button">click me
               </button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button_transparent">click ME
+              <button class="button button_transparent" type="button">click ME
               </button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button_with-text">clickkk meee
+              <button class="button button_with-text" type="button">click me
               </button>
             </div>
             <div class="form-elements__button-wrapper">
-              <button class="button button_long">long click me<span class="button__arrow"></span>
+              <button class="button button_long" type="button">перейти к оплате<span class="button__arrow"></span>
               </button>
             </div>
           </div>

@@ -11,10 +11,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script defer src="./main.bundle.js"></script><link href="./main.css" rel="stylesheet"></head>
   <body>
-    <div class="cards">
+    <div class="cards js-cards">
       <div class="cards__container">
         <div class="cards__item">
-          <div class="find-room">
+          <form class="find-room" action="change">
             <p class="find-room__title">Найдём номера под ваши пожелания</p>
             <div class="find-room__dates">
               <div class="date-dropdown js-date-dropdown date-dropdown_double" data-double="true">
@@ -32,7 +32,7 @@
               <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                   <p class="dropdown__input-wrapper-title">гости</p><span class="dropdown__open-button"></span>
-                  <input class="dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
+                  <input class="dropdown__input js-dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
                   <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -63,11 +63,11 @@
                   </div>
                   <li class="dropdown__interactive">
                     <div class="js-dropdown__interactive-clear">
-                      <button class="button button_with-text">очистить
+                      <button class="button button_with-text" type="button">очистить
                       </button>
                     </div>
                     <div class="js-dropdown__interactive-confirm">
-                      <button class="button button_with-text">применить
+                      <button class="button button_with-text" type="button">применить
                       </button>
                     </div>
                   </li>
@@ -75,11 +75,11 @@
               </div>
             </div>
             <div class="find-room__long-button-wrapper">
-              <button class="button button_long">Подобрать номер<span class="button__arrow"></span>
+              <button class="button button_long" type="submit">Подобрать номер<span class="button__arrow"></span>
               </button>
             </div>
-          </div>
-          <div class="registration">
+          </form>
+          <form class="registration" action="change">
             <div class="registration__layout">
               <p class="registration__layout-text registration__layout-text_big">Регистрация аккаунта</p>
               <div class="registration__input-wrapper">
@@ -118,17 +118,17 @@
                 <p class="toggle__text">Получать спецпредложения</p>
               </label>
             </div>
-            <button class="button button_long">Зарегистрироваться<span class="button__arrow"></span>
+            <button class="button button_long" type="submit">Зарегистрироваться<span class="button__arrow"></span>
             </button>
             <div class="registration__bottom">
               <p class="registration__bottom-text">Уже есть аккаунт на Toxin</p>
-              <button class="button button_transparent">Войти
+              <button class="button button_transparent" type="button">Войти
               </button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="cards__item">
-          <div class="reservation">
+          <form class="reservation" action="change">
             <div class="reservation__info">
               <p class="reservation__info-number">888<span class="reservation__info-type">люкс</span></p>
               <p class="reservation__info-cost"><strong class="reservation__info-cost-price">9 990₽</strong><span class="reservation__info-cost-date"> в сутки</span></p>
@@ -149,7 +149,7 @@
               <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                   <p class="dropdown__input-wrapper-title">гости</p><span class="dropdown__open-button"></span>
-                  <input class="dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
+                  <input class="dropdown__input js-dropdown__input" placeholder="Сколько гостей" type="default" readonly="readonly"/>
                 </div>
                 <ul class="dropdown__list js-dropdown__list">
                   <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
@@ -180,11 +180,11 @@
                   </div>
                   <li class="dropdown__interactive">
                     <div class="js-dropdown__interactive-clear">
-                      <button class="button button_with-text">очистить
+                      <button class="button button_with-text" type="button">очистить
                       </button>
                     </div>
                     <div class="js-dropdown__interactive-confirm">
-                      <button class="button button_with-text">применить
+                      <button class="button button_with-text" type="button">применить
                       </button>
                     </div>
                   </li>
@@ -215,11 +215,11 @@
               <p class="reservation__total-price">38 081₽</p>
             </div>
             <div class="reservation__button">
-              <button class="button button_long">Забронировать<span class="button__arrow"></span>
+              <button class="button button_long" type="submit">Забронировать<span class="button__arrow"></span>
               </button>
             </div>
-          </div>
-          <div class="login">
+          </form>
+          <form class="login" action="change">
             <div class="login__title">
               <p class="login__title-text">Войти</p>
             </div>
@@ -228,15 +228,15 @@
               <input class="text-field js-text-field" placeholder="Пароль" type="password"/>
             </div>
             <div class="login__button">
-              <button class="button button_long">Войти<span class="button__arrow"></span>
+              <button class="button button_long" type="submit">Войти<span class="button__arrow"></span>
               </button>
             </div>
             <div class="login__bottom">
               <p class="login__bottom-text">Нет аккаунта на Toxin?</p>
-              <button class="button button_transparent">Создать
+              <button class="button button_transparent" type="button">Создать
               </button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="cards__item">
           <div class="date-dropdown js-date-dropdown date-dropdown_inline" data-double="false" data-inline="true">
