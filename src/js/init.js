@@ -1,21 +1,19 @@
-import LikeButton from '../blocks/like-button/like-button';
-import MaskedTextField from '../blocks/masked-text-field/masked-text-field';
-import ExpandableCheckboxList from '../blocks/expandable-checkbox-list/expandable-checkbox-list';
-import Pagination from '../blocks/pagination/pagination';
-import RangeSlider from '../blocks/range-slider/range-slider';
-import RoomCard from '../blocks/room-card/room-card';
-import Header from '../blocks/header/header';
-import Canvas from '../blocks/canvas/canvas';
-import DateDropdown from '../blocks/date-dropdown/date-dropdown';
+import {Cards} from '../pages/cards/Cards';
+import {FormElements} from '../pages/form-elements/FormElements';
+import {HeaderFooter} from '../pages/header-footer/HeaderFooter';
+import {Landing} from '../pages/landing/Landing';
+import {Registration} from '../pages/registration/Registration';
+import {SignIn} from '../pages/sign-in/SignIn';
+import {RoomDetails} from '../pages/room-details/RoomDetails';
+import {SearchRoom} from '../pages/search-room/SearchRoom';
 
 $(() => {
-    $('.js-like-button').each((_, element) => new LikeButton(element));
-    $('.js-masked-text-field input').each((_, element) => new MaskedTextField(element));
-    $('.js-expandable-checkbox').each((_, element) => new ExpandableCheckboxList(element));
-    $('.js-pagination').each((_, element) => new Pagination(element));
-    $('.js-range-slider').each((_, element) => new RangeSlider(element));
-    $('.js-room-card__top').each((_, element) => new RoomCard(element));
-    $('.js-header').each((_, element) => new Header(element));
-    $('.js-canvas__area').each((_, element) => new Canvas(element));
-    $('.js-date-dropdown').each((_, element) => new DateDropdown(element));
+    $('.js-cards').each((_, element) => new Cards(element));
+    $('.js-form-elements').each((_, element) => new FormElements(element));
+    $('.js-header-footer').each((_, element) => new HeaderFooter(element));
+    $('.js-landing').each((_, element) => new Landing(element));
+    $('.js-registration-page').each((_, element) => new Registration(element));
+    $('.js-sign-in').each((_, element) => new SignIn(element));
+    $('.js-room-details').each((_, element) => new RoomDetails(element));
+    $('.js-search-room').each((_, element) => new SearchRoom(element));
 });
