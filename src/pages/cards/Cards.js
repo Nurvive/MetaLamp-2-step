@@ -1,7 +1,7 @@
 import DateDropdown from '../../blocks/date-dropdown/date-dropdown';
 import RoomCard from '../../blocks/room-card/room-card';
 import MaskedTextField from '../../blocks/masked-text-field/masked-text-field';
-import dropdownTypes, {Dropdown} from '../../blocks/dropdown/dropdown-kit/Dropdown';
+import dropdownTypes, {Dropdown} from '../../blocks/dropdown/Dropdown';
 
 class Cards {
     constructor(root) {
