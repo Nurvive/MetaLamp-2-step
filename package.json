@@ -12,7 +12,8 @@
     "scripts": {
         "build": "webpack",
         "dev": "webpack serve --open",
-        "lint": "eslint ./src/**/*.js && stylelint ./src/**/*.scss"
+        "lint": "eslint ./src/**/*.js && stylelint ./src/**/*.scss",
+        "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.14.7",

@@ -1,4 +1,4 @@
-mixin bullet-list(obj = [])
+mixin bullet-list(textArray = [])
     ul.bullet-list
-        each val in obj
-            li.bullet-list__item=val
+        each text in textArray
+            li.bullet-list__item=text
