@@ -2,7 +2,7 @@
 
 %text {
     position: absolute;
-    color: $purple;
+    color: $color-main;
     font-weight: bold;
     left: 50%;
     transform: translate(-50%);
@@ -35,7 +35,7 @@
         &-colors {
             font-size: 14px;
             line-height: 24px;
-            color: $dark75;
+            color: $color-main-dark;
             position: relative;
 
             &::before {

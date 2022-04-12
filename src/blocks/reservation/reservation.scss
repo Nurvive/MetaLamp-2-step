@@ -17,7 +17,7 @@
             font-weight: bold;
             font-size: 24px;
             line-height: 29px;
-            color: $dark100;
+            color: $color-main-darker;
             position: relative;
             margin-left: 22px;
 
@@ -33,7 +33,7 @@
         }
 
         &-type {
-            color: $purple;
+            color: $color-main;
             text-transform: uppercase;
             line-height: 15px;
             font-size: 12px;
@@ -41,7 +41,7 @@
         }
 
         &-cost {
-            color: $dark50;
+            color: $color-main-middle;
 
             &-price {
                 font-size: 14px;
@@ -69,7 +69,7 @@
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
-        color: $dark100;
+        color: $color-main-darker;
         text-transform: uppercase;
         margin-bottom: 5px;
     }
@@ -92,7 +92,7 @@
     &__service {
         font-size: 14px;
         line-height: 23px;
-        color: $dark75;
+        color: $color-main-dark;
         max-width: 214px;
         margin-right: auto;
     }
@@ -112,12 +112,12 @@
             font-weight: bold;
             font-size: 19px;
             line-height: 23px;
-            color: $dark100;
+            color: $color-main-darker;
         }
 
         &-border {
             flex-grow: 1;
-            border-bottom: 1px dotted $dark25;
+            border-bottom: 1px dotted $color-main-light;
             height: 18px;
         }
 

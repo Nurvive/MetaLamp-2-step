@@ -2,7 +2,7 @@
 
 .bullet-list {
     &__item {
-        color: $dark75;
+        color: $color-main-dark;
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
@@ -16,7 +16,7 @@
             display: inline-block;
             width: 10px;
             height: 10px;
-            background: $dark25;
+            background: $color-main-light;
             border-radius: 50%;
             left: -20px;
             transform: translateY(50%);

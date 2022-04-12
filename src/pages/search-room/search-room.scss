@@ -2,7 +2,7 @@
 @import '../../scss/common/templates';
 
 %layout {
-    color: $dark100;
+    color: $color-main-darker;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
@@ -88,7 +88,7 @@
         }
 
         &-extra-text {
-            color: $dark50;
+            color: $color-main-middle;
             font-weight: normal;
             font-size: 12px;
             line-height: 14px;
@@ -129,7 +129,7 @@
             font-weight: bold;
             font-size: 24px;
             line-height: 29px;
-            color: $dark100;
+            color: $color-main-darker;
 
             @media (max-width: 900px) {
                 text-align: center;
@@ -143,7 +143,7 @@
     }
 
     &__small-menu > &__layout {
-        border: 1px solid $dark50;
+        border: 1px solid $color-main-middle;
         border-radius: 22px;
         display: inline-block;
         cursor: pointer;

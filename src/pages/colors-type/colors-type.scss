@@ -23,31 +23,31 @@
                 margin-right: 40px;
 
                 .colors-type__list-item:nth-child(1) > & {
-                    background-color: $dark100;
+                    background-color: $color-main-darker;
                 }
 
                 .colors-type__list-item:nth-child(2) > & {
-                    background-color: $dark75;
+                    background-color: $color-main-dark;
                 }
 
                 .colors-type__list-item:nth-child(3) > & {
-                    background-color: $dark50;
+                    background-color: $color-main-middle;
                 }
 
                 .colors-type__list-item:nth-child(4) > & {
-                    background-color: $dark25;
+                    background-color: $color-main-light;
                 }
 
                 .colors-type__list-item:nth-child(5) > & {
-                    background-color: $dark5;
+                    background-color: $color-main-lighter;
                 }
 
                 .colors-type__list-item:nth-child(6) > & {
-                    background-color: $purple;
+                    background-color: $color-main;
                 }
 
                 .colors-type__list-item:nth-child(7) > & {
-                    background-color: $green;
+                    background-color: $color-secondary;
                 }
             }
 
@@ -55,7 +55,7 @@
                 &-title {
                     font-size: 19px;
                     font-weight: bold;
-                    color: $dark100;
+                    color: $color-main-darker;
                     line-height: 28px;
                 }
 

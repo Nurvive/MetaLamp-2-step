@@ -16,7 +16,7 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 29px;
-        color: $dark100;
+        color: $color-main-darker;
     }
 
     &__dates {
@@ -27,7 +27,7 @@
 
     &__layout {
         &-text {
-            color: $dark100;
+            color: $color-main-darker;
             text-transform: uppercase;
             font-weight: bold;
             font-size: 12px;

@@ -14,7 +14,7 @@
     }
 
     &__text {
-        color: $dark75;
+        color: $color-main-dark;
         font-size: 14px;
         line-height: 24px;
         font-weight: normal;
@@ -31,7 +31,7 @@
             border-radius: 50%;
             background: #fff;
             transition: 0.2s;
-            border: 1px solid $dark25;
+            border: 1px solid $color-main-light;
         }
 
         &::before {
@@ -55,11 +55,11 @@
         opacity: 0;
 
         &:checked + .radio-buttons__text::after {
-            border: 1px solid $purple;
+            border: 1px solid $color-main;
         }
 
         &:checked + .radio-buttons__text::before {
-            background: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+            background: linear-gradient(180deg, $color-main 0%, #8ba4f9 100%);
             opacity: 1;
         }
     }

@@ -3,7 +3,7 @@
 .like-button {
     border-radius: 10px;
     display: inline-flex;
-    border: 1px solid $dark25;
+    border: 1px solid $color-main-light;
     min-width: 40px;
     height: 20px;
     padding: 3px 4px 4px;
@@ -15,12 +15,12 @@
     &__icon {
         font-size: 10px;
         margin-right: 7px;
-        color: $dark25;
+        color: $color-main-light;
 
         &_active {
             opacity: 0;
             width: 0;
-            color: $purple;
+            color: $color-main;
             font-size: 10px;
         }
 
@@ -38,15 +38,15 @@
     &__count {
         font-size: 10px;
         line-height: 12px;
-        color: $dark25;
+        color: $color-main-light;
         text-transform: initial;
     }
 
     &_active {
-        border: 1px solid $purple;
+        border: 1px solid $color-main;
 
         & .like-button__count {
-            color: $purple;
+            color: $color-main;
         }
     }
 }

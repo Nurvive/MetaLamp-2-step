@@ -4,7 +4,7 @@
 .column-list {
     max-width: rem(150);
     text-transform: uppercase;
-    color: $dark100;
+    color: $color-main-darker;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
@@ -18,7 +18,7 @@
         line-height: 17px;
         font-style: normal;
         font-weight: normal;
-        color: $dark50;
+        color: $color-main-middle;
         text-transform: none;
         margin-top: 22px;
         display: block;

@@ -23,10 +23,10 @@
         border-radius: 4px;
         background-color: transparent;
         font-size: 14px;
-        border: 1px solid $dark25;
+        border: 1px solid $color-main-light;
         cursor: pointer;
         line-height: 18px;
-        color: $dark75;
+        color: $color-main-dark;
         padding: 8px 44px 8px 15px;
 
         &:hover,
@@ -42,12 +42,12 @@
 
                 .dropdown__input {
                     border-radius: 4px 4px 0 0;
-                    border-color: $dark50;
+                    border-color: $color-main-middle;
                 }
             }
 
             &-title {
-                color: $dark100;
+                color: $color-main-darker;
                 text-transform: uppercase;
                 font-weight: bold;
                 line-height: 15px;
@@ -60,9 +60,9 @@
     &__list {
         position: absolute;
         width: 100%;
-        border: 1px solid $dark50;
+        border: 1px solid $color-main-middle;
         border-top: none;
-        box-shadow: 0 10px 20px $dark5;
+        box-shadow: 0 10px 20px $color-main-lighter;
         border-radius: 0 0 5px 5px;
         padding: 5px 7px 13px 15px;
         background-color: #fff;

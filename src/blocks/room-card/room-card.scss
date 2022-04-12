@@ -37,14 +37,14 @@
     &__number {
         font-size: 19px;
         line-height: 23px;
-        color: $dark100;
+        color: $color-main-darker;
 
         &::before {
             content: '№';
             font-weight: bold;
             font-size: 14px;
             line-height: 17px;
-            color: $dark100;
+            color: $color-main-darker;
         }
 
         &-text {
@@ -57,7 +57,7 @@
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
-        color: $purple;
+        color: $color-main;
         text-transform: uppercase;
         margin-left: 2px;
     }
@@ -65,7 +65,7 @@
     &__price {
         font-size: 14px;
         line-height: 18px;
-        color: $dark50;
+        color: $color-main-middle;
 
         &-inner {
             line-height: 23px;
@@ -80,7 +80,7 @@
     &__reviews {
         font-size: 14px;
         line-height: 18px;
-        color: $dark50;
+        color: $color-main-middle;
 
         &-text {
             line-height: 23px;

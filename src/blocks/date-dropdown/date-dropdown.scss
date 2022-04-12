@@ -12,7 +12,7 @@
         font-family: inherit;
 
         &-title {
-            color: $dark100;
+            color: $color-main-darker;
             text-transform: uppercase;
             font-weight: bold;
             line-height: 15px;
@@ -70,7 +70,7 @@
 
 .air-datepicker {
     width: 318px;
-    border: 1px solid $dark25;
+    border: 1px solid $color-main-light;
     font-family: Montserrat, sans-serif;
     box-shadow: none;
 
@@ -94,7 +94,7 @@
             font-weight: bold;
             font-size: 19px;
             line-height: 22.8px;
-            color: $dark100;
+            color: $color-main-darker;
         }
 
         &--action {
@@ -105,7 +105,7 @@
     &__arrow {
         @extend %arrow;
 
-        background-color: $purple;
+        background-color: $color-main;
 
         &_left {
             transform: rotate(180deg);
@@ -123,7 +123,7 @@
         }
 
         &--day-name {
-            color: $purple;
+            color: $color-main;
             font-weight: bold;
             line-height: 14.4px;
         }
@@ -134,14 +134,14 @@
     }
 
     &-cell {
-        color: $dark50;
+        color: $color-main-middle;
         font-size: 12px;
         line-height: 14.4px;
         width: 40px;
         height: 40px;
 
         &.-current- {
-            background: $gradient-purple;
+            background: $gradient-secondary;
             color: white;
             font-weight: bold;
             border-radius: 50%;
@@ -149,14 +149,14 @@
             &.-in-range- {
                 border-radius: 0;
                 font-weight: normal;
-                color: $dark50;
+                color: $color-main-middle;
             }
         }
 
         &.-focus- {
             border-radius: 50%;
             color: white;
-            background: $gradient-green;
+            background: $gradient-main;
             font-weight: bold;
 
             &.-in-range- {
@@ -168,18 +168,18 @@
 
         &.-select- {
             border-radius: 50%;
-            background: $gradient-green;
+            background: $gradient-main;
             font-weight: bold;
         }
 
         &.-selected- {
             border-radius: 50%;
-            background: $gradient-green;
+            background: $gradient-main;
             font-weight: bold;
             z-index: 1;
 
             &.-focus- {
-                background: $gradient-green;
+                background: $gradient-main;
                 border-radius: 50%;
             }
 
@@ -209,7 +209,7 @@
         &.-range-from- {
             border: none;
             border-radius: 50%;
-            background: $gradient-green;
+            background: $gradient-main;
 
             &.-select- {
                 border-radius: 0;
@@ -219,12 +219,12 @@
         &.-range-to- {
             border: none;
             border-radius: 50%;
-            background: $gradient-green;
+            background: $gradient-main;
         }
 
         &.-in-range- {
             background: linear-gradient(to top, #bc9cff3f 0%, #8ba4f93f 100%);
-            color: $dark50;
+            color: $color-main-middle;
         }
     }
 
@@ -248,7 +248,7 @@
             }
 
             & .air-datepicker-button {
-                color: $purple;
+                color: $color-main;
                 font-size: 12px;
                 line-height: 14.4px;
                 font-weight: bold;
@@ -262,7 +262,7 @@
                     background: initial;
 
                     & span {
-                        color: $dark50;
+                        color: $color-main-middle;
                     }
                 }
             }

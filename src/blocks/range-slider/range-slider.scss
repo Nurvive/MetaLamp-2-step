@@ -22,14 +22,14 @@
 
     & .irs--round .irs-line {
         background-color: transparent;
-        border: 1px solid $dark25;
+        border: 1px solid $color-main-light;
         height: 6px;
     }
 
     &__count {
         position: absolute;
         right: 0;
-        color: $dark50;
+        color: $color-main-middle;
         font-weight: normal;
     }
 }

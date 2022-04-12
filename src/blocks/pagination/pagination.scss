@@ -7,7 +7,7 @@
     &__info {
         line-height: 24px;
         font-weight: normal;
-        color: $dark75;
+        color: $color-main-dark;
         text-transform: none;
         font-size: 14px;
     }
@@ -37,7 +37,7 @@
                     width: 40px;
 
                     & a {
-                        color: $dark50;
+                        color: $color-main-middle;
                         font-size: 12px;
                         font-weight: normal;
                     }

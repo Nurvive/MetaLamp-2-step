@@ -19,7 +19,7 @@
 
     &__item-text {
         margin-left: 10px;
-        color: $dark75;
+        color: $color-main-dark;
         line-height: 18px;
         font-weight: bold;
         font-size: 14px;
@@ -36,7 +36,7 @@
             border-radius: 4px;
             background: #fff;
             transition: 0.2s;
-            border: 1px solid $dark25;
+            border: 1px solid $color-main-light;
         }
     }
 
@@ -46,7 +46,7 @@
         opacity: 0;
 
         &:checked + .rich-checkbox-buttons__item-text::after {
-            border: 1px solid $purple;
+            border: 1px solid $color-main;
             background-image: url('../../assets/images/check.svg');
             background-repeat: no-repeat;
             background-position: center;
@@ -54,7 +54,7 @@
     }
 
     &__description {
-        color: $dark50;
+        color: $color-main-middle;
         line-height: 14px;
         font-weight: normal;
         text-transform: initial;
