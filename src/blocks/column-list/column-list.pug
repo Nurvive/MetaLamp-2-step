@@ -1,5 +1,5 @@
-mixin column-list({title = 'title', text =[]} = {})
+mixin column-list({title = 'title', textArray = []} = {})
     ul.column-list= title
-        each val in text
+        each text in textArray
             li
-                a(href='change').column-list__item= val
+                a(href='change').column-list__item= text
