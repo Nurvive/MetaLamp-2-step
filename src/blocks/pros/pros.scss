@@ -11,17 +11,22 @@
         align-items: center;
 
         &:first-child {
-            padding-top: 25px;
+            padding-top: 21px;
         }
 
         &:last-child {
             border: none;
             padding-bottom: 0;
         }
+
+        &-img-wrapper {
+            max-width: 43px;
+            width: 100%;
+        }
     }
 
     &__inner {
-        margin-left: 18px;
+        margin-left: 10px;
     }
 
     &__title {
@@ -32,7 +37,7 @@
     }
 
     &__text {
-        @extend.pros__title;
+        @extend .pros__title;
 
         font-weight: normal;
     }

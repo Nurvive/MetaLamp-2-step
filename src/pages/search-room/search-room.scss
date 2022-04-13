@@ -16,7 +16,7 @@
     &__main {
         display: flex;
         justify-content: center;
-        padding: 30px 20px 78px;
+        padding: 30px 20px 70px;
 
         @media (max-width: 900px) {
             flex-direction: column;
@@ -92,7 +92,7 @@
             font-weight: normal;
             font-size: 12px;
             line-height: 14px;
-            margin-top: 10px;
+            margin-top: 7px;
             display: inline-block;
         }
     }
@@ -140,6 +140,7 @@
     &__pagination-wrapper {
         margin: 22px auto 0;
         text-align: center;
+        padding-right: 15px;
     }
 
     &__small-menu > &__layout {

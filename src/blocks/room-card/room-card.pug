@@ -23,10 +23,10 @@ mixin room-card({images = [], number = '1337', type = '', cost = '666₽', ratin
                             const value = reviews % 100
                             const n1 = reviews % 10
                         if (value > 10 && value < 20)
-                            span  отзывов
+                            span  Отзывов
                         else if (n1 > 1 && n1 < 5)
-                            span  отзыва
+                            span  Отзыва
                         else if (n1 === 1)
-                            span  отзыв
+                            span  Отзыв
                         else
-                            span  отзывов
+                            span  Отзывов

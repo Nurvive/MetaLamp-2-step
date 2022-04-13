@@ -39,7 +39,7 @@
         width: 100%;
         justify-content: center;
         gap: 70px;
-        padding-top: 68px;
+        padding-top: 70px;
         padding-bottom: 60px;
 
         @media (max-width: 1200px) {
@@ -51,7 +51,7 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 31px;
+        gap: 32px;
     }
 
     &__item {
@@ -85,6 +85,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin-top: 1px;
 
         .room-details__title {
             position: relative;
@@ -92,7 +93,7 @@
             &-reviews {
                 position: absolute;
                 right: 0;
-                bottom: 4px;
+                bottom: 0;
                 color: $color-main-middle;
                 line-height: 14px;
                 font-weight: normal;

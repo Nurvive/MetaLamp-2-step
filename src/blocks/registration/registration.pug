@@ -22,7 +22,7 @@ mixin registration
                 +text-field({placeholder: 'Email', type: 'email'})
             .registration__input-wrapper
                 +text-field({placeholder: 'Пароль', type: 'password'})
-            - const toggleOptions = [{isChecked: true, text: 'Получать спецпредложения'}]
+            - const toggleOptions = [{isChecked: false, text: 'Получать спецпредложения'}]
             each obj in toggleOptions
                 +toggle(obj)
         +button({text: 'Зарегистрироваться', size: 'long', withArrow: true, htmlType: 'submit'})

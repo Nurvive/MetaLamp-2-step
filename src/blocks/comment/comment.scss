@@ -12,7 +12,7 @@
 
     &__info {
         display: flex;
-        margin-bottom: 13px;
+        margin-bottom: 12px;
 
         &-img {
             border-radius: 50%;
@@ -20,7 +20,6 @@
             &-wrapper {
                 width: 48px;
                 height: 48px;
-                border: 2px solid #fff;
                 filter: drop-shadow(0 10px 20px rgb(31 32 65 / 10%));
                 border-radius: 32px;
                 margin-right: 10px;
@@ -40,7 +39,7 @@
 
     &__content {
         display: flex;
-
+        margin-left: 3px;
         &-text {
             @extend %info-author;
 

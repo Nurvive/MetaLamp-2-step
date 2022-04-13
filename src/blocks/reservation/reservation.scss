@@ -84,17 +84,29 @@
         gap: 10px;
     }
 
-    &__item {
-        display: flex;
-        justify-content: space-between;
-    }
-
     &__service {
         font-size: 14px;
         line-height: 23px;
         color: $color-main-dark;
         max-width: 214px;
         margin-right: auto;
+
+        &:last-child {
+            margin-top: 2px;
+            line-height: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            .reservation__service {
+                margin-top: 2px;
+                line-height: 20px;
+            }
+        }
     }
 
     &__price {
@@ -107,6 +119,7 @@
 
     &__total {
         display: flex;
+        margin-top: 28px;
 
         &-text {
             font-weight: bold;

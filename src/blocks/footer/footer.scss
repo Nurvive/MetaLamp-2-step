@@ -27,7 +27,7 @@
 }
 
 .footer {
-    padding-top: rem(104);
+    padding-top: rem(99);
     background-color: #fff;
     position: relative;
     border-top: 1px solid rgb(31 32 65 / 10%);
@@ -37,14 +37,13 @@
     }
 
     &__logo {
-        margin-top: -3px;
         display: block;
     }
 
     &__container {
         @extend %container;
 
-        padding: 0 15px;
+        padding-left: 15px;
 
         @media (max-width: 1060px) {
             display: flex;
@@ -91,6 +90,7 @@
 
     &__column-list-wrapper {
         vertical-align: top;
+        margin-top: 5px;
 
         @media (max-width: 1060px) {
             display: none;
@@ -124,6 +124,7 @@
     &__subscribe {
         @extend %column-list;
 
+        margin-top: 5px;
         max-width: rem(260);
 
         @media (max-width: 1060px) {
@@ -133,8 +134,9 @@
         &-text {
             @extend %column-item;
 
+            margin-top: 19px;
             line-height: 23px;
-            margin-bottom: 21px;
+            margin-bottom: 23px;
         }
     }
 
@@ -152,7 +154,7 @@
 
     &__down {
         position: relative;
-        padding: 26px 0;
+        padding: 30px 16px 23px 0;
         display: flex;
         justify-content: space-between;
 
@@ -165,7 +167,7 @@
 
         &-copyright {
             color: $color-main-dark;
-            line-height: 17px;
+            line-height: 16px;
             text-align: center;
         }
     }
