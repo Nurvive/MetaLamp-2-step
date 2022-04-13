@@ -63,7 +63,7 @@ class DateDropdown {
 
     static singleCreate(inputs) {
         const input = inputs[0];
-        return new AirDatepicker(input, {
+        new AirDatepicker(input, {
             multipleDates: true,
             range: true,
             onSelect(fd) {
@@ -103,7 +103,7 @@ class DateDropdown {
 
     static inlineCreate(inputs) {
         const input = inputs[0];
-        return new AirDatepicker(input, {
+        new AirDatepicker(input, {
             range: true,
             inline: true,
             buttons: ['clear', {

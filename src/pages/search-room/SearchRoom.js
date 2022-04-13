@@ -22,17 +22,17 @@ class SearchRoom {
         this.root.find('.js-expandable-checkbox').each((_, element) => new ExpandableCheckboxList(element));
         this.root.find('.js-pagination').each((_, element) => new Pagination(element));
         this.root.find('.js-dropdown-rooms').each((_, element) => {
-            return new Dropdown(element, [
+            new Dropdown(element, [
                 ['спальня', 'спальни', 'спален'],
                 ['кровать', 'кровати', 'кроватей'],
                 ['ванная комната', 'ванные комнаты', 'ванных комнат']
-            ], dropdownTypes.separate, false, ['спальни', 'кровати', 'ванные комнаты']);
+            ], dropdownTypes.separate, false, ['спальни', [1, 8, 2], 'кровати', [1, 10, 1], 'ванные комнаты', [0, 10, 1]]);
         });
         this.root.find('.js-dropdown-default').each((_, element) => {
-            return new Dropdown(element, [
+            new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']
-            ], dropdownTypes.default, true, ['взрослые', 'дети', 'младенцы']);
+            ], dropdownTypes.default, true, ['взрослые', [1, 10, 1], 'дети', [0, 8, 0], 'младенцы', [0, 5, 0]]);
         });
         SearchRoom.setup();
     }
