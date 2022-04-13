@@ -19,6 +19,7 @@
     text-transform: uppercase;
     color: #fff;
     border: none;
+    overflow: hidden;
 
     &:hover {
         opacity: 0.5;
@@ -43,6 +44,7 @@
     }
 
     &_long {
+        padding: 0 45px;
         text-align: center;
         max-width: 320px;
         width: 100%;
@@ -56,8 +58,8 @@
     &__arrow {
         @extend %arrow;
 
-        top: -8px;
-        left: 45%;
+        position: absolute;
+        right: 5%;
         background-color: white;
         transform: translateX(-50%);
     }
