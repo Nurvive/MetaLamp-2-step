@@ -1,7 +1,7 @@
 include ../text-field/text-field
 
 mixin subscription-text-field
-    form(action='change').subscription-text-field
+    form(action='/mock-address/change-me').subscription-text-field
         button(type='submit').subscription-text-field__button
             span.subscription-text-field__button-inner
         +text-field({withPadding: true, type: 'email'})

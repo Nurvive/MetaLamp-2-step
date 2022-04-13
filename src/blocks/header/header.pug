@@ -25,9 +25,9 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []
                                         .header__menu-dropdown-open-button
                                         each item in option.items
                                             li.header__dropdown-item.header__dropdown-item_hide.js-header__dropdown-item
-                                                a(href='change').header__dropdown-item-link= item
+                                                a(href='/mock-address/change-me').header__dropdown-item-link= item
                                 else
-                                    a(href='change').header__menu-item-link= option.text
+                                    a(href='/mock-address/change-me').header__menu-item-link= option.text
                 .header__buttons
                     if !isAuthorized
                         +enter-buttons
