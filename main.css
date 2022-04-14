@@ -288,6 +288,7 @@
   text-transform: uppercase;
   color: #fff;
   border: none;
+  overflow: hidden;
 }
 .button:hover {
   opacity: 0.5;
@@ -308,6 +309,7 @@
   color: #1f2041;
 }
 .button_long {
+  padding: 0 45px;
   text-align: center;
   max-width: 320px;
   width: 100%;
@@ -317,8 +319,8 @@
   height: 34px;
 }
 .button__arrow {
-  top: -8px;
-  left: 45%;
+  position: absolute;
+  right: 2%;
   background-color: white;
   transform: translateX(-50%);
 }
@@ -378,16 +380,16 @@
   left: -15px;
   top: 25%;
 }
-.canvas__legend .color-0::before {
+.canvas__legend-color-0::before {
   background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
 }
-.canvas__legend .color-1::before {
+.canvas__legend-color-1::before {
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }
-.canvas__legend .color-2::before {
+.canvas__legend-color-2::before {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
-.canvas__legend .color-3::before {
+.canvas__legend-color-3::before {
   background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
 }
 .checkbox-buttons {
@@ -458,7 +460,7 @@
   font-weight: normal;
   color: rgba(31, 32, 65, 0.5);
   text-transform: none;
-  margin-top: 22px;
+  margin-top: 21px;
   display: block;
 }
 .comment__content-text, .comment__info-time, .comment__info-author {
@@ -473,7 +475,7 @@
 }
 .comment__info {
   display: flex;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 .comment__info-img {
   border-radius: 50%;
@@ -481,7 +483,6 @@
 .comment__info-img-wrapper {
   width: 48px;
   height: 48px;
-  border: 2px solid #fff;
   filter: drop-shadow(0 10px 20px rgba(31, 32, 65, 0.1));
   border-radius: 32px;
   margin-right: 10px;
@@ -491,6 +492,7 @@
 }
 .comment__content {
   display: flex;
+  margin-left: 3px;
 }
 .comment__content-text {
   font-weight: normal;
@@ -567,7 +569,7 @@
 }
 .date-dropdown__input-open-button {
   bottom: 12px;
-  right: 16px;
+  right: 14px;
 }
 .date-dropdown__input_active .date-dropdown__input-open-button {
   transform: rotate(180deg) translateY(35%);
@@ -799,7 +801,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.dropdown-item__minus_inactive {
+.dropdown-item__minus_inactive, .dropdown-item__plus_inactive {
   opacity: 0.5;
   cursor: initial;
 }
@@ -851,7 +853,7 @@
 .dropdown__open-button {
   top: 65%;
   transform: translateY(-25%);
-  right: 16px;
+  right: 13px;
 }
 .dropdown__input {
   position: relative;
@@ -1050,7 +1052,7 @@
 }
 
 .footer {
-  padding-top: 6.5rem;
+  padding-top: 6.1875rem;
   background-color: #fff;
   position: relative;
   border-top: 1px solid rgba(31, 32, 65, 0.1);
@@ -1061,11 +1063,10 @@
   }
 }
 .footer__logo {
-  margin-top: -3px;
   display: block;
 }
 .footer__container {
-  padding: 0 15px;
+  padding-left: 15px;
 }
 @media (max-width: 1060px) {
   .footer__container {
@@ -1112,6 +1113,7 @@
 }
 .footer__column-list-wrapper {
   vertical-align: top;
+  margin-top: 5px;
 }
 @media (max-width: 1060px) {
   .footer__column-list-wrapper {
@@ -1143,6 +1145,7 @@
   }
 }
 .footer__subscribe {
+  margin-top: 5px;
   max-width: 16.25rem;
 }
 @media (max-width: 1060px) {
@@ -1151,8 +1154,9 @@
   }
 }
 .footer__subscribe-text {
+  margin-top: 19px;
   line-height: 23px;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
 }
 .footer-line {
   width: 100%;
@@ -1168,7 +1172,7 @@
 }
 .footer__down {
   position: relative;
-  padding: 26px 0;
+  padding: 30px 16px 23px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -1182,7 +1186,7 @@
 }
 .footer__down-copyright {
   color: rgba(31, 32, 65, 0.75);
-  line-height: 17px;
+  line-height: 16px;
   text-align: center;
 }
 .footer__social-media {
@@ -1237,7 +1241,7 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 13px 15px;
 }
 @media (max-width: 960px) {
   .header__container {
@@ -1245,7 +1249,7 @@
   }
 }
 .header__logo {
-  position: relative;
+  padding-top: 1px;
 }
 .header__logo-burger {
   position: absolute;
@@ -1274,7 +1278,9 @@
   }
 }
 .header__menu {
+  padding-top: 1px;
   display: flex;
+  gap: 1px;
   align-items: center;
 }
 .header__menu-dropdown {
@@ -1507,14 +1513,18 @@
   align-items: center;
 }
 .pros__container:first-child {
-  padding-top: 25px;
+  padding-top: 21px;
 }
 .pros__container:last-child {
   border: none;
   padding-bottom: 0;
 }
+.pros__container-img-wrapper {
+  max-width: 43px;
+  width: 100%;
+}
 .pros__inner {
-  margin-left: 18px;
+  margin-left: 10px;
 }
 .pros__title, .pros__text {
   color: rgba(31, 32, 65, 0.75);
@@ -1584,6 +1594,7 @@
 }
 .range-slider {
   max-width: 270px;
+  margin-top: 2px;
   position: relative;
 }
 .range-slider .irs--round .irs-handle {
@@ -1607,7 +1618,8 @@
 }
 .range-slider__count {
   position: absolute;
-  right: 0;
+  right: -1px;
+  font-size: 12px;
   color: rgba(31, 32, 65, 0.5);
   font-weight: normal;
 }
@@ -1775,16 +1787,24 @@
   flex-direction: column;
   gap: 10px;
 }
-.reservation__item {
-  display: flex;
-  justify-content: space-between;
-}
 .reservation__service, .reservation__price {
   font-size: 14px;
   line-height: 23px;
   color: rgba(31, 32, 65, 0.75);
   max-width: 214px;
   margin-right: auto;
+}
+.reservation__service:last-child, .reservation__price:last-child {
+  margin-top: 2px;
+  line-height: 20px;
+}
+.reservation__item {
+  display: flex;
+  justify-content: space-between;
+}
+.reservation__item:last-child .reservation__service, .reservation__item:last-child .reservation__price {
+  margin-top: 2px;
+  line-height: 20px;
 }
 .reservation__price {
   width: 77px;
@@ -1793,6 +1813,7 @@
 }
 .reservation__total {
   display: flex;
+  margin-top: 28px;
 }
 .reservation__total-text, .reservation__total-price {
   font-weight: bold;
@@ -1885,6 +1906,7 @@
 .rich-checkbox-buttons__description {
   color: rgba(31, 32, 65, 0.5);
   line-height: 14px;
+  font-size: 12px;
   font-weight: normal;
   text-transform: initial;
   margin-left: 10px;
@@ -1941,7 +1963,7 @@
   line-height: 15px;
   color: #bc9cff;
   text-transform: uppercase;
-  margin-left: 2px;
+  margin-left: 8px;
 }
 .room-card__price {
   font-size: 14px;
@@ -2411,7 +2433,7 @@
   background-image: url(assets/images/landing-background.png);
   background-position: center bottom;
   background-repeat: no-repeat;
-  padding: 70px 0 0 132px;
+  padding: 70px 0 0 140px;
   position: relative;
   background-size: cover;
 }
@@ -2428,7 +2450,7 @@
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
-  right: 125px;
+  right: 117px;
   bottom: 20px;
   max-width: 300px;
   text-align: right;
@@ -2486,7 +2508,7 @@
   width: 100%;
   justify-content: center;
   gap: 70px;
-  padding-top: 68px;
+  padding-top: 70px;
   padding-bottom: 60px;
 }
 @media (max-width: 1200px) {
@@ -2498,7 +2520,7 @@
 .room-details__list {
   display: flex;
   flex-direction: column;
-  gap: 31px;
+  gap: 32px;
 }
 .room-details__item {
   display: flex;
@@ -2528,6 +2550,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 1px;
 }
 .room-details__reviews .room-details__title, .room-details__abort .room-details__title, .room-details__rules .room-details__title, .room-details__rating .room-details__title {
   position: relative;
@@ -2535,7 +2558,7 @@
 .room-details__reviews .room-details__title-reviews, .room-details__abort .room-details__title-reviews, .room-details__rules .room-details__title-reviews, .room-details__rating .room-details__title-reviews {
   position: absolute;
   right: 0;
-  bottom: 4px;
+  bottom: 0;
   color: rgba(31, 32, 65, 0.5);
   line-height: 14px;
   font-weight: normal;
@@ -2577,7 +2600,7 @@
 .search-room__main {
   display: flex;
   justify-content: center;
-  padding: 30px 20px 78px;
+  padding: 30px 20px 70px;
 }
 @media (max-width: 900px) {
   .search-room__main {
@@ -2653,7 +2676,7 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  margin-top: 10px;
+  margin-top: 7px;
   display: inline-block;
 }
 .search-room__dropdown-layout {
@@ -2690,6 +2713,7 @@
 .search-room__pagination-wrapper {
   margin: 22px auto 0;
   text-align: center;
+  padding-right: 15px;
 }
 .search-room__small-menu > .search-room__layout {
   border: 1px solid rgba(31, 32, 65, 0.5);

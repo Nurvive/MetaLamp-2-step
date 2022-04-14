@@ -13,10 +13,10 @@
   <body>
     <div class="cards js-cards">
       <div class="cards__container">
-        <div class="cards__item">
-          <form class="find-room" action="change">
+        <div class="cards__item js-cards__item-first">
+          <form class="find-room js-find-room" action="/mock-address/change-me">
             <p class="find-room__title">Найдём номера под ваши пожелания</p>
-            <div class="find-room__dates">
+            <div class="find-room__dates js-find-room__dates-date-dropdown">
               <div class="date-dropdown js-date-dropdown date-dropdown_double" data-double="true">
                 <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
                   <p class="date-dropdown__input-title">Прибытие</p>
@@ -28,7 +28,7 @@
                 </div>
               </div>
             </div>
-            <div class="find-room__layout">
+            <div class="find-room__layout js-find-room__layout-dropdown">
               <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                   <p class="dropdown__input-wrapper-title">гости</p><span class="dropdown__open-button"></span>
@@ -37,27 +37,27 @@
                 <ul class="dropdown__list js-dropdown__list">
                   <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
                     <li class="dropdown-item">
-                      <p class="dropdown-item__text" data-index="0">взрослые</p>
+                      <p class="dropdown-item__text js-dropdown-item__text" data-index="0">взрослые</p>
                       <div class="dropdown-item__container">
-                        <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="0"></div>
-                        <div class="dropdown-item__count" data-type="count" data-index="0">0</div>
-                        <div class="dropdown-item__plus" data-type="plus" data-index="0"></div>
+                        <div class="dropdown-item__minus js-dropdown-item__minus" data-type="minus" data-index="0"></div>
+                        <div class="dropdown-item__count js-dropdown-item__count" data-type="count" data-index="0">0</div>
+                        <div class="dropdown-item__plus js-dropdown-item__plus" data-type="plus" data-index="0"></div>
                       </div>
                     </li>
                     <li class="dropdown-item">
-                      <p class="dropdown-item__text" data-index="1">дети</p>
+                      <p class="dropdown-item__text js-dropdown-item__text" data-index="1">дети</p>
                       <div class="dropdown-item__container">
-                        <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="1"></div>
-                        <div class="dropdown-item__count" data-type="count" data-index="1">0</div>
-                        <div class="dropdown-item__plus" data-type="plus" data-index="1"></div>
+                        <div class="dropdown-item__minus js-dropdown-item__minus" data-type="minus" data-index="1"></div>
+                        <div class="dropdown-item__count js-dropdown-item__count" data-type="count" data-index="1">0</div>
+                        <div class="dropdown-item__plus js-dropdown-item__plus" data-type="plus" data-index="1"></div>
                       </div>
                     </li>
                     <li class="dropdown-item">
-                      <p class="dropdown-item__text" data-index="2">младенцы</p>
+                      <p class="dropdown-item__text js-dropdown-item__text" data-index="2">младенцы</p>
                       <div class="dropdown-item__container">
-                        <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="2"></div>
-                        <div class="dropdown-item__count" data-type="count" data-index="2">0</div>
-                        <div class="dropdown-item__plus" data-type="plus" data-index="2"></div>
+                        <div class="dropdown-item__minus js-dropdown-item__minus" data-type="minus" data-index="2"></div>
+                        <div class="dropdown-item__count js-dropdown-item__count" data-type="count" data-index="2">0</div>
+                        <div class="dropdown-item__plus js-dropdown-item__plus" data-type="plus" data-index="2"></div>
                       </div>
                     </li>
                   </div>
@@ -79,7 +79,7 @@
               </button>
             </div>
           </form>
-          <form class="registration" action="change">
+          <form class="registration js-registration" action="/mock-address/change-me">
             <div class="registration__layout">
               <p class="registration__layout-text registration__layout-text_big">Регистрация аккаунта</p>
               <div class="registration__input-wrapper">
@@ -99,7 +99,7 @@
                 </label>
               </div>
             </div>
-            <div class="registration__layout">
+            <div class="registration__layout js-registration__layout-masked-text-field">
               <p class="registration__layout-text">дата рождения</p>
               <div class="js-masked-text-field">
                 <input class="text-field js-text-field" placeholder="ДД.ММ.ГГГГ" type="text"/>
@@ -114,7 +114,7 @@
                 <input class="text-field js-text-field" placeholder="Пароль" type="password"/>
               </div>
               <label class="toggle__label">
-                <input class="toggle__button" checked="checked" type="checkbox"/>
+                <input class="toggle__button" type="checkbox"/>
                 <p class="toggle__text">Получать спецпредложения</p>
               </label>
             </div>
@@ -127,13 +127,13 @@
             </div>
           </form>
         </div>
-        <div class="cards__item">
-          <form class="reservation" action="change">
+        <div class="cards__item js-cards__item-second">
+          <form class="reservation js-reservation" action="/mock-address/change-me">
             <div class="reservation__info">
               <p class="reservation__info-number">888<span class="reservation__info-type">люкс</span></p>
               <p class="reservation__info-cost"><strong class="reservation__info-cost-price">9 990₽</strong><span class="reservation__info-cost-date"> в сутки</span></p>
             </div>
-            <div class="reservation__dates">
+            <div class="reservation__dates js-reservation__dates">
               <div class="date-dropdown js-date-dropdown date-dropdown_double" data-double="true">
                 <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
                   <p class="date-dropdown__input-title">Прибытие</p>
@@ -145,7 +145,7 @@
                 </div>
               </div>
             </div>
-            <div class="reservation__layout">
+            <div class="reservation__layout js-reservation__layout-dropdown">
               <div class="dropdown js-dropdown dropdown-default js-dropdown-default">
                 <div class="dropdown__input-wrapper js-dropdown__input-wrapper">
                   <p class="dropdown__input-wrapper-title">гости</p><span class="dropdown__open-button"></span>
@@ -154,27 +154,27 @@
                 <ul class="dropdown__list js-dropdown__list">
                   <div class="dropdown__dropdown-item-wrapper js-dropdown__dropdown-item-wrapper">
                     <li class="dropdown-item">
-                      <p class="dropdown-item__text" data-index="0">взрослые</p>
+                      <p class="dropdown-item__text js-dropdown-item__text" data-index="0">взрослые</p>
                       <div class="dropdown-item__container">
-                        <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="0"></div>
-                        <div class="dropdown-item__count" data-type="count" data-index="0">0</div>
-                        <div class="dropdown-item__plus" data-type="plus" data-index="0"></div>
+                        <div class="dropdown-item__minus js-dropdown-item__minus" data-type="minus" data-index="0"></div>
+                        <div class="dropdown-item__count js-dropdown-item__count" data-type="count" data-index="0">0</div>
+                        <div class="dropdown-item__plus js-dropdown-item__plus" data-type="plus" data-index="0"></div>
                       </div>
                     </li>
                     <li class="dropdown-item">
-                      <p class="dropdown-item__text" data-index="1">дети</p>
+                      <p class="dropdown-item__text js-dropdown-item__text" data-index="1">дети</p>
                       <div class="dropdown-item__container">
-                        <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="1"></div>
-                        <div class="dropdown-item__count" data-type="count" data-index="1">0</div>
-                        <div class="dropdown-item__plus" data-type="plus" data-index="1"></div>
+                        <div class="dropdown-item__minus js-dropdown-item__minus" data-type="minus" data-index="1"></div>
+                        <div class="dropdown-item__count js-dropdown-item__count" data-type="count" data-index="1">0</div>
+                        <div class="dropdown-item__plus js-dropdown-item__plus" data-type="plus" data-index="1"></div>
                       </div>
                     </li>
                     <li class="dropdown-item">
-                      <p class="dropdown-item__text" data-index="2">младенцы</p>
+                      <p class="dropdown-item__text js-dropdown-item__text" data-index="2">младенцы</p>
                       <div class="dropdown-item__container">
-                        <div class="dropdown-item__minus dropdown-item__minus_inactive" data-type="minus" data-index="2"></div>
-                        <div class="dropdown-item__count" data-type="count" data-index="2">0</div>
-                        <div class="dropdown-item__plus" data-type="plus" data-index="2"></div>
+                        <div class="dropdown-item__minus js-dropdown-item__minus" data-type="minus" data-index="2"></div>
+                        <div class="dropdown-item__count js-dropdown-item__count" data-type="count" data-index="2">0</div>
+                        <div class="dropdown-item__plus js-dropdown-item__plus" data-type="plus" data-index="2"></div>
                       </div>
                     </li>
                   </div>
@@ -219,7 +219,7 @@
               </button>
             </div>
           </form>
-          <form class="login" action="change">
+          <form class="login" action="/mock-address/change-me">
             <div class="login__title">
               <p class="login__title-text">Войти</p>
             </div>
@@ -238,7 +238,7 @@
             </div>
           </form>
         </div>
-        <div class="cards__item">
+        <div class="cards__item js-cards__item-third">
           <div class="date-dropdown js-date-dropdown date-dropdown_inline" data-double="false" data-inline="true">
             <div class="date-dropdown__input js-date-dropdown__input">
               <p class="date-dropdown__input-title"></p>
@@ -270,7 +270,7 @@
                       <label class="rate-button__star" for="rate-button__item1qwe"></label>
                     </div>
                   </div>
-                  <div class="room-card__reviews"><strong class="room-card__reviews-text">3</strong><span> отзыва</span>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">3</strong><span> Отзыва</span>
                   </div>
                 </li>
               </ul>
@@ -301,7 +301,7 @@
                       <label class="rate-button__star" for="rate-button__item1rty"></label>
                     </div>
                   </div>
-                  <div class="room-card__reviews"><strong class="room-card__reviews-text">14</strong><span> отзывов</span>
+                  <div class="room-card__reviews"><strong class="room-card__reviews-text">14</strong><span> Отзывов</span>
                   </div>
                 </li>
               </ul>
