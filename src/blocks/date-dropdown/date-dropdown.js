@@ -2,12 +2,12 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
 class DateDropdown {
-    constructor(element) {
-        this.init(element);
+    constructor(root) {
+        this.init(root);
     }
 
-    init(element) {
-        this.element = element;
+    init(root) {
+        this.element = root.querySelector('.js-date-dropdown');
         this.inputs = this.element.querySelectorAll('.js-date-dropdown__input input');
         const isDouble = this.element.dataset.double === 'true';
         const isInline = this.element.dataset.inline === 'true';
@@ -57,7 +57,6 @@ class DateDropdown {
             startDate: new Date(),
             autoClose: true
         });
-
         inputs[1].addEventListener('click', this.handleInputClick);
     }
 

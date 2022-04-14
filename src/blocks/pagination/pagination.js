@@ -1,12 +1,12 @@
 import 'paginationjs';
 
 class Pagination {
-    constructor(element) {
-        this.init(element);
+    constructor(root) {
+        this.init(root);
     }
 
-    init(element) {
-        this.element = $(element);
+    init(root) {
+        this.element = $(root).find('.js-pagination');
         if (this.element[0] == null) return;
         this.element.pagination({
             dataSource: function (done) {

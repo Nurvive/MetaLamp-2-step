@@ -1,12 +1,12 @@
 import IMask from 'imask';
 
 class MaskedTextField {
-    constructor(element) {
-        this.init(element);
+    constructor(root) {
+        this.init(root);
     }
 
-    init(element) {
-        this.element = element;
+    init(root) {
+        this.element = root.querySelector('.js-masked-text-field input');
         if (this.element !== null) {
             IMask(
                 this.element,

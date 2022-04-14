@@ -9,12 +9,12 @@ const checkResults = {
 };
 
 class Dropdown {
-    constructor(component, words, type, withButtons, defaultWords = []) {
-        this.init(component, words, type, withButtons, defaultWords);
+    constructor(root, words, type, withButtons, defaultWords = []) {
+        this.init(root, words, type, withButtons, defaultWords);
     }
 
-    init(component, words, type, withButtons, defaultWords) {
-        this.component = component;
+    init(root, words, type, withButtons, defaultWords) {
+        this.component = root.querySelector('.js-dropdown');
         this.words = words;
         this.type = type;
         this.withButtons = withButtons;

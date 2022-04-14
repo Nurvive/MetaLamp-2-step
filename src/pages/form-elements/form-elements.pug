@@ -28,18 +28,18 @@ block content
                 .form-elements__label
                     p.form-elements__label-inner Text field
                     +text-field
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-dropdown-default
                     +dropdown({type: 'default', title: 'dropdown'})
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-masked-text-field
                     p.form-elements__label-inner masked text field
                     +masked-text-field
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-date-dropdown-double
                     p.form-elements__label-inner date Dropdown
                     +date-dropdown({
                         placeholder: 'ДД.ММ.ГГГГ',
-                        type: 'double',
+                        type: 'double'
                     })
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-date-dropdown-single
                     +date-dropdown({
                         placeholder: 'ДД.ММ. - ДД.ММ.',
                         type: 'single',
@@ -48,9 +48,9 @@ block content
                 .form-elements__label
                     p.form-elements__label-inner subscription text field
                     +subscription-text-field
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-dropdown-rooms
                     +dropdown({type: 'rooms', title: 'dropdown'})
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-expandable-checkbox
                     +expandable-checkbox({
                         text: 'expandable checkbox list',
                         items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь']
@@ -73,7 +73,7 @@ block content
                         +toggle(obj)
                 .form-elements__label
                     p.form-elements__label-inner like button
-                    div
+                    div.js-form-elements__label-inner-like
                         +like-button({likes: 2})
                 .form-elements__label
                     p.form-elements__label-inner rate button
@@ -86,7 +86,7 @@ block content
                         'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
                     })
             .form-elements__inner
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-range-slider
                     p.form-elements__label-inner range slider
                     +range-slider
                 .form-elements__label
@@ -99,7 +99,7 @@ block content
                         +button({text: 'click me', size: 'default', type: 'with-text'})
                     .form-elements__button-wrapper
                         +button({text: 'перейти к оплате', size: 'long', withArrow: true})
-                .form-elements__label
+                .form-elements__label.js-form-elements__label-pagination
                     p.form-elements__label-inner pagination
                     +pagination
                 .form-elements__label
@@ -107,7 +107,7 @@ block content
                     +bullet-list(['Нельзя с питомцами',
                         'Без вечеринок и мероприятий',
                         'Время прибытия — после 13:00, а выезд до 12:00'])
-        .form-elements__low-container
+        .form-elements__low-container.js-form-elements__low-container
             -
                 const prosOptions = [
                     {

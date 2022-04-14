@@ -2,11 +2,12 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
 
 class RangeSlider {
-    constructor(element) {
-        this.init(element);
+    constructor(root) {
+        this.init(root);
     }
 
-    init(element) {
+    init(root) {
+        const element = $(root).find('.js-range-slider');
         this.element = $(element).children('.js-range-slider__slider');
         this.counter = $(element).children('.js-range-slider__count');
         this.element.ionRangeSlider({
