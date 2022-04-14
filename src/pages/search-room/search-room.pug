@@ -17,7 +17,7 @@ block content
             aside.search-room__aside
                 ul.search-room__list
                     li.search-room__item.search-room__item_small-margin.js-search-room__item(data-move="no")
-                        .search-room__dropdown-layout
+                        .search-room__dropdown-layout.js-search-room__dropdown-layout-date-dropdown
                             -
                                 const dateDropdownOptions = {
                                     placeholder: 'ДД.ММ. - ДД.ММ.',
@@ -26,9 +26,9 @@ block content
                                 }
                             +date-dropdown(dateDropdownOptions)
                     li.search-room__item.js-search-room__item(data-move="no")
-                        .search-room__dropdown-layout
+                        .search-room__dropdown-layout.js-search-room__dropdown-layout
                             +dropdown({type:'default', title: 'Гости'})
-                    li.search-room__item.js-search-room__item(data-move="no")
+                    li.search-room__item.js-search-room__item.js-search-room__item-range-slider(data-move="no")
                         .search-room__slider-layout диапазон цены
                         +range-slider
                         span.search-room__item-extra-text Стоимость за сутки пребывания в номере
@@ -42,10 +42,10 @@ block content
                             'Помощник для инвалидов': 'На 1 этаже вас встретит специалист и проводит до номера.'
                         })
 
-                    li.search-room__item.js-search-room__item
+                    li.search-room__item.js-search-room__item.js-search-room__item-dropdown
                         +dropdown({type:'rooms', title: 'удобства номера'})
                     li.search-room__item.js-search-room__item
-                        .search-room__layout
+                        .search-room__layout.js-search-room__layout-expandable-checkbox
                             +expandable-checkbox({
                                 text: 'Дополнительные удобства',
                                 items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'],
@@ -53,7 +53,7 @@ block content
                     ul.search-room__small-menu.js-search-room__small-menu
                         p.search-room__layout(data-attr='small-menu-title') фильтр
                         .search-room__small-menu-content
-            .search-room__content
+            .search-room__content.js-search-room__content
                 p.search-room__content-title Номера, которые мы для вас подобрали
                 -
                     const roomsArray = [{
@@ -153,7 +153,7 @@ block content
                         reviews: 145,
                         uniqueID: 'xcv'
                     }]
-                each obj in roomsArray
-                    +room-card(obj)
-                .search-room__pagination-wrapper
+                each room in roomsArray
+                    +room-card(room)
+                .search-room__pagination-wrapper.js-search-room__pagination-wrapper
                     +pagination

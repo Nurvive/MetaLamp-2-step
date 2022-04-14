@@ -2,9 +2,8 @@ import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
 import Header from '../../blocks/header/header';
 import Canvas from '../../blocks/canvas/canvas';
-import DateDropdown from '../../blocks/date-dropdown/date-dropdown';
-import dropdownTypes, {Dropdown} from '../../blocks/dropdown/Dropdown';
-import LikeButton from '../../blocks/like-button/like-button';
+import Comment from '../../blocks/comment/comment';
+import Reservation from '../../blocks/reservation/Reservation';
 
 class RoomDetails {
     constructor(root) {
@@ -13,16 +12,10 @@ class RoomDetails {
     }
 
     init() {
-        this.root.parent().find('.js-header').each((_, element) => new Header(element));
-        this.root.find('.js-canvas__area').each((_, element) => new Canvas(element));
-        this.root.find('.js-date-dropdown').each((_, element) => new DateDropdown(element));
-        this.root.find('.js-like-button').each((_, element) => new LikeButton(element));
-        this.root.find('.js-dropdown-default').each((_, element) => {
-            new Dropdown(element, [
-                ['гость', 'гостя', 'гостей'],
-                ['младенец', 'младенца', 'младенцев']
-            ], dropdownTypes.default, true, ['взрослые', [1, 10, 1], 'дети', [0, 8, 0], 'младенцы', [0, 5, 0]]);
-        });
+        this.root.parent().each((_, element) => new Header(element));
+        this.root.find('.js-room-details__canvas-wrapper').each((_, element) => new Canvas(element));
+        this.root.find('.js-room-details__reviews').each((_, element) => new Comment(element));
+        this.root.find('.js-room-details__reservation-wrapper').each((_, element) => new Reservation(element));
         RoomDetails.setup();
     }
 

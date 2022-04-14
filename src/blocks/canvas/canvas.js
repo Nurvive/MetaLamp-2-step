@@ -1,12 +1,12 @@
 import {Chart, registerables} from 'chart.js';
 
 class Canvas {
-    constructor(element) {
-        this.init(element);
+    constructor(root) {
+        this.init(root);
     }
 
-    init(element) {
-        this.ctx = element;
+    init(root) {
+        this.ctx = root.querySelector('.js-canvas__area');
         Chart.register(...registerables);
         const badParam = this.ctx.dataset.bad;
         const normalParam = this.ctx.dataset.normal;

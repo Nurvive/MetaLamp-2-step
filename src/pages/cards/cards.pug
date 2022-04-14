@@ -12,13 +12,13 @@ block title
 block content
     .cards.js-cards
         .cards__container
-            .cards__item
+            .cards__item.js-cards__item-first
                 +find-room
                 +registration
-            .cards__item
+            .cards__item.js-cards__item-second
                 +reservation
                 +login
-            .cards__item
+            .cards__item.js-cards__item-third
                 +date-dropdown({
                     type: 'inline'
                 })

@@ -3,14 +3,14 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 
 mixin reservation()
-    form(action='/mock-address/change-me').reservation
+    form(action='/mock-address/change-me').reservation.js-reservation
         .reservation__info
             p.reservation__info-number 888
                 span.reservation__info-type люкс
             p.reservation__info-cost
                 strong.reservation__info-cost-price 9 990₽
                 span.reservation__info-cost-date  в сутки
-        .reservation__dates
+        .reservation__dates.js-reservation__dates
             -
                 const dateDropdownDoubleOptions = {
                     title: ['Прибытие', 'Выезд'],
@@ -18,7 +18,7 @@ mixin reservation()
                     type: 'double'
                 }
             +date-dropdown(dateDropdownDoubleOptions)
-        .reservation__layout
+        .reservation__layout.js-reservation__layout-dropdown
             +dropdown({type: 'default', title: 'гости'})
         .reservation__services
             -

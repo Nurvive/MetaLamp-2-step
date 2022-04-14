@@ -40,7 +40,7 @@ block content
                             +pros(prosOptions)
                         .room-details__rating
                             p.room-details__title Впечатления от номера
-                            div.room-details__canvas-wrapper(style="position: relative; height:126px; width: 120px")
+                            div.room-details__canvas-wrapper.js-room-details__canvas-wrapper(style="position: relative; height:126px; width: 120px")
                                 +canvas({
                                     colors: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
                                     options: {
@@ -52,7 +52,7 @@ block content
                                     count: 260
                                 })
                     li.room-details__item
-                        .room-details__reviews
+                        .room-details__reviews.js-room-details__reviews
                             p.room-details__title Отзывы посетителей номера
                                 span.room-details__title-reviews 2 отзыва
                             +comment({
@@ -78,5 +78,5 @@ block content
                         .room-details__abort
                             p.room-details__title Отмена
                             p.room-details__abort-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-                .room-details__reservation-wrapper
+                .room-details__reservation-wrapper.js-room-details__reservation-wrapper
                     +reservation

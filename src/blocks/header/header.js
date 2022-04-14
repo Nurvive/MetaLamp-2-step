@@ -1,12 +1,12 @@
 import SideMenu from '../side-menu/side-menu';
 
 class Header {
-    constructor(element) {
-        this.init(element);
+    constructor(root) {
+        this.init(root);
     }
 
-    init(element) {
-        this.element = $(element);
+    init(root) {
+        this.element = $(root).find('.js-header');
         this.menuDropdown = this.element.find('.js-header__menu-dropdown');
         this.menuDropdown.on('click', Header.handleMenuDropdownClick);
         (() => new SideMenu('.header__logo-burger'))();

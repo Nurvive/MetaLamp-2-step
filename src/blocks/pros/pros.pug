@@ -1,9 +1,9 @@
-mixin pros(obj = [{}])
+mixin pros(options = [{}])
     .pros
-        each val in obj
+        each option in options
             .pros__container
                 .pros__container-img-wrapper
-                    img(src = val.img)
+                    img(src = option.img)
                 .pros__inner
-                    p.pros__title=val.title
-                    p.pros__text=val.text
+                    p.pros__title=option.title
+                    p.pros__text=option.text

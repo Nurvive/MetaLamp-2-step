@@ -1,6 +1,6 @@
-mixin radio-buttons(obj = [])
+mixin radio-buttons(choices = [])
     .radio-buttons
-        each val in obj
+        each choice in choices
             label.radio-buttons__label
                 input(name='radio' class='radio-buttons__button' type='radio')
-                p.radio-buttons__text= val
+                p.radio-buttons__text= choice

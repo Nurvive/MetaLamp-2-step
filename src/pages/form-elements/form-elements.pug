@@ -69,8 +69,8 @@ block content
                             {isChecked: true, text: 'Получать спецпредложения'},
                             {isChecked: false, text: 'Получать спам'}
                         ]
-                    each obj in toggleOptions
-                        +toggle(obj)
+                    each option in toggleOptions
+                        +toggle(option)
                 .form-elements__label
                     p.form-elements__label-inner like button
                     div.js-form-elements__label-inner-like

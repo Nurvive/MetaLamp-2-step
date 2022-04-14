@@ -5,7 +5,7 @@ include ../text-field/text-field
 include ../toggle/toggle
 
 mixin registration
-    form(action='/mock-address/change-me').registration
+    form(action='/mock-address/change-me').registration.js-registration
         .registration__layout
             p.registration__layout-text.registration__layout-text_big Регистрация аккаунта
             .registration__input-wrapper
@@ -13,7 +13,7 @@ mixin registration
             .registration__input-wrapper
                 +text-field({placeholder: 'Фамилия'})
             +radio-buttons(['Мужчина', "Женщина"])
-        .registration__layout
+        .registration__layout.js-registration__layout-masked-text-field
             p.registration__layout-text дата рождения
             +masked-text-field
         .registration__layout
@@ -23,8 +23,8 @@ mixin registration
             .registration__input-wrapper
                 +text-field({placeholder: 'Пароль', type: 'password'})
             - const toggleOptions = [{isChecked: false, text: 'Получать спецпредложения'}]
-            each obj in toggleOptions
-                +toggle(obj)
+            each option in toggleOptions
+                +toggle(option)
         +button({text: 'Зарегистрироваться', size: 'long', withArrow: true, htmlType: 'submit'})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin

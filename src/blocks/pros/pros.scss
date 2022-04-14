@@ -37,7 +37,7 @@
     }
 
     &__text {
-        @extend .pros__title;
+        @extend.pros__title;
 
         font-weight: normal;
     }

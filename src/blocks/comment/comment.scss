@@ -40,6 +40,7 @@
     &__content {
         display: flex;
         margin-left: 3px;
+
         &-text {
             @extend %info-author;
 

@@ -7,7 +7,7 @@ class HeaderFooter {
     }
 
     init() {
-        this.root.find('.js-header').each((_, element) => new Header(element));
+        this.root.parent().each((_, element) => new Header(element));
     }
 }
 
