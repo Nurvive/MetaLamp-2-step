@@ -6,12 +6,12 @@ class Canvas {
     }
 
     init(root) {
-        this.ctx = root.querySelector('.js-canvas__area');
+        this.canvas = root.querySelector('.js-canvas__area');
         Chart.register(...registerables);
-        const badParam = this.ctx.dataset.bad;
-        const normalParam = this.ctx.dataset.normal;
-        const goodParam = this.ctx.dataset.good;
-        const awesomeParam = this.ctx.dataset.awesome;
+        const badParam = this.canvas.dataset.bad;
+        const normalParam = this.canvas.dataset.normal;
+        const goodParam = this.canvas.dataset.good;
+        const awesomeParam = this.canvas.dataset.awesome;
         this.data = {
             labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
             datasets: [{
@@ -26,43 +26,47 @@ class Canvas {
 
             }]
         };
-        if (this.ctx) {
-            (() => (new Chart(this.ctx, {
-                type: 'doughnut',
-                data: this.data,
-                options: {
-                    layout: {
-                        padding: {}
-                    },
+        if (this.canvas) {
+            this.createChart();
+        }
+    }
 
-                    responsive: false,
-                    maintainAspectRatio: false,
-                    datasets: {
-                        doughnut: {
-                            cutout: 53
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'right',
-                            reverse: true,
-                            display: false,
-                            labels: {
-                                usePointStyle: true,
-                                boxWidth: 10,
-                                font: {
-                                    family: 'Montserrat',
-                                    lineHeight: 24
-                                }
+    createChart() {
+        new Chart(this.canvas, {
+            type: 'doughnut',
+            data: this.data,
+            options: {
+                layout: {
+                    padding: {}
+                },
+
+                responsive: false,
+                maintainAspectRatio: false,
+                datasets: {
+                    doughnut: {
+                        cutout: 53
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        reverse: true,
+                        display: false,
+                        labels: {
+                            usePointStyle: true,
+                            boxWidth: 10,
+                            font: {
+                                family: 'Montserrat',
+                                lineHeight: 24
                             }
                         }
-                    },
-                    elements: {
-                        point: {}
                     }
+                },
+                elements: {
+                    point: {}
                 }
-            })))();
-        }
+            }
+        });
     }
 }
 
