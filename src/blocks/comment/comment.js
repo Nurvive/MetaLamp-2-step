@@ -6,8 +6,8 @@ class Comment {
     }
 
     init(root) {
-        this.component = $(root).find('.js-comment');
-        this.component.find('.js-comment__content').each((_, element) => new LikeButton(element));
+        this.$component = $(root).find('.js-comment');
+        this.$component.find('.js-comment__content').each((_, element) => new LikeButton(element));
     }
 }
 

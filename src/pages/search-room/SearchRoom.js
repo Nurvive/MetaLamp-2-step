@@ -10,25 +10,25 @@ import Pagination from '../../blocks/pagination/pagination';
 
 class SearchRoom {
     constructor(root) {
-        this.root = $(root);
+        this.$root = $(root);
         this.init();
     }
 
     init() {
-        this.root.parent().each((_, element) => new Header(element));
-        this.root.find('.js-search-room__content').each((_, element) => new RoomCard(element));
-        this.root.find('.js-search-room__dropdown-layout-date-dropdown').each((_, element) => new DateDropdown(element));
-        this.root.find('.js-search-room__item-range-slider').each((_, element) => new RangeSlider(element));
-        this.root.find('.js-search-room__layout-expandable-checkbox').each((_, element) => new ExpandableCheckboxList(element));
-        this.root.find('.js-search-room__pagination-wrapper').each((_, element) => new Pagination(element));
-        this.root.find('.js-search-room__item-dropdown').each((_, element) => {
+        this.$root.parent().each((_, element) => new Header(element));
+        this.$root.find('.js-search-room__content').each((_, element) => new RoomCard(element));
+        this.$root.find('.js-search-room__dropdown-layout-date-dropdown').each((_, element) => new DateDropdown(element));
+        this.$root.find('.js-search-room__item-range-slider').each((_, element) => new RangeSlider(element));
+        this.$root.find('.js-search-room__layout-expandable-checkbox').each((_, element) => new ExpandableCheckboxList(element));
+        this.$root.find('.js-search-room__pagination-wrapper').each((_, element) => new Pagination(element));
+        this.$root.find('.js-search-room__item-dropdown').each((_, element) => {
             new Dropdown(element, [
                 ['спальня', 'спальни', 'спален'],
                 ['кровать', 'кровати', 'кроватей'],
                 ['ванная комната', 'ванные комнаты', 'ванных комнат']
             ], dropdownTypes.separate, false, ['спальни', [1, 8, 2], 'кровати', [1, 10, 1], 'ванные комнаты', [0, 10, 1]]);
         });
-        this.root.find('.js-search-room__dropdown-layout').each((_, element) => {
+        this.$root.find('.js-search-room__dropdown-layout').each((_, element) => {
             new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']

@@ -7,9 +7,9 @@ class Reservation {
     }
 
     init(root) {
-        this.component = $(root).find('.js-reservation');
-        this.component.find('.js-reservation__dates').each((_, element) => new DateDropdown(element));
-        this.component.find('.js-reservation__layout-dropdown').each((_, element) => {
+        this.$component = $(root).find('.js-reservation');
+        this.$component.find('.js-reservation__dates').each((_, element) => new DateDropdown(element));
+        this.$component.find('.js-reservation__layout-dropdown').each((_, element) => {
             new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']

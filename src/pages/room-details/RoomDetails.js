@@ -7,15 +7,15 @@ import Reservation from '../../blocks/reservation/Reservation';
 
 class RoomDetails {
     constructor(root) {
-        this.root = $(root);
+        this.$root = $(root);
         this.init();
     }
 
     init() {
-        this.root.parent().each((_, element) => new Header(element));
-        this.root.find('.js-room-details__canvas-wrapper').each((_, element) => new Canvas(element));
-        this.root.find('.js-room-details__reviews').each((_, element) => new Comment(element));
-        this.root.find('.js-room-details__reservation-wrapper').each((_, element) => new Reservation(element));
+        this.$root.parent().each((_, element) => new Header(element));
+        this.$root.find('.js-room-details__canvas-wrapper').each((_, element) => new Canvas(element));
+        this.$root.find('.js-room-details__reviews').each((_, element) => new Comment(element));
+        this.$root.find('.js-room-details__reservation-wrapper').each((_, element) => new Reservation(element));
         RoomDetails.setup();
     }
 

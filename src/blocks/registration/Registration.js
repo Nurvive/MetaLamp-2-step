@@ -6,8 +6,8 @@ class Registration {
     }
 
     init(root) {
-        this.component = $(root).find('.js-registration');
-        this.component.find('.js-registration__layout-masked-text-field').each((_, element) => new MaskedTextField(element));
+        this.$component = $(root).find('.js-registration');
+        this.$component.find('.js-registration__layout-masked-text-field').each((_, element) => new MaskedTextField(element));
     }
 }
 

@@ -6,9 +6,9 @@ class Pagination {
     }
 
     init(root) {
-        this.element = $(root).find('.js-pagination');
-        if (this.element[0] == null) return;
-        this.element.pagination({
+        this.$element = $(root).find('.js-pagination');
+        if (this.$element[0] == null) return;
+        this.$element.pagination({
             dataSource: function (done) {
                 let result = [];
                 for (let i = 1; i < 180; i += 1) {

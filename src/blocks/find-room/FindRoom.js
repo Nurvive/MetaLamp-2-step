@@ -7,9 +7,9 @@ class FindRoom {
     }
 
     init(root) {
-        this.component = $(root).find('.js-find-room');
-        this.component.find('.js-find-room__dates-date-dropdown').each((_, element) => new DateDropdown(element));
-        this.component.find('.js-find-room__layout-dropdown').each((_, element) => {
+        this.$component = $(root).find('.js-find-room');
+        this.$component.find('.js-find-room__dates-date-dropdown').each((_, element) => new DateDropdown(element));
+        this.$component.find('.js-find-room__layout-dropdown').each((_, element) => {
             new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']

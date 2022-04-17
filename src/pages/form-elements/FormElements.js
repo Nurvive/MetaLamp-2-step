@@ -9,26 +9,26 @@ import dropdownTypes, {Dropdown} from '../../blocks/dropdown/Dropdown';
 
 class FormElements {
     constructor(root) {
-        this.root = $(root);
+        this.$root = $(root);
         this.init();
     }
 
     init() {
-        this.root.find('.js-form-elements__label-date-dropdown-double').each((_, element) => new DateDropdown(element));
-        this.root.find('.js-form-elements__label-date-dropdown-single').each((_, element) => new DateDropdown(element));
-        this.root.find('.js-form-elements__label-masked-text-field').each((_, element) => new MaskedTextField(element));
-        this.root.find('.js-form-elements__label-inner-like').each((_, element) => new LikeButton(element));
-        this.root.find('.js-form-elements__low-container').each((_, element) => new Comment(element));
-        this.root.find('.js-form-elements__label-expandable-checkbox').each((_, element) => new ExpandableCheckboxList(element));
-        this.root.find('.js-form-elements__label-pagination').each((_, element) => new Pagination(element));
-        this.root.find('.js-form-elements__label-range-slider').each((_, element) => new RangeSlider(element));
-        this.root.find('.js-form-elements__label-dropdown-default').each((_, element) => {
+        this.$root.find('.js-form-elements__label-date-dropdown-double').each((_, element) => new DateDropdown(element));
+        this.$root.find('.js-form-elements__label-date-dropdown-single').each((_, element) => new DateDropdown(element));
+        this.$root.find('.js-form-elements__label-masked-text-field').each((_, element) => new MaskedTextField(element));
+        this.$root.find('.js-form-elements__label-inner-like').each((_, element) => new LikeButton(element));
+        this.$root.find('.js-form-elements__low-container').each((_, element) => new Comment(element));
+        this.$root.find('.js-form-elements__label-expandable-checkbox').each((_, element) => new ExpandableCheckboxList(element));
+        this.$root.find('.js-form-elements__label-pagination').each((_, element) => new Pagination(element));
+        this.$root.find('.js-form-elements__label-range-slider').each((_, element) => new RangeSlider(element));
+        this.$root.find('.js-form-elements__label-dropdown-default').each((_, element) => {
             new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']
             ], dropdownTypes.default, true, ['взрослые', [1, 10, 1], 'дети', [0, 8, 0], 'младенцы', [0, 5, 0]]);
         });
-        this.root.find('.js-form-elements__label-dropdown-rooms').each((_, element) => {
+        this.$root.find('.js-form-elements__label-dropdown-rooms').each((_, element) => {
             new Dropdown(element, [
                 ['спальня', 'спальни', 'спален'],
                 ['кровать', 'кровати', 'кроватей'],
