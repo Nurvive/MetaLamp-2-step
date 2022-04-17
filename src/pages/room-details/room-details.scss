@@ -46,6 +46,16 @@
             flex-direction: column-reverse;
             align-items: center;
         }
+
+        @media (max-width: 770px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @media (max-width: 425px) {
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
     }
 
     &__list {
@@ -63,7 +73,6 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            padding: 0 20px;
         }
     }
 
@@ -78,7 +87,7 @@
         width: 310px;
         height: 170px;
 
-        @extend.room-details__reviews;
+        @extend .room-details__reviews;
     }
 
     &__reviews {
@@ -112,13 +121,13 @@
         padding-left: 20px;
         margin-right: 20px;
 
-        @extend.room-details__reviews;
+        @extend .room-details__reviews;
     }
 
     &__abort {
         max-width: 341px;
 
-        @extend.room-details__reviews;
+        @extend .room-details__reviews;
 
         &-text {
             font-size: 14px;

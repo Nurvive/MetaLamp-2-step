@@ -16,34 +16,36 @@ class RoomDetails {
         this.$root.find('.js-room-details__canvas-wrapper').each((_, element) => new Canvas(element));
         this.$root.find('.js-room-details__reviews').each((_, element) => new Comment(element));
         this.$root.find('.js-room-details__reservation-wrapper').each((_, element) => new Reservation(element));
-        RoomDetails.setup();
+        this.setup();
     }
 
-    static setup() {
-        const $gallery = $('.js-room-details__gallery');
-        const $galleryImages = $gallery.children();
-        let slickExist = null;
-        $(window).resize(function () {
-            const width = document.documentElement.clientWidth;
-            if (width > 900 && slickExist) {
-                $gallery.slick('unslick');
-                $gallery.append($galleryImages);
-                slickExist = false;
-            } else if (width < 900 && !slickExist) {
-                $gallery.slick({
-                    slidesToShow: 1,
-                    arrows: false
-                });
-            }
-        });
+    setup() {
+        this.$gallery = $('.js-room-details__gallery');
+        this.$galleryImages = this.$gallery.children();
+        this.slickExist = null;
+        $(window).resize(this.handleWindowResize);
         const handleGalleryInit = () => {
-            slickExist = true;
+            this.slickExist = true;
         };
-
         $(document).ready(() => {
-            $gallery.on('init', handleGalleryInit);
+            this.handleWindowResize();
+            this.$gallery.on('init', handleGalleryInit);
         });
     }
+
+    handleWindowResize = () => {
+        const width = document.documentElement.clientWidth;
+        if (width > 900 && this.slickExist) {
+            this.$gallery.slick('unslick');
+            this.$gallery.append(this.$galleryImages);
+            this.slickExist = false;
+        } else if (width < 900 && !this.slickExist) {
+            this.$gallery.slick({
+                slidesToShow: 1,
+                arrows: false
+            });
+        }
+    };
 }
 
 export {RoomDetails};
