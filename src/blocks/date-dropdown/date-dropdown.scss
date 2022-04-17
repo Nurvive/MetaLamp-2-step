@@ -74,6 +74,10 @@
     font-family: Montserrat, sans-serif;
     box-shadow: none;
 
+    @media (max-width: 400px) {
+        width: 280px;
+    }
+
     &--pointer {
         display: none;
     }
@@ -131,6 +135,13 @@
         &--cells.-days- {
             grid-auto-rows: 40px;
         }
+
+        &--cells {
+            @media (max-width: 400px) {
+                margin: 0 auto;
+                width: fit-content;
+            }
+        }
     }
 
     &-cell {
@@ -139,6 +150,11 @@
         line-height: 14.4px;
         width: 40px;
         height: 40px;
+
+        @media (max-width: 400px) {
+            width: 35px;
+            height: 35px;
+        }
 
         &.-current- {
             background: $gradient-secondary;

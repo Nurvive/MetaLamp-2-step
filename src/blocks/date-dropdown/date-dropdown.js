@@ -1,5 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
+import tr from 'air-datepicker/locale/tr';
 
 class DateDropdown {
     constructor(root) {
