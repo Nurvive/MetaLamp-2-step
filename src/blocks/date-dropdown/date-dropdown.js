@@ -12,11 +12,11 @@ class DateDropdown {
         const isDouble = this.element.dataset.double === 'true';
         const isInline = this.element.dataset.inline === 'true';
         if (isDouble) {
-            this.doubleCreate(this.inputs);
+            this.createDouble(this.inputs);
         } else if (isInline) {
-            DateDropdown.inlineCreate(this.inputs);
+            DateDropdown.createInline(this.inputs);
         } else {
-            DateDropdown.singleCreate(this.inputs);
+            DateDropdown.createSingle(this.inputs);
         }
     }
 
@@ -27,7 +27,7 @@ class DateDropdown {
         }
     };
 
-    doubleCreate(inputs) {
+    createDouble(inputs) {
         this.picker = new AirDatepicker(inputs[0], {
             multipleDates: true,
             range: true,
@@ -60,7 +60,7 @@ class DateDropdown {
         inputs[1].addEventListener('click', this.handleInputClick);
     }
 
-    static singleCreate(inputs) {
+    static createSingle(inputs) {
         const input = inputs[0];
         new AirDatepicker(input, {
             multipleDates: true,
@@ -100,7 +100,7 @@ class DateDropdown {
         });
     }
 
-    static inlineCreate(inputs) {
+    static createInline(inputs) {
         const input = inputs[0];
         new AirDatepicker(input, {
             range: true,
