@@ -20,7 +20,7 @@
         &_active {
             opacity: 0;
             width: 0;
-            color: $color-main;
+            color: $color-first;
             font-size: 10px;
         }
 
@@ -43,10 +43,10 @@
     }
 
     &_active {
-        border: 1px solid $color-main;
+        border: 1px solid $color-first;
 
         & .like-button__count {
-            color: $color-main;
+            color: $color-first;
         }
     }
 }

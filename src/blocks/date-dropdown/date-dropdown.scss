@@ -105,7 +105,7 @@
     &__arrow {
         @extend %arrow;
 
-        background-color: $color-main;
+        background-color: $color-first;
 
         &_left {
             transform: rotate(180deg);
@@ -123,7 +123,7 @@
         }
 
         &--day-name {
-            color: $color-main;
+            color: $color-first;
             font-weight: bold;
             line-height: 14.4px;
         }
@@ -248,7 +248,7 @@
             }
 
             & .air-datepicker-button {
-                color: $color-main;
+                color: $color-first;
                 font-size: 12px;
                 line-height: 14.4px;
                 font-weight: bold;

@@ -48,7 +48,7 @@
         opacity: 0;
 
         &:checked + .checkbox-buttons__item-text::after {
-            border: 1px solid $color-main;
+            border: 1px solid $color-first;
             background-image: url('../../assets/images/check.svg');
             background-repeat: no-repeat;
             background-position: center;
