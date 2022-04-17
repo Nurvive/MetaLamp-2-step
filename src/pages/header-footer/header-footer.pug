@@ -21,4 +21,10 @@ block content
             //.header-footer__wrapper
             //    +header({isAuthorized: true, name: 'Юлий Цезарь', options: headerOptions})
             .header-footer__wrapper
-                +footer
+                -
+                    const footerColumns = [
+                        {title: "Навигация", textArray: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+                        {title: "О нас", textArray: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+                        {title: "Служба поддержки", textArray: ["Соглашения", "Сообщества", "Связь с нами"]}
+                    ]
+                +footer(footerColumns)

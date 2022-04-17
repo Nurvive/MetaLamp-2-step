@@ -32,5 +32,11 @@ html(lang='ru')
             ]
         +header({isAuthorized: false, options: headerOption})
         block content
-        +footer
+        -
+            const footerColumns = [
+                {title: "Навигация", textArray: ["О нас", "Новости", "Служба поддержки", "Услуги"]},
+                {title: "О нас", textArray: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]},
+                {title: "Служба поддержки", textArray: ["Соглашения", "Сообщества", "Связь с нами"]}
+            ]
+        +footer(footerColumns)
 
