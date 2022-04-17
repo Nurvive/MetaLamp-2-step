@@ -230,16 +230,16 @@ class Dropdown {
         return checkResult;
     }
 
-    static declOfNum(n, textForms) {
-        let value = Math.abs(n) % 100;
-        let n1 = n % 10;
-        if (value > 10 && value < 20) {
+    static declOfNum(value, textForms) {
+        let bigValue = Math.abs(value) % 100;
+        let smallValue = value % 10;
+        if (bigValue > 10 && bigValue < 20) {
             return textForms[2];
         }
-        if (n1 > 1 && n1 < 5) {
+        if (smallValue > 1 && smallValue < 5) {
             return textForms[1];
         }
-        if (n1 === 1) {
+        if (smallValue === 1) {
             return textForms[0];
         }
         return textForms[2];
