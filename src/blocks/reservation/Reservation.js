@@ -13,7 +13,22 @@ class Reservation {
             new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']
-            ], dropdownTypes.default, true, ['взрослые', [1, 10, 1], 'дети', [0, 8, 0], 'младенцы', [0, 5, 0]]);
+            ], dropdownTypes.default, true, [{
+                word: 'взрослые',
+                min: 1,
+                max: 10,
+                current: 1
+            }, {
+                word: 'дети',
+                min: 0,
+                max: 10,
+                current: 1
+            }, {
+                word: 'младенцы',
+                min: 0,
+                max: 5,
+                current: 0
+            }]);
         });
     }
 }

@@ -37,12 +37,9 @@ class Dropdown {
     }
 
     setup(defaultWords) {
-        defaultWords.forEach((elem, index) => {
-            if (index % 2 === 0) {
-                this.defaultWords.push(elem);
-            } else {
-                this.restrictions.push(elem);
-            }
+        defaultWords.forEach((elem) => {
+            this.defaultWords.push(elem.word);
+            this.restrictions.push([elem.min, elem.max, elem.current]);
         });
         this.outputStrings = new Array(this.defaultWords.length);
         this.defaultWords.forEach((item, index) => {

@@ -26,14 +26,45 @@ class FormElements {
             new Dropdown(element, [
                 ['гость', 'гостя', 'гостей'],
                 ['младенец', 'младенца', 'младенцев']
-            ], dropdownTypes.default, true, ['взрослые', [1, 10, 1], 'дети', [0, 8, 0], 'младенцы', [0, 5, 0]]);
+            ], dropdownTypes.default, true, [{
+                word: 'взрослые',
+                min: 1,
+                max: 10,
+                current: 1
+            }, {
+                word: 'дети',
+                min: 0,
+                max: 10,
+                current: 1
+            }, {
+                word: 'младенцы',
+                min: 0,
+                max: 5,
+                current: 0
+            }]);
         });
+
         this.$root.find('.js-form-elements__label-dropdown-rooms').each((_, element) => {
             new Dropdown(element, [
                 ['спальня', 'спальни', 'спален'],
                 ['кровать', 'кровати', 'кроватей'],
                 ['ванная комната', 'ванные комнаты', 'ванных комнат']
-            ], dropdownTypes.separate, false, ['спальни', [1, 8, 2], 'кровати', [1, 10, 1], 'ванные комнаты', [0, 10, 1]]);
+            ], dropdownTypes.separate, false, [{
+                word: 'спальни',
+                min: 1,
+                max: 8,
+                current: 2
+            }, {
+                word: 'кровати',
+                min: 1,
+                max: 10,
+                current: 1
+            }, {
+                word: 'ванные комнаты',
+                min: 0,
+                max: 10,
+                current: 1
+            }]);
         });
     }
 }
