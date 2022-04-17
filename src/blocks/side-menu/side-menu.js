@@ -44,6 +44,7 @@ class SideMenu {
 
     static handleMenuDropdownClick(e) {
         $(e.currentTarget).children('.js-side-menu__dropdown-item').toggle(400);
+        $(e.currentTarget).toggleClass('side-menu__menu-dropdown_active');
     }
 
     handleBurgerClick = () => {

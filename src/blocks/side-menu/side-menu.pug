@@ -11,6 +11,7 @@ mixin side-menu({isAuthorized = false, menu = []} = {})
                     li.side-menu__menu-item
                         if (option.isDropdown)
                             ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown= option.text
+                                .side-menu__menu-dropdown-open-button
                                 each item in option.items
                                     li.side-menu__dropdown-item.js-side-menu__dropdown-item
                                         a= item
