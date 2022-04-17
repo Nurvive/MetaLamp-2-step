@@ -170,7 +170,6 @@ class Dropdown {
     }
 
     checkDefault = (key, value, currIndex, operation = 0) => {
-        let val;
         if (value + operation < this.restrictions[currIndex][0]) {
             return checkResults.onlyIncrease;
         }
@@ -180,10 +179,10 @@ class Dropdown {
         if (key === this.defaultWords[0] || key === this.defaultWords[1]) {
             const newValue = (this.dropdownItems[this.defaultWords[0]] || 0)
                 + (this.dropdownItems[this.defaultWords[1]] || 0);
-            val = Dropdown.declOfNum(newValue + operation, this.words[0]);
+            const val = Dropdown.declOfNum(newValue + operation, this.words[0]);
             this.outputStrings[0] = (newValue + operation) + ' ' + val;
         } else {
-            val = Dropdown.declOfNum(value + operation, this.words[1]);
+            const val = Dropdown.declOfNum(value + operation, this.words[1]);
             this.outputStrings[1] = (value + operation) + ' ' + val;
         }
         return checkResults.all;
