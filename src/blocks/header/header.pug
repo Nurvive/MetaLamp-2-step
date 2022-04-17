@@ -4,7 +4,7 @@ include ../enter-buttons/enter-buttons
 include ../cabinet-button/cabinet-button
 include ../font-awesome-icon/font-awesome-icon
 
-mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []} = {})
+mixin header({isAuthorized = false, name = 'Имя Фамилия', menu = []} = {})
     header.header.js-header
         .header__container
             .header__logo-burger
@@ -18,7 +18,7 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []
             div.header__menu-wrapper
                 nav.header__nav
                     ul.header__menu
-                        each option in options
+                        each option in menu
                             li.header__menu-item
                                 if (option.isDropdown)
                                     ul.header__menu-dropdown.js-header__menu-dropdown= option.text
@@ -35,5 +35,5 @@ mixin header({isAuthorized = false, name = 'Имя Фамилия', options = []
                         +cabinet-button({name: name})
     +side-menu({
         isAuthorized: isAuthorized,
-        options: options
+        menu: menu
     })

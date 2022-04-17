@@ -1,13 +1,13 @@
 include ../enter-buttons/enter-buttons
 include ../cabinet-button/cabinet-button
 
-mixin side-menu({isAuthorized = false, options = []} = {})
+mixin side-menu({isAuthorized = false, menu = []} = {})
     .side-menu.js-side-menu
         .side-menu__holder
         .side-menu__close.js-side-menu__close
         nav.side-menu__nav
             ul.side-menu__menu
-                each option in options
+                each option in menu
                     li.side-menu__menu-item
                         if (option.isDropdown)
                             ul.side-menu__menu-dropdown.js-side-menu__menu-dropdown= option.text
