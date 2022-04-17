@@ -7,10 +7,9 @@ class RangeSlider {
     }
 
     init(root) {
-        const element = $(root).find('.js-range-slider');
-        this.element = $(element).children('.js-range-slider__slider');
-        this.counter = $(element).children('.js-range-slider__count');
-        this.element.ionRangeSlider({
+        this.$element = $(root).find('.js-range-slider__slider');
+        this.$counter = $(root).find('.js-range-slider__count');
+        this.$element.ionRangeSlider({
             skin: 'round',
             min: 0,
             type: 'double',
@@ -21,10 +20,10 @@ class RangeSlider {
             hide_min_max: true,
             hide_from_to: true,
             onStart: (data) => {
-                this.counter.text(`${data.from} ₽ - ${data.to} ₽`);
+                this.$counter.text(`${data.from} ₽ - ${data.to} ₽`);
             },
             onChange: (data) => {
-                this.counter.text(`${data.from} ₽ - ${data.to} ₽`);
+                this.$counter.text(`${data.from} ₽ - ${data.to} ₽`);
             }
         });
     }
