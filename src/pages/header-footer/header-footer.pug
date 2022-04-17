@@ -17,9 +17,9 @@ block content
                         {text: 'Новости', isDropdown: false},
                         {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
                     ]
-                +header({isAuthorized: false, options: headerOptions})
+                +header({isAuthorized: false, menu: headerOptions})
             //.header-footer__wrapper
-            //    +header({isAuthorized: true, name: 'Юлий Цезарь', options: headerOptions})
+            //    +header({isAuthorized: true, name: 'Юлий Цезарь', menu: headerOptions})
             .header-footer__wrapper
                 -
                     const footerColumns = [

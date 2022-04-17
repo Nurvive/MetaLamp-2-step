@@ -1,4 +1,5 @@
 import './init';
+import 'normalize.css';
 
 function importAll(resolve) {
     resolve.keys().forEach(resolve);

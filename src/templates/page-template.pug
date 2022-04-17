@@ -30,7 +30,7 @@ html(lang='ru')
                 {text: 'Новости', isDropdown: false},
                 {text: 'Соглашение', items: ['О воде', 'О солях'], isDropdown: true}
             ]
-        +header({isAuthorized: false, options: headerOption})
+        +header({isAuthorized: false, menu: headerOption})
         block content
         -
             const footerColumns = [
