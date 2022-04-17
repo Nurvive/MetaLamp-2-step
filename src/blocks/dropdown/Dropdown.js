@@ -80,18 +80,22 @@ class Dropdown {
     };
 
     handlePlusClick = (e) => {
+        const index = e.target.dataset.index;
         if (this.type === dropdownTypes.default) {
-            if (this.countingDefault(e, 1) !== checkResults.onlyDecrease) this.increase(e);
+            if (this.countingDefault(index, 1) !== checkResults.onlyDecrease) this.increase(index);
         } else if (this.type === dropdownTypes.separate) {
-            if (this.countingSeparate(e, 1) !== checkResults.onlyDecrease) this.increase(e);
+            if (this.countingSeparate(index, 1) !== checkResults.onlyDecrease) this.increase(index);
         }
     };
 
     handleMinusClick = (e) => {
+        const index = e.target.dataset.index;
         if (this.type === dropdownTypes.default) {
-            if (this.countingDefault(e, -1) !== checkResults.onlyIncrease) this.decrease(e);
+            if (this.countingDefault(index, -1) !== checkResults.onlyIncrease) this.decrease(index);
         } else if (this.type === dropdownTypes.separate) {
-            if (this.countingSeparate(e, -1) !== checkResults.onlyIncrease) this.decrease(e);
+            if (this.countingSeparate(index, -1) !== checkResults.onlyIncrease) {
+                this.decrease(index);
+            }
         }
     };
 
@@ -125,8 +129,7 @@ class Dropdown {
         }
     }
 
-    decrease(event) {
-        const index = event.target.dataset.index;
+    decrease(index) {
         const counter = this.counters[index];
         this.onIncreaseButton(index);
         counter.textContent = Number(counter.textContent) - 1;
@@ -159,8 +162,7 @@ class Dropdown {
         node.classList.remove('dropdown-item__minus_inactive');
     }
 
-    increase(event) {
-        const index = event.target.dataset.index;
+    increase(index) {
         const counter = this.counters[index];
         this.onDecreaseButton(index);
         counter.textContent = Number(counter.textContent) + 1;
@@ -187,8 +189,7 @@ class Dropdown {
         return checkResults.all;
     };
 
-    countingDefault(event, operation) {
-        const index = event.target.dataset.index;
+    countingDefault(index, operation) {
         this.items.forEach((item, i) => {
             this.dropdownItems[item.textContent] = Number(this.counters[i].textContent);
         });
@@ -220,8 +221,7 @@ class Dropdown {
         this.input.value = arrayToPrint.filter(el => el[0] !== '0').join(', ');
     }
 
-    countingSeparate(event, operation) {
-        const index = Number(event.target.dataset.index);
+    countingSeparate(index, operation) {
         const item = this.items[index].textContent;
         const counter = this.counters[index];
         this.dropdownItems[item] = Number(counter.textContent);
