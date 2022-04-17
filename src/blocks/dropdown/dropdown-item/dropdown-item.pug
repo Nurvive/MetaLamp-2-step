@@ -3,6 +3,6 @@ mixin dropdown-item(wordsArray = [])
         li.dropdown-item
             p.dropdown-item__text.js-dropdown-item__text(data-index=index)=val
             .dropdown-item__container
-                div.dropdown-item__minus.js-dropdown-item__minus(data-type='minus', data-index=index)
-                div.dropdown-item__count.js-dropdown-item__count(data-type='count' data-index=index) 0
-                div.dropdown-item__plus.js-dropdown-item__plus(data-type='plus' data-index=index)
+                div.dropdown-item__minus.js-dropdown-item__minus(data-index=index)
+                div.dropdown-item__count.js-dropdown-item__count(data-index=index) 0
+                div.dropdown-item__plus.js-dropdown-item__plus(data-index=index)
