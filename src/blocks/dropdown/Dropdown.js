@@ -102,7 +102,7 @@ class Dropdown {
         this.inputWrapper.classList.toggle('dropdown__input-wrapper_active');
     };
 
-    handleNotDropdownClick = (e) => {
+    handleDocumentClick = (e) => {
         if (!this.component.contains(e.target)) {
             this.input.classList.remove('dropdown__input_active');
             this.list.classList.remove('dropdown__list_active');
@@ -118,7 +118,7 @@ class Dropdown {
             node.addEventListener('click', this.handleMinusClick);
         });
         this.input.addEventListener('click', this.handleDropdownClick);
-        document.addEventListener('click', this.handleNotDropdownClick);
+        document.addEventListener('click', this.handleDocumentClick);
         if (this.withButtons) {
             this.clear.addEventListener('click', this.handleClearClick);
             this.confirm.addEventListener('click', this.handleConfirmClick);
