@@ -1,4 +1,4 @@
-import SideMenu from '../side-menu/side-menu';
+import SideMenu from '../side-menu/SideMenu';
 
 class Header {
     constructor(root) {

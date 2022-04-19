@@ -1,4 +1,4 @@
-import MaskedTextField from '../masked-text-field/masked-text-field';
+import MaskedTextField from '../masked-text-field/MaskedTextField';
 
 class Registration {
     constructor(root) {

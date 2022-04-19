@@ -1,4 +1,4 @@
-import DateDropdown from '../date-dropdown/date-dropdown';
+import DateDropdown from '../date-dropdown/DateDropdown';
 import dropdownTypes, {Dropdown} from '../dropdown/Dropdown';
 
 class FindRoom {

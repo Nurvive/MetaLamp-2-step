@@ -1,4 +1,4 @@
-import Header from '../../blocks/header/header';
+import Header from '../../blocks/header/Header';
 import Registration from '../../blocks/registration/Registration';
 
 class RegistrationPage {

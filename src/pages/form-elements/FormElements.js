@@ -1,10 +1,10 @@
-import DateDropdown from '../../blocks/date-dropdown/date-dropdown';
-import MaskedTextField from '../../blocks/masked-text-field/masked-text-field';
-import LikeButton from '../../blocks/like-button/like-button';
-import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/expandable-checkbox-list';
-import Pagination from '../../blocks/pagination/pagination';
-import RangeSlider from '../../blocks/range-slider/range-slider';
-import Comment from '../../blocks/comment/comment';
+import DateDropdown from '../../blocks/date-dropdown/DateDropdown';
+import MaskedTextField from '../../blocks/masked-text-field/MaskedTextField';
+import LikeButton from '../../blocks/like-button/LikeButton';
+import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/ExpandableCheckboxList';
+import Pagination from '../../blocks/pagination/Pagination';
+import RangeSlider from '../../blocks/range-slider/RangeSlider';
+import Comment from '../../blocks/comment/Comment';
 import dropdownTypes, {Dropdown} from '../../blocks/dropdown/Dropdown';
 
 class FormElements {

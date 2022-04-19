@@ -1,5 +1,5 @@
-import DateDropdown from '../../blocks/date-dropdown/date-dropdown';
-import RoomCard from '../../blocks/room-card/room-card';
+import DateDropdown from '../../blocks/date-dropdown/DateDropdown';
+import RoomCard from '../../blocks/room-card/RoomCard';
 import FindRoom from '../../blocks/find-room/FindRoom';
 import Registration from '../../blocks/registration/Registration';
 import Reservation from '../../blocks/reservation/Reservation';

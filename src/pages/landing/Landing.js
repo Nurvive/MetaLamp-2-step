@@ -1,4 +1,4 @@
-import Header from '../../blocks/header/header';
+import Header from '../../blocks/header/Header';
 import FindRoom from '../../blocks/find-room/FindRoom';
 
 class Landing {

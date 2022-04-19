@@ -1,12 +1,12 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.min.css';
-import Header from '../../blocks/header/header';
+import Header from '../../blocks/header/Header';
 import dropdownTypes, {Dropdown} from '../../blocks/dropdown/Dropdown';
-import RoomCard from '../../blocks/room-card/room-card';
-import DateDropdown from '../../blocks/date-dropdown/date-dropdown';
-import RangeSlider from '../../blocks/range-slider/range-slider';
-import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/expandable-checkbox-list';
-import Pagination from '../../blocks/pagination/pagination';
+import RoomCard from '../../blocks/room-card/RoomCard';
+import DateDropdown from '../../blocks/date-dropdown/DateDropdown';
+import RangeSlider from '../../blocks/range-slider/RangeSlider';
+import ExpandableCheckboxList from '../../blocks/expandable-checkbox-list/ExpandableCheckboxList';
+import Pagination from '../../blocks/pagination/Pagination';
 
 class SearchRoom {
     constructor(root) {

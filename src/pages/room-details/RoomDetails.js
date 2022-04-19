@@ -1,8 +1,8 @@
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
-import Header from '../../blocks/header/header';
-import Canvas from '../../blocks/canvas/canvas';
-import Comment from '../../blocks/comment/comment';
+import Header from '../../blocks/header/Header';
+import Canvas from '../../blocks/canvas/Canvas';
+import Comment from '../../blocks/comment/Comment';
 import Reservation from '../../blocks/reservation/Reservation';
 
 class RoomDetails {

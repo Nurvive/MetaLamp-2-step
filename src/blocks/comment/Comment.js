@@ -1,4 +1,4 @@
-import LikeButton from '../like-button/like-button';
+import LikeButton from '../like-button/LikeButton';
 
 class Comment {
     constructor(root) {
