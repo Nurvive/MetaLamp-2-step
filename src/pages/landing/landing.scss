@@ -9,15 +9,22 @@
         background-image: url('../../assets/images/landing-background.png');
         background-position: center bottom;
         background-repeat: no-repeat;
-        padding: 70px 0 0 140px;
-        position: relative;
         background-size: cover;
 
         @media (max-width: 960px) {
             height: 560px;
-            padding: 70px 5px;
+            padding: 0 5px 30px 0;
             display: flex;
             justify-content: center;
+        }
+
+        &-inner {
+            position: relative;
+            margin: 0 auto;
+            padding-top: 70px;
+            padding-left: 5px;
+            height: 100%;
+            max-width: 1170px;
         }
 
         &-text {
@@ -25,7 +32,7 @@
             font-size: 14px;
             line-height: 24px;
             color: $color-main-dark;
-            right: 134px;
+            right: 0;
             bottom: 20px;
             max-width: 300px;
             text-align: right;
