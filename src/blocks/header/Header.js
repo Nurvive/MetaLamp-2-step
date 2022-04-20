@@ -9,7 +9,7 @@ class Header {
         this.$element = $(root).find('.js-header');
         this.$menuDropdown = this.$element.find('.js-header__menu-dropdown');
         this.$menuDropdown.on('click', Header.handleMenuDropdownClick);
-        (() => new SideMenu('.header__logo-burger'))();
+        new SideMenu($('.header__logo-burger'));
     }
 
     static handleMenuDropdownClick(e) {

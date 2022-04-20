@@ -6,7 +6,7 @@ class SideMenu {
     init(burger) {
         this.startingX = 0;
         this.$element = $('.js-side-menu');
-        this.$burger = $(burger);
+        this.$burger = burger;
         this.$menuDropdown = this.$element.find('.js-side-menu__menu-dropdown');
         this.$close = this.$element.children('.js-side-menu__close');
         this.$element.on('touchstart', this.handleSideMenuTouchStart);
