@@ -39,12 +39,16 @@ class Dropdown {
     setup(defaultWords) {
         defaultWords.forEach((elem) => {
             this.defaultWords.push(elem.word);
-            this.restrictions.push([elem.min, elem.max, elem.current]);
+            this.restrictions.push({
+                min: elem.min,
+                max: elem.max,
+                current: elem.current
+            });
         });
         this.outputStrings = new Array(this.defaultWords.length);
         this.defaultWords.forEach((item, index) => {
-            this.dropdownItems[item] = this.restrictions[index][2];
-            this.counters[index].textContent = this.restrictions[index][2];
+            this.dropdownItems[item] = this.restrictions[index].current;
+            this.counters[index].textContent = this.restrictions[index].current;
             if (this.type === dropdownTypes.default) {
                 this.checkDefault(item, this.dropdownItems[item], index);
             } else if (this.type === dropdownTypes.separate) {
@@ -57,8 +61,8 @@ class Dropdown {
 
     handleClearClick = () => {
         this.defaultWords.forEach((item, index) => {
-            this.dropdownItems[item] = this.restrictions[index][0];
-            this.counters[index].textContent = this.restrictions[index][0];
+            this.dropdownItems[item] = this.restrictions[index].min;
+            this.counters[index].textContent = this.restrictions[index].min;
             if (this.type === dropdownTypes.default) {
                 this.checkDefault(item, this.dropdownItems[item], index);
             } else if (this.type === dropdownTypes.separate) {
@@ -136,7 +140,7 @@ class Dropdown {
     offDecreaseButton(index) {
         const counter = this.counters[index];
         const node = this.minuses[index];
-        if (Number(counter.textContent) === this.restrictions[index][0]) {
+        if (Number(counter.textContent) === this.restrictions[index].min) {
             node.classList.add('dropdown-item__minus_inactive');
         }
     }
@@ -144,7 +148,7 @@ class Dropdown {
     offIncreaseButton(index) {
         const counter = this.counters[index];
         const node = this.pluses[index];
-        if (Number(counter.textContent) === this.restrictions[index][1]) {
+        if (Number(counter.textContent) === this.restrictions[index].max) {
             node.classList.add('dropdown-item__plus_inactive');
         }
     }
@@ -167,10 +171,10 @@ class Dropdown {
     }
 
     checkDefault = (key, value, currIndex, operation = 0) => {
-        if (value + operation < this.restrictions[currIndex][0]) {
+        if (value + operation < this.restrictions[currIndex].min) {
             return checkResults.onlyIncrease;
         }
-        if (value + operation > this.restrictions[currIndex][1]) {
+        if (value + operation > this.restrictions[currIndex].max) {
             return checkResults.onlyDecrease;
         }
         if (key === this.defaultWords[0] || key === this.defaultWords[1]) {
@@ -196,12 +200,12 @@ class Dropdown {
     }
 
     checkSeparate = (key, value, currIndex, operation = 0) => {
-        if (value + operation < this.restrictions[currIndex][0]) {
+        if (value + operation < this.restrictions[currIndex].min) {
             let val = Dropdown.declOfNum(value, this.words[currIndex]);
             this.outputStrings[currIndex] = value + ' ' + val;
             return checkResults.onlyIncrease;
         }
-        if (value + operation > this.restrictions[currIndex][1]) {
+        if (value + operation > this.restrictions[currIndex].max) {
             let val = Dropdown.declOfNum(value, this.words[currIndex]);
             this.outputStrings[currIndex] = value + ' ' + val;
             return checkResults.onlyDecrease;
