@@ -1,13 +1,21 @@
-mixin button({text = 'click me', size = '', type = '', withArrow = false, modifier = '', htmlType = 'button'} = {})
+mixin button({text = 'click me', size = '', type = '', withArrow = false, height = '', htmlType = 'button'} = {})
     -
-        let className = 'button';
-        if (size === 'long') {
-            className += ` button_size_${size}`;
+        const sizeModifiers = {
+            long: 'button_size_long'
         }
-        if (type === 'transparent' || type === 'with-text')
-            className += ` button_type_${type}`;
-        if (modifier === 'flat')
-            className += ` button_modifier_${modifier}`
-    button(class=className, type=htmlType)= text
+        const typeModifiers = {
+            transparent: 'button_type_transparent',
+            withText: 'button_type_with-text'
+        }
+        const heightModifiers = {
+            flat: 'button_case_flat'
+        }
+        const classes = [
+            'button',
+            sizeModifiers[size],
+            typeModifiers[type],
+            heightModifiers[height]
+        ]
+    button(class=classes, type=htmlType)= text
         if (withArrow)
             span.button__arrow
