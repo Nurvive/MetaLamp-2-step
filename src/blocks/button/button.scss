@@ -25,34 +25,40 @@
         opacity: 0.5;
     }
 
-    &_transparent {
-        background: white;
-        border: 2px solid #bc9cff;
-        color: #bc9cff;
-    }
+    &_type_ {
+        &transparent {
+            background: white;
+            border: 2px solid #bc9cff;
+            color: #bc9cff;
+        }
 
-    &_with-text {
-        cursor: pointer;
-        display: inline-block;
-        color: #bc9cff;
-        background: none;
-        height: initial;
+        &with-text {
+            cursor: pointer;
+            display: inline-block;
+            color: #bc9cff;
+            background: none;
+            height: initial;
 
-        &:hover {
-            color: $color-main-darker;
+            &:hover {
+                color: $color-main-darker;
+            }
         }
     }
 
-    &_long {
-        padding: 0 45px;
-        text-align: center;
-        max-width: 320px;
-        width: 100%;
-        position: relative;
+    &_size_ {
+        &long {
+            padding: 0 45px;
+            text-align: center;
+            max-width: 320px;
+            width: 100%;
+            position: relative;
+        }
     }
 
-    &_flat {
-        height: 34px;
+    &__modifier_ {
+        &flat {
+            height: 34px;
+        }
     }
 
     &__arrow {

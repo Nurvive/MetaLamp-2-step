@@ -2,12 +2,12 @@ mixin button({text = 'click me', size = '', type = '', withArrow = false, modifi
     -
         let className = 'button';
         if (size === 'long') {
-            className += ` button_${size}`;
+            className += ` button_size_${size}`;
         }
         if (type === 'transparent' || type === 'with-text')
-            className += ` button_${type}`;
+            className += ` button_type_${type}`;
         if (modifier === 'flat')
-            className += ` button_${modifier}`
+            className += ` button_modifier_${modifier}`
     button(class=className, type=htmlType)= text
         if (withArrow)
             span.button__arrow
