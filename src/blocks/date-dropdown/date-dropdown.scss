@@ -31,41 +31,47 @@
             transform: rotate(180deg) translateY(35%);
         }
 
-        &_long {
-            max-width: 266px;
+        &_size {
+            &_long {
+                max-width: 266px;
+            }
         }
     }
 
-    &_double {
-        display: flex;
-        gap: 20px;
-        justify-content: space-between;
-
-        @media (max-width: 370px) {
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        & .date-dropdown__input {
-            max-width: 150px;
+    &_type {
+        &_double {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
 
             @media (max-width: 370px) {
-                max-width: 300px;
-                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            & .date-dropdown__input {
+                max-width: 150px;
+
+                @media (max-width: 370px) {
+                    max-width: 300px;
+                    width: 100%;
+                }
+            }
+
+            & .date-dropdown-double__input_active .date-dropdown__input-open-button {
+                transform: rotate(180deg) translateY(35%);
             }
         }
 
-        & .date-dropdown-double__input_active .date-dropdown__input-open-button {
-            transform: rotate(180deg) translateY(35%);
+        &_inline {
+            & .date-dropdown__input > *:not(.air-datepicker) {
+                display: none;
+            }
         }
     }
 
-    &_inline {
-        & .date-dropdown__input > *:not(.air-datepicker) {
-            display: none;
-        }
-    }
+
 }
 
 .air-datepicker {

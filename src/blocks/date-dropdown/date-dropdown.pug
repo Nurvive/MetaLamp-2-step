@@ -2,10 +2,10 @@ include ../text-field/text-field
 
 mixin date-dropdown({titles = ['', ''], placeholder = '', type = 'single'} = {})
     -
-        const className = `date-dropdown_${type}`
+        const className = `date-dropdown_type_${type}`
     .date-dropdown.js-date-dropdown(class=className data-double=`${type === 'double'}` data-inline=`${type === 'inline'}`)
         each title in titles
-            .date-dropdown__input.js-date-dropdown__input(class=type === 'single'? 'date-dropdown__input_long': '')
+            .date-dropdown__input.js-date-dropdown__input(class=type === 'single'? 'date-dropdown__input_size_long': '')
                 p.date-dropdown__input-title= title
                 +text-field({withDropdown: true, placeholder: placeholder, isReadonly: true})
                 span.date-dropdown__input-open-button

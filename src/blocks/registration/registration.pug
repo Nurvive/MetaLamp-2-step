@@ -25,8 +25,8 @@ mixin registration
             - const toggleOptions = [{isChecked: false, text: 'Получать спецпредложения'}]
             each option in toggleOptions
                 +toggle(option)
-        +button({text: 'Зарегистрироваться', size: 'long', withArrow: true, htmlType: 'link', href: 'registration.html'})
+        +button({text: 'Зарегистрироваться', size: 'long', withArrow: true, htmlType: 'submit'})
         .registration__bottom
             p.registration__bottom-text Уже есть аккаунт на Toxin
-            +button({text: 'Войти', size: 'default', type: 'transparent', htmlType: 'link', href: 'sign-in.html'})
+            +button({text: 'Войти', size: 'default', type: 'perforated', htmlType: 'link', href: 'sign-in.html'})
 
