@@ -1,3 +1,5 @@
+import ending from '../../utils/ending';
+
 const dropdownTypes = {
     default: 'default',
     separate: 'separate'
@@ -180,10 +182,10 @@ class Dropdown {
         if (key === this.defaultWords[0] || key === this.defaultWords[1]) {
             const newValue = (this.dropdownItems[this.defaultWords[0]] || 0)
                 + (this.dropdownItems[this.defaultWords[1]] || 0);
-            const val = Dropdown.declOfNum(newValue + operation, this.words[0]);
+            const val = ending(newValue + operation, this.words[0]);
             this.outputStrings[0] = (newValue + operation) + ' ' + val;
         } else {
-            const val = Dropdown.declOfNum(value + operation, this.words[1]);
+            const val = ending(value + operation, this.words[1]);
             this.outputStrings[1] = (value + operation) + ' ' + val;
         }
         return checkResults.all;
@@ -201,17 +203,17 @@ class Dropdown {
 
     checkSeparate = (key, value, currIndex, operation = 0) => {
         if (value + operation < this.restrictions[currIndex].min) {
-            let val = Dropdown.declOfNum(value, this.words[currIndex]);
+            let val = ending(value, this.words[currIndex]);
             this.outputStrings[currIndex] = value + ' ' + val;
             return checkResults.onlyIncrease;
         }
         if (value + operation > this.restrictions[currIndex].max) {
-            let val = Dropdown.declOfNum(value, this.words[currIndex]);
+            let val = ending(value, this.words[currIndex]);
             this.outputStrings[currIndex] = value + ' ' + val;
             return checkResults.onlyDecrease;
         }
         if (key === this.defaultWords[currIndex]) {
-            let val = Dropdown.declOfNum(value + operation, this.words[currIndex]);
+            let val = ending(value + operation, this.words[currIndex]);
             this.outputStrings[currIndex] = (value + operation) + ' ' + val;
         }
         return checkResults.all;
@@ -229,21 +231,6 @@ class Dropdown {
         const checkResult = this.checkSeparate(currItem[0], currItem[1], index, operation);
         this.printInput(this.outputStrings);
         return checkResult;
-    }
-
-    static declOfNum(value, textForms) {
-        let hundredthPart = Math.abs(value) % 100;
-        let decimalPart = value % 10;
-        if (hundredthPart > 10 && hundredthPart < 20) {
-            return textForms[2];
-        }
-        if (decimalPart > 1 && decimalPart < 5) {
-            return textForms[1];
-        }
-        if (decimalPart === 1) {
-            return textForms[0];
-        }
-        return textForms[2];
     }
 }
 

@@ -1,17 +1,22 @@
 mixin canvas({colors = [], count = 0, options: {bad, normal, good, awesome}} = {})
+    -
+        const ending=function(count, textForms) {
+            let hundredthPart = Math.abs(value) % 100;
+            let decimalPart = value % 10;
+            if (hundredthPart > 10 && hundredthPart < 20) {
+                return textForms[2];
+            }
+            if (decimalPart > 1 && decimalPart < 5) {
+                return textForms[1];
+            }
+            if (decimalPart === 1) {
+                return textForms[0];
+            }
+            return textForms[2];
+        }
     .canvas
         span.canvas__count= count
-        -
-            const value = count % 100
-            const n1 = count % 10
-        if (value > 10 && value < 20)
-            span.canvas__word  голосов
-        else if (n1 > 1 && n1 < 5)
-            span.canvas__word  голоса
-        else if (n1 === 1)
-            span.canvas__word  голос
-        else
-            span.canvas__word  голосов
+        span.canvas__word=ending(count, ['голос', 'голоса', 'голосов'])
         div.canvas__legend
             each val, n in colors
                 p(class=`canvas__legend-colors canvas__legend-color-${n}`)=val
