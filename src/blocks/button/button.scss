@@ -9,8 +9,8 @@
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border-radius: 22px;
     height: 44px;
-    max-width: 99px;
-    width: 100%;
+    width: fit-content;
+    padding: 0 20px;
     cursor: pointer;
     transition: 0.2s;
     font-size: 12px;
@@ -47,10 +47,8 @@
 
     &_size_ {
         &long {
-            padding: 0 45px;
+            padding: 0 94px;
             text-align: center;
-            max-width: 320px;
-            width: 100%;
             position: relative;
         }
     }

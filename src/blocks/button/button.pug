@@ -1,5 +1,7 @@
-mixin button({text = 'click me', size = '', type = '', withArrow = false, height = '', htmlType = 'button'} = {})
+mixin button({text = 'click me', size = '', type = '', withArrow = false, height = '', htmlType = 'button', href = false} = {})
     -
+        const tag = htmlType === 'link' ? 'a' : 'button'
+        const buttonType = !(htmlType === 'link') && htmlType
         const sizeModifiers = {
             long: 'button_size_long'
         }
@@ -8,7 +10,7 @@ mixin button({text = 'click me', size = '', type = '', withArrow = false, height
             withText: 'button_type_with-text'
         }
         const heightModifiers = {
-            flat: 'button_case_flat'
+            flat: 'button_height_flat'
         }
         const classes = [
             'button',
@@ -16,6 +18,6 @@ mixin button({text = 'click me', size = '', type = '', withArrow = false, height
             typeModifiers[type],
             heightModifiers[height]
         ]
-    button(class=classes, type=htmlType)= text
+    #{tag}(class=classes, type=buttonType, href=href)= text
         if (withArrow)
             span.button__arrow
