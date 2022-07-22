@@ -20,6 +20,7 @@
     color: #fff;
     border: none;
     overflow: hidden;
+    min-width: 87px;
 
     &:hover {
         opacity: 0.5;
@@ -30,14 +31,19 @@
             background: white;
             border: 2px solid #bc9cff;
             color: #bc9cff;
+            padding: 0 18px;
         }
     }
 
     &_size {
         &_long {
-            padding: 0 94px;
+            max-width: 320px;
+            width: 100%;
             text-align: center;
             position: relative;
+        }
+        &_middle {
+            min-width: 99px;
         }
     }
 

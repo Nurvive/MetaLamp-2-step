@@ -3,7 +3,8 @@ mixin button({text = 'click me', size = '', type = '', withArrow = false, height
         const tag = htmlType === 'link' ? 'a' : 'button'
         const buttonType = !(htmlType === 'link') && htmlType
         const sizeModifiers = {
-            long: 'button_size_long'
+            long: 'button_size_long',
+            middle: 'button_size_middle'
         }
         const typeModifiers = {
             perforated: 'button_type_perforated',
