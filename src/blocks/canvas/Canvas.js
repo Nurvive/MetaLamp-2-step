@@ -1,4 +1,5 @@
 import {Chart, registerables} from 'chart.js';
+import ending from '../../utils/ending';
 
 class Canvas {
     constructor(root) {
@@ -6,17 +7,23 @@ class Canvas {
     }
 
     init(root) {
+        this.root = root;
         this.canvas = root.querySelector('.js-canvas__area');
         Chart.register(...registerables);
         const badParam = this.canvas.dataset.bad;
         const normalParam = this.canvas.dataset.normal;
         const goodParam = this.canvas.dataset.good;
         const awesomeParam = this.canvas.dataset.awesome;
+        const allParams = [badParam, normalParam, goodParam, awesomeParam];
+        const countParams = allParams.reduce((acc, item) => {
+            acc += Number(item);
+            return acc;
+        }, 0);
         this.data = {
             labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
             datasets: [{
                 label: 'My First Dataset',
-                data: [badParam, normalParam, goodParam, awesomeParam],
+                data: allParams,
                 backgroundColor: [
                     '#919191',
                     '#BC9CFF',
@@ -28,7 +35,13 @@ class Canvas {
         };
         if (this.canvas) {
             this.createChart();
+            this.changeLabel(countParams);
         }
+    }
+
+    changeLabel(value) {
+        const label = this.root.querySelector('.canvas__word');
+        label.textContent = ending(value, ['голос', 'голоса', 'голосов']);
     }
 
     createChart() {
