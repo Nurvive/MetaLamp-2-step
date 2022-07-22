@@ -17,12 +17,12 @@
           <form class="find-room js-find-room" action="/mock-address/change-me">
             <p class="find-room__title">Найдём номера под ваши пожелания</p>
             <div class="find-room__dates js-find-room__dates-date-dropdown">
-              <div class="date-dropdown js-date-dropdown date-dropdown_double" data-double="true">
-                <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
+              <div class="date-dropdown js-date-dropdown date-dropdown_type_double" data-double="true" data-inline="false">
+                <div class="date-dropdown__input js-date-dropdown__input">
                   <p class="date-dropdown__input-title">Прибытие</p>
                   <input class="text-field js-text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                 </div>
-                <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
+                <div class="date-dropdown__input js-date-dropdown__input">
                   <p class="date-dropdown__input-title">Выезд</p>
                   <input class="text-field js-text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                 </div>
@@ -75,7 +75,7 @@
               </div>
             </div>
             <div class="find-room__long-button-wrapper">
-              <button class="button button_long" type="submit">Подобрать номер<span class="button__arrow"></span>
+              <button class="button button_size_long" type="submit">Подобрать номер<span class="button__arrow"></span>
               </button>
             </div>
           </form>
@@ -118,12 +118,12 @@
                 <p class="toggle__text">Получать спецпредложения</p>
               </label>
             </div>
-            <button class="button button_long" type="submit">Зарегистрироваться<span class="button__arrow"></span>
+            <button class="button button_size_long" type="submit">Зарегистрироваться<span class="button__arrow"></span>
             </button>
             <div class="registration__bottom">
               <p class="registration__bottom-text">Уже есть аккаунт на Toxin</p>
-              <button class="button button_transparent" type="button">Войти
-              </button>
+              <a class="button button_size_middle button_type_perforated" href="sign-in.html">Войти
+              </a>
             </div>
           </form>
         </div>
@@ -134,12 +134,12 @@
               <p class="reservation__info-cost"><strong class="reservation__info-cost-price">9 990₽</strong><span class="reservation__info-cost-date"> в сутки</span></p>
             </div>
             <div class="reservation__dates js-reservation__dates">
-              <div class="date-dropdown js-date-dropdown date-dropdown_double" data-double="true">
-                <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
+              <div class="date-dropdown js-date-dropdown date-dropdown_type_double" data-double="true" data-inline="false">
+                <div class="date-dropdown__input js-date-dropdown__input">
                   <p class="date-dropdown__input-title">Прибытие</p>
                   <input class="text-field js-text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                 </div>
-                <div class="date-dropdown__input date-dropdown__input js-date-dropdown__input">
+                <div class="date-dropdown__input js-date-dropdown__input">
                   <p class="date-dropdown__input-title">Выезд</p>
                   <input class="text-field js-text-field text-field_with-dropdown" placeholder="ДД.ММ.ГГГГ" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
                 </div>
@@ -215,7 +215,7 @@
               <p class="reservation__total-price">38 081₽</p>
             </div>
             <div class="reservation__button">
-              <button class="button button_long" type="submit">Забронировать<span class="button__arrow"></span>
+              <button class="button button_size_long" type="submit">Забронировать<span class="button__arrow"></span>
               </button>
             </div>
           </form>
@@ -228,18 +228,22 @@
               <input class="text-field js-text-field" placeholder="Пароль" type="password"/>
             </div>
             <div class="login__button">
-              <button class="button button_long" type="submit">Войти<span class="button__arrow"></span>
+              <button class="button button_size_long" type="submit">Войти<span class="button__arrow"></span>
               </button>
             </div>
             <div class="login__bottom">
               <p class="login__bottom-text">Нет аккаунта на Toxin?</p>
-              <button class="button button_transparent" type="button">Создать
-              </button>
+              <a class="button button_type_perforated" href="registration.html">Создать
+              </a>
             </div>
           </form>
         </div>
         <div class="cards__item js-cards__item-third">
-          <div class="date-dropdown js-date-dropdown date-dropdown_inline" data-double="false" data-inline="true">
+          <div class="date-dropdown js-date-dropdown date-dropdown_type_inline" data-double="false" data-inline="true">
+            <div class="date-dropdown__input js-date-dropdown__input">
+              <p class="date-dropdown__input-title"></p>
+              <input class="text-field js-text-field text-field_with-dropdown" placeholder="" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
+            </div>
             <div class="date-dropdown__input js-date-dropdown__input">
               <p class="date-dropdown__input-title"></p>
               <input class="text-field js-text-field text-field_with-dropdown" placeholder="" type="text" readonly="readonly"/><span class="date-dropdown__input-open-button"></span>
