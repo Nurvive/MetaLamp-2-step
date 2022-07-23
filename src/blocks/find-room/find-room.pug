@@ -14,6 +14,17 @@ mixin find-room()
                 }
             +date-dropdown(dateDropdownDoubleOptions)
         div.find-room__layout.js-find-room__layout-dropdown
-            +dropdown({type: 'default', title: 'гости'})
+            +dropdown({
+                type: 'default',
+                title: 'гости',
+                wordsArray: ["взрослые", 'дети', "младенцы"],
+                withButtons: true,
+                placeholder: 'Сколько гостей'
+            })
         .find-room__long-button-wrapper
-            +button({text: 'Подобрать номер', size: 'long', withArrow: true, htmlType: 'submit'})
+            +button({
+                text: 'Подобрать номер',
+                size: 'long',
+                withArrow: true,
+                htmlType: 'submit'
+            })

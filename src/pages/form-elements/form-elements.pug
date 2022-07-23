@@ -29,7 +29,13 @@ block content
                     p.form-elements__label-inner Text field
                     +text-field
                 .form-elements__label.js-form-elements__label-dropdown-default
-                    +dropdown({type: 'default', title: 'dropdown'})
+                    +dropdown({
+                        type: 'default',
+                        title: 'dropdown',
+                        wordsArray: ["взрослые", 'дети', "младенцы"],
+                        withButtons: true,
+                        placeholder: 'Сколько гостей'
+                    })
                 .form-elements__label.js-form-elements__label-masked-text-field
                     p.form-elements__label-inner masked text field
                     +masked-text-field
@@ -49,7 +55,12 @@ block content
                     p.form-elements__label-inner subscription text field
                     +subscription-text-field
                 .form-elements__label.js-form-elements__label-dropdown-rooms
-                    +dropdown({type: 'rooms', title: 'dropdown'})
+                    +dropdown({
+                        type: 'rooms',
+                        title: 'dropdown',
+                        wordsArray: ["спальни", 'кровати', "ванные комнаты"],
+                        placeholder: 'Сколько комнат'
+                    })
                 .form-elements__label.js-form-elements__label-expandable-checkbox
                     +expandable-checkbox({
                         text: 'expandable checkbox list',
@@ -66,8 +77,14 @@ block content
                     p.form-elements__label-inner toggle
                     -
                         const toggleOptions = [
-                            {isChecked: true, text: 'Получать спецпредложения'},
-                            {isChecked: false, text: 'Получать спам'}
+                            {
+                                isChecked: true,
+                                text: 'Получать спецпредложения'
+                            },
+                            {
+                                isChecked: false,
+                                text: 'Получать спам'
+                            }
                         ]
                     each option in toggleOptions
                         +toggle(option)
@@ -78,7 +95,10 @@ block content
                 .form-elements__label
                     p.form-elements__label-inner rate button
                     div
-                        +rate-button({count: 1, unique: 'form-elements'})
+                        +rate-button({
+                            count: 1,
+                            unique: 'form-elements'
+                        })
                 .form-elements__label
                     p.form-elements__label-inner rich Checkbox Buttons
                     +rich-checkbox-buttons({
@@ -92,13 +112,28 @@ block content
                 .form-elements__label
                     p.form-elements__label-inner buttons
                     .form-elements__button-wrapper
-                        +button({text: 'click me', size: 'default'})
+                        +button({
+                            text: 'click me',
+                            size: 'default'
+                        })
                     .form-elements__button-wrapper
-                        +button({text: 'click ME', size: 'default', type: 'perforated'})
+                        +button({
+                            text: 'click ME',
+                            size: 'default',
+                            type: 'perforated'
+                        })
                     .form-elements__button-wrapper
-                        +button({text: 'click me', size: 'default', type: 'withText'})
+                        +button({
+                            text: 'click me',
+                            size: 'default',
+                            type: 'withText'
+                        })
                     .form-elements__button-wrapper
-                        +button({text: 'перейти к оплате', size: 'long', withArrow: true})
+                        +button({
+                            text: 'перейти к оплате',
+                            size: 'long',
+                            withArrow: true
+                        })
                 .form-elements__label.js-form-elements__label-pagination
                     p.form-elements__label-inner pagination
                     +pagination

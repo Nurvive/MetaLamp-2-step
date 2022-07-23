@@ -1,21 +1,9 @@
 include dropdown-item/dropdown-item
 include ../button/button
 
-mixin dropdown({type = 'default', title = 'Гости'} = {})
+mixin dropdown({type = 'default', title = 'Гости', wordsArray = [], withButtons = false, placeholder = ''} = {})
     -
-        let placeholder = ''
-        let hasButtons = false
-        let className = 'dropdown-' + type
-        let wordsArray = []
-    if type === 'default'
-        -
-            hasButtons = true
-            placeholder = 'Сколько гостей'
-            wordsArray = ["взрослые", 'дети', "младенцы"]
-    else if type = 'rooms'
-        -
-            wordsArray = ["спальни", 'кровати', "ванные комнаты"]
-            placeholder = 'Сколько комнат'
+        const className = 'dropdown-' + type
     div.dropdown.js-dropdown(class=className class='js-' + className)
         .dropdown__input-wrapper.js-dropdown__input-wrapper
             p.dropdown__input-wrapper-title= title
@@ -24,7 +12,7 @@ mixin dropdown({type = 'default', title = 'Гости'} = {})
         ul.dropdown__list.js-dropdown__list
             .dropdown__dropdown-item-wrapper.js-dropdown__dropdown-item-wrapper
                 +dropdown-item(wordsArray)
-            if hasButtons
+            if withButtons
                 li.dropdown__interactive
                     .js-dropdown__interactive-clear.dropdown__interactive-clear
                         +button({text: 'очистить', type: 'withText'})

@@ -19,7 +19,13 @@ mixin reservation()
                 }
             +date-dropdown(dateDropdownDoubleOptions)
         .reservation__layout.js-reservation__layout-dropdown
-            +dropdown({type: 'default', title: 'гости'})
+            +dropdown({
+                type: 'default',
+                title: 'гости',
+                wordsArray: ["взрослые", 'дети', "младенцы"],
+                withButtons: true,
+                placeholder: 'Сколько гостей'
+            })
         .reservation__services
             -
                 const reservationItems = [
@@ -55,4 +61,9 @@ mixin reservation()
             .reservation__total-border
             p.reservation__total-price 38 081₽
         .reservation__button
-            +button({text: 'Забронировать', size: 'long', withArrow: true, htmlType: 'submit'})
+            +button({
+                text: 'Забронировать',
+                size: 'long',
+                withArrow: true,
+                htmlType: 'submit'
+            })

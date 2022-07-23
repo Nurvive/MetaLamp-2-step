@@ -27,7 +27,13 @@ block content
                             +date-dropdown(dateDropdownOptions)
                     li.search-room__item.js-search-room__item(data-move="no")
                         .search-room__dropdown-layout.js-search-room__dropdown-layout
-                            +dropdown({type:'default', title: 'Гости'})
+                            +dropdown({
+                                type: 'default',
+                                title: 'Гости',
+                                wordsArray: ["взрослые", 'дети', "младенцы"],
+                                withButtons: true,
+                                placeholder: 'Сколько комнат'
+                            })
                     li.search-room__item.js-search-room__item.js-search-room__item-range-slider(data-move="no")
                         .search-room__slider-layout диапазон цены
                         +range-slider
@@ -43,7 +49,12 @@ block content
                         })
 
                     li.search-room__item.js-search-room__item.js-search-room__item-dropdown
-                        +dropdown({type:'rooms', title: 'удобства номера'})
+                        +dropdown({
+                            type: 'rooms',
+                            title: 'удобства номера',
+                            wordsArray: ["спальни", 'кровати', "ванные комнаты"],
+                            placeholder: 'Сколько комнат'
+                        })
                     li.search-room__item.js-search-room__item
                         .search-room__layout.js-search-room__layout-expandable-checkbox
                             +expandable-checkbox({
